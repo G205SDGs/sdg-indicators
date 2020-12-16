@@ -122,7 +122,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20201216011510">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20201216104446">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -384,13 +384,9 @@ var translations = {
 
 <div class="row" id="page-content">
   <div class="col-xs-12">
-    <p><span class="status notapplicable"> Nicht zutreffend </span><br />
-Dieser Indikator ist als nicht zutreffend für die Bereitstellung nationaler Zeitreihen markiert. Mögliche Gründe dafür sind:</p>
-<ul>
-  <li>Es handelt sich um einen globalen Indikator, der auf nationaler Ebene nicht aussagekräftig darstellbar ist.</li>
-  <li>Der Indikator oder das zugehörige Unterziel beziehen sich auf spezifische Ländergruppen (wie z.B. die kleinen Inselentwicklungsländer), denen Deutschland nicht angehört.</li>
-  <li>Der Indikator ist aus anderen Gründen z.B. in Anlehnung an eine entsprechende Klassifikation auf europäischer Ebene durch Eurostat als nicht zutreffend markiert.</li>
-</ul>
+    <p><span class="status notstarted"> Datenquellenanalyse </span><br />
+Nach möglichen Datenquellen für diesen Indikator wird derzeit gesucht.
+Gerne können Sie uns Feedback oder Vorschläge zu geeigneten Datenquellen zu diesem Indikator über das Kontaktformular zukommen lassen.</p>
 
   </div>
 </div>
@@ -680,8 +676,8 @@ data-event-label="Change to Sources tab"
                 
 
                 
-                  <a href="https://github.com/G205SDGs/sdg-data/commit/12b45842747b83a71acaa5d1b8e4761d650aea29" target="_blank">
-                    2020-11-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  <a href="https://github.com/G205SDGs/sdg-data/commit/c2a272b73d1304f34a77ef7a6d40aa97020f9102" target="_blank">
+                    2020-12-16: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
                   </a>
                 
 
@@ -1352,7 +1348,7 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20201216011510'></script><script src="/sdg-indicators/assets/js/custom.js?v=20201216011510"></script><script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20201216104446'></script><script src="/sdg-indicators/assets/js/custom.js?v=20201216104446"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

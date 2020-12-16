@@ -11,7 +11,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/1-1-1",
-          "status": "notapplicable"
+          "status": "notstarted"
         },
         {
           "id": "1-2-1",
@@ -835,7 +835,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/7-b-1",
-          "status": "notstarted"
+          "status": "notapplicable"
         }]
     }
   },
