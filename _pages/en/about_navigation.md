@@ -5,63 +5,64 @@ language: en
 layout: page
 ---
 
-## Layout of the reporting platform
+## Layout of the SDG online platform
 
-There are two sections of this reporting platform. The one where you are currently located displays the indicator set of the [Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/). The other section of the platform provides the indicators of the [German Sustainable Development Strategy](https://www.bundesregierung.de/breg-en/issues/sustainability/) (Deutsche Nachhaltigkeitsstrategie, DNS). In both sections the time series on the respective indicators can be downloaded by interested visitors.
+The online platform comprises two components, namely the German set of indicators for the global sustainability goals ([Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/), SDGs) of the United Nations 2030 Agenda and the indicator set of the [German Sustainable Development Strategy](https://www.bundesregierung.de/breg-en/issues/sustainability/) (Deutsche Nachhaltigkeitsstrategie, DNS). Since the German Sustainable Development Strategy is aimed at implementing the 2030 Agenda at the national level, indicators shared by both strategies are linked to each other on the platform.
 
-Next to the search box in the upper right corner of this page there is a direct link to the starting page of the national reporting platform to the indicator section of the German Sustainable Development Strategy: [<img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS Wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io)
+A direct link to the homepage of the DNS online platform can be found at the top right of this page next to the search field: [<img src="https://g205sdgs.github.io/sdg-indicators/assets/img/about/DNS Wheel.png" alt="Wheel">](https://sustainabledevelopment-deutschland.github.io/en)
 
-## Structure of the SDG part of the platform
 
-The SDG part of the platform is organised into goals, targets and the related SDG indicators (figure 1).
+
+## Structure of the SDG online platform
+
+TThe SDG online platform comprises goals, targets and related indicators (Fig. 1).
 
 <br>
 <img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/target_page.PNG" alt="Abbildung 1: Aufbau der Unterziel-Seiten" class="responsiveImg">
 
 <p style="text-align:center">
-<small> Figure 1: Example for the structure of the SDGs via goal 11 „Sustainable Cities and Communities“ (as of 07/2020)</small>
+<small> Fig. 1: Example of the structure of SDGs based on goal 11 “Sustainable Cities and Communities“ (as of July 2020)</small>
 </p>
 <br>
 
-## Presentation of single SDG indicators
+## Presentation of SDG indicators
 
-Every SDG indicator is presented on an own page. Depending on the SDG indicator, there are different selection menus presented on the left hand side of each page. The first menu contains all time series that are available for this indicator. Depending on the time series, you can choose different values in the provided sub-menus below – i.e. different age classes.
+Each SDG indicator is displayed on a separate page. Depending on the indicator, different selection menus are shown on the left. The first selection menu contains all time series available for the indicator. In the sub-menus you can select various variable values depending on the data series - e.g. different age groups.
 
-The development of a time series is visualised in a chart. On the second tab “Table” – next to “Chart” – the chart data and all available data related from the sub-menus can be viewed (please have a look at figure 2).
+The development of the time series is visualised in a chart. Click on the second tab next to “Chart“ to view, in a table, the data underlying the chart and all other data available from the selection menus (Fig. 2).
 
 <br>
 <img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/indicator_page.PNG" alt="Abbildung 2: Aufbau der Indikator-Seiten" class="responsiveImg">
 
 <p style="text-align:center">
-<small> Figure 2: Example for an SDG indicator page on the German reporting platform (as of 07/2020)</small>
+<small> Fig. 2: Example of the presentation of SDG indicators using indicator 11.7.1 (as of April 2020)</small>
 </p>
 <br>
 
-Below the chart there are green buttons that allow data downloads in csv format and, in case of the chart, as well as a png file.
+Below, there are green buttons that allow the data to be downloaded in CSV format and, in the case of the chart, also as a PNG file.
 
 ## Metadata and data sources
 
-At the bottom of the indicator page three tabs are shown:
-“National Metadata”, “Global Metadata”, and “Data Sources”
+At the bottom of the indicator pages you can see the following three tabs: “National Metadata“, “Global Metadata“ and “Data Sources“.
 
-Below the tab “National Metadata” the national time series that are available and fit best the global metadata are listed. In addition, a comparison to the global metadata as well as further methodical and country-specific information on the time series can be found in the related national metadata sheet.
+The “National Metadata“ tab provides a list of the national time series which correspond most closely to the global metadata. The national metadata sheet includes a comparison with the global requirements and related methodological and country-specific information.
 
-Every SDG indicator is administrated by one or more Custodian Agencies. After consultation with the IAEG-SDG, a statistical UN working group, the Custodian Agencies define the methodological guidelines for the calculation of the respective SDG indicator and publish those as global metadata. The global metadata can be found below the tab of the same name (figure 3). Here, the target is added in full length, as well as the [Tier classification](https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/) of the SDG indicator.
+Each SDG indicator is managed by one or more custodian agencies. The custodian agencies, in consultation with the IAEG-SDGs, a statistical working group of the United Nations, determine the exact definition of and methodology for the respective indicator and publish these as global metadata. These can be found in the “Global metadata“ tab (Fig. 3). In addition to the indicator‘s detailed target, the [Tier classification](https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/) of the indicator is listed here as well.
 
-Below „Data Sources“ there are web links to the organisation:s, that provided the data for the time series, and – if possible – there are web links directly to the particular data source.
+The “Data sources“ tab provides links to the organisation(s) that submitted the data for the time series and, where possible, also direct links to the relevant data sources.
 
 ## Comparison of SDG and DNS indicators
 
-There are several overlaps in content in between the indicators of the Sustainable Development Goals and the German Sustainable Development Strategy.
+There are numerous overlaps between the indicators of the UN Sustainable Development Goals and the indicators of the German Sustainable Development Strategy (DNS).
 
-Approximately half of the DNS indicators are similar or congruent with SDG indicators. Furthermore, both indicator sets are structured according to the 17 Goals of the UN agenda 2030, since the DNS represents the national implementation of the global agenda. More information about the DNS you can find in the category “Interesting Facts” and [DNS](https://sustainabledevelopment-germany.github.io/en/sdg-indicators/facts_dns/).
+About half of the DNS- indicators are similar to or congruent with the SDG- indicators. Both sets of indicators are also structured according to the 17 goals of the United Nations 2030 Agenda, as the DNS represents the national implementation ofGerman Sustainable Development Strategy is aimed at implementing the global agenda. at the national level. More information on the DNSGerman strategy can be found in the “Useful information“ section „Interesting Facts“ andunder [DNS](https://sustainabledevelopment-germany.github.io/en/sdg-indicators/facts_dns/).
 
-However, there are also differences. The name and especially the numbering of the DNS indicators is not identical with the SDG indicators. If there is a DNS indicator comparable to an SDG indicator, there is a button on the indicator page with a direct link to the respective indicator (figure 3).
+However, there are also differences. The names of the DNS indicators and especially their numbering are not identical to those of the SDG indicators. If an SDG indicator is comparable to a DNS indicator, this is indicated by a button with a direct link to the respective indicator (Fig. 3).
 
 <br>
 <img src="https://g205SDGs.github.io/sdg-indicators/assets/img/about/en/navigation_dns.PNG" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg">
 
 <p style="text-align:center">
-<small> Figure 3: Position of the direct link to similar or congruent indicators in SDGs and DNS (as of 07/2020)</small>
+<small> Fig. 3: Position of the direct link to similar or congruent indicators of the UN Sustainable Development Goals and the German Sustainable Development Strategy (as of July 2020)</small>
 </p>
 <br>

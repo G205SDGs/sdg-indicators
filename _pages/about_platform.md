@@ -27,7 +27,7 @@ Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der Vereinten Nati
 
 ## Ziel und Hintergrund
 
-Ziel der SDGS-Online Plattform ist die Darstellung der Indikatoren der UN-Nachhaltigkeitsziele für Deutschland.
+Ziel der SDG-Online Plattform ist die Darstellung der Indikatoren der UN-Nachhaltigkeitsziele für Deutschland.
 
 Die SDGs sind in der Agenda 2030 für nachhaltige Entwicklung verankert, die im September 2015 von der Generalversammlung der Vereinten Nationen und somit im Einvernehmen aller Mitgliedsstaaten verabschiedet wurde. Die Agenda schafft die Grundlage, um weltweiten wirtschaftlichen Fortschritt im Einklang mit sozialer Gerechtigkeit und im Rahmen der ökologischen Grenzen der Erde zu gestalten.
 
