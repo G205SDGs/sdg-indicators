@@ -128,7 +128,7 @@ Kommunikation via E-Mail kann Sicherheitslücken aufweisen. Beispielsweise könn
 
 Für die Standard-Veröffentlichungen des Statistischen Bundesamtes in gedruckter und elektronischer Form sowie für die Inhalte auf dieser Website einschließlich Grafiken sowie der zum Download bereitgestellten Produkte gilt, soweit bei dem jeweiligen Produkt/Internetseite keine ergänzenden oder anderslautenden Angaben ausgewiesen sind:
 
-© Statistisches Bundesamt (Destatis), 2020 <br>
+© Statistisches Bundesamt (Destatis), 2021 <br>
 Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellennachweis gestattet.
 
 Diese Regelung gilt für jede Art der Weiterverbreitung von Texten, Daten und Grafiken durch Dritte, soweit das Statistische Bundesamt Inhaber des Urheberrechts ist und die alleinigen Herausgeberrechte besitzt. Die Weiterverwendung ist sowohl für nicht gewerbliche als auch gewerbliche Zwecke erlaubt. Auch die Verbreitungsform elektronisch, via Internet oder als Print ist nicht eingeschränkt. Es bedarf keiner ausdrücklichen Genehmigung durch unser Haus. Eine Quellenangabe ist jedoch erforderlich. Das Statistische Bundesamt (Destatis) ist als Herausgeber in den Quellennachweis aufzunehmen.
