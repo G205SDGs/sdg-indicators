@@ -134,6 +134,17 @@
     {% endfor %}
     </div>
   {% endfor %}
+
+  {% if  page.goal.number == "11" %}
+    <div class="indicator-cards target goal-target col-md-6">
+      <span>
+        11.c
+      </span>
+      {{ page.t.global_targets.11-c-title }}
+    </div>
+    <div class="indicator-cards col-md-6 row no-gutters">
+  {% endif %}
+
 </div>
 
 {% include footer.html %}
