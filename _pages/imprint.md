@@ -50,11 +50,13 @@ Neben den eigenen Inhalten bietet das Statistische Bundesamt Querverweise („ex
 <b>Das Statistische Bundesamt nimmt den Schutz Ihrer Privat- und Persönlichkeitssphäre ernst und beachtet die datenschutzrechtlichen Bestimmungen. Ihr Vertrauen ist uns wichtig!</b>
 
 Mit diesen Hinweisen kommen wir unseren Informationspflichten nach Artikel 13 der Datenschutz-Grundverordnung (DS-GVO) bei der Erhebung personenbezogener Daten nach.
-Beim Zugriff auf die SDG-Online Plattform werden vom Statistischen Bundesamt keine personenbezogenen Daten erhoben. Sie nutzen allerdings die Dienste des Anbieters GitHub.  Die Datenschutzerklärung von GitHub finden Sie unter [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement).
+Beim Zugriff auf die SDG-Online Plattform werden vom Statistischen Bundesamt keine personenbezogenen Daten erhoben.
 
-Als Website-Besucher werden technische Informationen, auch die IP-Adresse, erfasst: diese kann ggf. ein personenbezogenes Datum sein. Personenbezogene Daten werden erfasst, wenn Sie einen Account anlegen.
+Sie nutzen allerdings die Dienste des Anbieters GitHub.  Die Datenschutzerklärung von GitHub finden Sie unter [https://help.github.com/en/articles/github-privacy-statement](https://help.github.com/en/articles/github-privacy-statement).
 
-Im Zusammenhang mit der Nutzung sozialer Medien sowie des weiteren Internet-Angebotes des Statistischen Bundesamtes gilt die Datenschutzerklärung unter [https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html](https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html).
+Wir haben technische und organisatorische Maßnahmen getroffen, die sicherstellen, dass die Vorschriften über den Datenschutz sowohl von uns als auch von unserem Dienstleister beachtet werden. In diesem Zusammenhang weisen wir daraufhin, dass die Daten von GitHub in den USA verarbeitet werden können.
+
+Als Website-Besucher werden technische Informationen, auch die IP-Adresse, erfasst: diese kann ggf. ein personenbezogenes Datum sein.
 
 Im Zuge der Weiterentwicklung unserer Website können auch Änderungen dieser Datenschutzerklärung erforderlich werden. Daher empfehlen wir Ihnen, sich diese Erklärung regelmäßig durchzulesen.
 
@@ -63,28 +65,26 @@ Im Zuge der Weiterentwicklung unserer Website können auch Änderungen dieser Da
 
 Personenbezogene Daten sind Informationen zu Ihrer Person, wie zum Beispiel Ihr Name, Adresse, Postanschrift oder auch Ihr Nutzerverhalten, wenn dies nicht anonymisiert wird. Informationen, die nicht mit Ihrer Identität in Verbindung gebracht werden, fallen nicht darunter.
 
-Ihre Daten werden dadurch erhoben, dass Sie uns diese, z. B. in einer E-Mail, mitteilen. Dabei beruht die Verarbeitung auf Ihrer Einwilligung.
-
 ## Einsatz von Cookies
 
 Auf diesen Seiten kommen Cookies zum Einsatz. Diese sind zur optimalen Bereitstellung unseres Internetangebots technisch erforderlich. Der Einsatz dieser Cookies erfolgt auf der Grundlage des Art. 6 Absatz 1 lit. e DS-GVO in Verbindung mit § 3 Bundesdatenschutzgesetz (BDSG).
 
-Die meisten Internetbrowser sind so eingestellt, dass sie Cookies automatisch akzeptieren. Sie können das Speichern von Cookies jedoch deaktivieren oder Ihren Browser so einstellen, dass Cookies nur für die Dauer der jeweiligen Verbindung zum Internet gespeichert werden.
-Sollten Sie eine Browsererweiterung nutzen, die die Ablage unserer Cookies verhindert, respektieren wir dies selbstverständlich. Cookies werden in diesem Fall nicht abgelegt. Wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.
+Die meisten Internetbrowser sind so eingestellt, dass sie Cookies automatisch akzeptieren. Sie können das Speichern von Cookies jedoch deaktivieren oder Ihren Browser so einstellen, dass Cookies nur für die Dauer der jeweiligen Verbindung zum Internet gespeichert werden. Sollten Sie eine Browsererweiterung nutzen, die die Ablage unserer Cookies verhindert, respektieren wir dies selbstverständlich. Cookies werden in diesem Fall nicht abgelegt. Wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können.
 
 ## Soziale Medien
 
-Das Statistische Bundesamt nutzt den Kurznachrichtendienst Twitter.
-
-Diese Funktionen werden angeboten durch die Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. Durch das Benutzen von Twitter und der Funktion „Re-Tweet“ werden die von Ihnen besuchten Websites mit Ihrem Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter übertragen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Twitter unter: Version: [https://twitter.com/privacy](https://twitter.com/privacy).
-
-Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter [https://twitter.com/account/settings](https://twitter.com/account/settings) ändern.
-
-Um Inhalte in den sozialen Netzwerken zu planen und zu posten, keine für uns relevanten Posts zu verpassen sowie mit Nutzerinnen und Nutzern zu interagieren, nutzt das Statistische Bundesamt das Produkt „Social Hub“ des Dienstleisters maloon GmbH; Schütterlettenweg 4; 85053 Ingolstadt; Deutschland; Telefon: +49 (0)841 493 990-0; Fax: +49 (0)841 493 990-10; E-Mail: hallo@socialhub.io; Web: [www.socialhub.io](http://www.socialhub.io/)
+Im Zusammenhang mit der Nutzung sozialer Medien (Twitter) sowie des weiteren Internet-Angebotes des Statistischen Bundesamtes gilt die Datenschutzerklärung unter [https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html](https://www.destatis.de/DE/Service/Datenschutz/_inhalt.html).
 
 ## Anfragen per E-Mail oder Telefon
 
 Wenn Sie Ihre Anfragen per E-Mail oder Telefon an uns richten, werden Ihre Angaben zur Beantwortung der Anfrage in unserem Kundenmanagement gespeichert. Dies erfolgt in Erfüllung unserer öffentlichen Aufgaben nach Artikel 6 Absatz 1 lit. e) DS-GVO in Verbindung mit § 3 BDSG. Sollte eine Anfrage kostenpflichtig sein, werden Sie darauf per E-Mail hingewiesen, es sei denn Ihre Anfrage enthält im Einzelfall bereits eine konkrete Bestellung mit den erforderlichen Vertragsbestandteilen. Die Verarbeitung basiert sodann auf Artikel 6 Absatz 1 lit. b) DS-GVO. Ihnen stehen ebenso die jeweils einschlägigen untenstehenden Rechte zu.
+
+## Weitergabe personenbezogener Daten an Dritte
+
+Daten, die beim Zugriff auf das Internet-Angebot von Destatis protokolliert worden sind, werden an Dritte nur übermittelt, soweit wir gesetzlich oder durch Gerichtsentscheidung dazu verpflichtet sind oder die Weitergabe im Falle von Angriffen auf die Internet-Infrastruktur von Destatis zu Rechts- oder Strafverfolgung erforderlich ist. Eine Weitergabe zu anderen nichtkommerziellen oder zu kommerziellen Zwecken erfolgt nicht.
+
+Im Falle der Bestellung von Publikationen verwenden wir die von Ihnen eingegebenen personenbezogenen Informationen nur innerhalb des Statistischen Bundesamtes und der mit dem Versand von Publikationen beauftragten Unternehmen. Wir geben sie nicht ohne Ihre ausdrückliche Einwilligung an Dritte weiter.
+
 
 ## Minderjährigenschutz
 
@@ -119,10 +119,6 @@ Datenschutzbeauftragte im Statistischen Bundesamt<br>
 65180 Wiesbaden<br>
 Telefon:	+49 (0)611 75-4449<br>
 E-Mail:	[datenschutzbeauftragter@destatis.de](mailto:datenschutzbeauftragter@destatis.de)
-
-## Kontaktaufnahme
-
-Kommunikation via E-Mail kann Sicherheitslücken aufweisen. Beispielsweise können E-Mails auf ihrem Weg an die Mitarbeiter des Statistischen Bundesamts von versierten Internet-Nutzern aufgehalten, eingesehen und auch manipuliert werden. Daher sind über E-Mail ausnahmslos nur informelle Kontakte möglich. Rechtsverbindliche Erklärungen können auf diesem Wege derzeit nicht abgegeben werden. Sollten wir eine E-Mail von Ihnen erhalten, so gehen wir davon aus, dass wir zu einer Beantwortung per E-Mail berechtigt sind. Ansonsten müssen Sie ausdrücklich auf eine andere Art der Kommunikation verweisen.
 
 ## Copyright allgemein
 
