@@ -142,15 +142,14 @@ Excluded from the temporally and geographically unlimited scope of use are the u
 
 It is therefore recommended that, when exploiting our data, users ensure that the copyright information is included in the product in question and, if necessary, that they contact the copyright owners given in the Legal Notice.
 
-
-### Recommended source note:
+<b>Recommended source note:</b>
 
 Source: Exact designation of reference (table, publication, edition, or, for web pages: www.destatis.de / URL or topical search path plus type of document and date of retrieval), Statistisches Bundesamt, Wiesbaden as publisher and data owner;
 
 - <i>Sample source note for table from publication (downloadable product):</i><br>
-Source: Daten zur Energiepreisentwicklung – Lange Reihe von Januar 2000 bis November 2017, Tabelle 5.3.1 Erdgas – Indizes, Statistisches Bundesamt (Destatis), 2017
+Source: Daten zur Energiepreisentwicklung – Lange Reihe von Januar 2000 bis November 2017, Tabelle 5.3.1 Erdgas – Indizes, Statistisches Bundesamt (Destatis), 2017<br><br>
 - <i>Sample source note for website extract:</i><br>
-Source: Number of deaths by chapters of the International Statistical Classification of Diseases and Related Health Problems (10th Revision) and by gender 2017, Statistisches Bundesamt (Destatis), 2020. [http://www.destatis.de/EN/Themes/Society-Environment/Health/Causes-Death/_node.html](http://www.destatis.de/EN/Themes/Society-Environment/Health/Causes-Death/_node.html)
+Source: Number of deaths by chapters of the International Statistical Classification of Diseases and Related Health Problems (10th Revision) and by gender 2017, Statistisches Bundesamt (Destatis), 2020. <br>http://www.destatis.de/EN/Themes/Society-Environment/Health/Causes-Death/_node.html<br><br>
 - <i>Example of supplements to the source note if the data are only used as the basis for the user's own calculations or if the data are used to generate the user's own graphs:</i><br>
 Source: …; own calculation / …; own representation
 
