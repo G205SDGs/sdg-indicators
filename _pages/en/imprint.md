@@ -131,7 +131,7 @@ E-mail communication may involve security gaps. For example, E-mails may be dela
 
 The following applies to all standard publications of the Federal Statistical Office, either in printed or electronic form, and for the content of this website, including charts and downloadable products, unless additional or other information is given on the product/web page itself.
 
-© Statistisches Bundesamt (Destatis), 2021
+© Statistisches Bundesamt (Destatis), 2021 <br>
 Reproduction and distribution, also of parts, are permitted provided that the source is mentioned.
 
 This applies to any redistribution of texts, data and charts by third parties where the Federal Statistical Office is the copyright owner and holds exclusive publishing rights. Re-use is permitted both for commercial and non-commercial purposes. There are also no restrictions on distribution by electronic means, via the internet or in printed form. No express authorisation is required from the Federal Statistical Office. It is, however, required to provide a source note. Statistisches Bundesamt (Destatis) shall be named as the publisher in the list of references.
@@ -141,6 +141,18 @@ Amendments, deletions/abridgements or omissions, redesigns or other modification
 Excluded from the temporally and geographically unlimited scope of use are the usage rights of third parties which are explicitly set out in our publications or on our web pages (e.g. photo rights). This also applies to jointly-issued products. There is no general policy here. Each product must be assessed on a case-by-case basis.
 
 It is therefore recommended that, when exploiting our data, users ensure that the copyright information is included in the product in question and, if necessary, that they contact the copyright owners given in the Legal Notice.
+
+
+### Recommended source note:
+
+Source: Exact designation of reference (table, publication, edition, or, for web pages: www.destatis.de / URL or topical search path plus type of document and date of retrieval), Statistisches Bundesamt, Wiesbaden as publisher and data owner;
+
+- <i>Sample source note for table from publication (downloadable product):</i><br>
+Source: Daten zur Energiepreisentwicklung – Lange Reihe von Januar 2000 bis November 2017, Tabelle 5.3.1 Erdgas – Indizes, Statistisches Bundesamt (Destatis), 2017
+- <i>Sample source note for website extract:</i><br>
+Source: Number of deaths by chapters of the International Statistical Classification of Diseases and Related Health Problems (10th Revision) and by gender 2017, Statistisches Bundesamt (Destatis), 2020. [http://www.destatis.de/EN/Themes/Society-Environment/Health/Causes-Death/_node.html](http://www.destatis.de/EN/Themes/Society-Environment/Health/Causes-Death/_node.html)
+- <i>Example of supplements to the source note if the data are only used as the basis for the user's own calculations or if the data are used to generate the user's own graphs:</i><br>
+Source: …; own calculation / …; own representation
 
 ## Copyright Icons
 
