@@ -155,4 +155,4 @@ Source: …; own calculation / …; own representation
 
 ## Copyright Icons
 
-© United Nations, [www.globalgoals.org](http://www.globalgoals.org/asset-licence/), [Guidelines for the use](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (logos and pictograms) / © Bundespresseamt, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (German translation)
+© United Nations, [www.globalgoals.org](http://www.globalgoals.org/asset-licence/), [Guidelines for the use](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (logos and pictograms) / © The Federal Government, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (German translation)

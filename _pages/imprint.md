@@ -148,4 +148,4 @@ In http://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen
 Quelle: …; eigene Berechnung / …; eigene Darstellung
 
 ## Copyright Icons
-© United Nations/[www.globalgoals.org](http://www.globalgoals.org/asset-licence/), [Guidelines for the use](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (Logos und Pictogramme) / © Bundespresseamt, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (deutsche Übersetzung)
+© United Nations/[www.globalgoals.org](http://www.globalgoals.org/asset-licence/), [Guidelines for the use](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf) (Logos und Pictogramme) / © Bundesregierung, [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) (deutsche Übersetzung)
