@@ -942,22 +942,6 @@
           "status": "complete"
         },
         {
-          "id": "8-a-1",
-          "title": "Handelshilfe: Zusagen und Auszahlungen",
-          "description": "",
-          "keywords": "Indikator 8.a.1, Verpflichtungen zur Handelshilfe (ODA und OOF), Bruttoauszahlungen für Handelshilfe (ODA und OOF), Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)",
-          "href": "/sdg-indicators/8-a-1",
-          "status": "complete"
-        },
-        {
-          "id": "8-b-1",
-          "title": "Existenz einer entwickelten und operationalisierten nationalen Strategie für Jugendbeschäftigung, als eigenständige Strategie oder als Teil einer nationalen Beschäftigungsstrategie",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators/8-b-1",
-          "status": "notstarted"
-        },
-        {
           "id": "8-10-1",
           "title": "(a) Anzahl der Bankfilialen je 100&nbsp;000 Erwachsene und (b) Anzahl der Geldautomaten je 100&nbsp;000 Erwachsene",
           "description": "",
@@ -972,6 +956,22 @@
           "keywords": "Indikator 8.10.2, Konten bei Zahlungsverkehrsdienstleistern, Weltbank (WB)",
           "href": "/sdg-indicators/8-10-2",
           "status": "complete"
+        },
+        {
+          "id": "8-a-1",
+          "title": "Handelshilfe: Zusagen und Auszahlungen",
+          "description": "",
+          "keywords": "Indikator 8.a.1, Verpflichtungen zur Handelshilfe (ODA und OOF), Bruttoauszahlungen für Handelshilfe (ODA und OOF), Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD)",
+          "href": "/sdg-indicators/8-a-1",
+          "status": "complete"
+        },
+        {
+          "id": "8-b-1",
+          "title": "Existenz einer entwickelten und operationalisierten nationalen Strategie für Jugendbeschäftigung, als eigenständige Strategie oder als Teil einer nationalen Beschäftigungsstrategie",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators/8-b-1",
+          "status": "notstarted"
         }]
     }
   },
@@ -1878,22 +1878,6 @@
           "status": "complete"
         },
         {
-          "id": "16-a-1",
-          "title": "Existenz unabhängiger nationaler Menschenrechtsinstitutionen, die mit den 'Pariser Grundsätzen' übereistimmen",
-          "description": "",
-          "keywords": "Indikator 16.a.1, Mitgliedschaft GANHRI (Kategorie A), Hoher Kommissar der Vereinten Nationen für Menschenrechte (OHCHR)",
-          "href": "/sdg-indicators/16-a-1",
-          "status": "complete"
-        },
-        {
-          "id": "16-b-1",
-          "title": "Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsgesetzen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat",
-          "description": "",
-          "keywords": "",
-          "href": "/sdg-indicators/16-b-1",
-          "status": "notstarted"
-        },
-        {
           "id": "16-10-1",
           "title": "Anzahl der bestätigten Fälle von Tötung, Entführung, gewaltsamem Verschwindenlassen, willkürlicher Inhaftierung und Folter von Journalisten und zugehörigem Medienpersonal, Gewerkschaftern und Menschenrechtsanwälten in den vorangegangenen 12 Monaten",
           "description": "",
@@ -1908,6 +1892,22 @@
           "keywords": "Indikator; 16.10.2, Öffentlicher Zugang zu Informationen, Organisation der Vereinten Nationen für Bildung, Wissenschaft und Kultur - Statistische Behörde (UNESCO-UIS)",
           "href": "/sdg-indicators/16-10-2",
           "status": "complete"
+        },
+        {
+          "id": "16-a-1",
+          "title": "Existenz unabhängiger nationaler Menschenrechtsinstitutionen, die mit den 'Pariser Grundsätzen' übereistimmen",
+          "description": "",
+          "keywords": "Indikator 16.a.1, Mitgliedschaft GANHRI (Kategorie A), Hoher Kommissar der Vereinten Nationen für Menschenrechte (OHCHR)",
+          "href": "/sdg-indicators/16-a-1",
+          "status": "complete"
+        },
+        {
+          "id": "16-b-1",
+          "title": "Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsgesetzen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators/16-b-1",
+          "status": "notstarted"
         }]
     }
   },
