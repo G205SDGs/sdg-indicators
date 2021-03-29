@@ -1,19 +1,19 @@
-<div class="heading sup-goal-banner indicator goal-{{ page.goal.number }}"></div>
 <div class="heading goal-banner indicator goal-{{ page.goal.number }}">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-icon">
+      <div class="col-xs-4 col-md-3 col-lg-2 goal-icon goal-tiles">
         <a href="{{ page.goal.url }}" title="{{ page.t.indicator.view_indicator_list }}">
-          <img src="{{ page.goal.icon }}" alt="{{ page.goal.short | escape }} - {{ page.t.general.goal }} {{ page.goal.number }}" />
+          <img src="{{ page.goal.icon }}" alt="{{ page.goal.short | escape }} - {{ page.t.general.goal }} {{ page.goal.number }}" id="goal-{{ page.goal.number }}"/>
         </a>
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10 indicator-details">
         <div>
-          <h1>{{ page.t.general.indicator }} {{ page.indicator.number }}</h1>
-          <p class="lead-copy">{{ page.indicator.name }}</p>
+          <h1>
+            {{ page.t.general.indicator }} {{ page.indicator.number }}
+            <span class="lead-copy">{{ page.indicator.name }}</span>
+          </h1>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="heading sub-goal-banner indicator goal-{{ page.goal.number }}"></div>

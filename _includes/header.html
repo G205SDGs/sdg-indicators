@@ -7,147 +7,66 @@
 <header role="banner">
   <div class="container">
 
-    <a class="navbar-brand" href="{{ page.baseurl }}" id="home">
-      <img src="{{ site.baseurl }}/assets/img/{{ page.language }}/SDG_logo.png" alt="{{ page.t.general.sdg }} - {{ page.t.header.tag_line }}" />
-    </a>
+    <div class="logo-and-mobile-widgets">
+      <a class="navbar-brand" href="{{ page.baseurl }}" id="home">
+        <img src="{{ site.baseurl }}/assets/img/{{ page.language }}/SDG_logo.png" alt="{{ page.t.general.sdg }} - {{ page.t.header.tag_line }}" />
+      </a>
 
-    <div class='hidden visible-xs float-right'>
-      <ul id='accessibility-nav' class='contrast-switcher'></ul>
-      {%- if site.languages.size > 1 -%}
-      <div class="language-toggle-mobile">
-        {% include components/language-toggle.html %}
+      <div class="mobile-widgets">
+        <ul id='accessibility-nav' class='contrast-switcher'></ul>
+        {%- if site.languages.size > 1 and site.header_language_toggle != 'none' -%}
+        <div class="language-toggle-mobile">
+          {% include components/language-toggle-dropdown.html location="header" %}
+        </div>
+        {%- endif -%}
+
+        <!-- Add Btn to link to DNS Page--
+
+        {% if page.language == "de" %}
+          <a href="https://sustainabledevelopment-deutschland.github.io">
+            <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="{{ page.t.general.link_dns }}" alt="Link DNS" style="width:24px;height:24px;"/>
+            <span class="hidden-sm hidden-md hidden-lg">DNS-{{ page.t.menu.platform }}</span>
+          </a>
+        {% else %}
+          <a href="https://sustainabledevelopment-deutschland.github.io/{{ page.language }}">
+            <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="{{ page.t.general.link_dns }}" alt="Link DNS" style="width:24px;height:24px;"/>
+            <span class="hidden-sm hidden-md hidden-lg">DNS-{{ page.t.menu.platform }}</span>
+          </a>
+        {% endif %}
+
+        <!--     -->
+
+
+
+
+
+
       </div>
-      {%- endif -%}
     </div>
 
     <nav class="navbar navbar-default" id="main-nav">
 
       <ul class="top-level">
         <li id="menuToggle"
-            aria-label="Menu toggle. Click to expand or collapse the menu."
-            aria-haspopup="true"
-            aria-expanded="false">
-          <span data-target="menu" tabindex="0"
-          role="navigation">{{ page.t.menu.menu }}</span>
+            aria-label="{{ page.t.header.toggle_menu }}"
+            aria-haspopup="true">
+          <button data-target="menu-mobile" aria-expanded="false">{{ page.t.menu.menu }}</button>
+          {% include navigation.html id="menu-mobile" %}
         </li>
-        <li><span data-target="search">{{ page.t.search.search }}</span></li>
+        <li id="searchToggle"
+            aria-label="{{ page.t.header.toggle_search }}"
+            aria-haspopup="true">
+          <button data-target="search-mobile" aria-expanded="false">{{ page.t.search.search }}</button>
+          {% include search.html id="search-mobile" %}
+        </li>
       </ul>
 
-      {% include search.html %}
+      {% include search.html id="search" %}
 
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu">
-        {%- if site.menu -%}
-          {%- assign current_path_no_slash = page.url | remove: '/' -%}
-          {%- for item in site.menu -%}
-          {%- assign item_path_no_slash = item.path | remove: '/' -%}
-          {%- assign item_path = item.path -%}
-          {%- assign item_path_first = item_path | slice: 0 %}
-          {%- if item_path_first == '/' -%}
-            {%- assign item_path = item_path | slice: 1, item_path.size -%}
-          {%- endif -%}
-            {% if item.path contains "about_" %}
-              <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-sm hidden-md hidden-lg">
-                <a href="{{ page.baseurl }}{{ item_path }}">{{ page.t.menu.about_short }}: {{ item.translation_key | t }}</a>
-              </li>
-            {% elsif item.path contains "facts_" %}
-              <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %} hidden-sm hidden-md hidden-lg">
-                <a href="{{ page.baseurl }}{{ item_path }}">{{ page.t.menu.facts}}: {{ item.translation_key | t }}</a>
-              </li>
-            {% else %}
-              <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-                <a href="{{ page.baseurl }}{{ item_path }}">{{ item.translation_key | t }}</a>
-              </li>
-            {% endif %}
-          {%- endfor -%}
-        {%- endif -%}
-
-        <li class="nav-link visible-sm visible-md visible-lg">
-          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;" style="margin-right: 0px;">
-            <span class="language-toggle-text">{{ page.t.menu.about }}</span>
-            <i class="language-toggle fa fa-chevron-down"></i>
-          </a>
-          <ul class="language-options language-toggle">
-            {%- assign current_path_no_slash = page.url | remove: '/' -%}
-            {%- for item in site.menu -%}
-              {%- assign item_path_no_slash = item.path | remove: '/' -%}
-              {% if item.path contains "about_" %}
-                {%- assign item_path = item.path -%}
-                {%- assign item_path_first = item_path | slice: 0 %}
-                  {%- if item_path_first == '/' -%}
-                    {%- assign item_path = item_path | slice: 1, item_path.size -%}
-                  {%- endif -%}
-                  <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-                    <a href="{{ page.baseurl }}{{ item_path }}">{{ item.translation_key | t }}</a>
-                  </li>
-              {% endif %}
-            {%- endfor -%}
-          </ul>
-        </li>
-
-        <li class="nav-link visible-sm visible-md visible-lg">
-          <a class="language-toggle-button" onclick="$(this).next('.language-toggle').toggle(); return false;" style="margin-right: 0px;">
-            <span class="language-toggle-text">{{ page.t.menu.facts }}</span>
-            <i class="language-toggle fa fa-chevron-down"></i>
-          </a>
-          <ul class="language-options language-toggle">
-            {%- assign current_path_no_slash = page.url | remove: '/' -%}
-            {%- for item in site.menu -%}
-              {%- assign item_path_no_slash = item.path | remove: '/' -%}
-              {% if item.path contains "facts_" %}
-                {%- assign item_path = item.path -%}
-                {%- assign item_path_first = item_path | slice: 0 %}
-                  {%- if item_path_first == '/' -%}
-                    {%- assign item_path = item_path | slice: 1, item_path.size -%}
-                  {%- endif -%}
-                  <li class="nav-link {% if current_path_no_slash == item_path_no_slash %}active{% endif %}">
-                    <a href="{{ page.baseurl }}{{ item_path }}">{{ item.translation_key | t }}</a>
-                  </li>
-              {% endif %}
-            {%- endfor -%}
-          </ul>
-
-        </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        {%- if site.languages.size > 1 -%}
-        <li>
-          {% include components/language-toggle.html %}
-        </li>
-        {%- endif -%}
-
-        <!--Add Btn to link to DNS Page-->
-        <li class="nav-link">
-          {% if page.language == "de" %}
-            <a href="https://sustainabledevelopment-deutschland.github.io">
-              <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="{{ page.t.general.link_dns }}" alt="Link DNS" style="width:24px;height:24px;"/>
-              <span class="hidden-sm hidden-md hidden-lg">DNS-{{ page.t.menu.platform }}</span>
-            </a>
-          {% else %}
-            <a href="https://sustainabledevelopment-deutschland.github.io/{{ page.language }}">
-              <img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="{{ page.t.general.link_dns }}" alt="Link DNS" style="width:24px;height:24px;"/>
-              <span class="hidden-sm hidden-md hidden-lg">DNS-{{ page.t.menu.platform }}</span>
-            </a>
-          {% endif %}
-        </li>
-        <!--     -->
-
-      </ul>
+      {% include navigation.html id="menu" dropdowns=true %}
 
     </nav>
   </div>
 
-
 </header>
+<div id="top" tabindex=-1></div>
