@@ -46,7 +46,6 @@ If you have comments or feedback on the Open SDG project or would like to partic
 ## Current presentation
 
 The current version of the SDG online platform contains some technical issues concerning the presentation of data. These include:<br>
-- Whole numbers are displayed without decimal places (also in time series which include other numerical values with decimal places).
 - Very long names of time series are not wrapped over several lines and sometimes cut off in graph axis labels.
 - If you hover over a data point in the charts, the label and the exact value of this data point are displayed. Subscript and superscript numbers and letters are not correctly shown.
 - During the same process the names of the data series are not wrapped.
