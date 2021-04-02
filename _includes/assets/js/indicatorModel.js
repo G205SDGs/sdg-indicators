@@ -90,6 +90,7 @@ var indicatorModel = function (options) {
     this.data = this.allData;
     this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data);
   }
+
   // calculate some initial values:
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
@@ -126,13 +127,12 @@ var indicatorModel = function (options) {
 
   this.updateSelectedUnit = function(selectedUnit) {
     this.selectedUnit = selectedUnit;
-
     this.getData({
       updateFields: this.dataHasUnitSpecificFields
     });
-
     this.onUnitsSelectedChanged.notify(selectedUnit);
   };
+
   this.updateSelectedSeries = function(selectedSeries) {
     // Updating the Series is akin to loading a whole new indicator, so
     // here we re-initialise most everything on the page.
@@ -280,7 +280,7 @@ var indicatorModel = function (options) {
       headline = helpers.sortData(headline, this.selectedUnit);
     }
 
-
+    console.log("selectedFields: ", this.selectedFields);
     var combinations = helpers.getCombinationData(this.selectedFields);
     var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps);
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);

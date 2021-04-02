@@ -79,16 +79,6 @@ languages:
 
 # Menu
 menu:
-  # Use these to customise the main navigation.
-  # - path: /
-  #   translation_key: general.goals
-  # - path: /reporting-status/
-  #   translation_key: menu.reporting_status
-  # - path: /about/
-  #   translation_key: menu.about
-  # - path: /guidance/
-  #   translation_key: menu.guidance
-
   - path: /
     translation_key: general.seventeen_goals
   - path: /reporting-status/
@@ -109,6 +99,23 @@ menu:
         translation_key: menu.facts_dns
   - path: https://sustainabledevelopment-deutschland.github.io
     translation_key: menu.linkToDnsPlatform
+
+
+
+  # - path: /
+  #   translation_key: general.seventeen_goals
+  # - path: /reporting-status/
+  #   translation_key: menu.reporting_status
+  # - path: /about_platform/
+  #   translation_key: menu.about_platform
+  # - path: /about_navigation/
+  #   translation_key: menu.about_navigation
+  # - path: /about_guidance/
+  #   translation_key: menu.about_guidance
+  # - path: /facts_agenda/
+  #   translation_key: menu.facts_agenda
+  # - path: /facts_dns/
+  #   translation_key: menu.facts_dns
 
 
 footer_menu:
@@ -155,6 +162,8 @@ remote_theme: open-sdg/open-sdg@1.3.0
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
 
+accessible_tabs: true
+accessible_charts: true
 
 custom_js:
   - /assets/js/custom.js
