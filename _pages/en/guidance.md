@@ -46,5 +46,4 @@ If you have any comments or feedback on the Open SDG project, or want to get inv
 ## Current display
 
 Due to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:<br>
-- Integers are displayed without decimal places (even in time series in which other numerical values with decimal places exist).
 - Very long names of time series are not broken up into several lines in the axis labels of the graphics and hence are partly cut off.

@@ -45,7 +45,6 @@ Wenn Sie Kommentare oder Feedback zum Open SDG-Projekt haben oder an der Open SD
 ## Aktuelle Darstellung
 
 Aufgrund von technischen Schwierigkeiten finden sich auf der aktuellen Version der SDG-Online Plattform einige suboptimale Darstellungen, auf die an dieser Stelle hingewiesen wird:
-- Ganze Zahlen werden ohne Nachkommastelle dargestellt (auch in Zeitreihen, in denen andere Zahlenwerte mit Nachkommastelle vorhanden sind).
 - Sehr lange Zeitreihenbezeichnungen werden in den Achsenbeschriftungen der Grafiken nicht in mehrere Zeilen umgebrochen und z. T. abgeschnitten.
 - Wenn man mit dem Mausanzeiger über einem Datenpunkt in den Grafiken verweilt, werden die Beschriftung und der exakte Wert dieses Datenpunktes angezeigt. Tief- und hochgestellte Ziffern und Buchstaben werden dabei nicht korrekt übernommen.
 - Beim gleichen Vorgang werden auch die Namen der Datenreihen nicht umgebrochen.
