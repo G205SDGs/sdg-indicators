@@ -100,10 +100,6 @@ menu:
   - path: https://sustainabledevelopment-deutschland.github.io
     translation_key: menu.linkToDnsPlatform
 
-data:
-  - zip:
-    - filename: all_indicators.zip
-
   # - path: /
   #   translation_key: general.seventeen_goals
   # - path: /reporting-status/
