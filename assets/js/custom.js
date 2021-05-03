@@ -23,3 +23,17 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
     return value.toFixed(dcmplc)
   }
 };
+
+.mytablestyle {
+  border-collapse: collapse;
+
+   > table, td, th {
+        border: 1px solid black;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        }
+        td{
+          vertical-align: top;
+          text-align: left;
+        }
+}
