@@ -3131,3 +3131,13 @@ body.contrast-high .navbar #menu .btn-group.menu-dropdown .dropdown-menu li a {
   color: black; }
   body.contrast-high .navbar #menu .btn-group.menu-dropdown .dropdown-menu li a:hover {
     text-decoration: underline; }
+
+.mytablestyle {
+  border-collapse: collapse; }
+  .mytablestyle > table, .mytablestyle td, .mytablestyle th {
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .mytablestyle td {
+    vertical-align: top;
+    text-align: left; }
