@@ -138,7 +138,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210507012615">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210507104936">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -501,7 +501,9 @@ var translations = {
 
 <div class="row" id="page-content">
   <div class="col-xs-12">
-    <p><span></span></p>
+    <p><span class="status notstarted"> Datenquellenanalyse </span><br />
+Nach möglichen Datenquellen für diesen Indikator wird derzeit gesucht.
+Gerne können Sie uns Feedback oder Vorschläge zu geeigneten Datenquellen zu diesem Indikator über das Kontaktformular zukommen lassen.</p>
 
   </div>
 </div>
@@ -694,8 +696,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/G205SDGs/sdg-data/commit/ca981e207f353080dd592cba680d5fc8200dfad4" target="_blank">
-                2021-05-04: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/G205SDGs/sdg-data/commit/79170639702f5ecd8f93abd73e1d910105fbe95e" target="_blank">
+                2021-05-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1572,12 +1574,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20210507012615'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20210507104936'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20210507012615"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20210507104936"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
