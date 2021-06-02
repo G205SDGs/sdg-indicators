@@ -133,7 +133,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210602124856">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210602131155">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -377,7 +377,7 @@ layout-reportingstatus
 
 
 <div class="reporting-status-description">
-  <p>Der Berichtsstatus gibt Ihnen einen Überblick, wie viele Indikatoren zu den globalen Nachhaltigkeitszielen (<a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/">Sustainable Development Goals, SDGs</a>) der Agenda 2030 der Vereinten Nationen für Deutschland zurzeit berechnet werden können. Die Zeitreihen für die Berechnung der Indikatoren basieren überwiegend auf Daten der amtlichen Statistik, nutzen aber auch Erhebungen zahlreicher weiterer Institutionen.<br />Stehen Daten zur Verfügung, wird der Indikator als <span class="status complete"> Daten verfügbar </span> markiert. Für andere Indikatoren wird noch nach einer geeigneten Datenquelle gesucht. Diese sind an der Markierung <span class="status notstarted"> Datenquellenanalyse </span> erkennbar. Es liegen nicht zu allen der global vereinbarten Indikatoren Zeitreihen vor. Dafür kann es verschiedene Gründe geben: Bestimmte international relevante Indikatoren lassen sich nicht sinnvoll für Deutschland berechnen oder sind nur im globalen Kontext zu beantworten. Solche Indikatoren sind als <span class="status notapplicable"> Nicht zutreffend </span> markiert.</p>
+  <p>Der Berichtsstatus gibt einen Überblick darüber, zu wie vielen SDG-Indikatoren auf dieser Plattform berichtet wird.<br /> Stehen Informationen zu einem Indikator zur Verfügung wird dieser als <span class="status complete"> Verfügbar </span> markiert. Für andere Indikatoren wird noch nach einer geeigneten Datenquelle gesucht, diese sind an der Markierung <span class="status notstarted"> Nicht verfügbar </span> erkennbar. Werden die Zeitreihen für einen Indikator zurzeit für die Darstellung auf dieser Plattform aufbereitet, so befinden sich diese Indikatoren <span class="status inprogress"> In Bearbeitung </span>.<br /> Nicht zu allen der global vereinbarten Indikatoren liegen Zeitreihen für Deutschland vor. Dafür kann es verschiedene Gründe geben: Bestimmte international relevante Indikatoren lassen sich nicht sinnvoll für Deutschland berechnen oder sind nur im globalen Kontext zu beantworten. Solche Indikatoren sind als <span class="status notapplicable"> Nicht zutreffend </span> markiert.</p>
 
 </div>
 
@@ -423,9 +423,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         <span class="total"><span>247</span> Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete"><span class="status-inner">176</span></span><strong>Daten verfügbar</strong><span class="value">71%</span>
+                <span class="status complete"><span class="status-inner">176</span></span><strong>Verfügbar</strong><span class="value">71%</span>
             </div><div>
-                <span class="status notstarted"><span class="status-inner">5</span></span><strong>Datenquellenanalyse</strong><span class="value">2%</span>
+                <span class="status notstarted"><span class="status-inner">5</span></span><strong>Nicht verfügbar</strong><span class="value">2%</span>
             </div><div>
                 <span class="status notapplicable"><span class="status-inner">10</span></span><strong>Nicht zutreffend</strong><span class="value">4%</span>
             </div><br style="clear:both;">
@@ -434,10 +434,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
             
             
-            <span class="complete" style="width:71.25506072874494%" title="Daten verfügbar: 71%"></span>
+            <span class="complete" style="width:71.25506072874494%" title="Verfügbar: 71%"></span>
             
             
-            <span class="notstarted" style="width:2.0242914979757085%" title="Datenquellenanalyse: 2%"></span>
+            <span class="notstarted" style="width:2.0242914979757085%" title="Nicht verfügbar: 2%"></span>
             
             
             <span class="notapplicable" style="width:4.048582995951417%" title="Nicht zutreffend: 4%"></span></div>
@@ -458,9 +458,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">8</span></span><strong>Daten verfügbar</strong><span class="value">62%</span>
+                    <span class="status complete"><span class="status-inner">8</span></span><strong>Verfügbar</strong><span class="value">62%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Datenquellenanalyse</strong><span class="value">8%</span>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Nicht verfügbar</strong><span class="value">8%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -469,10 +469,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:61.53846153846154%" title="Daten verfügbar: 62%"></span>
+                <span class="complete" style="width:61.53846153846154%" title="Verfügbar: 62%"></span>
                 
                 
-                <span class="notstarted" style="width:7.692307692307693%" title="Datenquellenanalyse: 8%"></span>
+                <span class="notstarted" style="width:7.692307692307693%" title="Nicht verfügbar: 8%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -492,9 +492,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">11</span></span><strong>Daten verfügbar</strong><span class="value">79%</span>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Verfügbar</strong><span class="value">79%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Datenquellenanalyse</strong><span class="value">7%</span>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Nicht verfügbar</strong><span class="value">7%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -503,10 +503,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:78.57142857142857%" title="Daten verfügbar: 79%"></span>
+                <span class="complete" style="width:78.57142857142857%" title="Verfügbar: 79%"></span>
                 
                 
-                <span class="notstarted" style="width:7.142857142857142%" title="Datenquellenanalyse: 7%"></span>
+                <span class="notstarted" style="width:7.142857142857142%" title="Nicht verfügbar: 7%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -526,9 +526,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">25</span></span><strong>Daten verfügbar</strong><span class="value">89%</span>
+                    <span class="status complete"><span class="status-inner">25</span></span><strong>Verfügbar</strong><span class="value">89%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -537,10 +537,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:89.28571428571429%" title="Daten verfügbar: 89%"></span>
+                <span class="complete" style="width:89.28571428571429%" title="Verfügbar: 89%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -560,9 +560,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">9</span></span><strong>Daten verfügbar</strong><span class="value">75%</span>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Verfügbar</strong><span class="value">75%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Datenquellenanalyse</strong><span class="value">17%</span>
+                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Nicht verfügbar</strong><span class="value">17%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -571,10 +571,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:75.0%" title="Daten verfügbar: 75%"></span>
+                <span class="complete" style="width:75.0%" title="Verfügbar: 75%"></span>
                 
                 
-                <span class="notstarted" style="width:16.666666666666664%" title="Datenquellenanalyse: 17%"></span>
+                <span class="notstarted" style="width:16.666666666666664%" title="Nicht verfügbar: 17%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -594,9 +594,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">10</span></span><strong>Daten verfügbar</strong><span class="value">71%</span>
+                    <span class="status complete"><span class="status-inner">10</span></span><strong>Verfügbar</strong><span class="value">71%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -605,10 +605,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:71.42857142857143%" title="Daten verfügbar: 71%"></span>
+                <span class="complete" style="width:71.42857142857143%" title="Verfügbar: 71%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -628,9 +628,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">9</span></span><strong>Daten verfügbar</strong><span class="value">82%</span>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Verfügbar</strong><span class="value">82%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -639,10 +639,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:81.81818181818181%" title="Daten verfügbar: 82%"></span>
+                <span class="complete" style="width:81.81818181818181%" title="Verfügbar: 82%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -662,9 +662,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">4</span></span><strong>Daten verfügbar</strong><span class="value">67%</span>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Verfügbar</strong><span class="value">67%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Nicht zutreffend</strong><span class="value">33%</span>
                 </div><br style="clear:both;">
@@ -673,10 +673,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:66.66666666666666%" title="Daten verfügbar: 67%"></span>
+                <span class="complete" style="width:66.66666666666666%" title="Verfügbar: 67%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:33.33333333333333%" title="Nicht zutreffend: 33%"></span></div>
@@ -696,9 +696,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">13</span></span><strong>Daten verfügbar</strong><span class="value">81%</span>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Verfügbar</strong><span class="value">81%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -707,10 +707,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:81.25%" title="Daten verfügbar: 81%"></span>
+                <span class="complete" style="width:81.25%" title="Verfügbar: 81%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -730,9 +730,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">11</span></span><strong>Daten verfügbar</strong><span class="value">92%</span>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Verfügbar</strong><span class="value">92%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Datenquellenanalyse</strong><span class="value">8%</span>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Nicht verfügbar</strong><span class="value">8%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -741,10 +741,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:91.66666666666666%" title="Daten verfügbar: 92%"></span>
+                <span class="complete" style="width:91.66666666666666%" title="Verfügbar: 92%"></span>
                 
                 
-                <span class="notstarted" style="width:8.333333333333332%" title="Datenquellenanalyse: 8%"></span>
+                <span class="notstarted" style="width:8.333333333333332%" title="Nicht verfügbar: 8%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -764,9 +764,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">5</span></span><strong>Daten verfügbar</strong><span class="value">36%</span>
+                    <span class="status complete"><span class="status-inner">5</span></span><strong>Verfügbar</strong><span class="value">36%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Nicht zutreffend</strong><span class="value">7%</span>
                 </div><br style="clear:both;">
@@ -775,10 +775,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:35.714285714285715%" title="Daten verfügbar: 36%"></span>
+                <span class="complete" style="width:35.714285714285715%" title="Verfügbar: 36%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:7.142857142857142%" title="Nicht zutreffend: 7%"></span></div>
@@ -798,9 +798,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">11</span></span><strong>Daten verfügbar</strong><span class="value">79%</span>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Verfügbar</strong><span class="value">79%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -809,10 +809,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:78.57142857142857%" title="Daten verfügbar: 79%"></span>
+                <span class="complete" style="width:78.57142857142857%" title="Verfügbar: 79%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -832,9 +832,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">8</span></span><strong>Daten verfügbar</strong><span class="value">62%</span>
+                    <span class="status complete"><span class="status-inner">8</span></span><strong>Verfügbar</strong><span class="value">62%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Nicht zutreffend</strong><span class="value">8%</span>
                 </div><br style="clear:both;">
@@ -843,10 +843,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:61.53846153846154%" title="Daten verfügbar: 62%"></span>
+                <span class="complete" style="width:61.53846153846154%" title="Verfügbar: 62%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:7.692307692307693%" title="Nicht zutreffend: 8%"></span></div>
@@ -866,9 +866,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">5</span></span><strong>Daten verfügbar</strong><span class="value">63%</span>
+                    <span class="status complete"><span class="status-inner">5</span></span><strong>Verfügbar</strong><span class="value">63%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Nicht zutreffend</strong><span class="value">13%</span>
                 </div><br style="clear:both;">
@@ -877,10 +877,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:62.5%" title="Daten verfügbar: 63%"></span>
+                <span class="complete" style="width:62.5%" title="Verfügbar: 63%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:12.5%" title="Nicht zutreffend: 13%"></span></div>
@@ -900,9 +900,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">6</span></span><strong>Daten verfügbar</strong><span class="value">60%</span>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Verfügbar</strong><span class="value">60%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Nicht zutreffend</strong><span class="value">10%</span>
                 </div><br style="clear:both;">
@@ -911,10 +911,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:60.0%" title="Daten verfügbar: 60%"></span>
+                <span class="complete" style="width:60.0%" title="Verfügbar: 60%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:10.0%" title="Nicht zutreffend: 10%"></span></div>
@@ -934,9 +934,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">9</span></span><strong>Daten verfügbar</strong><span class="value">64%</span>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Verfügbar</strong><span class="value">64%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                 </div><br style="clear:both;">
@@ -945,10 +945,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:64.28571428571429%" title="Daten verfügbar: 64%"></span>
+                <span class="complete" style="width:64.28571428571429%" title="Verfügbar: 64%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -968,9 +968,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">19</span></span><strong>Daten verfügbar</strong><span class="value">79%</span>
+                    <span class="status complete"><span class="status-inner">19</span></span><strong>Verfügbar</strong><span class="value">79%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Nicht zutreffend</strong><span class="value">4%</span>
                 </div><br style="clear:both;">
@@ -979,10 +979,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:79.16666666666666%" title="Daten verfügbar: 79%"></span>
+                <span class="complete" style="width:79.16666666666666%" title="Verfügbar: 79%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:4.166666666666666%" title="Nicht zutreffend: 4%"></span></div>
@@ -1002,9 +1002,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </h3>
         <div class="summary">
             <div class="statuses"><div>
-                    <span class="status complete"><span class="status-inner">13</span></span><strong>Daten verfügbar</strong><span class="value">54%</span>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Verfügbar</strong><span class="value">54%</span>
                 </div><div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                 </div><div>
                     <span class="status notapplicable"><span class="status-inner">3</span></span><strong>Nicht zutreffend</strong><span class="value">13%</span>
                 </div><br style="clear:both;">
@@ -1013,10 +1013,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:54.16666666666666%" title="Daten verfügbar: 54%"></span>
+                <span class="complete" style="width:54.16666666666666%" title="Verfügbar: 54%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:12.5%" title="Nicht zutreffend: 13%"></span></div>
@@ -1038,9 +1038,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         <span class="total"><span>247</span> Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
-                <span class="status complete"><span class="status-inner">176</span></span><strong>Daten verfügbar</strong><span class="value">71%</span>
+                <span class="status complete"><span class="status-inner">176</span></span><strong>Verfügbar</strong><span class="value">71%</span>
             </div><div>
-                <span class="status notstarted"><span class="status-inner">5</span></span><strong>Datenquellenanalyse</strong><span class="value">2%</span>
+                <span class="status notstarted"><span class="status-inner">5</span></span><strong>Nicht verfügbar</strong><span class="value">2%</span>
             </div><div>
                 <span class="status notapplicable"><span class="status-inner">10</span></span><strong>Nicht zutreffend</strong><span class="value">4%</span>
             </div><br style="clear:both;">
@@ -1049,10 +1049,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
             
             
-            <span class="complete" style="width:71.25506072874494%" title="Daten verfügbar: 71%"></span>
+            <span class="complete" style="width:71.25506072874494%" title="Verfügbar: 71%"></span>
             
             
-            <span class="notstarted" style="width:2.0242914979757085%" title="Datenquellenanalyse: 2%"></span>
+            <span class="notstarted" style="width:2.0242914979757085%" title="Nicht verfügbar: 2%"></span>
             
             
             <span class="notapplicable" style="width:4.048582995951417%" title="Nicht zutreffend: 4%"></span></div>
@@ -1072,9 +1072,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </span>
         <div class="summary">
             <div class="statuses"><div>
-                        <span class="status complete"><span class="status-inner">2</span></span><strong>Daten verfügbar</strong><span class="value">50%</span>
+                        <span class="status complete"><span class="status-inner">2</span></span><strong>Verfügbar</strong><span class="value">50%</span>
                     </div><div>
-                        <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                        <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                     </div><div>
                         <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                     </div><br style="clear:both;">
@@ -1083,10 +1083,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:50.0%" title="Daten verfügbar: 50%"></span>
+                <span class="complete" style="width:50.0%" title="Verfügbar: 50%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -1103,9 +1103,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </span>
         <div class="summary">
             <div class="statuses"><div>
-                        <span class="status complete"><span class="status-inner">98</span></span><strong>Daten verfügbar</strong><span class="value">73%</span>
+                        <span class="status complete"><span class="status-inner">98</span></span><strong>Verfügbar</strong><span class="value">73%</span>
                     </div><div>
-                        <span class="status notstarted"><span class="status-inner">3</span></span><strong>Datenquellenanalyse</strong><span class="value">2%</span>
+                        <span class="status notstarted"><span class="status-inner">3</span></span><strong>Nicht verfügbar</strong><span class="value">2%</span>
                     </div><div>
                         <span class="status notapplicable"><span class="status-inner">9</span></span><strong>Nicht zutreffend</strong><span class="value">7%</span>
                     </div><br style="clear:both;">
@@ -1114,10 +1114,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:73.13432835820896%" title="Daten verfügbar: 73%"></span>
+                <span class="complete" style="width:73.13432835820896%" title="Verfügbar: 73%"></span>
                 
                 
-                <span class="notstarted" style="width:2.2388059701492535%" title="Datenquellenanalyse: 2%"></span>
+                <span class="notstarted" style="width:2.2388059701492535%" title="Nicht verfügbar: 2%"></span>
                 
                 
                 <span class="notapplicable" style="width:6.716417910447761%" title="Nicht zutreffend: 7%"></span></div>
@@ -1134,9 +1134,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </span>
         <div class="summary">
             <div class="statuses"><div>
-                        <span class="status complete"><span class="status-inner">74</span></span><strong>Daten verfügbar</strong><span class="value">69%</span>
+                        <span class="status complete"><span class="status-inner">74</span></span><strong>Verfügbar</strong><span class="value">69%</span>
                     </div><div>
-                        <span class="status notstarted"><span class="status-inner">2</span></span><strong>Datenquellenanalyse</strong><span class="value">2%</span>
+                        <span class="status notstarted"><span class="status-inner">2</span></span><strong>Nicht verfügbar</strong><span class="value">2%</span>
                     </div><div>
                         <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Nicht zutreffend</strong><span class="value">1%</span>
                     </div><br style="clear:both;">
@@ -1145,10 +1145,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:69.15887850467288%" title="Daten verfügbar: 69%"></span>
+                <span class="complete" style="width:69.15887850467288%" title="Verfügbar: 69%"></span>
                 
                 
-                <span class="notstarted" style="width:1.8691588785046729%" title="Datenquellenanalyse: 2%"></span>
+                <span class="notstarted" style="width:1.8691588785046729%" title="Nicht verfügbar: 2%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.9345794392523364%" title="Nicht zutreffend: 1%"></span></div>
@@ -1165,9 +1165,9 @@ data-event-label="Change reporting status view to un_designated_tier"
         </span>
         <div class="summary">
             <div class="statuses"><div>
-                        <span class="status complete"><span class="status-inner">2</span></span><strong>Daten verfügbar</strong><span class="value">100%</span>
+                        <span class="status complete"><span class="status-inner">2</span></span><strong>Verfügbar</strong><span class="value">100%</span>
                     </div><div>
-                        <span class="status notstarted"><span class="status-inner">0</span></span><strong>Datenquellenanalyse</strong><span class="value">0%</span>
+                        <span class="status notstarted"><span class="status-inner">0</span></span><strong>Nicht verfügbar</strong><span class="value">0%</span>
                     </div><div>
                         <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Nicht zutreffend</strong><span class="value">0%</span>
                     </div><br style="clear:both;">
@@ -1176,10 +1176,10 @@ data-event-label="Change reporting status view to un_designated_tier"
         <div class="goal-stats">
                 
                 
-                <span class="complete" style="width:100.0%" title="Daten verfügbar: 100%"></span>
+                <span class="complete" style="width:100.0%" title="Verfügbar: 100%"></span>
                 
                 
-                <span class="notstarted" style="width:0.0%" title="Datenquellenanalyse: 0%"></span>
+                <span class="notstarted" style="width:0.0%" title="Nicht verfügbar: 0%"></span>
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Nicht zutreffend: 0%"></span></div>
@@ -1257,12 +1257,12 @@ data-event-label="Change reporting status view to un_designated_tier"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20210602124856'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20210602131155'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20210602124856"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20210602131155"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
