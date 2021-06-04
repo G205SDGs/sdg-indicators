@@ -93,9 +93,7 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
     }
   }, this);
 
-  //datasets.sort(function(a, b) { return (a.label > b.label) ? 1 : -1; });
-
-
+  datasets.sort(function(a, b) { return (a.label > b.label) ? 1 : -1; });
   if (headline.length > 0) {
     dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
     datasets.unshift(dataset);
@@ -318,8 +316,7 @@ function getBaseDataset() {
  * @return {string} Human-readable description of combo
  */
 function getCombinationDescription(combination, fallback) {
-  //console.log("Combination for legend: ", combination);
-  var keys = Object.keys(combination); //.sort();
+  var keys = Object.keys(combination);
   if (keys.length === 0) {
     return fallback;
   }
