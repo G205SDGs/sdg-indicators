@@ -1869,6 +1869,24 @@ footer {
       background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==");
       background-repeat: repeat;
       background-position: -5px 0; }
+  #main-content #legend.legend-for-line-chart .swatch {
+    height: 3px;
+    position: relative; }
+    #main-content #legend.legend-for-line-chart .swatch .swatch-inner {
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      top: -4px;
+      left: 17px;
+      border-radius: 10px; }
+    #main-content #legend.legend-for-line-chart .swatch.headline {
+      height: 6px; }
+      #main-content #legend.legend-for-line-chart .swatch.headline .swatch-inner {
+        top: -3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 0; }
   #main-content #legend span {
     vertical-align: middle;
     line-height: 18px; }
