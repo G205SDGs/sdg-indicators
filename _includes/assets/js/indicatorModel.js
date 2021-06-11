@@ -321,6 +321,7 @@ var indicatorModel = function (options) {
     });
   };
 };
+console.log("selectedSeries: ", this.selectedSeries,"  selectedUnit: ", this.selectedUnit);
 
 indicatorModel.prototype = {
   initialise: function () {
