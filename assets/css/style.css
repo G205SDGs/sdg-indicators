@@ -174,10 +174,19 @@ input[type="checkbox"]:focus, body.contrast-high input[type="checkbox"]:focus {
 .tabPanel:focus,
 input[type="text"]:focus,
 body.contrast-high input[type="text"]:focus,
+.variable-selector button.accessBtn:focus,
 div[tabindex]:focus {
   background-color: white !important;
   box-shadow: none !important;
   outline: 3px solid #ffdd00 !important; }
+
+body.contrast-high .variable-selector button.accessBtn:focus {
+  background-color: black !important;
+  box-shadow: none !important;
+  outline: 3px solid #ffdd00 !important;
+  color: white !important; }
+  body.contrast-high .variable-selector button.accessBtn:focus, body.contrast-high .variable-selector button.accessBtn:focus span {
+    color: white !important; }
 
 body.contrast-high div[tabindex]:focus {
   background-color: black !important;
@@ -1699,7 +1708,9 @@ footer {
     background: #ccc; }
 #main-content #toolbar .accessBtn {
   padding: 0px !important;
-  border: none; }
+  border: 1px solid transparent; }
+  #main-content #toolbar .accessBtn:focus {
+    border: 1px solid #555; }
 #main-content #toolbar > p {
   font-size: 96%; }
 #main-content #fields {
