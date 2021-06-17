@@ -21,6 +21,33 @@ body {
 ul {
   padding-left: 2rem; }
 
+/**
+ * CSS rules specific to certain languages.
+ */
+.language-ar {
+  direction: rtl; }
+
+.language-km #page-content,
+.language-km #indicator-sidebar,
+.language-km #indicator-main,
+.language-km #main-content,
+.language-km .goal-banner,
+.language-lo #page-content,
+.language-lo #indicator-sidebar,
+.language-lo #indicator-main,
+.language-lo #main-content,
+.language-lo .goal-banner {
+  line-break: anywhere; }
+.language-km #main-content .status-inner,
+.language-km #main-content .status,
+.language-lo #main-content .status-inner,
+.language-lo #main-content .status {
+  line-break: normal; }
+.language-km #indicator-main #national th[scope="row"], .language-km #indicator-main #global th[scope="row"],
+.language-lo #indicator-main #national th[scope="row"],
+.language-lo #indicator-main #global th[scope="row"] {
+  min-width: 100px; }
+
 .js #headlineTable {
   display: none; }
 
@@ -667,9 +694,6 @@ body.contrast-high #zip-download-info {
 .goal-banner .goal-icon a:focus {
   outline: 6px #ffdd00 solid !important; }
 
-.language-ar {
-  direction: rtl; }
-
 .language-toggle-dropdown {
   margin-top: -2px; }
   .language-toggle-dropdown .dropdown-toggle {
@@ -923,6 +947,10 @@ footer #footerLinks .language-toggle-menu-footer {
     border-radius: 5px; }
     #main-content #map .disaggregation-select-container label {
       margin-right: 4px; }
+  @media only screen and (max-width: 480px) {
+    #main-content #map .leaflet-control-attribution {
+      max-width: 100px;
+      text-align: right; } }
   #main-content #map .selection-legend {
     background-color: rgba(150, 150, 150, 0.6);
     padding: 0;
