@@ -134,7 +134,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210629011923">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210630012553">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -271,7 +271,7 @@ layout-indicator
             aria-haspopup="true">
           <button data-target="search-mobile" aria-expanded="false">Suche</button>
           <div id="search-mobile" class="menu-target">
-  <form action="/sdg-indicators/search">
+  <form action="/sdg-indicators/search/">
     <label class="sr-only" for="indicator_search-mobile">Suche</label>
     <input type="text" name="q" id="indicator_search-mobile" title="Suche" /><!--
     --><button aria-label="Suche" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -282,7 +282,7 @@ layout-indicator
       </ul>
 
       <div id="search" class="menu-target">
-  <form action="/sdg-indicators/search">
+  <form action="/sdg-indicators/search/">
     <label class="sr-only" for="indicator_search">Suche</label>
     <input type="text" name="q" id="indicator_search" title="Suche" /><!--
     --><button aria-label="Suche" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
@@ -2126,12 +2126,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20210629011923'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20210630012553'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20210629011923"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20210630012553"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

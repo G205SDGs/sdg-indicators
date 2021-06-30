@@ -903,6 +903,8 @@ footer #footerLinks .language-toggle-menu-footer {
     justify-content: center; }
     #main-content #map #loader-container img {
       height: auto; }
+  #main-content #map .leaflet-control-search #map-search-combobox {
+    display: inline; }
   #main-content #map .leaflet-control-search .search-button {
     background-image: none;
     font-size: 20px;
