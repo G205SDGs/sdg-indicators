@@ -2830,7 +2830,6 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     });
   };
 };
-console.log("selectedSeries: ", this.selectedSeries,"  selectedUnit: ", this.selectedUnit);
 
 indicatorModel.prototype = {
   initialise: function () {
