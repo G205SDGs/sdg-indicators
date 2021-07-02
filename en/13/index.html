@@ -129,7 +129,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210702121024">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210702124617">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -530,12 +530,12 @@ layout-goal-by-target
       <div class="col-md-12  goal-indicator">
         <span>
           13.2.1
-          <span class="status inprogress">
-            In progress
+          <span class="status complete">
+            Reported
           </span>
         </span>
         <a href="/sdg-indicators/en/13-2-1">
-          Number of countries with NDCs, long-term strategies, national adaptation plans, strategies as reported in adaptation communications and national communications
+          Number of countries with nationally determined contributions, long-term strategies, national adaptation plans and adaptation communications, as reported to the secretariat of the United Nations Framework Convention on Climate Change
         </a>
         
       </div>
@@ -663,7 +663,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/en/13-b-1">
-          Number of least developed countries and small island developing States with NDCs, long-term strategies, national adaptation plans, strategies as reported in adaptation communications and national communications
+          Number of least developed countries and small island developing States with nationally determined contributions, long-term strategies, national adaptation plans and adaptation communications, as reported to the secretariat of the United Nations Framework Convention on Climate Change
         </a>
         
       </div>
@@ -736,12 +736,12 @@ layout-goal-by-target
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20210702121024'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20210702124617'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20210702121024"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20210702124617"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -783,6 +783,7 @@ $(function() {
               spanGaps: domData.spangaps,
               graphAnnotations: domData.graphannotations,
               indicatorDownloads: domData.indicatordownloads,
+              dataSchema: domData.dataschema,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
               precision: domData.precision,
             }),
