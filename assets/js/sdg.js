@@ -1074,7 +1074,12 @@ opensdg.chartColors = function(indicatorId) {
 
 };
 opensdg.maptitles = function(indicatorId) {
-  if(indicatorId == "indicator_5-5-1"){
+  if(indicatorId == "indicator_2-4-1"){
+
+    this.mapTitle = translations.t("organically farmed agricultural land (data from destatis)")
+    this.mapUnit = translations.t("%")
+  }
+  else if(indicatorId == "indicator_5-5-1"){
 
     this.mapTitle = translations.t("seats held by women in national parliament")
     this.mapUnit = translations.t("%")
@@ -2254,6 +2259,8 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     pointBackgroundColor: background,
     borderDash: border,
     borderWidth: 2,
+    headline: false,
+    pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
     excess: excess,
     spanGaps: spanGaps,
@@ -2328,6 +2335,8 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
     pointBorderColor: getHeadlineColor(),
     pointBackgroundColor: getHeadlineColor(),
     borderWidth: 4,
+    headline: true,
+    pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
     showLine: showLine,
     spanGaps: spanGaps,
@@ -3322,10 +3331,11 @@ var indicatorView = function (model, options) {
         legendCallback: function(chart) {
             var text = [];
             text.push('<h5 class="sr-only">' + translations.indicator.plot_legend_description + '</h5>');
-            text.push('<ul id="legend">');
+            text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
             _.each(chart.data.datasets, function(dataset) {
               text.push('<li>');
-              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+              text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+              text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
               text.push('</span>');
               text.push(translations.t(dataset.label));
               text.push('</li>');
