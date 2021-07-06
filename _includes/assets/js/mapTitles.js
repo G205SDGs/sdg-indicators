@@ -1,5 +1,10 @@
 opensdg.maptitles = function(indicatorId) {
-  if(indicatorId == "indicator_5-5-1"){
+  if(indicatorId == "indicator_2-4-1"){
+
+    this.mapTitle = translations.t("organically farmed agricultural land (data from destatis)")
+    this.mapUnit = translations.t("%")
+  }
+  else if(indicatorId == "indicator_5-5-1"){
 
     this.mapTitle = translations.t("seats held by women in national parliament")
     this.mapUnit = translations.t("%")
