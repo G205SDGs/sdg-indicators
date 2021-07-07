@@ -9,6 +9,8 @@ layout: page
 
 [Sustainable Development Goals – Indikatoren für die Agenda 2030 für nachhaltige Entwicklung](https://sdg-indikatoren.de//public/wista_SDG.pdf)
 <br><br>
-## Bericht zum HLPF 2016
+## Berichte zum HLPF
 
 [Bericht der Bundesregierung zum High-Level Political Forum für Nachhaltige Entwicklung 2016 (nur auf Englisch verfügbar)](https://sdg-indikatoren.de//public/HLPF_Bericht.pdf)
+<br><br>
+[Bericht der Bundesregierung zum High-Level Political Forum für Nachhaltige Entwicklung 2021 (nur auf Englisch verfügbar)](https://sdg-indikatoren.de//public/HLPF_Bericht_2021.pdf)
