@@ -3243,3 +3243,41 @@ body.contrast-high .navbar #menu .btn-group.menu-dropdown .dropdown-menu li a {
   .mytablestyle td {
     vertical-align: top;
     text-align: left; }
+
+#legend {
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 20px; }
+  #legend > li {
+    font-size: 13px;
+    list-style-type: none;
+    display: inline-block;
+    color: #666;
+    padding: 5px; }
+  #legend .swatch {
+    display: inline-block;
+    width: 45px;
+    height: 15px;
+    margin-right: 3px; }
+    #legend .swatch.dashed {
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAFklEQVQImWP8////fwY0wMjIyIguBgCaAgQCms5tJwAAAABJRU5ErkJggg==");
+      background-repeat: repeat;
+      background-position: -5px 0; }
+  #legend.legend-for-line-chart .swatch {
+    height: 3px;
+    position: relative; }
+    #legend.legend-for-line-chart .swatch .swatch-inner {
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      top: -4px;
+      left: 17px;
+      border-radius: 10px; }
+    #legend.legend-for-line-chart .swatch.headline {
+      height: 6px; }
+      #legend.legend-for-line-chart .swatch.headline .swatch-inner {
+        top: -3px;
+        width: 12px;
+        height: 12px;
+        border-radius: 10px; }
