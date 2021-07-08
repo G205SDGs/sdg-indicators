@@ -93,7 +93,9 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
     }
   }, this);
 
-  datasets.sort(function(a, b) { return (a.label > b.label) ? 1 : -1; });
+  //datasets.sort(function(a, b) { return (a.label > b.label) ? 1 : -1; });
+
+
   if (headline.length > 0) {
     dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
     datasets.unshift(dataset);
@@ -365,7 +367,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps) {
     pointBorderColor: getHeadlineColor(),
     pointBackgroundColor: getHeadlineColor(),
     borderWidth: 4,
-    headline: true,
+    headline: false,
     pointStyle: 'circle',
     data: prepareDataForDataset(years, rows),
     showLine: showLine,
