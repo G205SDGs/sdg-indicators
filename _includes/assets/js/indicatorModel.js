@@ -48,6 +48,7 @@ var indicatorModel = function (options) {
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
   this.dataSchema = options.dataSchema;
+  this.graphStepsize = options.graphStepsize;
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
@@ -320,6 +321,7 @@ var indicatorModel = function (options) {
       chartTitle: this.chartTitle,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
+      graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
     });
   };
 };
