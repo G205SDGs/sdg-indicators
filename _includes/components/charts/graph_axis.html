@@ -1,0 +1,19 @@
+<script>
+opensdg.chartConfigAlter(function(config, info) {
+  if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
+    var overrides = {
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              stepSize: info.graphStepsize.step,
+            }
+          }]
+        }
+      }
+    }
+    // Add these overrides onto the normal config.
+    $.extend(true, config, overrides);
+  }
+});
+</script>

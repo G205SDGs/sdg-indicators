@@ -447,9 +447,9 @@ var indicatorView = function (model, options) {
             ticks: {
               suggestedMin: 0,
               fontColor: tickColor,
-              callback: function(value) {
-                return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
-              },
+              //callback: function(value) {
+                //return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
+              //},
             },
             scaleLabel: {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,

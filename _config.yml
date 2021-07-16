@@ -163,7 +163,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@data-schema
-remote_theme: open-sdg/open-sdg@1.4.0-dev #1.3.0
+remote_theme: open-sdg/open-sdg@1.4.0-beta3
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
