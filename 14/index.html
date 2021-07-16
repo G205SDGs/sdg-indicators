@@ -129,7 +129,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210716012408">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210716101054">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -740,7 +740,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/14-b-1">
-          Umsetzungsgrad eines rechtlichen/regulatorischen/politischen/institutionellen Rahmenwerks, das die Zugangsrechte für Kleinfischerei anerkennt und schützt
+          Umsetzungsgrad eines rechtlichen/ regulatorischen/ politischen/ institutionellen Rahmens, das die Zugangsrechte für Kleinfischerei anerkennt und schützt
         </a>
         
       </div>
@@ -775,7 +775,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/14-c-1">
-          Anzahl der Staaten, die Fortschritte bei der Ratifizierung, Annahme und Durchführung von ozeanbezogenen Übereinkünften zur Umsetzung des Völkerrechts, wie es im Seerechtsübereinkommen der Vereinten Nationen niedergelegt ist, durch rechtliche, politische und institutionelle Rahmenwerke machen
+          Anzahl der Staaten, die Fortschritte bei der Ratifizierung, Annahme und Durchführung von ozeanbezogenen Übereinkünften zur Umsetzung des Völkerrechts, wie es im Seerechtsübereinkommen der Vereinten Nationen niedergelegt ist, durch rechtliche, politische und institutionelle Rahmenbedingungen zugunsten der Erhaltung und nachhaltigen Nutzung der Ozeane und ihrer Ressourcen machen
         </a>
         
       </div>
@@ -847,12 +847,12 @@ layout-goal-by-target
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20210716012408'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20210716101054'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20210716012408"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20210716101054"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -897,6 +897,7 @@ $(function() {
               dataSchema: domData.dataschema,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
               precision: domData.precision,
+              graphStepsize: domData.graphstepsize,
             }),
             view  = new indicatorView(model, {
               rootElement: '#indicatorData',

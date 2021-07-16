@@ -1710,37 +1710,40 @@ function getCombinationData(fieldItems) {
   });
 
   // Generate all possible subsets of these key/value pairs.
-  var powerset = [];
-  // Start off with an empty item.
-  powerset.push([]);
+  var powerset = [[]];
   for (var i = 0; i < fieldValuePairs.length; i++) {
     for (var j = 0, len = powerset.length; j < len; j++) {
-      var candidate = powerset[j].concat(fieldValuePairs[i]);
-      if (!hasDuplicateField(candidate)) {
-        powerset.push(candidate);
-      }
+      powerset.push(powerset[j].concat(fieldValuePairs[i]));
     }
   }
-
-  function hasDuplicateField(pairs) {
-    var fields = [], i;
-    for (i = 0; i < pairs.length; i++) {
-      var field = Object.keys(pairs[i])[0]
-      if (fields.includes(field)) {
-        return true;
-      }
-      else {
-        fields.push(field);
-      }
+  // But we require special filtering on top of this.
+  return powerset.filter(function(combinations) {
+    // We don't need the empty set.
+    if (combinations.length === 0) {
+      return false;
     }
-    return false;
-  }
-
-  // Remove the empty item.
-  powerset.shift();
-
-  return powerset.map(function(combinations) {
-    // We want to merge these into a single object.
+    else if (combinations.length === 1) {
+      return true;
+    }
+    // We don't want any sets that include multiples of the same field.
+    // Eg, we do not need to consider a set containing both "Female" and
+    // "Male". So filter them out here.
+    else {
+      var fieldsUsed = [];
+      for (var i = 0, len = combinations.length; i < len; i++) {
+        var thisField = Object.keys(combinations[i])[0];
+        if (fieldsUsed.includes(thisField)) {
+          // Abort as soon as we find a duplicate.
+          return false;
+        }
+        else {
+          fieldsUsed.push(thisField);
+        }
+      }
+      return true;
+    }
+  }).map(function(combinations) {
+    // We also want to merge these into a single object.
     var combinedSubset = {};
     combinations.forEach(function(keyValue) {
       Object.assign(combinedSubset, keyValue);
@@ -1989,6 +1992,16 @@ function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
  */
 function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
   return getMatchByUnitSeries(graphLimits, selectedUnit, selectedSeries);
+}
+
+/**
+ * @param {Array} graphStepsize Objects containing 'unit' and 'title'
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Object|false} Graph limit object, if any
+ */
+function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
+  return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
 }
 
 /**
@@ -2514,6 +2527,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
     getGraphLimits: getGraphLimits,
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,
+    getGraphStepsize: getGraphStepsize,
     // Backwards compatibility.
     footerFields: deprecated('helpers.footerFields'),
   }
@@ -2566,6 +2580,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
   this.dataSchema = options.dataSchema;
+  this.graphStepsize = options.graphStepsize;
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
@@ -2838,6 +2853,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
       chartTitle: this.chartTitle,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
+      graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
     });
   };
 };
@@ -3317,9 +3333,9 @@ var indicatorView = function (model, options) {
             ticks: {
               suggestedMin: 0,
               fontColor: tickColor,
-              callback: function(value) {
-                return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
-              },
+              //callback: function(value) {
+                //return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
+              //},
             },
             scaleLabel: {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,

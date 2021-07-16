@@ -129,7 +129,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210716012408">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210716101054">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -506,7 +506,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/en/16-1-3">
-          Proportion of population subjected to (a) physical violence, (b) psychological violence and (c) sexual violence in the previous 12 months
+          Proportion of population subjected to (a) physical violence; (b) psychological violence; and (c) sexual violence in the previous 12 months
         </a>
         
       </div>
@@ -564,7 +564,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/en/16-2-1">
-          Proportion of children aged 1-17 years who experienced any physical punishment and/or psychological aggression by caregivers in the past month
+          Proportion of children aged 1–17 years who experienced any physical punishment and/ or psychological aggression by caregivers in the past month
         </a>
         
       </div>
@@ -610,7 +610,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/en/16-2-3">
-          Proportion of young women and men aged 18‑29 years who experienced sexual violence by age 18
+          Proportion of young women and men aged 18–29 years who experienced sexual violence by age 18
         </a>
         
       </div>
@@ -900,7 +900,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/en/16-7-1">
-          Proportions of positions in national and local public institutions, including (a) the legislatures; (b) the public service; and (c) the judiciary, compared to national distributions, by sex, age, persons with disabilities and population groups
+          Proportions of positions in national and local institutions, including (a) the legislatures; (b) the public service; and (c) the judiciary, compared to national distributions, by sex, age, persons with disabilities and population groups
         </a>
         
       </div>
@@ -1051,7 +1051,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/en/16-10-2">
-          Number of countries that adopt and implement constitutional, statutory and/or policy guarantees for public access to information
+          Number of countries that adopt and implement constitutional, statutory and/ or policy guarantees for public access to information
         </a>
         
       </div>
@@ -1193,12 +1193,12 @@ layout-goal-by-target
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20210716012408'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20210716101054'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20210716012408"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20210716101054"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1243,6 +1243,7 @@ $(function() {
               dataSchema: domData.dataschema,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
               precision: domData.precision,
+              graphStepsize: domData.graphstepsize,
             }),
             view  = new indicatorView(model, {
               rootElement: '#indicatorData',

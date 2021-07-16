@@ -129,7 +129,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210716012408">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20210716101054">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet" crossorigin="">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -506,7 +506,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/16-1-3">
-          Anteil der Bevölkerung, der in den vorangegangenen 12 Monaten (a) physischer Gewalt, (b) psychischer Gewalt und/oder (c) sexueller Gewalt ausgesetzt war
+          Anteil der Bevölkerung, der in den vorangegangenen 12 Monaten (a) physischer Gewalt; (b) psychischer Gewalt; und (c) sexueller Gewalt ausgesetzt war
         </a>
         
       </div>
@@ -564,7 +564,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/16-2-1">
-          Anteil der Kinder im Alter von 1-17 Jahren, die im vorangegangenen Monat körperlicher Züchtigung und/oder psychischer Aggression durch Betreuungspersonen ausgesetzt waren
+          Anteil der Kinder im Alter von 1–17 Jahren, die im vorangegangenen Monat körperlicher Züchtigung und/ oder psychischer Aggression durch Betreuungspersonen ausgesetzt waren
         </a>
         
       </div>
@@ -610,7 +610,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/16-2-3">
-          Anteil junger Frauen und Männer im Alter von 18-29 Jahren, die vor Vollendung des 18. Lebensjahrs sexuelle Gewalt erlebt haben
+          Anteil junger Frauen und Männer im Alter von 18–29 Jahren, die vor Vollendung des 18. Lebensjahrs sexuelle Gewalt erlebt haben
         </a>
         
       </div>
@@ -900,7 +900,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/16-7-1">
-          Anteil der Stellen in nationalen und lokalen öffentlichen Institutionen, einschließlich (a) Gesetzgebungsorganen, (b) des öffentlichen Dienstes und (c) Rechtsprechungsorganen, im Vergleich zur nationalen Stellenverteilung, nach Geschlecht, Alter, Menschen mit Behinderungen und Bevölkerungsgruppen
+          Stellenverteilung in nationalen und lokalen Institutionen, einschließlich a) Gesetzgebungsorganen; b) des öffentlichen Dienstes; und c) Rechtsprechungsorganen, im Vergleich zur nationalen Stellenverteilung, nach Geschlecht, Alter, Menschen mit Behinderungen und Bevölkerungsgruppe
         </a>
         
       </div>
@@ -1051,7 +1051,7 @@ layout-goal-by-target
           </span>
         </span>
         <a href="/sdg-indicators/16-10-2">
-          Anzahl der Staaten mit verfassungsmäßigen, gesetzlichen und/oder politischen Garantien für den öffentlichen Zugang zu Informationen
+          Anzahl der Staaten mit verfassungsmäßigen, gesetzlichen und/ oder politischen Garantien für den öffentlichen Zugang zu Informationen
         </a>
         
       </div>
@@ -1193,12 +1193,12 @@ layout-goal-by-target
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20210716012408'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20210716101054'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20210716012408"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20210716101054"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
@@ -1243,6 +1243,7 @@ $(function() {
               dataSchema: domData.dataschema,
               compositeBreakdownLabel: domData.compositebreakdownlabel,
               precision: domData.precision,
+              graphStepsize: domData.graphstepsize,
             }),
             view  = new indicatorView(model, {
               rootElement: '#indicatorData',
