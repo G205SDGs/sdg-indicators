@@ -97,8 +97,10 @@ menu:
         translation_key: menu.facts_agenda
       - path: /facts_dns/
         translation_key: menu.facts_dns
-      - path: /publications/
-        translation_key: menu.publications
+      #- path: /publications/
+        #translation_key: menu.publications
+  - path: /publications/
+    translation_key: menu.publications
   - path: https://sustainabledevelopment-deutschland.github.io
     translation_key: menu.linkToDnsPlatform
 
@@ -144,9 +146,11 @@ search_index_extra_fields:
   - graph_title
 
 series_toggle: true
+graph_title_from_series: true
 decimal_separator: ','
 graph_color_headline: '#b8b8b8' #
 #graph_color_headline: ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#26bde2', '#fcc30b', '#a21942', '#fd6925', '#dd1367', '#fd9d24', '#bf8b2e', '#3f7e44', '#0a97d9', '#56c02b', '#00689d', '#19486a']
+useHeadlineColor: false
 no_value_character: '.'
 
 reporting_status:
@@ -163,7 +167,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@data-schema
-remote_theme: open-sdg/open-sdg@1.4.0-beta3
+remote_theme: open-sdg/open-sdg@1.5.0-dev
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
