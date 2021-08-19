@@ -1,3 +1,4 @@
+//Last check: 16.08.2021
 {% comment %}
 /**
  * Helper functions to be used in indicatorModel.js.

@@ -1,3 +1,4 @@
+//Last check: 16.08.2021
 var indicatorModel = function (options) {
 
   var helpers = {% include assets/js/model/helpers.js %}
@@ -183,7 +184,7 @@ var indicatorModel = function (options) {
         var startingUnit = this.selectedUnit;
         if (this.hasStartValues) {
           var unitInStartValues = helpers.getUnitFromStartValues(this.startValues);
-          if (unitInStartValues) {
+          if (unitInStartValues && this.units.includes(unitInStartValues)) {
             startingUnit = unitInStartValues;
           }
         }
