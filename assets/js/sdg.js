@@ -1006,7 +1006,6 @@ var accessibilitySwitcher = function() {
 
   function imageFix(contrast) {
     var doNotSwitchTheseSuffixes = ['.svg'];
-    var doNotSwitchThesePrefixes = ['https://platform-cdn.sharethis.com/'];
     if (contrast == 'high')  {
       _.each($('img:not([src*=high-contrast])'), function(image) {
         var src = $(image).attr('src').toLowerCase();
@@ -1014,12 +1013,6 @@ var accessibilitySwitcher = function() {
         for (var i = 0; i < doNotSwitchTheseSuffixes.length; i++) {
           var suffix = doNotSwitchTheseSuffixes[i];
           if (src.slice(0 - suffix.length) === suffix) {
-            switchThisImage = false;
-          }
-        }
-        for (var i = 0; i < doNotSwitchThesePrefixes.length; i++) {
-          var prefix = doNotSwitchThesePrefixes[i];
-          if (src.slice(0, prefix.length) === prefix) {
             switchThisImage = false;
           }
         }
@@ -1098,9 +1091,11 @@ opensdg.maptitles = function(indicatorId) {
   return [this.mapTitle, this.mapUnit] ;
 
 };
+//Last check: 16.08.2021
 var indicatorModel = function (options) {
 
-  var helpers = 
+  var helpers = //Last check: 16.08.2021
+
 (function() {
 
   /**
@@ -1114,7 +1109,7 @@ var VALUE_COLUMN = 'Value';
 // Note this headline color is overridden in indicatorView.js.
 var HEADLINE_COLOR = '#777777';
 var SERIES_TOGGLE = true;
-var GRAPH_TITLE_FROM_SERIES = false;
+var GRAPH_TITLE_FROM_SERIES = true;
 
   /**
  * Model helper functions with general utility.
@@ -1710,40 +1705,37 @@ function getCombinationData(fieldItems) {
   });
 
   // Generate all possible subsets of these key/value pairs.
-  var powerset = [[]];
+  var powerset = [];
+  // Start off with an empty item.
+  powerset.push([]);
   for (var i = 0; i < fieldValuePairs.length; i++) {
     for (var j = 0, len = powerset.length; j < len; j++) {
-      powerset.push(powerset[j].concat(fieldValuePairs[i]));
+      var candidate = powerset[j].concat(fieldValuePairs[i]);
+      if (!hasDuplicateField(candidate)) {
+        powerset.push(candidate);
+      }
     }
   }
-  // But we require special filtering on top of this.
-  return powerset.filter(function(combinations) {
-    // We don't need the empty set.
-    if (combinations.length === 0) {
-      return false;
-    }
-    else if (combinations.length === 1) {
-      return true;
-    }
-    // We don't want any sets that include multiples of the same field.
-    // Eg, we do not need to consider a set containing both "Female" and
-    // "Male". So filter them out here.
-    else {
-      var fieldsUsed = [];
-      for (var i = 0, len = combinations.length; i < len; i++) {
-        var thisField = Object.keys(combinations[i])[0];
-        if (fieldsUsed.includes(thisField)) {
-          // Abort as soon as we find a duplicate.
-          return false;
-        }
-        else {
-          fieldsUsed.push(thisField);
-        }
+
+  function hasDuplicateField(pairs) {
+    var fields = [], i;
+    for (i = 0; i < pairs.length; i++) {
+      var field = Object.keys(pairs[i])[0]
+      if (fields.includes(field)) {
+        return true;
       }
-      return true;
+      else {
+        fields.push(field);
+      }
     }
-  }).map(function(combinations) {
-    // We also want to merge these into a single object.
+    return false;
+  }
+
+  // Remove the empty item.
+  powerset.shift();
+
+  return powerset.map(function(combinations) {
+    // We want to merge these into a single object.
     var combinedSubset = {};
     combinations.forEach(function(keyValue) {
       Object.assign(combinedSubset, keyValue);
@@ -1968,7 +1960,8 @@ function sortFieldValueNames(fieldName, fieldValues, dataSchema) {
   }
 }
 
-  /**
+  //Last check: 16.08.2021
+/**
  * Model helper functions related to charts and datasets.
  */
 
@@ -2715,7 +2708,7 @@ function getPrecision(precisions, selectedUnit, selectedSeries) {
         var startingUnit = this.selectedUnit;
         if (this.hasStartValues) {
           var unitInStartValues = helpers.getUnitFromStartValues(this.startValues);
-          if (unitInStartValues) {
+          if (unitInStartValues && this.units.includes(unitInStartValues)) {
             startingUnit = unitInStartValues;
           }
         }
@@ -2884,6 +2877,7 @@ var mapView = function () {
     });
   };
 };
+//Last check: 16.08.2021
 var indicatorView = function (model, options) {
 
   "use strict";
