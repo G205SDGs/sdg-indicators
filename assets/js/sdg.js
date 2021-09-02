@@ -3176,7 +3176,9 @@ var indicatorView = function (model, options) {
       selectedUnit: selectedUnit
     }));
 
-    if(!units.length) {
+    
+    if (units.length < 1) {
+    
       $(this._rootElement).addClass('no-units');
     }
   };
@@ -3193,7 +3195,9 @@ var indicatorView = function (model, options) {
         selectedSeries: selectedSeries
       }));
 
-      if(!serieses.length) {
+      
+      if (serieses.length < 1) {
+      
         $(this._rootElement).addClass('no-serieses');
       }
     }
@@ -3331,6 +3335,7 @@ var indicatorView = function (model, options) {
                 //return view_obj.alterDataDisplay(value, undefined, 'chart y-axis tick');
               //},
             },
+
             scaleLabel: {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
               labelString: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
@@ -3369,7 +3374,7 @@ var indicatorView = function (model, options) {
             },
             afterBody: function() {
               var unit = view_obj._model.selectedUnit ? translations.t(view_obj._model.selectedUnit) : view_obj._model.measurementUnit;
-              if (typeof unit !== 'undefined' && unit !== '') {
+              if (typeof unit !== 'undefined' && unit !== '' && unit !== translations.t('no unit')) {
                 return '\n' + translations.indicator.unit + ': ' + unit;
               }
             }

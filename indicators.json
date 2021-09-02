@@ -387,7 +387,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/3-9-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "3-9-2",
@@ -435,7 +435,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/3-b-3",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "3-c-1",
@@ -651,7 +651,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/5-6-2",
-          "status": "inprogress"
+          "status": "complete"
         },
         {
           "id": "5-a-1",
@@ -1771,7 +1771,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/16-2-3",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "16-3-1",
