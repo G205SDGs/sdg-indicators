@@ -2943,7 +2943,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
  * This file left blank intentionally. Implementations of Open SDG can use
  * a similarly named file for custom styles.
  */
-/*#2.1 Navigation Buttond */
+/*#2.1 Navigation Buttons */
 .goal-1.goal-banner {
   background-color: #E52B3D; }
 .goal-1.sup-goal-banner {
@@ -3505,3 +3505,6 @@ body.contrast-high .navbar #menu .btn-group.menu-dropdown .dropdown-menu li a {
         width: 12px;
         height: 12px;
         border-radius: 10px; }
+
+.chart-title {
+  text-align: center; }
