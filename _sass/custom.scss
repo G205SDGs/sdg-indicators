@@ -5,7 +5,7 @@
  * a similarly named file for custom styles.
  */
 
-/*#2.1 Navigation Buttond */
+/*#2.1 Navigation Buttons */
  @for $i from 1 through length($goal-banner-backgroundColors) {
    $background-c: nth($goal-banner-backgroundColors, $i);
    .goal-#{$i} {
@@ -287,3 +287,11 @@ body.contrast-high {
       }
     }
   }
+
+
+
+//--- recenter chart title 25.8.21
+.chart-title {
+  //margin-left: 20px;
+ text-align: center
+}
