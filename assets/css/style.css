@@ -2228,6 +2228,8 @@ body.contrast-high #dataset-size-warning {
   margin-top: 0;
   margin-left: 10px;
   margin-bottom: 15px; }
+.layout-goal .indicator-placeholder-wrapper {
+  padding: 1rem; }
 
 body.contrast-high .goal-indicators div span {
   border-color: white !important;
@@ -2719,6 +2721,8 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   display: block; }
 .layout-goal-by-target-vertical .target-number, .layout-goal-by-target-vertical .indicator-number {
   margin-top: 3px; }
+.layout-goal-by-target-vertical .indicator-number {
+  font-size: 16px; }
 .layout-goal-by-target-vertical .goal-target, .layout-goal-by-target-vertical .goal-indicator h4 {
   clear: left;
   float: left;
