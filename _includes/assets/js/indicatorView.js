@@ -1,4 +1,4 @@
-//Last check: 16.08.2021
+//Last check: 17.09.2021
 var indicatorView = function (model, options) {
 
   "use strict";
@@ -68,7 +68,7 @@ var indicatorView = function (model, options) {
 
     view_obj.createSelectionsTable(args);
 
-    view_obj.updateChartTitle(args.chartTitle);
+    view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>",""));
   });
 
   this._model.onFieldsComplete.attach(function(sender, args) {
@@ -446,6 +446,13 @@ var indicatorView = function (model, options) {
             ticks: {
               fontColor: tickColor,
             },
+            scaleLabel: {
+              display: this._model.xAxisLabel ? true : false,
+              labelString: this._model.xAxisLabel,
+              fontColor: tickColor,
+              fontSize: 14,
+              fontFamily: "'Open Sans', Helvetica, Arial, sans-serif",
+            }
           }],
           yAxes: [{
             gridLines: {
@@ -465,6 +472,8 @@ var indicatorView = function (model, options) {
               display: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
               labelString: this._model.selectedUnit ? translations.t(this._model.selectedUnit) : this._model.measurementUnit,
               fontColor: tickColor,
+              fontSize: 14,
+              fontFamily: "'Open Sans', Helvetica, Arial, sans-serif",
             }
           }]
         },
@@ -493,9 +502,47 @@ var indicatorView = function (model, options) {
           scaler: {}
         },
         tooltips: {
+          backgroundColor: 'rgba(0,0,0,0.7)',
           callbacks: {
             label: function(tooltipItems, data) {
-              return data.datasets[tooltipItems.datasetIndex].label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
+              var label = data.datasets[tooltipItems.datasetIndex].label
+              label = label.replace('<sub>','').replace('</sub>','');
+              if (label.length > 45){
+
+                label = label.split(' ');
+                var line = '';
+
+                for(var i=0; i<label.length; i++){
+                  if (line.concat(label[i]).length < 45){
+                    line = line.concat(label[i] + ' ');
+                  }
+                }
+                return line;
+              } else {
+                return label + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip');
+              }
+            },
+            afterLabel: function(tooltipItems, data) {
+
+              var label = data.datasets[tooltipItems.datasetIndex].label;
+              label = label.replace('<sub>','').replace('</sub>','');
+              if (label.length > 45){
+                label = label.split(' ');
+                var re = [];
+                var line = '';
+                for (var i=0; i<label.length; i++){
+                  if (line.concat(label[i]).length < 45){
+                    line = line.concat(label[i] + ' ');
+                  } else {
+                    re.push(line);
+                    line = '';
+                    line = line.concat(label[i] + ' ');
+                  }
+                };
+                re.push(line.slice(0, -1) + ': ' + view_obj.alterDataDisplay(tooltipItems.yLabel, data, 'chart tooltip'));
+                re.shift();
+              }
+              return re;
             },
             afterBody: function() {
               var unit = view_obj._model.selectedUnit ? translations.t(view_obj._model.selectedUnit) : view_obj._model.measurementUnit;

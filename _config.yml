@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: German Indicators For The Sustainable Development Goals
+title: general.tabTitle #German Indicators For The Sustainable Development Goals
 description: Data Platform Prototype
 baseurl: "/sdg-indicators" # the subpath of your site, e.g. /blog
 url: ""
@@ -104,7 +104,7 @@ menu:
   - path: https://sustainabledevelopment-deutschland.github.io
     translation_key: menu.linkToDnsPlatform
 
-
+contrast_type: single
 
   # - path: /
   #   translation_key: general.seventeen_goals
@@ -159,6 +159,7 @@ reporting_status:
     disaggregation_tabs: false
 
 hide_empty_metadata: true
+hide_single_unit: true
 
 plugins:
   - jekyll-remote-theme
@@ -192,7 +193,7 @@ map_options:
   tileOptions:
     id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w
-    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2020</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2020</a>
+    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2021</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2021</a>
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
   # 1 map color depending on goal --- start ---
   #colorRange: ["#F6E8EC", "#E3BAC6", "#D18CA1", "#BE5E7B", "#AB3055", "#A21942", "#821435", "#610F28", "#410A1A", "#20050D"]

@@ -1,3 +1,4 @@
+//Last check: 17.09.2021
 /**
  * TODO:
  * Integrate with high-contrast switcher.
@@ -224,6 +225,11 @@
 
     // Alter data before displaying it.
     alterData: function(value) {
+      // @deprecated start
+      if (typeof opensdg.dataDisplayAlterations === 'undefined') {
+        opensdg.dataDisplayAlterations = [];
+      }
+      // @deprecated end
       opensdg.dataDisplayAlterations.forEach(function(callback) {
         value = callback(value);
       });
@@ -291,6 +297,7 @@
       var minimumValues = [],
           maximumValues = [],
           availableYears = [];
+          avaialbleValues = [];
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
@@ -382,16 +389,37 @@
           $(plugin.element).parent().append(downloadButton);
 
           // Keep track of the minimums and maximums.
+          console.log("features: ", geoJson.features);
           _.each(geoJson.features, function(feature) {
             if (feature.properties.values && feature.properties.values.length) {
               availableYears = availableYears.concat(Object.keys(feature.properties.values[0]));
-              minimumValues.push(_.min(Object.values(feature.properties.values[0])));
-              maximumValues.push(_.max(Object.values(feature.properties.values[0])));
+              for (var year in feature.properties.values[0]){
+                if (! _.isNaN(feature.properties.values[0][year]) && feature.properties.values[0][year]!="") {
+                  //availableYears.concat(year);
+                  avaialbleValues.push(feature.properties.values[0][year]);
+                }
+              };
+              // _.each(feature.properties.values[0], function(year){
+              //   if (!_.isNaN(year.values(year))) {
+              //     availableYears.concat(Object.key(year));
+              //     avaialbleValues.push(Object.values(year));
+              //   }
+              // });
+              minimumValues.push(_.min(avaialbleValues));
+              maximumValues.push(_.max(avaialbleValues));
             }
           });
+          console.log("minArray: ", minimumValues);
+          console.log("Values: ", avaialbleValues);
+          console.log("Years: ", availableYears);
         }
 
         // Calculate the ranges of values, years and colors.
+        function isMapValueInvalid(val) {
+          return _.isNaN(val) || val === '';
+        }
+        minimumValues = _.reject(minimumValues, isMapValueInvalid);
+        maximumValues = _.reject(maximumValues, isMapValueInvalid);
         plugin.valueRange = [_.min(minimumValues), _.max(maximumValues)];
 
 
@@ -536,7 +564,11 @@
           }
           // Make sure the map is not too high.
           var heightPadding = 75;
+          var minHeight = 400;
           var maxHeight = $(window).height() - heightPadding;
+          if (maxHeight < minHeight) {
+            maxHeight = minHeight;
+          }
           if ($('#map').height() > maxHeight) {
             $('#map').height(maxHeight);
           }
