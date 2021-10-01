@@ -180,7 +180,6 @@ h3 {
     color: #0b0c0c; }
   #main-content .alert a {
     display: inline;
-    color: inherit;
     padding: 0; }
   #main-content h2:first-child {
     margin-bottom: 14px; }
@@ -468,7 +467,7 @@ body.contrast-high #zip-download-info {
 .goal-1 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-1.goal-indicators div span:not(.status-inner) {
+  .goal-1.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #97131f;
     color: #97131f; }
 
@@ -479,7 +478,7 @@ body.contrast-high #zip-download-info {
 .goal-2 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-2.goal-indicators div span:not(.status-inner) {
+  .goal-2.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #976d1a;
     color: #976d1a; }
 
@@ -490,7 +489,7 @@ body.contrast-high #zip-download-info {
 .goal-3 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-3.goal-indicators div span:not(.status-inner) {
+  .goal-3.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #28541d;
     color: #28541d; }
 
@@ -501,7 +500,7 @@ body.contrast-high #zip-download-info {
 .goal-4 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-4.goal-indicators div span:not(.status-inner) {
+  .goal-4.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #6d121b;
     color: #6d121b; }
 
@@ -512,7 +511,7 @@ body.contrast-high #zip-download-info {
 .goal-5 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-5.goal-indicators div span:not(.status-inner) {
+  .goal-5.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #bd1600;
     color: #bd1600; }
 
@@ -523,7 +522,7 @@ body.contrast-high #zip-download-info {
 .goal-6 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-6.goal-indicators div span:not(.status-inner) {
+  .goal-6.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #14768f;
     color: #14768f; }
 
@@ -534,7 +533,7 @@ body.contrast-high #zip-download-info {
 .goal-7 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-7.goal-indicators div span:not(.status-inner) {
+  .goal-7.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #9f7a02;
     color: #9f7a02; }
 
@@ -545,7 +544,7 @@ body.contrast-high #zip-download-info {
 .goal-8 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-8.goal-indicators div span:not(.status-inner) {
+  .goal-8.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #4a0b1e;
     color: #4a0b1e; }
 
@@ -556,7 +555,7 @@ body.contrast-high #zip-download-info {
 .goal-9 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-9.goal-indicators div span:not(.status-inner) {
+  .goal-9.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #ba3c02;
     color: #ba3c02; }
 
@@ -567,7 +566,7 @@ body.contrast-high #zip-download-info {
 .goal-10 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-10.goal-indicators div span:not(.status-inner) {
+  .goal-10.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #7f0b3b;
     color: #7f0b3b; }
 
@@ -578,7 +577,7 @@ body.contrast-high #zip-download-info {
 .goal-11 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-11.goal-indicators div span:not(.status-inner) {
+  .goal-11.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #bc6802;
     color: #bc6802; }
 
@@ -589,7 +588,7 @@ body.contrast-high #zip-download-info {
 .goal-12 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-12.goal-indicators div span:not(.status-inner) {
+  .goal-12.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #6d4f1a;
     color: #6d4f1a; }
 
@@ -600,7 +599,7 @@ body.contrast-high #zip-download-info {
 .goal-13 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-13.goal-indicators div span:not(.status-inner) {
+  .goal-13.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #1e3a20;
     color: #1e3a20; }
 
@@ -611,7 +610,7 @@ body.contrast-high #zip-download-info {
 .goal-14 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-14.goal-indicators div span:not(.status-inner) {
+  .goal-14.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #055277;
     color: #055277; }
 
@@ -622,7 +621,7 @@ body.contrast-high #zip-download-info {
 .goal-15 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-15.goal-indicators div span:not(.status-inner) {
+  .goal-15.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #326c1b;
     color: #326c1b; }
 
@@ -633,7 +632,7 @@ body.contrast-high #zip-download-info {
 .goal-16 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-16.goal-indicators div span:not(.status-inner) {
+  .goal-16.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #002436;
     color: #002436; }
 
@@ -644,7 +643,7 @@ body.contrast-high #zip-download-info {
 .goal-17 {
   padding-top: 30px;
   padding-bottom: 30px; }
-  .goal-17.goal-indicators div span:not(.status-inner) {
+  .goal-17.goal-indicators div span:not(.status-inner):not(.indicator-card-number) {
     border-color: #08131b;
     color: #08131b; }
 
@@ -1345,6 +1344,9 @@ body.contrast-high #map .selection-legend .legend-values li, body.contrast-high 
 
 .klaro .cookie-notice .cn-body strong {
   text-transform: lowercase; }
+.klaro .cookie-notice .cn-body .cn-changes {
+  text-decoration: none !important;
+  font-weight: bold; }
 
 body {
   background: white url("../img/sdgbg.png") top left repeat-x;
@@ -2018,31 +2020,43 @@ footer {
     #main-content.goal-indicators .indicator-cards .indicator-card-number.status.complete,
     #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.complete {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #5cb85c;
+      background: #5cb85c; }
       #main-content.goal-indicators .indicator-cards .indicator-card-number.status.complete .status-inner,
       #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.complete .status-inner {
-        background-color: #5cb85c; }
+        background-color: #5cb85c;
+        background: #5cb85c; }
     #main-content.goal-indicators .indicator-cards .indicator-card-number.status.inprogress,
     #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.inprogress {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #f0ad4e;
+      background: #f0ad4e; }
       #main-content.goal-indicators .indicator-cards .indicator-card-number.status.inprogress .status-inner,
       #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.inprogress .status-inner {
-        background-color: #f0ad4e; }
+        background-color: #f0ad4e;
+        background: #f0ad4e; }
     #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notstarted,
     #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notstarted {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #E27874;
+      background: #E27874; }
       #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notstarted .status-inner,
       #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notstarted .status-inner {
-        background-color: #E27874; }
+        background-color: #E27874;
+        background: #E27874; }
     #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notapplicable,
     #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notapplicable {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #B7B7B7;
+      background: #B7B7B7; }
       #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notapplicable .status-inner,
       #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notapplicable .status-inner {
-        background-color: #B7B7B7; }
+        background-color: #B7B7B7;
+        background: #B7B7B7; }
 #main-content.goal-indicators .indicator-cards .tags .tag {
   color: #0b0c0c;
   font-weight: normal;
@@ -2059,24 +2073,39 @@ footer {
     border-radius: 5px; }
   #main-content.goal-indicators .indicator-cards .tags .tag.complete {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #5cb85c;
+    background: #5cb85c; }
     #main-content.goal-indicators .indicator-cards .tags .tag.complete .status-inner {
-      background-color: #5cb85c; }
+      background-color: #5cb85c;
+      background: #5cb85c; }
   #main-content.goal-indicators .indicator-cards .tags .tag.inprogress {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #f0ad4e;
+    background: #f0ad4e; }
     #main-content.goal-indicators .indicator-cards .tags .tag.inprogress .status-inner {
-      background-color: #f0ad4e; }
+      background-color: #f0ad4e;
+      background: #f0ad4e; }
   #main-content.goal-indicators .indicator-cards .tags .tag.notstarted {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #E27874;
+    background: #E27874; }
     #main-content.goal-indicators .indicator-cards .tags .tag.notstarted .status-inner {
-      background-color: #E27874; }
+      background-color: #E27874;
+      background: #E27874; }
   #main-content.goal-indicators .indicator-cards .tags .tag.notapplicable {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #B7B7B7;
+    background: #B7B7B7; }
     #main-content.goal-indicators .indicator-cards .tags .tag.notapplicable .status-inner {
-      background-color: #B7B7B7; }
+      background-color: #B7B7B7;
+      background: #B7B7B7; }
+  #main-content.goal-indicators .indicator-cards .tags .tag a {
+    color: #0b0c0c;
+    text-decoration: underline; }
 #main-content.goal-indicators .indicator-cards .match {
   display: inline;
   font-weight: normal;
@@ -2198,6 +2227,50 @@ body.contrast-high #legend li {
   border: 1px solid transparent; }
 body.contrast-high #dataset-size-warning {
   color: black; }
+body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.complete,
+body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.complete {
+  border: 1px solid transparent;
+  background-color: white;
+  background: white;
+  color: black !important; }
+  body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.complete .status-inner,
+  body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.complete .status-inner {
+    background-color: white !important;
+    background: white !important;
+    color: black !important; }
+body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.inprogress,
+body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.inprogress {
+  border: 1px solid transparent;
+  background-color: #767676;
+  background: #767676;
+  color: white; }
+  body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.inprogress .status-inner,
+  body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.inprogress .status-inner {
+    background-color: #767676 !important;
+    background: #767676 !important;
+    color: white; }
+body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notstarted,
+body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notstarted {
+  border: 1px solid white;
+  background-color: black;
+  background: black;
+  color: white !important; }
+  body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notstarted .status-inner,
+  body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notstarted .status-inner {
+    background-color: black !important;
+    background: black !important;
+    color: white !important; }
+body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notapplicable,
+body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notapplicable {
+  border: 1px solid white;
+  background-color: #B7B7B7;
+  background: #B7B7B7;
+  color: black !important; }
+  body.contrast-high #main-content.goal-indicators .indicator-cards .indicator-card-number.status.notapplicable .status-inner,
+  body.contrast-high #main-content.goal-indicators .indicator-cards span:not(.tags):not(.tag):not(.sr-only):not(.status-inner).status.notapplicable .status-inner {
+    background-color: #B7B7B7 !important;
+    background: #B7B7B7 !important;
+    color: black !important; }
 
 .layout-indicator #page-content {
   border-top: 1px solid #faebcc;
@@ -2219,10 +2292,9 @@ body.contrast-high #dataset-size-warning {
 #sources .row > div:nth-child(odd) {
   clear: left; }
 
-.layout-goal #page-content, .layout-goal-by-target #page-content, .layout-goal-by-target-vertical #page-content {
+.layout-goal #page-content {
   margin-top: -20px;
   margin-bottom: 10px; }
-
 .layout-goal .tags {
   display: inline-block;
   margin-top: 0;
@@ -2230,65 +2302,86 @@ body.contrast-high #dataset-size-warning {
   margin-bottom: 15px; }
 .layout-goal .indicator-placeholder-wrapper {
   padding: 1rem; }
-
-body.contrast-high .goal-indicators div span {
-  border-color: white !important;
-  color: white !important; }
-body.contrast-high .goal-indicators .indicator-cards.target {
-  color: white !important; }
-body.contrast-high .goal-indicators .indicator-cards span.status, body.contrast-high .goal-indicators .indicator-cards .tags .tag {
-  color: black !important; }
-body.contrast-high .goal-indicators .indicator-cards span.status.complete, body.contrast-high .goal-indicators .indicator-cards span.status.notapplicable {
-  color: black !important; }
-body.contrast-high .goal-indicators .indicator-cards span.status.notstarted, body.contrast-high .goal-indicators .indicator-cards span.status.inprogress {
-  color: black !important; }
-body.contrast-high .goal-indicators .indicator-cards span.status.notstarted {
-  color: white !important;
-  border: 1px solid white !important; }
-body.contrast-high #main-content.goal-indicators.goal-by-target .indicator-cards a {
-  color: #FFDD00; }
+.layout-goal.contrast-high .status {
+  color: pink !important; }
+  .layout-goal.contrast-high .status.complete {
+    border: 1px solid transparent;
+    background-color: white;
+    background: white;
+    color: black !important; }
+    .layout-goal.contrast-high .status.complete .status-inner {
+      background-color: white !important;
+      background: white !important;
+      color: black !important; }
+  .layout-goal.contrast-high .status.inprogress {
+    border: 1px solid transparent;
+    background-color: #767676;
+    background: #767676;
+    color: white; }
+    .layout-goal.contrast-high .status.inprogress .status-inner {
+      background-color: #767676 !important;
+      background: #767676 !important;
+      color: white; }
+  .layout-goal.contrast-high .status.notstarted {
+    border: 1px solid white;
+    background-color: black;
+    background: black;
+    color: white !important; }
+    .layout-goal.contrast-high .status.notstarted .status-inner {
+      background-color: black !important;
+      background: black !important;
+      color: white !important; }
+  .layout-goal.contrast-high .status.notapplicable {
+    border: 1px solid white;
+    background-color: #B7B7B7;
+    background: #B7B7B7;
+    color: black !important; }
+    .layout-goal.contrast-high .status.notapplicable .status-inner {
+      background-color: #B7B7B7 !important;
+      background: #B7B7B7 !important;
+      color: black !important; }
 
 .layout-news .post-listing {
   clear: both;
   margin-bottom: 25px; }
   .layout-news .post-listing .post-categories {
+    padding-left: 0;
     list-style-type: none; }
     .layout-news .post-listing .post-categories li {
-      display: inline-block;
-      margin-right: 20px; }
+      display: inline-block; }
+      .layout-news .post-listing .post-categories li:after {
+        content: ',';
+        padding-right: 1ch; }
+      .layout-news .post-listing .post-categories li:last-child:after {
+        content: '';
+        padding-right: 0; }
   .layout-news .post-listing .post-title {
     font-size: 16px;
     margin-bottom: 7px !important; }
   .layout-news .post-listing .post-date {
     float: left;
     margin-right: 40px; }
+.layout-news.contrast-high .post-categories {
+  padding-left: 0;
+  list-style-type: none; }
+  .layout-news.contrast-high .post-categories li {
+    display: inline-block; }
+    .layout-news.contrast-high .post-categories li:after {
+      content: ',';
+      padding-right: 1ch; }
+    .layout-news.contrast-high .post-categories li:last-child:after {
+      content: '';
+      padding-right: 0; }
 
 .layout-reportingstatus .reporting-status-description {
   margin-bottom: 25px; }
-
-.notapplicable {
-  background-color: #B7B7B7;
-  background: #B7B7B7; }
-
-.notstarted {
-  background-color: #E27874;
-  background: #E27874; }
-
-.inprogress {
-  background-color: #f0ad4e;
-  background: #f0ad4e; }
-
-.complete {
-  background-color: #5cb85c;
-  background: #5cb85c; }
-
-#main-content .statuses strong {
+.layout-reportingstatus #main-content .statuses strong {
   font-weight: normal; }
-#main-content .statuses > div {
+.layout-reportingstatus #main-content .statuses > div {
   display: inline-block;
   margin-bottom: 5px;
   margin-right: 10px; }
-  #main-content .statuses > div .status {
+  .layout-reportingstatus #main-content .statuses > div .status {
     color: #0b0c0c;
     font-weight: normal;
     border: none;
@@ -2301,56 +2394,80 @@ body.contrast-high #main-content.goal-indicators.goal-by-target .indicator-cards
     width: 40px;
     text-align: center;
     font-size: 16px; }
-    #main-content .statuses > div .status .status-inner {
+    .layout-reportingstatus #main-content .statuses > div .status .status-inner {
       padding: 0 2px;
       border-radius: 5px; }
-    #main-content .statuses > div .status.complete {
+    .layout-reportingstatus #main-content .statuses > div .status.complete {
       color: black;
-      border: none; }
-      #main-content .statuses > div .status.complete .status-inner {
-        background-color: #5cb85c; }
-    #main-content .statuses > div .status.inprogress {
+      border: none;
+      background-color: #5cb85c;
+      background: #5cb85c; }
+      .layout-reportingstatus #main-content .statuses > div .status.complete .status-inner {
+        background-color: #5cb85c;
+        background: #5cb85c; }
+    .layout-reportingstatus #main-content .statuses > div .status.inprogress {
       color: black;
-      border: none; }
-      #main-content .statuses > div .status.inprogress .status-inner {
-        background-color: #f0ad4e; }
-    #main-content .statuses > div .status.notstarted {
+      border: none;
+      background-color: #f0ad4e;
+      background: #f0ad4e; }
+      .layout-reportingstatus #main-content .statuses > div .status.inprogress .status-inner {
+        background-color: #f0ad4e;
+        background: #f0ad4e; }
+    .layout-reportingstatus #main-content .statuses > div .status.notstarted {
       color: black;
-      border: none; }
-      #main-content .statuses > div .status.notstarted .status-inner {
-        background-color: #E27874; }
-    #main-content .statuses > div .status.notapplicable {
+      border: none;
+      background-color: #E27874;
+      background: #E27874; }
+      .layout-reportingstatus #main-content .statuses > div .status.notstarted .status-inner {
+        background-color: #E27874;
+        background: #E27874; }
+    .layout-reportingstatus #main-content .statuses > div .status.notapplicable {
       color: black;
-      border: none; }
-      #main-content .statuses > div .status.notapplicable .status-inner {
-        background-color: #B7B7B7; }
-    #main-content .statuses > div .status .status-inner {
+      border: none;
+      background-color: #B7B7B7;
+      background: #B7B7B7; }
+      .layout-reportingstatus #main-content .statuses > div .status.notapplicable .status-inner {
+        background-color: #B7B7B7;
+        background: #B7B7B7; }
+    .layout-reportingstatus #main-content .statuses > div .status .status-inner {
       padding: 0 2px;
       border-radius: 5px; }
-#main-content .value {
+.layout-reportingstatus #main-content .value {
   color: #0b0c0c;
   font-weight: bold;
   margin-left: 3px; }
-#main-content .goal-stats {
+.layout-reportingstatus #main-content .goal-stats {
   border: 1px solid #0b0c0c;
   font-size: 0;
   margin-top: 10px; }
   @media (-ms-high-contrast: active), (forced-colors: active) {
-    #main-content .goal-stats {
+    .layout-reportingstatus #main-content .goal-stats {
       -ms-high-contrast-adjust: none;
       forced-color-adjust: none; } }
-  #main-content .goal-stats span {
+  .layout-reportingstatus #main-content .goal-stats span {
     display: inline-block;
     height: 10px;
     font-weight: bold; }
-#main-content .divider {
+  .layout-reportingstatus #main-content .goal-stats .notapplicable {
+    background-color: #B7B7B7;
+    background: #B7B7B7; }
+  .layout-reportingstatus #main-content .goal-stats .notstarted {
+    background-color: #E27874;
+    background: #E27874; }
+  .layout-reportingstatus #main-content .goal-stats .inprogress {
+    background-color: #f0ad4e;
+    background: #f0ad4e; }
+  .layout-reportingstatus #main-content .goal-stats .complete {
+    background-color: #5cb85c;
+    background: #5cb85c; }
+.layout-reportingstatus #main-content .divider {
   height: 15px; }
-#main-content .goal {
+.layout-reportingstatus #main-content .goal {
   clear: left;
   margin-bottom: 4px;
   padding-bottom: 4px;
   border-bottom: 1px solid #ccc; }
-  #main-content .goal .total {
+  .layout-reportingstatus #main-content .goal .total {
     line-height: 1.2;
     font-size: 16px;
     width: auto;
@@ -2362,189 +2479,98 @@ body.contrast-high #main-content.goal-indicators.goal-by-target .indicator-cards
     border-radius: 4px;
     border: 1px solid #ccc; }
     @media screen and (min-width: 520px) {
-      #main-content .goal .total {
+      .layout-reportingstatus #main-content .goal .total {
         margin-left: 10px; } }
-#main-content .frame {
+.layout-reportingstatus #main-content .frame {
   width: 115px;
   float: left;
   min-height: 1px; }
-  #main-content .frame > a:focus {
+  .layout-reportingstatus #main-content .frame > a:focus {
     outline: 6px #ffdd00 solid !important; }
-#main-content .details {
+.layout-reportingstatus #main-content .details {
   width: calc(100% - 125px);
   float: left; }
   @media screen and (min-width: 520px) {
-    #main-content .details h2 {
+    .layout-reportingstatus #main-content .details h2 {
       display: inline-block; } }
-  #main-content .details h3 {
+  .layout-reportingstatus #main-content .details h3 {
     margin-top: 10px;
     line-height: 1.2; }
     @media screen and (min-width: 520px) {
-      #main-content .details h3 {
+      .layout-reportingstatus #main-content .details h3 {
         display: inline-block; } }
     @media only screen and (max-width: 720px) {
-      #main-content .details h3 {
+      .layout-reportingstatus #main-content .details h3 {
         margin-top: 3px; } }
     @media only screen and (max-width: 520px) {
-      #main-content .details h3 {
+      .layout-reportingstatus #main-content .details h3 {
         margin-bottom: 3px; } }
-#main-content [data-extra-field] .details {
+.layout-reportingstatus #main-content [data-extra-field] .details {
   width: 100%; }
-#main-content .goal-overall {
+.layout-reportingstatus #main-content .goal-overall {
   margin-bottom: 20px; }
-  #main-content .goal-overall .details {
+  .layout-reportingstatus #main-content .goal-overall .details {
     width: 100%; }
-
-#main-content .reporting-status-item {
+.layout-reportingstatus #main-content .reporting-status-item {
   margin-bottom: 20px; }
-
-body.contrast-high .goal-stats {
+.layout-reportingstatus.contrast-high #main-content .goal-stats {
   border: 1px solid white !important; }
-body.contrast-high .statuses strong {
+  .layout-reportingstatus.contrast-high #main-content .goal-stats .notapplicable {
+    background-color: #B7B7B7;
+    background: #B7B7B7; }
+  .layout-reportingstatus.contrast-high #main-content .goal-stats .notstarted {
+    background-color: black;
+    background: black; }
+  .layout-reportingstatus.contrast-high #main-content .goal-stats .inprogress {
+    background-color: #767676;
+    background: #767676; }
+  .layout-reportingstatus.contrast-high #main-content .goal-stats .complete {
+    background-color: white;
+    background: white; }
+.layout-reportingstatus.contrast-high #main-content .statuses strong {
   color: white; }
-body.contrast-high .statuses .value {
+.layout-reportingstatus.contrast-high #main-content .statuses .value {
   color: white !important; }
-body.contrast-high .summary .statuses .notstarted {
-  border: 1px solid white !important; }
-body.contrast-high .complete {
+.layout-reportingstatus.contrast-high #main-content .statuses .status {
   border: none !important; }
-  body.contrast-high .complete.complete {
+  .layout-reportingstatus.contrast-high #main-content .statuses .status.complete {
     border: 1px solid transparent;
     background-color: white;
     background: white;
     color: black !important; }
-    body.contrast-high .complete.complete .status-inner {
+    .layout-reportingstatus.contrast-high #main-content .statuses .status.complete .status-inner {
       background-color: white !important;
+      background: white !important;
       color: black !important; }
-  body.contrast-high .complete.inprogress {
+  .layout-reportingstatus.contrast-high #main-content .statuses .status.inprogress {
     border: 1px solid transparent;
     background-color: #767676;
     background: #767676;
     color: white; }
-    body.contrast-high .complete.inprogress .status-inner {
+    .layout-reportingstatus.contrast-high #main-content .statuses .status.inprogress .status-inner {
       background-color: #767676 !important;
+      background: #767676 !important;
       color: white; }
-  body.contrast-high .complete.notstarted {
+  .layout-reportingstatus.contrast-high #main-content .statuses .status.notstarted {
     border: 1px solid white;
     background-color: black;
     background: black;
     color: white !important; }
-    body.contrast-high .complete.notstarted .status-inner {
+    .layout-reportingstatus.contrast-high #main-content .statuses .status.notstarted .status-inner {
       background-color: black !important;
+      background: black !important;
       color: white !important; }
-  body.contrast-high .complete.notapplicable {
+  .layout-reportingstatus.contrast-high #main-content .statuses .status.notapplicable {
     border: 1px solid white;
     background-color: #B7B7B7;
     background: #B7B7B7;
     color: black !important; }
-    body.contrast-high .complete.notapplicable .status-inner {
+    .layout-reportingstatus.contrast-high #main-content .statuses .status.notapplicable .status-inner {
       background-color: #B7B7B7 !important;
+      background: #B7B7B7 !important;
       color: black !important; }
-body.contrast-high .inprogress {
-  border: none !important; }
-  body.contrast-high .inprogress.complete {
-    border: 1px solid transparent;
-    background-color: white;
-    background: white;
-    color: black !important; }
-    body.contrast-high .inprogress.complete .status-inner {
-      background-color: white !important;
-      color: black !important; }
-  body.contrast-high .inprogress.inprogress {
-    border: 1px solid transparent;
-    background-color: #767676;
-    background: #767676;
-    color: white; }
-    body.contrast-high .inprogress.inprogress .status-inner {
-      background-color: #767676 !important;
-      color: white; }
-  body.contrast-high .inprogress.notstarted {
-    border: 1px solid white;
-    background-color: black;
-    background: black;
-    color: white !important; }
-    body.contrast-high .inprogress.notstarted .status-inner {
-      background-color: black !important;
-      color: white !important; }
-  body.contrast-high .inprogress.notapplicable {
-    border: 1px solid white;
-    background-color: #B7B7B7;
-    background: #B7B7B7;
-    color: black !important; }
-    body.contrast-high .inprogress.notapplicable .status-inner {
-      background-color: #B7B7B7 !important;
-      color: black !important; }
-body.contrast-high .notstarted {
-  border: none !important; }
-  body.contrast-high .notstarted.complete {
-    border: 1px solid transparent;
-    background-color: white;
-    background: white;
-    color: black !important; }
-    body.contrast-high .notstarted.complete .status-inner {
-      background-color: white !important;
-      color: black !important; }
-  body.contrast-high .notstarted.inprogress {
-    border: 1px solid transparent;
-    background-color: #767676;
-    background: #767676;
-    color: white; }
-    body.contrast-high .notstarted.inprogress .status-inner {
-      background-color: #767676 !important;
-      color: white; }
-  body.contrast-high .notstarted.notstarted {
-    border: 1px solid white;
-    background-color: black;
-    background: black;
-    color: white !important; }
-    body.contrast-high .notstarted.notstarted .status-inner {
-      background-color: black !important;
-      color: white !important; }
-  body.contrast-high .notstarted.notapplicable {
-    border: 1px solid white;
-    background-color: #B7B7B7;
-    background: #B7B7B7;
-    color: black !important; }
-    body.contrast-high .notstarted.notapplicable .status-inner {
-      background-color: #B7B7B7 !important;
-      color: black !important; }
-body.contrast-high .notapplicable {
-  border: none !important; }
-  body.contrast-high .notapplicable.complete {
-    border: 1px solid transparent;
-    background-color: white;
-    background: white;
-    color: black !important; }
-    body.contrast-high .notapplicable.complete .status-inner {
-      background-color: white !important;
-      color: black !important; }
-  body.contrast-high .notapplicable.inprogress {
-    border: 1px solid transparent;
-    background-color: #767676;
-    background: #767676;
-    color: white; }
-    body.contrast-high .notapplicable.inprogress .status-inner {
-      background-color: #767676 !important;
-      color: white; }
-  body.contrast-high .notapplicable.notstarted {
-    border: 1px solid white;
-    background-color: black;
-    background: black;
-    color: white !important; }
-    body.contrast-high .notapplicable.notstarted .status-inner {
-      background-color: black !important;
-      color: white !important; }
-  body.contrast-high .notapplicable.notapplicable {
-    border: 1px solid white;
-    background-color: #B7B7B7;
-    background: #B7B7B7;
-    color: black !important; }
-    body.contrast-high .notapplicable.notapplicable .status-inner {
-      background-color: #B7B7B7 !important;
-      color: black !important; }
-body.contrast-high .reporting-status-description {
-  color: white;
-  border: none !important; }
+  .layout-reportingstatus.contrast-high #main-content .statuses .status.notstarted {
+    border: 1px solid white !important; }
 
 #jump-to-search a {
   cursor: pointer; }
@@ -2673,10 +2699,16 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   .layout-goal-by-target .indicator-cards.target {
     padding-top: 20px; } }
 
+.layout-goal-by-target #page-content {
+  margin-top: -20px;
+  margin-bottom: 10px; }
 .layout-goal-by-target .tags {
   margin-top: 10px;
   display: inline-block; }
 
+.layout-goal-by-target-vertical #page-content {
+  margin-top: -20px;
+  margin-bottom: 10px; }
 .layout-goal-by-target-vertical .goal-target, .layout-goal-by-target-vertical .goal-indicator {
   font-size: 16px;
   font-weight: normal;
@@ -2748,24 +2780,36 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
     border-radius: 5px; }
   .layout-goal-by-target-vertical .status.complete {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #5cb85c;
+    background: #5cb85c; }
     .layout-goal-by-target-vertical .status.complete .status-inner {
-      background-color: #5cb85c; }
+      background-color: #5cb85c;
+      background: #5cb85c; }
   .layout-goal-by-target-vertical .status.inprogress {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #f0ad4e;
+    background: #f0ad4e; }
     .layout-goal-by-target-vertical .status.inprogress .status-inner {
-      background-color: #f0ad4e; }
+      background-color: #f0ad4e;
+      background: #f0ad4e; }
   .layout-goal-by-target-vertical .status.notstarted {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #E27874;
+    background: #E27874; }
     .layout-goal-by-target-vertical .status.notstarted .status-inner {
-      background-color: #E27874; }
+      background-color: #E27874;
+      background: #E27874; }
   .layout-goal-by-target-vertical .status.notapplicable {
     color: black;
-    border: none; }
+    border: none;
+    background-color: #B7B7B7;
+    background: #B7B7B7; }
     .layout-goal-by-target-vertical .status.notapplicable .status-inner {
-      background-color: #B7B7B7; }
+      background-color: #B7B7B7;
+      background: #B7B7B7; }
 .layout-goal-by-target-vertical .tags {
   float: left;
   clear: left;
@@ -2787,24 +2831,39 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
       border-radius: 5px; }
     .layout-goal-by-target-vertical .tags .tag.complete {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #5cb85c;
+      background: #5cb85c; }
       .layout-goal-by-target-vertical .tags .tag.complete .status-inner {
-        background-color: #5cb85c; }
+        background-color: #5cb85c;
+        background: #5cb85c; }
     .layout-goal-by-target-vertical .tags .tag.inprogress {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #f0ad4e;
+      background: #f0ad4e; }
       .layout-goal-by-target-vertical .tags .tag.inprogress .status-inner {
-        background-color: #f0ad4e; }
+        background-color: #f0ad4e;
+        background: #f0ad4e; }
     .layout-goal-by-target-vertical .tags .tag.notstarted {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #E27874;
+      background: #E27874; }
       .layout-goal-by-target-vertical .tags .tag.notstarted .status-inner {
-        background-color: #E27874; }
+        background-color: #E27874;
+        background: #E27874; }
     .layout-goal-by-target-vertical .tags .tag.notapplicable {
       color: black;
-      border: none; }
+      border: none;
+      background-color: #B7B7B7;
+      background: #B7B7B7; }
       .layout-goal-by-target-vertical .tags .tag.notapplicable .status-inner {
-        background-color: #B7B7B7; }
+        background-color: #B7B7B7;
+        background: #B7B7B7; }
+    .layout-goal-by-target-vertical .tags .tag a {
+      color: #0b0c0c;
+      text-decoration: underline; }
   @media screen and (min-width: 769px) {
     .layout-goal-by-target-vertical .tags {
       margin-top: 20px; } }
@@ -2817,6 +2876,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: black !important; }
   .layout-goal-by-target-vertical.contrast-high .status.complete .status-inner {
     background-color: white !important;
+    background: white !important;
     color: black !important; }
 .layout-goal-by-target-vertical.contrast-high .status.inprogress {
   border: 1px solid transparent;
@@ -2825,6 +2885,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: white; }
   .layout-goal-by-target-vertical.contrast-high .status.inprogress .status-inner {
     background-color: #767676 !important;
+    background: #767676 !important;
     color: white; }
 .layout-goal-by-target-vertical.contrast-high .status.notstarted {
   border: 1px solid white;
@@ -2833,6 +2894,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: white !important; }
   .layout-goal-by-target-vertical.contrast-high .status.notstarted .status-inner {
     background-color: black !important;
+    background: black !important;
     color: white !important; }
 .layout-goal-by-target-vertical.contrast-high .status.notapplicable {
   border: 1px solid white;
@@ -2841,6 +2903,7 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   color: black !important; }
   .layout-goal-by-target-vertical.contrast-high .status.notapplicable .status-inner {
     background-color: #B7B7B7 !important;
+    background: #B7B7B7 !important;
     color: black !important; }
 
 .layout-frontpage .goal-tiles .row > div {
@@ -2940,6 +3003,36 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
     margin-right: 10px; }
   .layout-data-editor .config-widgets .data-grid-buttons #add-column {
     margin-top: 0; }
+
+.layout-post .post-header {
+  margin-bottom: 20px; }
+.layout-post .post-categories {
+  padding-left: 0;
+  list-style-type: none;
+  display: inline; }
+  .layout-post .post-categories li {
+    display: inline-block; }
+    .layout-post .post-categories li:after {
+      content: ',';
+      padding-right: 1ch; }
+    .layout-post .post-categories li:last-child:after {
+      content: '';
+      padding-right: 0; }
+.layout-post .post-categories:before, .layout-post .post-author:before {
+  content: '\2022';
+  padding-left: 10px;
+  padding-right: 10px; }
+.layout-post.contrast-high .post-categories {
+  padding-left: 0;
+  list-style-type: none; }
+  .layout-post.contrast-high .post-categories li {
+    display: inline-block; }
+    .layout-post.contrast-high .post-categories li:after {
+      content: ',';
+      padding-right: 1ch; }
+    .layout-post.contrast-high .post-categories li:last-child:after {
+      content: '';
+      padding-right: 0; }
 
 /**
  * custom.scss
