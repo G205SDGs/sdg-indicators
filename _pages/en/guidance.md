@@ -42,8 +42,3 @@ If you have any comments or feedback on the Open SDG project, or want to get inv
 - XHTML, CSS, JavaScript
 - Chartist: JavaScript library that offers customizable and responsive charts
 - Bootstrap: framework CSS
-
-## Current display
-
-Due to technical difficulties, the current version of the German NRP contains some faulty illustrations, which are referred to here:<br>
-- Very long names of time series are not broken up into several lines in the axis labels of the graphics and hence are partly cut off.

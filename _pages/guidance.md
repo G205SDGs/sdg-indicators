@@ -43,8 +43,3 @@ Wenn Sie Kommentare oder Feedback zum Open SDG-Projekt haben oder an der Open SD
 - XHTML, CSS, JavaScript
 - Chartist: JavaScript Bibliothek
 - Bootstrap: framework CSS
-
-### Aktuelle Darstellung
-
-Aufgrund von technischen Schwierigkeiten finden sich auf der aktuellen Version der Berichtsplattform einige mangelhafte Darstellungen, auf die an dieser Stelle hingewiesen wird:
-- Sehr lange Zeitreihenbezeichnungen werden in den Achsenbeschriftungen der Grafiken nicht in mehrere Zeilen umgebrochen und z.T. abgeschnitten.
