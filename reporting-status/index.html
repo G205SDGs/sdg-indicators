@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="de" class="no-js">
     <head>
-        <meta charset="utf-8">
+      <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js"></script>
+
+        <script src="html2pdf.bundle.min.js"></script>
+        <script src="/html2pdf/js/html2pdf.bundle.min.js"></script>
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        />
+
+
         <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -102,6 +112,7 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
+
         
     <title>Berichtsstatus - Deutschlands Indikatoren der VN Sustainable Development Goals</title>
 
@@ -131,7 +142,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20211021121009">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20211021123715">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -430,14 +441,14 @@ data-event-label="high"
   <h2>Status nach Ziel</h2><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/1">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/1.png" alt="Keine Armut - Ziel 1" width="100" height="100" class="goal-icon-1"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/1.png" alt="Keine Armut - Ziel 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/1">Keine Armut</a>
-            <span class="total">13 Indikatoren</span>
         </h3>
+        <span class="total">13 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">9</span></span><strong>Verfügbar</strong><span class="value">69%</span>
@@ -469,14 +480,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/2">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/2.png" alt="Kein Hunger - Ziel 2" width="100" height="100" class="goal-icon-2"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/2.png" alt="Kein Hunger - Ziel 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/2">Kein Hunger</a>
-            <span class="total">14 Indikatoren</span>
         </h3>
+        <span class="total">14 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">13</span></span><strong>Verfügbar</strong><span class="value">93%</span>
@@ -508,14 +519,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/3">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/3.png" alt="Gesundheit und Wohlergehen - Ziel 3" width="100" height="100" class="goal-icon-3"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/3.png" alt="Gesundheit und Wohlergehen - Ziel 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/3">Gesundheit und Wohlergehen</a>
-            <span class="total">28 Indikatoren</span>
         </h3>
+        <span class="total">28 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">25</span></span><strong>Verfügbar</strong><span class="value">89%</span>
@@ -547,14 +558,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/4">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/4.png" alt="Hochwertige Bildung - Ziel 4" width="100" height="100" class="goal-icon-4"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/4.png" alt="Hochwertige Bildung - Ziel 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/4">Hochwertige Bildung</a>
-            <span class="total">12 Indikatoren</span>
         </h3>
+        <span class="total">12 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">9</span></span><strong>Verfügbar</strong><span class="value">75%</span>
@@ -586,14 +597,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/5">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" width="100" height="100" class="goal-icon-5"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/5">Geschlechtergleichstellung</a>
-            <span class="total">14 Indikatoren</span>
         </h3>
+        <span class="total">14 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Verfügbar</strong><span class="value">86%</span>
@@ -625,14 +636,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/6">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/6.png" alt="Sauberes Wasser und Sanitärversorgung - Ziel 6" width="100" height="100" class="goal-icon-6"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/6.png" alt="Sauberes Wasser und Sanitärversorgung - Ziel 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/6">Sauberes Wasser und Sanitärversorgung</a>
-            <span class="total">11 Indikatoren</span>
         </h3>
+        <span class="total">11 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">10</span></span><strong>Verfügbar</strong><span class="value">91%</span>
@@ -664,14 +675,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/7">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/7.png" alt="Bezahlbare und saubere Energie - Ziel 7" width="100" height="100" class="goal-icon-7"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/7.png" alt="Bezahlbare und saubere Energie - Ziel 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/7">Bezahlbare und saubere Energie</a>
-            <span class="total">6 Indikatoren</span>
         </h3>
+        <span class="total">6 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">4</span></span><strong>Verfügbar</strong><span class="value">67%</span>
@@ -703,14 +714,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/8">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" width="100" height="100" class="goal-icon-8"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/8">Menschenwürdige Arbeit und Wirtschaftswachstum</a>
-            <span class="total">16 Indikatoren</span>
         </h3>
+        <span class="total">16 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">15</span></span><strong>Verfügbar</strong><span class="value">94%</span>
@@ -742,14 +753,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/9">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/9.png" alt="Industrie, Innovationen und Infrastruktur - Ziel 9" width="100" height="100" class="goal-icon-9"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/9.png" alt="Industrie, Innovationen und Infrastruktur - Ziel 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/9">Industrie, Innovationen und Infrastruktur</a>
-            <span class="total">12 Indikatoren</span>
         </h3>
+        <span class="total">12 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">11</span></span><strong>Verfügbar</strong><span class="value">92%</span>
@@ -781,14 +792,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/10">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" width="100" height="100" class="goal-icon-10"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/10">Weniger Ungleichheiten</a>
-            <span class="total">14 Indikatoren</span>
         </h3>
+        <span class="total">14 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">7</span></span><strong>Verfügbar</strong><span class="value">50%</span>
@@ -820,14 +831,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/11">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" width="100" height="100" class="goal-icon-11"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/11">Nachhaltige Städte und Gemeinden</a>
-            <span class="total">14 Indikatoren</span>
         </h3>
+        <span class="total">14 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Verfügbar</strong><span class="value">86%</span>
@@ -859,14 +870,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/12">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" width="100" height="100" class="goal-icon-12"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/12">Verantwortungsvolle Konsum- und Produktionsmuster</a>
-            <span class="total">13 Indikatoren</span>
         </h3>
+        <span class="total">13 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">9</span></span><strong>Verfügbar</strong><span class="value">69%</span>
@@ -898,14 +909,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/13">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/13.png" alt="Maßnahmen zum Klimaschutz - Ziel 13" width="100" height="100" class="goal-icon-13"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/13.png" alt="Maßnahmen zum Klimaschutz - Ziel 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/13">Maßnahmen zum Klimaschutz</a>
-            <span class="total">8 Indikatoren</span>
         </h3>
+        <span class="total">8 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">6</span></span><strong>Verfügbar</strong><span class="value">75%</span>
@@ -937,14 +948,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/14">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/14.png" alt="Leben unter Wasser - Ziel 14" width="100" height="100" class="goal-icon-14"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/14.png" alt="Leben unter Wasser - Ziel 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/14">Leben unter Wasser</a>
-            <span class="total">10 Indikatoren</span>
         </h3>
+        <span class="total">10 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">6</span></span><strong>Verfügbar</strong><span class="value">60%</span>
@@ -976,14 +987,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/15">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/15.png" alt="Leben an Land - Ziel 15" width="100" height="100" class="goal-icon-15"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/15.png" alt="Leben an Land - Ziel 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/15">Leben an Land</a>
-            <span class="total">14 Indikatoren</span>
         </h3>
+        <span class="total">14 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">12</span></span><strong>Verfügbar</strong><span class="value">86%</span>
@@ -1015,14 +1026,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/16">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/16.png" alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16" width="100" height="100" class="goal-icon-16"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/16.png" alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/16">Frieden, Gerechtigkeit und starke Institutionen</a>
-            <span class="total">24 Indikatoren</span>
         </h3>
+        <span class="total">24 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">19</span></span><strong>Verfügbar</strong><span class="value">79%</span>
@@ -1054,14 +1065,14 @@ data-event-label="high"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/sdg-indicators/17">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/17.png" alt="Partnerschaften zur Erreichung der Ziele - Ziel 17" width="100" height="100" class="goal-icon-17"/>
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/17.png" alt="Partnerschaften zur Erreichung der Ziele - Ziel 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
             <a href="/sdg-indicators/17">Partnerschaften zur Erreichung der Ziele</a>
-            <span class="total">24 Indikatoren</span>
         </h3>
+        <span class="total">24 Indikatoren</span>
         <div class="summary">
             <div class="statuses"><div>
                     <span class="status complete"><span class="status-inner">14</span></span><strong>Verfügbar</strong><span class="value">58%</span>
@@ -1169,12 +1180,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20211021121009'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20211021123715'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20211021121009"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20211021123715"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

@@ -2949,7 +2949,7 @@ var mapView = function () {
     });
   };
 };
-//Last check: 17.09.2021
+//Last check: 21.10.2021
 var indicatorView = function (model, options) {
 
   "use strict";
@@ -3252,6 +3252,9 @@ var indicatorView = function (model, options) {
     if (units.length <= 1) {
     
       $(this._rootElement).addClass('no-units');
+    }
+    else {
+      $(this._rootElement).removeClass('no-units');
     }
   };
 
