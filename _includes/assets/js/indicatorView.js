@@ -304,9 +304,9 @@ var indicatorView = function (model, options) {
     {% endif %}
       $(this._rootElement).addClass('no-units');
     }
-    else {
-      $(this._rootElement).removeClass('no-units');
-    }
+    // else {
+    //   $(this._rootElement).removeClass('no-units');
+    // }
   };
 
   this.initialiseSerieses = function(args) {
