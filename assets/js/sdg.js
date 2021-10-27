@@ -14,6 +14,7 @@
 {%- include assets/js/mapTitles.js -%}
 {%- include assets/js/indicatorModel.js -%}
 {%- include assets/js/mapView.js -%}
+
 {%- include assets/js/indicatorView.js -%}
 {%- include assets/js/indicatorController.js -%}
 {%- include assets/js/tabs.js -%}
