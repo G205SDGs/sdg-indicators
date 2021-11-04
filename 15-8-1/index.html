@@ -140,7 +140,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20211104073939">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20211104074921">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -587,7 +587,7 @@ Eine oder mehrere mögliche Datenquelle/n wurde/n bereits identifiziert. Die ent
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;A&quot;,&quot;B&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Group&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;(1) a) Nationale Rechtsvorschriften, die als relevant für die Verhinderung der Einschleppung invasiver gebietsfremder Arten und deren Bekämpfung angesehen werden&quot;,&quot;(1) (b) Angleichung der Ziele des Nationalen Strategie- und Aktionsplans für biologische Vielfalt (NBSAP) an das Aichi-Biodiversitätsziel 9 des Strategieplans für biologische Vielfalt 2011-2020&quot;,&quot;(2) Online-Umfrage zu politischen Reaktionen, Mandat, rechtlichen Befugnissen und Ressourcen für den Umgang mit der Bedrohung durch invasive gebietsfremde Arten&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;legislation&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Übereinkommen über die biologische Vielfalt&quot;,&quot;Cartagena-Protokoll&quot;,&quot;Internationales Pflanzenschutzübereinkommen&quot;,&quot;Übereinkommen über gesundheitspolizeiliche und pflanzenschutzrechtliche Maßnahmen der Welthandelsorganisation&quot;,&quot;Weltorganisation für Tiergesundheit&quot;,&quot;Übereinkommen über den internationalen Handel mit gefährdeten Arten freilebender Tiere und Pflanzen&quot;,&quot;Ramsar-Konvention&quot;,&quot;Übereinkommen zur Erhaltung wandernder wild lebender Tierarten&quot;,&quot;Welterbekonvention&quot;,&quot;Ballastwasser-Übereinkommen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Rechtsvorschrift&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
   data-graphstepsize="null"
@@ -714,8 +714,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/G205SDGs/sdg-data/commit/2d635295bda496256a73e337c6f647e9de44d95d" target="_blank">
-                2018-09-25: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/G205SDGs/sdg-data/commit/46466ad8e124637c5fcdf70b37f8c20c78f4af08" target="_blank">
+                2021-11-04: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1315,12 +1315,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20211104073939'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20211104074921'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20211104073939"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20211104074921"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
