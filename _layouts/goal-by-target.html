@@ -42,12 +42,16 @@
     {% assign next_goal = page.sdg_goal | plus: 1 %}
   {% endif %}
 
+  {% if site.create_goals.previous_next_links %}
+    {% include components/previous-next-links.html previous_label=page.t.goal.previous next_label=page.t.goal.next %}
+  {% endif %}
+
+
   {% if page.language == 'de' %}
     {% assign language = '' %}
   {% else %}
     {% assign language = page.language %}
   {% endif %}
-
 
   <div class="col-xs-3 col-md-3 col-lg-4">
     <a href="{{ baseurl }}/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.sdg_goal }} navigation-btn" role="button">
@@ -69,6 +73,9 @@
 
 
 
+
+  {% include components/goal/goal-content.html content=content %}
+
   <div class="visible-md-block visible-lg-block">
     <div class="col-md-6">
       <h2>{{ page.t.general.targets }}</h2>
@@ -78,11 +85,11 @@
     </div>
   </div>
 
-  {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | sort: 'indicator_sort_order' | group_by: 'target_id' %}
+  {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
   {% for group in goal_indicators %}
     {% assign target = group.name | sdg_lookup %}
     <div class="indicator-cards target goal-target col-md-6">
-      <span>
+      <span class="indicator-card-number">
         <label class="hidden-md hidden-lg">{{ page.t.general.target }}</label>
         {{ target.number }}
       </span>
@@ -91,19 +98,6 @@
     <div class="indicator-cards col-md-6 row no-gutters">
     {% for indicator in group.items %}
 
-      {% assign status_css = indicator.reporting_status | slugify %}
-      {% if indicator.reporting_status == 'notapplicable' %}
-        {% assign status_desc = page.t.status.not_applicable %}
-      {% endif %}
-      {% if indicator.reporting_status == 'notstarted' %}
-        {% assign status_desc = page.t.status.exploring_data_sources %}
-      {% endif %}
-      {% if indicator.reporting_status == 'inprogress' %}
-        {% assign status_desc = page.t.status.statistics_in_progress %}
-      {% endif %}
-      {% if indicator.reporting_status == 'complete' %}
-        {% assign status_desc = page.t.status.reported_online %}
-      {% endif %}
       {% assign tag_classes = "" | split: "," %}
       {% if indicator.tags %}
         {% for tag in indicator.tags %}
@@ -114,49 +108,25 @@
       {% assign tag_classes = tag_classes | join: " " %}
 
       <div class="col-md-12 {{ tag_classes }} goal-indicator">
-        <span>
+        {% if indicator.placeholder and indicator.placeholder != '' %}
+        <span class="indicator-card-number">
           {{ indicator.number }}
-          <span class="status {{ status_css }}">
-            {{ status_desc }}
-          </span>
+        </span>
+        {{ indicator.placeholder }}
+        {% else %}
+        <span class="indicator-card-number">
+          {{ indicator.number }}
+          {% include components/reportingstatus/reporting-status-label.html indicator=indicator %}
         </span>
         <a href="{{ indicator.url }}">
           {{ indicator.name }}
         </a>
-        {% if indicator.tags %}
-          <ul class="tags">
-          {% for tag in indicator.tags %}
-            {% assign tag_class = tag | slugify %}
-            <li class="tag-{{ tag_class }} warning">{{ tag | t }}</li>
-          {% endfor %}
-          </ul>
+        {% include components/indicator/tags.html tags=indicator.tags %}
         {% endif %}
       </div>
     {% endfor %}
     </div>
   {% endfor %}
-
-  {% if  page.goal.number == "11" %}
-    <div class="indicator-cards target goal-target col-md-6">
-      <span>
-        11.c
-      </span>
-      {{ page.t.global_targets.11-c-title }}
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-
-
-      <div class="col-md-12 {{ tag_classes }} goal-indicator">
-        <span>
-          -
-        </span>
-        {{ page.t.general.no_indicator }}
-      </div>
-
-
-  {% endif %}
-
-
 </div>
 
 {% include footer.html %}
