@@ -151,7 +151,7 @@
         },
         {
           "id": "2-2-3",
-          "title": "Prevalence of anaemia in women aged 15–49 years, by pregnancy status (percentage)",
+          "title": "Prevalence of anaemia in women aged 15-49 years, by pregnancy status (percentage)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/2-2-3",
@@ -351,7 +351,7 @@
         },
         {
           "id": "3-7-1",
-          "title": "Proportion of women of reproductive age (aged 15–49 years) who have their need for family planning satisfied with modern methods",
+          "title": "Proportion of women of reproductive age (aged 15-49 years) who have their need for family planning satisfied with modern methods",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/3-7-1",
@@ -359,7 +359,7 @@
         },
         {
           "id": "3-7-2",
-          "title": "Adolescent birth rate (aged 10–14 years; aged 15–19 years) per 1,000 women in that age group",
+          "title": "Adolescent birth rate (aged 10-14 years; aged 15-19 years) per 1,000 women in that age group",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/3-7-2",
@@ -487,7 +487,7 @@
         },
         {
           "id": "4-2-1",
-          "title": "Proportion of children aged 24–59 months who are developmentally on track in health, learning and psychosocial well-being, by sex",
+          "title": "Proportion of children aged 24-59 months who are developmentally on track in health, learning and psychosocial well-being, by sex",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/4-2-1",
@@ -599,7 +599,7 @@
         },
         {
           "id": "5-3-1",
-          "title": "Proportion of women aged 20–24 years who were married or in a union before age 15 and before age 18",
+          "title": "Proportion of women aged 20-24 years who were married or in a union before age 15 and before age 18",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/5-3-1",
@@ -607,7 +607,7 @@
         },
         {
           "id": "5-3-2",
-          "title": "Proportion of girls and women aged 15–49 years who have undergone female genital mutilation/ cutting, by age",
+          "title": "Proportion of girls and women aged 15-49 years who have undergone female genital mutilation/ cutting, by age",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/5-3-2",
@@ -639,7 +639,7 @@
         },
         {
           "id": "5-6-1",
-          "title": "Proportion of women aged 15–49 years who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care",
+          "title": "Proportion of women aged 15-49 years who make their own informed decisions regarding sexual relations, contraceptive use and reproductive health care",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/5-6-1",
@@ -867,7 +867,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/8-3-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "8-4-1",
@@ -903,7 +903,7 @@
         },
         {
           "id": "8-6-1",
-          "title": "Proportion of youth (aged 15–24 years) not in education, employment or training",
+          "title": "Proportion of youth (aged 15-24 years) not in education, employment or training",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/8-6-1",
@@ -911,7 +911,7 @@
         },
         {
           "id": "8-7-1",
-          "title": "Proportion and number of children aged 5–17 years engaged in child labour, by sex and age",
+          "title": "Proportion and number of children aged 5-17 years engaged in child labour, by sex and age",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/8-7-1",
@@ -1171,7 +1171,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/10-7-4",
-          "status": "inprogress"
+          "status": "complete"
         },
         {
           "id": "10-a-1",
@@ -1447,7 +1447,7 @@
         },
         {
           "id": "13-1-2",
-          "title": "Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015–2030",
+          "title": "Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015-2030",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/13-1-2",
@@ -1751,7 +1751,7 @@
         },
         {
           "id": "16-2-1",
-          "title": "Proportion of children aged 1–17 years who experienced any physical punishment and/ or psychological aggression by caregivers in the past month",
+          "title": "Proportion of children aged 1-17 years who experienced any physical punishment and/ or psychological aggression by caregivers in the past month",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/16-2-1",
