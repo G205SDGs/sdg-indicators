@@ -3463,6 +3463,8 @@ var indicatorView = function (model, options) {
                 for(var i=0; i<label.length; i++){
                   if (line.concat(label[i]).length < 45){
                     line = line.concat(label[i] + ' ');
+                  } else {
+                    break
                   }
                 }
                 return line;
