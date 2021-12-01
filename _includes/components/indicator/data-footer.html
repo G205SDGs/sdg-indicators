@@ -1,54 +1,46 @@
-</u>{% assign sources_list = '' | split: ',' %}
-{% for i in (1..12) %}
-  {% assign src_active = "source_active_" | append: i %}
-  {% if page.indicator[src_active] == true %}
-    {% assign src_org = "source_organisation_" | append: i %}
-    {% assign src_org_translated = page.indicator[src_org] %}
-    {% assign sources_list = sources_list | push: src_org_translated  %}
-  {% endif %}
-{% endfor %}
-{% assign uniqSources = sources_list | uniq | join: "; " %}
+{% comment %}
+Because the "line" visualization is basic, nothing special needs to be done here,
+apart from providing the canvas tag and supporting graph limits. For details on
+the Chart.js configuration being used, see `createPlot()` in `indicatorView.js`.
+{% endcomment %}
+{% include components/charts/canvas.html %}
+{% include components/charts/graph_limits.html %}
+{% include components/charts/graph_annotations.html %}
+{% include components/charts/graph_axis.html %}
 
-<div id="{{ include.footerId | default: 'selectionChartFooter' }}" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        {% if uniqSources != '' %}
-          {% if sources_list.size < 2 %}
-          <dt><u>{{ page.t.indicator.source }}</u>:</dt>
-          {% else %}
-          <dt><u>{{ page.t.indicator.sources }}</u>:</dt>
-          {% endif %}
-        <dd>{{ uniqSources }}</dd>
-        {% endif %}
+<script>
+// For line charts, add the vertical line hover functionality.
+opensdg.chartConfigAlter(function(config, info) {
+    var overrides = {
+        options: {
+            tooltips: {
+                intersect: false,
+                axis: 'x'
+            },
+        },
+        plugins: [{
+            beforeDatasetsDraw: function(chart) {
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    var activePoint = chart.tooltip._active[0],
+                        ctx = chart.ctx,
+                        x = activePoint.tooltipPosition().x,
+                        topY = chart.scales['y-axis-0'].top,
+                        bottomY = chart.scales['y-axis-0'].bottom;
 
-        {% if page.indicator.national_geographical_coverage and page.indicator.national_geographical_coverage != '' %}
-        <dt><u>{{ page.t.indicator.geographical_area }}</u>:</dt>
-        <dd>{{ page.indicator.national_geographical_coverage }}</dd>
-        {% endif %}
-
-        {% if page.indicator.computation_units and page.indicator.computation_units != '' %}
-        <dt><u>{{ page.t.indicator.unit_of_measurement }}</u>:</dt>
-        <dd>{{ page.indicator.computation_units }}</dd>
-        {% endif %}
-
-        {% if page.indicator.computation_units_plural and page.indicator.computation_units_plural != '' %}
-        <dt><u>{{ page.t.indicator.computation_units_plural }}</u>:</dt>
-        <dd>{{ page.indicator.computation_units_plural }}</dd>
-        {% endif %}
-
-        {% if page.indicator.data_footnote and page.indicator.data_footnote != '' %}
-        <dt><u>{{ page.t.indicator.footnote }}</u>:</dt>
-        <dd>{{ page.indicator.data_footnote }}</dd>
-        {% endif %}
-
-        {% if page.indicator.data_footnotes and page.indicator.data_footnotes != '' %}
-        <dt><u>{{ page.t.indicator.footnotes }}</u>:</dt>
-        <dd><br>• {{ page.indicator.data_footnotes }}</dd>
-        {% endif %}
-
-        {% if page.indicator.copyright and page.indicator.copyright != '' %}
-        <dt><u>{{ page.t.metadata_fields.copyright }}</u>:</dt>
-        <dd>{{ page.indicator.copyright }}</dd>
-        {% endif %}
-    <dl>
-</div>
+                    // draw line
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.strokeStyle = '#757575';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        }],
+    };
+    // Add these overrides onto the normal config, and return it.
+    $.extend(true, config, overrides);
+});
+</script>
