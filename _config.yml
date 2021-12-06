@@ -152,6 +152,15 @@ reporting_status:
     title: status.reporting_status
     description: status.status_blurb
     disaggregation_tabs: false
+    status_types:
+      - value: complete
+        label: status.reported_online
+      - value: notstarted
+        label: status.exploring_data_sources
+      - value: inprogress
+        label: status.statistics_in_progress
+      - value: notapplicable
+        label: status.not_applicable
 
 hide_empty_metadata: true
 hide_single_unit: true
