@@ -20,7 +20,7 @@
             <div class="statuses">
             {%- for status in goalreport.statuses -%}}
                 <div>
-                    <span class="status {{ status_type.value | slugify }}"><span class="status-inner">{{ status_stats.count }}</span></span><strong>{{ status_type.label | t }}</strong><span class="value">{{ status_stats.percentage | round }}%</span>
+                    <span class="status {{ status.status | slugify }}"><span class="status-inner">{{ status.count }}</span></span><strong>{{ status.translation_key | t }}</strong><span class="value">{{ status.percentage | round }}%</span>
                 </div>
               {% endif %}
             {%- endfor -%}
