@@ -22,7 +22,7 @@
                 <div>
                     <span class="status {{ status.status | slugify }}"><span class="status-inner">{{ status.count }}</span></span><strong>{{ status.translation_key | t }}</strong><span class="value">{{ status.percentage | round }}%</span>
                 </div>
-              {% endif %}
+              
             {%- endfor -%}
 
             <br style="clear:both;">
