@@ -59,7 +59,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/1-5-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "1-5-2",
@@ -67,7 +67,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/1-5-2",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "1-5-3",
@@ -1147,7 +1147,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/10-7-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "10-7-2",
@@ -1251,7 +1251,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/11-5-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "11-5-2",
@@ -1259,7 +1259,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/11-5-2",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "11-6-1",
@@ -1451,7 +1451,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/13-1-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "13-1-2",
@@ -1811,7 +1811,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/16-4-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "16-4-2",
@@ -1891,7 +1891,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/16-10-1",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "16-10-2",
@@ -2067,7 +2067,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/17-16-1",
-          "status": "inprogress"
+          "status": "complete"
         },
         {
           "id": "17-17-1",
@@ -2075,7 +2075,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/17-17-1",
-          "status": "inprogress"
+          "status": "complete"
         },
         {
           "id": "17-18-1",
