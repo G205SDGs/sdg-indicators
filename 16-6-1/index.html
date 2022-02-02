@@ -140,7 +140,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220202162343">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220202164617">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -864,10 +864,8 @@ data-event-label="Change to Table tab"
   </li></ul>
 
     <div class="tab-content data-view">
-  
+  <div role="tabpanel" class="tab-pane active" id="chartview">
     
-      <div role="tabpanel" class="tab-pane active" id="chartview">
-        
 
     <div id="dataset-size-warning" style="display:none" role="alert">
       <i class="fa fa-bolt"><span class="sr-only"></span></i>
@@ -1200,15 +1198,12 @@ opensdg.chartConfigAlter(function(config, info) {
 
 
 
-      </div>
-    
-  
-    
-      <div role="tabpanel" class="tab-pane " id="tableview">
-        <div style="display: none;">
-          <span id="column-sort-info"></span>
-        </div>
-        <div id="selectionsTable"></div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="tableview">
+    <div style="display: none;">
+      <span id="column-sort-info"></span>
+    </div>
+    <div id="selectionsTable"></div>
 <dl id="tableTargetLines" class="clearfix"></dl>
 </u>
 
@@ -1249,9 +1244,7 @@ opensdg.chartConfigAlter(function(config, info) {
 
 <div id="tableSelectionDownload" class="clearfix"></div>
 
-      </div>
-    
-  
+  </div>
 </div>
 
 
@@ -2425,12 +2418,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220202162343'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220202164617'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220202162343"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220202164617"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

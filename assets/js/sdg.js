@@ -2456,19 +2456,12 @@ function getHeadlineTable(rows, selectedUnit) {
 
 /**
  * @param {Object} data Object imported from JSON file
- * @param {Array} dropKeys Array of keys to drop from the rows
  * @return {Array} Rows
  */
-function convertJsonFormatToRows(data, dropKeys) {
+function convertJsonFormatToRows(data) {
   var keys = Object.keys(data);
   if (keys.length === 0) {
     return [];
-  }
-
-  if (dropKeys && dropKeys.length > 0) {
-    keys = keys.filter(function(key) {
-      return !(dropKeys.includes(key));
-    });
   }
 
   return data[keys[0]].map(function(item, index) {
@@ -2539,26 +2532,6 @@ function sortData(rows, selectedUnit) {
 function getPrecision(precisions, selectedUnit, selectedSeries) {
   var match = getMatchByUnitSeries(precisions, selectedUnit, selectedSeries);
   return (match) ? match.decimals : false;
-}
-
-/**
- * @param {Object} data Object imported from JSON file
- * @return {Array} Rows
- */
-function inputData(data) {
-  var dropKeys = [];
-  
-  return convertJsonFormatToRows(data, dropKeys);
-}
-
-/**
- * @param {Object} edges Object imported from JSON file
- * @return {Array} Rows
- */
-function inputEdges(edges) {
-  var edgesData = convertJsonFormatToRows(edges);
-  
-  return edgesData;
 }
 
 
