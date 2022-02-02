@@ -140,7 +140,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220202154313">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220202155330">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -224,34 +224,34 @@ data-event-label="high"
         aria-haspopup="true">
         <button data-target="menu-mobile" aria-expanded="false">Menü</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-indicators/">17 Ziele</a>
+    <a href="/sdg-indicators/" onclick="updateVisitCountMinus()">17 Ziele</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
+    <a href="/sdg-indicators/reporting-status/" onclick="updateVisitCountMinus()">Datenverfügbarkeit</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
+    <a href="/sdg-indicators/about_platform/" onclick="updateVisitCountMinus()">Die&nbspSDG&#8209;Online&nbspPlattform</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/about_navigation/">Navigation</a>
+    <a href="/sdg-indicators/about_navigation/" onclick="updateVisitCountMinus()">Navigation</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
+    <a href="/sdg-indicators/about_guidance/" onclick="updateVisitCountMinus()">Technische&nbspHinweise</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
+    <a href="/sdg-indicators/facts_agenda/" onclick="updateVisitCountMinus()">Agenda&nbsp2030</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/facts_dns/">DNS</a>
+    <a href="/sdg-indicators/facts_dns/" onclick="updateVisitCountMinus()">DNS</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/">Open SDG Plattformen anderer Staaten</a>
+    <a href="/sdg-indicators/" onclick="updateVisitCountMinus()">Open SDG Plattformen anderer Staaten</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/publications/">Publikationen</a>
+    <a href="/sdg-indicators/publications/" onclick="updateVisitCountMinus()">Publikationen</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
+    <a href="https://sustainabledevelopment-deutschland.github.io" onclick=""><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
 </li>
 <li class="language-toggle-menu-header">
     
@@ -315,10 +315,10 @@ data-event-label="high"
 </div>
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sdg-indicators/">17 Ziele</a>
+    <a href="/sdg-indicators/" onclick="updateVisitCountMinus()">17 Ziele</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
+    <a href="/sdg-indicators/reporting-status/" onclick="updateVisitCountMinus()">Datenverfügbarkeit</a>
 </li>
 <li class="nav-link">
             <div class="btn-group menu-dropdown">
@@ -327,13 +327,13 @@ data-event-label="high"
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
+    <a href="/sdg-indicators/about_platform/" onclick="updateVisitCountMinus()">Die&nbspSDG&#8209;Online&nbspPlattform</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/about_navigation/">Navigation</a>
+    <a href="/sdg-indicators/about_navigation/" onclick="updateVisitCountMinus()">Navigation</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
+    <a href="/sdg-indicators/about_guidance/" onclick="updateVisitCountMinus()">Technische&nbspHinweise</a>
 </li>
 </ul>
             </div>
@@ -344,10 +344,10 @@ data-event-label="high"
                     <i class="fa fa-chevron-down"></i>
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
+    <a href="/sdg-indicators/facts_agenda/" onclick="updateVisitCountMinus()">Agenda&nbsp2030</a>
 </li>
 <li class="nav-link ">
-    <a href="/sdg-indicators/facts_dns/">DNS</a>
+    <a href="/sdg-indicators/facts_dns/" onclick="updateVisitCountMinus()">DNS</a>
 </li>
 <li class="dropdown-submenu">
                         <a class="test" tabindex="-1" href="#">
@@ -355,43 +355,43 @@ data-event-label="high"
                             <i class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu" style="margin-left: 0px"><li class="nav-link ">
-    <a href="https://armstat.github.io/sdg-site-armenia/">Armenien</a>
+    <a href="https://armstat.github.io/sdg-site-armenia/" onclick="">Armenien</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sdg.bhas.gov.ba/">Bosnien und Herzegowina</a>
+    <a href="https://sdg.bhas.gov.ba/" onclick="">Bosnien und Herzegowina</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sdgcif-data-canada-oddcic-donnee.github.io/">Kanada</a>
+    <a href="https://sdgcif-data-canada-oddcic-donnee.github.io/" onclick="">Kanada</a>
 </li>
 <li class="nav-link ">
-    <a href="https://visar.hagstofa.is/heimsmarkmidin/">Island</a>
+    <a href="https://visar.hagstofa.is/heimsmarkmidin/" onclick="">Island</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kirgisistan</a>
+    <a href="https://sustainabledevelopment-kyrgyzstan.github.io/" onclick="">Kirgisistan</a>
 </li>
 <li class="nav-link ">
-    <a href="https://www.lsb.gov.la/sdg/">Laos</a>
+    <a href="https://www.lsb.gov.la/sdg/" onclick="">Laos</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sustainabledevelopment-rwanda.github.io/">Ruanda</a>
+    <a href="https://sustainabledevelopment-rwanda.github.io/" onclick="">Ruanda</a>
 </li>
 <li class="nav-link ">
-    <a href="http://kostat.go.kr/sdg">Südkorea</a>
+    <a href="http://kostat.go.kr/sdg" onclick="">Südkorea</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sdgdata.gov.uk/">Vereinigtes Königreich</a>
+    <a href="https://sdgdata.gov.uk/" onclick="">Vereinigtes Königreich</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sdg.data.gov/">USA</a>
+    <a href="https://sdg.data.gov/" onclick="">USA</a>
 </li>
 </ul>
                       </li></ul>
             </div>
         </li><li class="nav-link ">
-    <a href="/sdg-indicators/publications/">Publikationen</a>
+    <a href="/sdg-indicators/publications/" onclick="updateVisitCountMinus()">Publikationen</a>
 </li>
 <li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
+    <a href="https://sustainabledevelopment-deutschland.github.io" onclick=""><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
 </li>
 <li class="language-toggle-menu-header">
     
@@ -864,6 +864,392 @@ data-event-label="Change to Table tab"
   </li></ul>
 
     <div class="tab-content data-view">
+  
+    
+      <div role="tabpanel" class="tab-pane active" id="chartview">
+        
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only"></span></i>
+      Zu viele Zeitreihen ausgewählt, um diese in einer Grafik darzustellen. Es können nicht alle Zeitreihen dargestellt werden.
+    </div>
+
+    
+    
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">Waldfläche im Verhältnis zur gesamten Landfläche</h4>
+          <div id="chart" class="plot-container">
+            
+<canvas
+    role="img"
+    aria-labelledby="chart-heading"
+    aria-describedby="table-alternative chart-annotations"
+    tabindex="0"
+ ></canvas>
+
+<script>
+// Add a chart alteration to support the chart_graph_limits metadata field.
+opensdg.chartConfigAlter(function(config, info) {
+  if (info.graphLimits && Object.keys(info.graphLimits).length > 0) {
+    var overrides = {
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              min: info.graphLimits.minimum,
+              max: info.graphLimits.maximum,
+            }
+          }]
+        }
+      }
+    }
+    // Add these overrides onto the normal config.
+    $.extend(true, config, overrides);
+  }
+  else {
+    // Otherwise remove any min/max that may be there.
+    try {
+      delete config.options.scales.yAxes[0].ticks.min;
+      delete config.options.scales.yAxes[0].ticks.max;
+    }
+    catch(e) {}
+  }
+});
+</script>
+
+<span style="display: none;" id="chart-annotations" role="status"></span>
+<script>
+opensdg.annotationPresets = {
+    common: {
+        // This "common" preset is applied to all annotations automatically.
+        borderColor: '#949494',
+        type: 'line',
+        borderDash: [10, 5],
+        borderWidth: 1,
+        label: {
+            backgroundColor: 'white',
+            fontColor: 'black',
+        },
+        // This "highContrast" overrides colors when in high-contrast mode.
+        highContrast: {
+            label: {
+                backgroundColor: 'black',
+                fontColor: 'white'
+            }
+        },
+        // This callback is used to generate a generic description for screenreaders.
+        // This can be overridden to be a more specific string, eg:
+        //
+        //     description: 'Chart annotation showing a 2030 target of 15%'
+        //
+        description: function() {
+            var descriptionParts = [translations.indicator.chart_annotation];
+            if (this.label && this.label.content) {
+                descriptionParts.push(translations.t(this.label.content));
+            }
+            else {
+                // If there is no label, just specify whether it is a box or line.
+                if (this.type == 'line') {
+                    descriptionParts.push(this.mode + ' line');
+                }
+                if (this.type == 'box') {
+                    descriptionParts.push('box');
+                }
+            }
+            if (typeof this.value !== 'undefined') {
+                descriptionParts.push(this.value);
+            }
+            return descriptionParts.join(': ');
+        },
+    },
+    target_line: {
+        mode: 'horizontal',
+        borderWidth: 2,
+        borderDash: [15, 10],
+        borderColor: '#757575',
+        label: {
+            position: 'right',
+            content: translations.indicator.annotation_2030_target,
+        },
+    },
+    series_break: {
+        mode: 'vertical',
+        borderDash: [2, 2],
+        label: {
+            position: 'top',
+            content: translations.indicator.annotation_series_break,
+            xAdjust: +60,
+        },
+
+    },
+};
+
+// Add a chart alteration to support the chart_annotations metadata field.
+opensdg.chartConfigAlter(function(config, info) {
+    if (info.graphAnnotations && info.graphAnnotations.length > 0) {
+        // Apply some helpers/fixes to the annotations.
+        var annotations = info.graphAnnotations.map(function(annotationOverrides) {
+            var annotation = {};
+            // Apply the "common" preset.
+            if (opensdg.annotationPresets.common) {
+                $.extend(true, annotation, opensdg.annotationPresets.common);
+            }
+            // Apply any specified presets.
+            if (annotationOverrides.preset) {
+                var preset = annotationOverrides.preset;
+                if (opensdg.annotationPresets[preset]) {
+                    $.extend(true, annotation, opensdg.annotationPresets[preset]);
+                }
+            }
+            // Now add any more annotation config.
+            $.extend(true, annotation, annotationOverrides);
+            // Default to horizontal lines.
+            if (!annotation.mode && annotation.type === 'line') {
+                annotation.mode = 'horizontal';
+            }
+            // Provide the obscure scaleID properties on user's behalf.
+            if (!annotation.scaleID && annotation.type === 'line') {
+                if (annotation.mode === 'horizontal') {
+                    annotation.scaleID = 'y-axis-0';
+                }
+                if (annotation.mode === 'vertical') {
+                    annotation.scaleID = 'x-axis-0';
+                }
+            }
+            if (!annotation.xScaleID && annotation.type === 'box') {
+                annotation.xScaleID = 'x-axis-0';
+            }
+            if (!annotation.yScaleID && annotation.type === 'box') {
+                annotation.yScaleID = 'y-axis-0';
+            }
+            // Provide the "enabled" label property on the user's behalf.
+            if (annotation.label && annotation.label.content) {
+                annotation.label.enabled = true;
+            }
+            // Translate any label content.
+            if (annotation.label && annotation.label.content) {
+                annotation.label.content = translations.t(annotation.label.content);
+            }
+            // Save some original values for later used when contrast mode is switched.
+            if (typeof annotation.defaultContrast === 'undefined') {
+                annotation.defaultContrast = {};
+                if (annotation.borderColor) {
+                    annotation.defaultContrast.borderColor = annotation.borderColor;
+                }
+                if (annotation.backgroundColor) {
+                    annotation.defaultContrast.backgroundColor = annotation.backgroundColor;
+                }
+                if (annotation.label) {
+                    annotation.defaultContrast.label = {};
+                    if (annotation.label.fontColor) {
+                        annotation.defaultContrast.label.fontColor = annotation.label.fontColor;
+                    }
+                    if (annotation.label.backgroundColor) {
+                        annotation.defaultContrast.label.backgroundColor = annotation.label.backgroundColor;
+                    }
+                }
+            }
+            return annotation;
+        });
+        if (annotations.length > 0) {
+            var overrides = {
+                options: {
+                    annotation: {
+                        drawTime: 'beforeDatasetsDraw',
+                        annotations: annotations
+                    }
+                }
+            };
+            // Add these overrides onto the normal config.
+            $.extend(true, config, overrides);
+
+            // Update the chart annotations element.
+            var descriptions = annotations.map(function(annotation) {
+                var description = '';
+                if (annotation.description) {
+                    if (typeof annotation.description === 'function') {
+                        description = annotation.description.call(annotation);
+                    }
+                    else {
+                        description = translations.t(annotation.description);
+                    }
+                }
+                return description;
+            }).filter(function(description) { return description != ''; });
+
+            var currentDescription = $('#chart-annotations').text();
+            var newDescription = descriptions.join('. ');
+            if (currentDescription != newDescription) {
+                $('#chart-annotations').text(newDescription);
+            }
+        }
+    }
+    else if (config.options && config.options.annotation) {
+        delete config.options.annotation;
+    }
+});
+</script>
+
+<script>
+opensdg.chartConfigAlter(function(config, info) {
+  if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
+    var overrides = {
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              stepSize: info.graphStepsize.step,
+            }
+          }]
+        }
+      }
+    }
+    // Add these overrides onto the normal config.
+    $.extend(true, config, overrides);
+  }
+});
+</script>
+
+
+<script>
+opensdg.chartConfigAlter(function(config, info) {
+  if (info.stackedDisaggregation) {
+    var overrides = {
+      options: {
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [{ stacked: true }],
+        }
+      }
+    };
+    // If we have stackedDisaggregation, we need to group datasets into stacks.
+    config.data.datasets.forEach(function(dataset) {
+      var disaggregation = $.extend({}, dataset.disaggregation);
+      // We're going to "stringify" each combination of disaggregations in order
+      // to place them in their own "stacks". To place "stacked" disaggregations
+      // into the same stack, we set them as "samestack" before stringifying.
+      // Note that the string "samestack" is completely arbitrary.
+      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
+        disaggregation[info.stackedDisaggregation] = 'samestack';
+      }
+      // Use the disaggregation as a unique id for each stack.
+      dataset.stack = JSON.stringify(disaggregation);
+    });
+    // Add these overrides onto the normal config, and return it.
+    $.extend(true, config, overrides);
+  }
+});
+</script>
+
+          </div>
+          <div id="plotLegend"></div>
+          </u>
+
+
+
+<div id="selectionChartFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+          
+          <dt><u>Datenquelle</u>:</dt>
+          
+        <dd><a href="https://www.destatis.de"> Statistisches Bundesamt (Destatis) </a></dd>
+        
+
+        
+        <dt><u>Geographische Abdeckung</u>:</dt>
+        <dd>Deutschland</dd>
+        
+
+        
+        <dt><u>Einheit</u>:</dt>
+        <dd>Prozent</dd>
+        
+
+        
+
+        
+        <dt><u>Anmerkung</u>:</dt>
+        <dd>Datenbasis ist die amtliche Flächenerhebung. Bis Ende 2016 erfolgte eine Umstellung des Liegenschaftskatasters auf ALKIS. Mit der Umstellung wurde auch eine neue Nutzungsartensystematik eingeführt, die Auswirkungen auf die Vergleichbarkeit der Daten im Zeitablauf hat. Die Umstellung nach ALKIS wurde in den Bundesländern zu unterschiedlichen Zeitpunkten durchgeführt und erstreckte sich über einen Zeitraum von insgesamt neun Jahren.</dd>
+        
+
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2022</dd>
+        
+    <dl>
+</div>
+
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button id="btnSave" title="" class='btn btn-primary btn-download'>
+          Grafik als Bild speichern
+        </button>
+      </div>
+    </div>
+
+
+
+      </div>
+    
+  
+    
+      <div role="tabpanel" class="tab-pane " id="tableview">
+        <div style="display: none;">
+          <span id="column-sort-info"></span>
+        </div>
+        <div id="selectionsTable"></div>
+<dl id="tableTargetLines" class="clearfix"></dl>
+</u>
+
+
+
+<div id="selectionTableFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+          
+          <dt><u>Datenquelle</u>:</dt>
+          
+        <dd><a href="https://www.destatis.de"> Statistisches Bundesamt (Destatis) </a></dd>
+        
+
+        
+        <dt><u>Geographische Abdeckung</u>:</dt>
+        <dd>Deutschland</dd>
+        
+
+        
+        <dt><u>Einheit</u>:</dt>
+        <dd>Prozent</dd>
+        
+
+        
+
+        
+        <dt><u>Anmerkung</u>:</dt>
+        <dd>Datenbasis ist die amtliche Flächenerhebung. Bis Ende 2016 erfolgte eine Umstellung des Liegenschaftskatasters auf ALKIS. Mit der Umstellung wurde auch eine neue Nutzungsartensystematik eingeführt, die Auswirkungen auf die Vergleichbarkeit der Daten im Zeitablauf hat. Die Umstellung nach ALKIS wurde in den Bundesländern zu unterschiedlichen Zeitpunkten durchgeführt und erstreckte sich über einen Zeitraum von insgesamt neun Jahren.</dd>
+        
+
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2022</dd>
+        
+    <dl>
+</div>
+
+<div id="tableSelectionDownload" class="clearfix"></div>
+
+      </div>
+    
   
 </div>
 
@@ -2040,12 +2426,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220202154313'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220202155330'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220202154313"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220202155330"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
