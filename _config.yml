@@ -12,11 +12,11 @@ baseurl: "/sdg-indicators" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: staging
-remote_data_prefix: "https://G205SDGs.github.io/sdg-data"
+remote_data_prefix: "https://SdgTestEnvironment.github.io/sdg-data"
 # URL for the "Edit Data" button on indicators.
-data_edit_url: http://prose.io/#G205SDGs/sdg-data/edit/develop/data/indicator_[id].csv
+data_edit_url: http://prose.io/#SdgTestEnvironment/sdg-data/edit/develop/data/indicator_[id].csv
 # URL for the "Edit Metadata" button on indicators.
-metadata_edit_url: http://prose.io/#G205SDGs/sdg-data/edit/develop/meta/[id].md
+metadata_edit_url: http://prose.io/#SdgTestEnvironment/sdg-data/edit/develop/meta/[id].md
 # permalink: /news/:year/:month/:day/:title.html
 
 logos:
@@ -104,12 +104,35 @@ menu:
         translation_key: menu.facts_agenda
       - path: /facts_dns/
         translation_key: menu.facts_dns
-      #- path: /publications/
-        #translation_key: menu.publications
+      - translation_key: menu.other_countries
+        dropdown:
+          - path: https://armstat.github.io/sdg-site-armenia/
+            translation_key: menu.armenia
+          - path: https://sdg.bhas.gov.ba/
+            translation_key: menu.bosnia_and_herzegovina
+          - path: https://sdgcif-data-canada-oddcic-donnee.github.io/
+            translation_key: menu.canada
+          - path: https://visar.hagstofa.is/heimsmarkmidin/
+            translation_key: menu.iceland
+          - path: https://sustainabledevelopment-kyrgyzstan.github.io/
+            translation_key: menu.kyrgyzstan
+          - path: https://www.lsb.gov.la/sdg/
+            translation_key: menu.lao
+          - path: https://sustainabledevelopment-rwanda.github.io/
+            translation_key: menu.rwanda
+          - path: http://kostat.go.kr/sdg
+            translation_key: menu.south_korea
+          - path: https://sdgdata.gov.uk/
+            translation_key: menu.united_kingdom
+          - path: https://sdg.data.gov/
+            translation_key: menu.unites_states
+
+
   - path: /publications/
     translation_key: menu.publications
   - path: https://sustainabledevelopment-deutschland.github.io
     translation_key: menu.linkToDnsPlatform
+
 
 contrast_type: single
 
@@ -152,15 +175,6 @@ reporting_status:
     title: status.reporting_status
     description: status.status_blurb
     disaggregation_tabs: false
-    status_types:
-      - value: complete
-        label: status.reported_online
-      - value: notstarted
-        label: status.exploring_data_sources
-      - value: inprogress
-        label: status.statistics_in_progress
-      - value: notapplicable
-        label: status.not_applicable
 
 hide_empty_metadata: true
 hide_single_unit: true
@@ -172,7 +186,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@data-schema
-remote_theme: open-sdg/open-sdg@1.6.0
+remote_theme: open-sdg/open-sdg@1.7.0
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
@@ -197,7 +211,7 @@ map_options:
   tileOptions:
     id: mapbox.light
     accessToken: pk.eyJ1IjoibW9ib3NzZSIsImEiOiJjazU1M2trazQwYnFwM2trYmdwNm9rOWxkIn0.u36w-RJPqoTGmivl_zED1w
-    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2021</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2021</a>
+    attribution: <a href="https://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a> contributors |<br class="visible-xs"> <a href="https://www.bkg.bund.de">&copy; GeoBasis-De / BKG 2022</a> |<br class="hidden-lg"> <a href="https://www.destatis.de/DE/Home/_inhalt.html">&copy; Statistisches Bundesamt (Destatis), 2022</a>
   # Control the choropleth color range. See https://gka.github.io/chroma.js/#chroma-brewer
   # 1 map color depending on goal --- start ---
   #colorRange: ["#F6E8EC", "#E3BAC6", "#D18CA1", "#BE5E7B", "#AB3055", "#A21942", "#821435", "#610F28", "#410A1A", "#20050D"]
