@@ -104,28 +104,28 @@ menu:
         translation_key: menu.facts_agenda
       - path: /facts_dns/
         translation_key: menu.facts_dns
-      - translation_key: menu.other_countries
-        dropdown:
-          - path: https://armstat.github.io/sdg-site-armenia/
-            translation_key: menu.armenia
-          - path: https://sdg.bhas.gov.ba/
-            translation_key: menu.bosnia_and_herzegovina
-          - path: https://sdgcif-data-canada-oddcic-donnee.github.io/
-            translation_key: menu.canada
-          - path: https://visar.hagstofa.is/heimsmarkmidin/
-            translation_key: menu.iceland
-          - path: https://sustainabledevelopment-kyrgyzstan.github.io/
-            translation_key: menu.kyrgyzstan
-          - path: https://www.lsb.gov.la/sdg/
-            translation_key: menu.lao
-          - path: https://sustainabledevelopment-rwanda.github.io/
-            translation_key: menu.rwanda
-          - path: http://kostat.go.kr/sdg
-            translation_key: menu.south_korea
-          - path: https://sdgdata.gov.uk/
-            translation_key: menu.united_kingdom
-          - path: https://sdg.data.gov/
-            translation_key: menu.unites_states
+      # - translation_key: menu.other_countries
+      #   dropdown:
+      #     - path: https://armstat.github.io/sdg-site-armenia/
+      #       translation_key: menu.armenia
+      #     - path: https://sdg.bhas.gov.ba/
+      #       translation_key: menu.bosnia_and_herzegovina
+      #     - path: https://sdgcif-data-canada-oddcic-donnee.github.io/
+      #       translation_key: menu.canada
+      #     - path: https://visar.hagstofa.is/heimsmarkmidin/
+      #       translation_key: menu.iceland
+      #     - path: https://sustainabledevelopment-kyrgyzstan.github.io/
+      #       translation_key: menu.kyrgyzstan
+      #     - path: https://www.lsb.gov.la/sdg/
+      #       translation_key: menu.lao
+      #     - path: https://sustainabledevelopment-rwanda.github.io/
+      #       translation_key: menu.rwanda
+      #     - path: http://kostat.go.kr/sdg
+      #       translation_key: menu.south_korea
+      #     - path: https://sdgdata.gov.uk/
+      #       translation_key: menu.united_kingdom
+      #     - path: https://sdg.data.gov/
+      #       translation_key: menu.unites_states
 
 
   - path: /publications/
