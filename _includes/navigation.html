@@ -11,8 +11,8 @@
                 <ul class="dropdown-menu">
                 {%- for dropdown_item in item.dropdown -%}
                     {%- if include.dropdowns and dropdown_item.dropdown and dropdown_item.dropdown.size > 0 -%}
-                      <li class="dropdown-submenu">
-                        <a class="test" tabindex="-1" href="#">
+                      <li>
+                        <a tabindex="-1">
                             {{ dropdown_item.translation_key | t }}
                             <i class="fa fa-chevron-down"></i>
                         </a>
