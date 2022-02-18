@@ -140,7 +140,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220218013925">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220218075622">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -650,7 +650,7 @@ data-event-label="high"
   data-graphtargetlines="null"
   data-graphseriesbreaks="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Gewässer mit guter Wasserqualität&quot;,&quot;Anteil Fließgewässer mit gutem ökologischem Zustand für Gesamt-Phosphor&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;type of water body&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Fließgewässer&quot;,&quot;Seen und Talsperren&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Art des Gewässers&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Anteil Fließgewässer mit gutem ökologischem Zustand für Gesamt-Phosphor&quot;,&quot;proportion groundwater below threshold for nitrate&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:2}]"
   data-graphstepsize="null"
@@ -697,7 +697,7 @@ data-event-label="high"
 
   <div id="datatableFooter">
     
-    <p>Datenquelle: <a href="https://www.bmuv.de/"> Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV) </a></p>
+    <p>Datenquelle: <a href="https://www.umweltbundesamt.de/"> Umweltbundesamt (UBA) </a></p>
     
     
     <p>Geographische Abdeckung: Deutschland</p>
@@ -706,7 +706,7 @@ data-event-label="high"
     <p>Einheit: Prozent</p>
     
     
-    <p>Anmerkung: Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</p>
+    <p>Anmerkung: </p>
     
   </div>
 
@@ -1029,7 +1029,7 @@ opensdg.chartConfigAlter(function(config, info) {
           
           <dt><u>Datenquelle</u>:</dt>
           
-        <dd><a href="https://www.bmuv.de/"> Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV) </a></dd>
+        <dd><a href="https://www.umweltbundesamt.de/"> Umweltbundesamt (UBA) </a></dd>
         
 
         
@@ -1044,9 +1044,6 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
-        
-        <dt><u>Anmerkung</u>:</dt>
-        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
@@ -1087,7 +1084,7 @@ opensdg.chartConfigAlter(function(config, info) {
           
           <dt><u>Datenquelle</u>:</dt>
           
-        <dd><a href="https://www.bmuv.de/"> Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV) </a></dd>
+        <dd><a href="https://www.umweltbundesamt.de/"> Umweltbundesamt (UBA) </a></dd>
         
 
         
@@ -1102,9 +1099,6 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
-        
-        <dt><u>Anmerkung</u>:</dt>
-        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
@@ -1201,7 +1195,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Verfügbare Zeitreihen </th>
         <td>
           
-            <ul style="padding-left: 25px;"><li>Gewässer mit guter Wasserqualität</li> <li> Anteil Fließgewässer mit gutem ökologischem Zustand für Gesamt-Phosphor</li></ul>
+            <ul style="padding-left: 25px;"><li>Anteil Fließgewässer mit gutem ökologischem Zustand für Gesamt-Phosphor</li> <li> Anteil Grundwasser unterhalb Schwellenwert für Nitrat</li></ul>
 
           
         </td>
@@ -1294,8 +1288,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/22347ddc4943f2e95f7406a3b7f41d474a75ca18" target="_blank">
-                2022-02-17: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/557228c77b0a7e0698eaaecbceacabd6bb460e2a" target="_blank">
+                2022-02-18: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1325,8 +1319,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/22347ddc4943f2e95f7406a3b7f41d474a75ca18" target="_blank">
-                2022-02-17: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/557228c77b0a7e0698eaaecbceacabd6bb460e2a" target="_blank">
+                2022-02-18: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -1890,7 +1884,7 @@ data-event-label="Change to Sources tab"
         <th scope="row"> </th>
         <td>
           
-            <p><a href="https://www.bmuv.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgDe/bmuv.png" alt="Logo bmuv" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://www.umweltbundesamt.de/"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgDe/uba.png" alt="Logo uba" style="height:60px; width:148px" /></a></p>
 
           
         </td>
@@ -1906,12 +1900,52 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p><a href="https://www.bmuv.de/"> Bundesministerium für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz (BMUV) </a></p>
+            <p><a href="https://www.umweltbundesamt.de/"> Umweltbundesamt (UBA) </a></p>
 
           
         </td>
         </tr>
         
+      
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+      
+      
+      <tr>
+        <th scope="row">Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+
+            
+              <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-eutrophierung-von-fluessen-durch-phosphor" target="_blank">
+                Eutrophierung von Flüssen durch Phosphor <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+        
+      
+      
       
   
       
@@ -1931,25 +1965,35 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-nitrat-im-grundwasser" target="_blank">
+                Nitrat im Grundwasser <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
-          
       
-        
-          
       
-        
-          
       
-        
-          
-      
-        
-          
-      
-        
-          
+  
       
         
           
@@ -2242,12 +2286,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220218013925'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220218075622'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220218013925"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220218075622"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();

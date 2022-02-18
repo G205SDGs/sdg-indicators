@@ -140,7 +140,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220218013925">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220218075622">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -618,22 +618,22 @@ data-event-label="high"
   data-indicatorid='indicator_4-4-1'
   data-id="4-4-1"
   data-country="Germany"
-  data-charttitle="Persons with computer-related activities in the last 12 months"
+  data-charttitle="Share of population with computer-related activities"
   data-charttitles="null"
   data-measurementunit="Percentage"
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype="line"
+  data-graphtype="bar"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Activities&quot;,&quot;value&quot;:&quot;Transferring files between computer and other devices&quot;},{&quot;field&quot;:&quot;Activities&quot;,&quot;value&quot;:&quot;Installing software or apps&quot;},{&quot;field&quot;:&quot;Activities&quot;,&quot;value&quot;:&quot;Using spreadsheet`s advanced functions to organize and analyze data, such as sorting, filtering, using formulas, creating charts&quot;}]"
+  data-startvalues="[{&quot;field&quot;:&quot;Activities&quot;,&quot;value&quot;:&quot;Writing code in a programming language&quot;},{&quot;field&quot;:&quot;Activities&quot;,&quot;value&quot;:&quot;Transferring files between computer and other devices&quot;},{&quot;field&quot;:&quot;Activities&quot;,&quot;value&quot;:&quot;Installing software or apps&quot;},{&quot;field&quot;:&quot;Activities&quot;,&quot;value&quot;:&quot;Using spreadsheet`s advanced functions to organize and analyze data, such as sorting, filtering, using formulas, creating charts&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
   data-showline="true"
   data-spangaps="true"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphseriesbreaks="[{&quot;value&quot;:10.5}]"
+  data-graphseriesbreaks="[{&quot;value&quot;:10.0}]"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;activities&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Copying or moving of files and folders&quot;,&quot;Using copy or cut and paste tools to duplicate or move information on screen&quot;,&quot;Writing code in a programming language&quot;,&quot;Connecting and installing new devices, eg a printer or a modem&quot;,&quot;Transferring files between computer and other devices&quot;,&quot;Installing software or apps&quot;,&quot;Creating electronic presentations with presentation software, including e.g. images, sound, video or charts&quot;,&quot;Using spreadsheet`s advanced functions to organize and analyze data, such as sorting, filtering, using formulas, creating charts&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Activities&quot;},{&quot;name&quot;:&quot;age&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 to under 25 years&quot;,&quot;25 to under 65 years&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
@@ -670,7 +670,7 @@ data-event-label="high"
 
     <h3>Headline data</h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Persons with computer-related activities in the last 12 months</caption>
+      <caption>Share of population with computer-related activities</caption>
       <thead>
         
       </thead>
@@ -737,7 +737,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Persons with computer-related activities in the last 12 months</h4>
+          <h4 id="chart-heading" class="chart-title">Share of population with computer-related activities</h4>
           <div id="chart" class="plot-container">
             
 <canvas
@@ -972,39 +972,32 @@ opensdg.chartConfigAlter(function(config, info) {
 
 
 <script>
-// For line charts, add the vertical line hover functionality.
 opensdg.chartConfigAlter(function(config, info) {
+  if (info.stackedDisaggregation) {
     var overrides = {
-        options: {
-            tooltips: {
-                intersect: false,
-                axis: 'x'
-            },
-        },
-        plugins: [{
-            beforeDatasetsDraw: function(chart) {
-                if (chart.tooltip._active && chart.tooltip._active.length) {
-                    var activePoint = chart.tooltip._active[0],
-                        ctx = chart.ctx,
-                        x = activePoint.tooltipPosition().x,
-                        topY = chart.scales['y-axis-0'].top,
-                        bottomY = chart.scales['y-axis-0'].bottom;
-
-                    // draw line
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.moveTo(x, topY);
-                    ctx.lineTo(x, bottomY);
-                    ctx.lineWidth = 2;
-                    ctx.strokeStyle = '#757575';
-                    ctx.stroke();
-                    ctx.restore();
-                }
-            }
-        }],
+      options: {
+        scales: {
+          xAxes: [{ stacked: true }],
+          yAxes: [{ stacked: true }],
+        }
+      }
     };
+    // If we have stackedDisaggregation, we need to group datasets into stacks.
+    config.data.datasets.forEach(function(dataset) {
+      var disaggregation = $.extend({}, dataset.disaggregation);
+      // We're going to "stringify" each combination of disaggregations in order
+      // to place them in their own "stacks". To place "stacked" disaggregations
+      // into the same stack, we set them as "samestack" before stringifying.
+      // Note that the string "samestack" is completely arbitrary.
+      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
+        disaggregation[info.stackedDisaggregation] = 'samestack';
+      }
+      // Use the disaggregation as a unique id for each stack.
+      dataset.stack = JSON.stringify(disaggregation);
+    });
     // Add these overrides onto the normal config, and return it.
     $.extend(true, config, overrides);
+  }
 });
 </script>
 
@@ -1317,8 +1310,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/8519dc554ba29fef04871fb819253a16f79c6f59" target="_blank">
-                2022-02-17: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/87baa9534f018bcbda0f4258154ccd52e844ed99" target="_blank">
+                2022-02-18: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -2310,10 +2303,35 @@ data-event-label="Change to Sources tab"
           
       
         
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
           
+            
+            
+            
+            
+
+            
+              <a href="https://ec.europa.eu/eurostat/databrowser/view/isoc_sk_cskl_i21/default/table?lang=en" target="_blank">
+                Individuals' level of computer skills (2021 onward) - Eurostat table [isoc_sk_cskl_i21] <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
       
         
-          
+      
+      
+      
+  
       
         
           
@@ -2579,12 +2597,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220218013925'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220218075622'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220218013925"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220218075622"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
