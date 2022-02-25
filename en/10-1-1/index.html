@@ -140,7 +140,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220224111809">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220225013932">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -633,7 +633,7 @@ data-event-label="high"
   data-spangaps="true"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphseriesbreaks="null"
+  data-graphseriesbreaks="[{&quot;value&quot;:9.5}]"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Growth rate of net equivalent income of the total population&quot;,&quot;Growth rate of net equivalent income of the bottom 40 per cent of the population&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
@@ -691,7 +691,7 @@ data-event-label="high"
     <p>Unit of measurement: Percentage</p>
     
     
-    <p>Note: </p>
+    <p>Note: The results from 2020 onwards are only comparable with previous years to a limited extent. For more information see "3. Data description" in the national metadata.</p>
     
   </div>
 
@@ -1037,6 +1037,9 @@ opensdg.chartConfigAlter(function(config, info) {
         
 
         
+        <dt><u>Note</u>:</dt>
+        <dd>The results from 2020 onwards are only comparable with previous years to a limited extent. For more information see "3. Data description" in the national metadata.</dd>
+        
 
         
 
@@ -1091,6 +1094,9 @@ opensdg.chartConfigAlter(function(config, info) {
 
         
 
+        
+        <dt><u>Note</u>:</dt>
+        <dd>The results from 2020 onwards are only comparable with previous years to a limited extent. For more information see "3. Data description" in the national metadata.</dd>
         
 
         
@@ -1311,8 +1317,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/970cce65d4316d558a738362a62eb866a2d63dfa" target="_blank">
-                2022-01-27: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
+              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/c437cb948101115aed9d64991de4d00a9524ed9b" target="_blank">
+                2022-02-24: see changes on GitHub <span class="visuallyhidden">opens in a new window</span>
               </a>
             
 
@@ -2236,6 +2242,8 @@ data-event-label="Change to Sources tab"
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js" integrity="sha512-9hzM/Gfa9KP1hSBlq3/zyNF/dfbcjAYwUTBWYX+xi8fzfAPHL3ILwS1ci0CTVeuXTGkRAWgRMZZwtSNV7P+nfw==" crossorigin="anonymous"></script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
@@ -2253,12 +2261,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220224111809'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220225013932'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220224111809"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220225013932"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
