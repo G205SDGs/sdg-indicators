@@ -140,7 +140,7 @@ var translations = {
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220328020334">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220329020302">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -1110,10 +1110,11 @@ opensdg.chartConfigAlter(function(config, info) {
   <div class="col-xs-12">
     
     
-    
       <div class="embedded-map" id="embeddedmapframe">
-         <iframe width="100%" height="1200" src="https://sdgtestenvironment.github.io/sdg-indicators/public/AddInfos/de/12.4.1.pdf" frameborder="0" allowFullScreen="true"></iframe>
+        <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+        <script>document.querySelector("li.nav-item.embedded-map").addEventListener("click",function(){ var pymParent = new pym.Parent('embeddedmapframe', 'https://sdgtestenvironment.github.io/sdg-indicators/public/AddInfos/de/12.4.1.pdf', {});})</script>
       </div>
+    
     
     <div class="embedded-map" id="embeddedmapframe">
     
@@ -1328,8 +1329,8 @@ data-event-label="Change to Sources tab"
             
 
             
-              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/690ef64ddd3f1b512cb81f383953a32b5fba9933" target="_blank">
-                2022-03-07: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              <a href="https://github.com/SdgTestEnvironment/sdg-data/commit/1fe6e9d051d45255b60f495ea1b774536e90da85" target="_blank">
+                2022-03-28: see changes on GitHub <span class="visuallyhidden">in neuem Fenster öffnen</span>
               </a>
             
 
@@ -2563,12 +2564,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220328020334'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220329020302'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220328020334"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220329020302"></script><script>
 $(function() {
     if($('#indicatorData').length) {
       var domData = $('#indicatorData').data();
