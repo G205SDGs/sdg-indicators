@@ -4,7 +4,7 @@
 {%- else -%}
   {%- assign indicators_plural = page.t.general.indicators | downcase -%}
 {%- endif -%
-
+  
 {%- assign status_types = site.reporting_status.status_types -%}
 {%- if include.status_types and site[include.status_types] -%}
     {%- assign status_types = site[include.status_types].status_types -%}
