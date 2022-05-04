@@ -7,12 +7,16 @@
 {% include multilingual-js.html key="indicator" %}
 {% include multilingual-js.html key="data" %}
 
-
 {% include components/indicator/header.html %}
+
 <div class="container">
   {% include components/indicator/breadcrumbs.html %}
   {% include components/indicator/navigationbuttons.html %}
+  {% if site.create_indicators.previous_next_links %}
+    {% include components/previous-next-links.html previous_label=page.t.indicator.previous next_label=page.t.indicator.next %}
+  {% endif %}
 </div>
+
 <div id="main-content" class="container goal-{{ page.goal.number }}" role="main">
   {% include components/indicator/data-notice.html %}
   {% include components/indicator/indicator-available.html %}
@@ -20,6 +24,5 @@
   {% include components/indicator/indicator-content.html %}
   {% include components/indicator/indicator-main.html %}
 </div>
-
 
 {% include footer.html %}

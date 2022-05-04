@@ -9,11 +9,12 @@ layout: page
 If you have feedback on the data sources we have used or have suggestions for new data sources then please contact us here <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>.
 
 ## What does the reporting status mean?
-We have used three different types of reporting status for an indicator, which are also colour coded:
+We have used four different types of reporting status for an indicator, which are also colour coded:
 
 * Green: Reported online – as a minimum the headline national data for this indicator is available on this website but the data might not be fully disaggregated yet. We are continuing to source additional disaggregations.
-* Amber: Statistics in progress – we have found a suitable source of data for this indicator or relevant proxy at national level. We are currently quality assuring the data and preparing it for publication.
-* Red: Exploring data sources – we are still looking for a suitable data source for this indicator.
+* Orange: In progress - a suitable data source has been identified. The corresponding time series are currently being processed to be included in this reporting platform.
+* Red: Not available - No data is available for this indicator.
+* Grey: Not applicable - This indicator is marked as not applicable for the provision of national time series.
 
 Where there is additional information about the status of indicator data collection and reporting, this will be displayed at the top of the indicator page.
 

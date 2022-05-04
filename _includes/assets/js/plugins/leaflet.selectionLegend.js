@@ -88,8 +88,6 @@
         '</li>';
       var plugin = this.plugin;
       var valueRange = this.plugin.valueRange;
-
-
       selectionList.innerHTML = this.selections.map(function(selection) {
         var value = plugin.getData(selection.feature.properties);
         var percentage, valueStatus;
@@ -122,7 +120,6 @@
     }
 
   });
-
 
   // Factory function for this class.
   L.Control.selectionLegend = function(plugin) {

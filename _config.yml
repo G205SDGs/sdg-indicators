@@ -60,6 +60,7 @@ exclude:
   - README.md
   - LICENSE
 
+
 # International Support
 # Eg name: Australia and adjective: Australian.
 country:
@@ -157,9 +158,17 @@ search_index_extra_fields:
   - national_indicator_available
   - indicator_name
   - target_name
-  - target_idS
+  - target_id
   - data_keywords
   - graph_title
+
+footer_fields:
+  - unit: '%'
+    label: metadata_fields.computation_units
+    value: data.%
+  - unit: number
+    label: metadata_fields.computation_units
+    value: data.number
 
 series_toggle: true
 graph_title_from_series: true
@@ -184,7 +193,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@data-schema
-remote_theme: open-sdg/open-sdg@1.6.0
+remote_theme: open-sdg/open-sdg@1.8.0-dev
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
