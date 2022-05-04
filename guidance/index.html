@@ -3,10 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        
-
-
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -105,7 +102,6 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
-
         
     <title>Technische Hinweise - Deutschlands Indikatoren der VN Sustainable Development Goals</title>
 
@@ -132,10 +128,12 @@ var translations = {
 
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220504094649">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220504101456">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -155,15 +153,18 @@ layout-page
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Beta-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_address\">Kommentare</a>.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Beta-Version</strong>
     
     Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href="mailto:sdg-indicators@destatis.de">Kommentare</a>.
+    
   </div>
 </div>
 
@@ -173,9 +174,10 @@ layout-page
   <div class="container">
 
     <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-indicators/" id="home">
+      <a class="navbar-brand" href="/sdg-indicators/" id="home" onclick="updateVisitCountMinus()">
     <img src="/sdg-indicators/assets/img/de/SDG_logo.png" alt="Zum Hauptinhalt springen" />
 </a>
+
       <div class="mobile-widgets">
     <ul id='accessibility-nav' class='contrast-switcher'>
         
@@ -220,35 +222,25 @@ data-event-label="high"
         <button data-target="menu-mobile" aria-expanded="false">Menü</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/sdg-indicators/">17 Ziele</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/about_navigation/">Navigation</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/facts_dns/">DNS</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/">Open SDG Plattformen anderer Staaten</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/publications/">Publikationen</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -311,11 +303,9 @@ data-event-label="high"
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/sdg-indicators/">17 Ziele</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li>
-<li class="nav-link">
+</li><li class="nav-link">
             <div class="btn-group menu-dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Über uns
@@ -323,14 +313,11 @@ data-event-label="high"
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/about_navigation/">Navigation</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
-</li>
-</ul>
+</li></ul>
             </div>
         </li><li class="nav-link">
             <div class="btn-group menu-dropdown">
@@ -340,52 +327,39 @@ data-event-label="high"
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/facts_dns/">DNS</a>
-</li>
-<li>
+</li><li>
                         <a tabindex="-1">
                             Open SDG Plattformen anderer Staaten
                             <i class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu" style="margin-left: 0px"><li class="nav-link ">
     <a href="https://armstat.github.io/sdg-site-armenia/">Armenien</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdg.bhas.gov.ba/">Bosnien und Herzegowina</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://visar.hagstofa.is/heimsmarkmidin/">Island</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kirgisistan</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://www.lsb.gov.la/sdg/">Laos</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-rwanda.github.io/">Ruanda</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="http://kostat.go.kr/sdg">Südkorea</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdgdata.gov.uk/">Vereinigtes Königreich</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdg.data.gov/">USA</a>
-</li>
-</ul>
+</li></ul>
                       </li></ul>
             </div>
         </li><li class="nav-link ">
     <a href="/sdg-indicators/publications/">Publikationen</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -433,16 +407,17 @@ data-event-label="high"
 
 
 
+
 <div id="main-content" class="container" role="main">
     <div>
         <h1>Technische Hinweise</h1>
         
-            <h2 id="nationale-berichtsplattform-zu-den-indikatoren-der-un-nachhaltigkeitszielen">Nationale Berichtsplattform zu den Indikatoren der UN-Nachhaltigkeitszielen</h2>
+            <h2 id="open-source-projekt-auf-github">Open-Source-Projekt auf GitHub</h2>
 
-<p>Die Nationale Berichtsplattform ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Daten für Deutschland zu den Indikatoren der Ziele zur nachhaltigen Entwicklung (Sustainable Development Goals - SDGs) der Agenda 2030 der Vereinten Nationen.</p>
+<p>Die SDG-Online Plattform ist ein öffentlich zugängliches Instrument zur Verbreitung und Präsentation von Daten für Deutschland zu den Indikatoren der Ziele zur nachhaltigen Entwicklung (Sustainable Development Goals - SDGs) der Agenda 2030 der Vereinten Nationen.</p>
 
-<p>Um den grundlegenden Prinzipien der Vereinten Nationen für die amtliche Statistik zu entsprechen, sollten die Mindesteigenschaften einer SDG-NRP folgende sein: <br />
-Die Berichtsplattform</p>
+<p>Um den grundlegenden Prinzipien der Vereinten Nationen für die amtliche Statistik zu entsprechen, sollten die Mindesteigenschaften einer SDG-Online Plattform folgende sein: <br />
+Die SDG-Online Plattform</p>
 <ul>
   <li>wird von den nationalen statistischen Ämtern verwaltet;</li>
   <li>enthält offizielle Statistiken und Metadaten nach bewährter Standardmethodik;</li>
@@ -451,22 +426,20 @@ Die Berichtsplattform</p>
   <li>wird mit Open-Source (kostenlosen) Technologien betrieben.</li>
 </ul>
 
-<p>Darüber hinaus wurde die Berichtsplattform nach anerkannten internationalen Richtlinien entwickelt, insbesondere hinsichtlich frei zugänglicher Daten und Software.</p>
+<p>Darüber hinaus wurde die SDG-Online Plattform nach anerkannten internationalen Richtlinien entwickelt, insbesondere hinsichtlich frei zugänglicher Daten und Software.</p>
 
 <h3 id="quellen">Quellen</h3>
 
-<p>Das Statistische Bundesamt (Destatis) unterstützt aktiv die Entwicklung nationaler Berichtsplattformen, insbesondere als Open-Source Lösung zur Darstellung von SDG-Indikatoren. Vorreiter in diesem Bereich sind die USA und Großbritannien.
-Die aktuelle Version der deutschen Berichtsplattform wurde auf der Grundlage einer früheren Version der britischen NRP entwickelt und an die Bedürfnisse der deutschen Statistik angepasst.
-Der Projektcode ist im folgenden <a href="https://github.com/G205SDGs/sdg-indicators">GitHub Repository</a> öffentlich zugänglich.</p>
+<p>Das Statistische Bundesamt (Destatis) unterstützt aktiv die Entwicklung nationaler Online Plattformen, insbesondere als Open-Source Lösung zur Darstellung von SDG-Indikatoren. Vorreiter in diesem Bereich sind die USA und Großbritannien. Die aktuelle Version der deutschen Online Plattform wurde auf der Grundlage einer früheren Version der britischen Online Plattform entwickelt und an die Bedürfnisse der deutschen Statistik angepasst. Der Projektcode für die SDG-Online Plattform ist im folgenden <a href="https://github.com/G205SDGs/sdg-indicators">GitHub Repository</a> öffentlich zugänglich.</p>
 
-<p>Eine neue universelle Version der von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten SDG-Berichtsplattform ist verfügbar. Wir empfehlen Ihnen, sich mit den SDG-Plattformen in den USA und in Großbritannien sowie mit der entsprechenden <a href="https://open-sdg.readthedocs.io/en/latest/">Open SDG-Projektdokumentation</a> vertraut zu machen. Diese enthält technische Anweisungen, wie eine Kopie der Open SDG-Plattform erstellt werden kann.</p>
+<p>Eine universelle Version der von den USA, Großbritannien und dem Center for Open Data Enterprise entwickelten Codes für eine Online Plattform ist verfügbar. Auf diesem basiert die SDG-Online Plattform. Bei Interesse empfehlen wir Ihnen, sich mit den SDG-Online Plattformen in den USA und in Großbritannien sowie mit der entsprechenden <a href="https://open-sdg.readthedocs.io/en/latest/">Open SDG-Projektdokumentation</a> vertraut zu machen. Diese enthält technische Anweisungen, wie eine Kopie der Open SDG-Online Plattform erstellt werden kann.</p>
 
 <ul>
   <li>
-    <p><a href="https://sdg.data.gov/">SDG-Berichtsplattform USA</a></p>
+    <p><a href="https://sdg.data.gov/">SDG-Online Plattform USA</a></p>
   </li>
   <li>
-    <p><a href="https://sustainabledevelopment-uk.github.io">SDG-Berichtsplattform GB</a></p>
+    <p><a href="https://sustainabledevelopment-uk.github.io">SDG-Online Plattform Großbritannien</a></p>
   </li>
 </ul>
 
@@ -490,6 +463,7 @@ Der Projektcode ist im folgenden <a href="https://github.com/G205SDGs/sdg-indica
         
     </div>
 </div>
+
 
 <footer role="contentinfo">
   <div class="container">
@@ -523,22 +497,21 @@ Der Projektcode ist im folgenden <a href="https://github.com/G205SDGs/sdg-indica
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
-<!-- Last check: 09.09.2021 -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -558,86 +531,15 @@ Der Projektcode ist im folgenden <a href="https://github.com/G205SDGs/sdg-indica
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220504094649'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220504101456'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220504094649"></script><script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              showLine: domData.showline,
-              spanGaps: domData.spangaps,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-              graphStepsize: domData.graphstepsize,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: ',',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220504101456"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
-
-
 
 
 </body>

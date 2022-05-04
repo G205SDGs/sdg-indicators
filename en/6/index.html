@@ -3,10 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        
-
-
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -105,7 +102,6 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
-
         
     <title>Goal 6 - Clean water and sanitation - German Indicators For The UN Sustainable Development Goals</title>
 
@@ -132,10 +128,12 @@ var translations = {
 
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220504094649">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220504101456">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -155,15 +153,18 @@ layout-goal-by-target
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Beta","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Beta</strong>
     
     This is a development website. We welcome your <a href="mailto:sdg-indicators@destatis.de">feedback</a>.
+    
   </div>
 </div>
 
@@ -173,9 +174,10 @@ layout-goal-by-target
   <div class="container">
 
     <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-indicators/en/" id="home">
+      <a class="navbar-brand" href="/sdg-indicators/en/" id="home" onclick="updateVisitCountMinus()">
     <img src="/sdg-indicators/assets/img/en/SDG_logo.png" alt="To main menu" />
 </a>
+
       <div class="mobile-widgets">
     <ul id='accessibility-nav' class='contrast-switcher'>
         
@@ -220,35 +222,25 @@ data-event-label="high"
         <button data-target="menu-mobile" aria-expanded="false">Menu</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/sdg-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/">Open SDG platforms of other countries</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/publications/">Publications</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -311,11 +303,9 @@ data-event-label="high"
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/sdg-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li>
-<li class="nav-link">
+</li><li class="nav-link">
             <div class="btn-group menu-dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About us
@@ -323,14 +313,11 @@ data-event-label="high"
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
-</li>
-</ul>
+</li></ul>
             </div>
         </li><li class="nav-link">
             <div class="btn-group menu-dropdown">
@@ -340,52 +327,39 @@ data-event-label="high"
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li>
-<li>
+</li><li>
                         <a tabindex="-1">
                             Open SDG platforms of other countries
                             <i class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu" style="margin-left: 0px"><li class="nav-link ">
     <a href="https://armstat.github.io/sdg-site-armenia/">Armenia</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://www.lsb.gov.la/sdg/">Lao PDR</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="http://kostat.go.kr/sdg">South korea</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdgdata.gov.uk/">United Kingdom</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdg.data.gov/">United States</a>
-</li>
-</ul>
+</li></ul>
                       </li></ul>
             </div>
         </li><li class="nav-link ">
     <a href="/sdg-indicators/en/publications/">Publications</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -433,13 +407,11 @@ data-event-label="high"
 
 
 
-
-
 <div class="heading goal-banner goal-6">
   <div class="container">
     <div class="row">
       <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/6.png" alt="Clean water and sanitation - Goal 6" id="goal-6" />
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/6.png" alt="Clean water and sanitation - Goal 6" id="goal-6" class="goal-icon-image goal-icon-image-" />
       </div>
       <div class="col-xs-8 col-md-9 col-lg-10">
         <h1>
@@ -450,6 +422,7 @@ data-event-label="high"
   </div>
 </div>
 
+
 <div class="container">
   <ol class="breadcrumb">
   
@@ -458,41 +431,34 @@ data-event-label="high"
   
 </ol>
 
+  
 </div>
 
 <div id="main-content" class="container goal-indicators goal-6 goal-by-target" role="main">
 
   
 
-  
-
-  
 
 
   
 
   <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/en/5" class="btn btn-primary btn-block goal-6 navigation-btn" role="button">
+    <a href="/sdg-indicators//5" class="btn btn-primary btn-block goal-6 navigation-btn" role="button" onclick="updateVisitCountMinus()">
       <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous goal</b>
     </a>
   </div>
 
   <div class="col-xs-6 col-md-6 col-lg-4">
-    <a href="https://sustainabledevelopment-deutschland.github.io/en/6" class="btn btn-primary btn-block goal-6 navigation-btn" title="" role="button">
+    <a href="https://sustainabledevelopment-deutschland.github.io//6" class="btn btn-primary btn-block goal-6 navigation-btn" title="" role="button">
       <b class="btn-label hidden-sm hidden-xs">National indicators on Goal 6 </b><b class="btn-label visible-sm visible-xs">Goal 6 - National</b>
     </a>
   </div>
 
   <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/en/7" class="btn btn-primary btn-block goal-6 navigation-btn" role="button">
+    <a href="/sdg-indicators//7" class="btn btn-primary btn-block goal-6 navigation-btn" role="button" onclick="updateVisitCountMinus()">
       <b class="btn-label hidden-sm hidden-xs">Next goal</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
     </a>
   </div>
-
-
-
-
-  
 
 
 
@@ -946,6 +912,7 @@ data-event-label="high"
   
 </div>
 
+
 <footer role="contentinfo">
   <div class="container">
     <div class="row">
@@ -978,22 +945,21 @@ data-event-label="high"
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
-<!-- Last check: 09.09.2021 -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -1013,86 +979,15 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220504094649'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220504101456'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220504094649"></script><script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              showLine: domData.showline,
-              spanGaps: domData.spangaps,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-              graphStepsize: domData.graphstepsize,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: ',',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220504101456"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
-
-
 
 
 </body>

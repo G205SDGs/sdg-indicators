@@ -3,10 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        
-
-
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -105,7 +102,6 @@ var translations = {
         <!-- Title and meta description
         ================================================== -->
 
-
         
     <title>
         
@@ -137,10 +133,12 @@ var translations = {
 
 
         
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
+        
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220504094649">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220504101456">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -160,15 +158,18 @@ layout-indicator
 <!-- <div class="container"> -->
 
 
+
 <script>translations['header'] = {"alpha":"Beta","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
 <a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div id="disclaimer">
-  <div class="container">
+  
+<div class="container">
   <div class="disclaimer-alert">
     <strong class="phase-tag">Beta</strong>
     
     This is a development website. We welcome your <a href="mailto:sdg-indicators@destatis.de">feedback</a>.
+    
   </div>
 </div>
 
@@ -178,9 +179,10 @@ layout-indicator
   <div class="container">
 
     <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-indicators/en/" id="home">
+      <a class="navbar-brand" href="/sdg-indicators/en/" id="home" onclick="updateVisitCountMinus()">
     <img src="/sdg-indicators/assets/img/en/SDG_logo.png" alt="To main menu" />
 </a>
+
       <div class="mobile-widgets">
     <ul id='accessibility-nav' class='contrast-switcher'>
         
@@ -225,35 +227,25 @@ data-event-label="high"
         <button data-target="menu-mobile" aria-expanded="false">Menu</button>
         <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
     <a href="/sdg-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/">Open SDG platforms of other countries</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/publications/">Publications</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -316,11 +308,9 @@ data-event-label="high"
 
       <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
     <a href="/sdg-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li>
-<li class="nav-link">
+</li><li class="nav-link">
             <div class="btn-group menu-dropdown">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     About us
@@ -328,14 +318,11 @@ data-event-label="high"
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
-</li>
-</ul>
+</li></ul>
             </div>
         </li><li class="nav-link">
             <div class="btn-group menu-dropdown">
@@ -345,52 +332,39 @@ data-event-label="high"
                 </button>
                 <ul class="dropdown-menu"><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li>
-<li>
+</li><li>
                         <a tabindex="-1">
                             Open SDG platforms of other countries
                             <i class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu" style="margin-left: 0px"><li class="nav-link ">
     <a href="https://armstat.github.io/sdg-site-armenia/">Armenia</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://www.lsb.gov.la/sdg/">Lao PDR</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="http://kostat.go.kr/sdg">South korea</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdgdata.gov.uk/">United Kingdom</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sdg.data.gov/">United States</a>
-</li>
-</ul>
+</li></ul>
                       </li></ul>
             </div>
         </li><li class="nav-link ">
     <a href="/sdg-indicators/en/publications/">Publications</a>
-</li>
-<li class="nav-link ">
+</li><li class="nav-link ">
     <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li>
-<li class="language-toggle-menu-header">
+</li><li class="language-toggle-menu-header">
     
 
 
@@ -433,6 +407,7 @@ data-event-label="high"
 
 </header>
 <div id="top" tabindex=-1></div>
+
 
 
 
@@ -490,7 +465,6 @@ data-event-label="high"
   <% if(units.length > 1) { %>
   
     <h4>Unit of measurement</h4>
-
     <fieldset>
       <legend class="sr-only">Unit of measurement</legend>
       <% _.each(units, function(unitsItem, index) { %>
@@ -498,8 +472,6 @@ data-event-label="high"
         <label><input type="radio" name="unit" value="<%=unitsItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(unitsItem)%></label>
       <% }); %>
     </fieldset>
-
-
   
   <% } %>
   
@@ -523,8 +495,6 @@ data-event-label="high"
 <script>translations['data'] = {"\"mountain green cover\" index":"\"Mountain Green Cover\" Index","\"red list\" index":"\"Red List\" Index","%":"Percentage","% of total land area":"% of total land area","(1) (a) national legislation considered relevant to the prevention of introduction of invasive alien species and control":"(1) (a) National Legislation considered relevant to the prevention of introduction of invasive alien species and control","(1) (b) national biodiversity strategy and action plan (nbsap) targets alignment to aichi biodiversity target 9 set out in the strategic plan for biodiversity 2011-2020":"(1) (b) National Biodiversity Strategy and Action Plan (NBSAP) targets alignment to Aichi Biodiversity target 9 set out in the Strategic Plan for Biodiversity 2011-2020","(2) online survey on policy responses, mandate, legal authority, and resourcing to manage the threat of invasive alien species":"(2) Online survey on Policy responses, mandate, legal authority, and resourcing to manage the threat of invasive alien species","(a) national education policies":"(a) national education policies","(b) curricula":"(b) curricula","(c) teacher education":"(c) teacher education","(d) student assessment":"(d) student assessment","1 000":"1,000","1 000 m3":"1 000 m³","1 000 t":"1,000 tonnes","10 to under 15 years":"10 to under 15 years","14 to under 18 years":"14 to under 18 years","15 to under 20 years":"15 to under 20 years","15 to under 25 years":"15 to under 25 years","15 years":"15 years","15 years and over":"15 years and older","15.5 years":"15.5 years","16 to under 25 years":"16 to under 25 years","16 to under 75 years":"16 to under 75 years","16 years":"16 years","16.5 years":"16.5 years","17 years":"17 years","17.5 years":"17.5 years","18 to under 21 years":"18 to under 21 years","18 to under 30 years":"18 to under 30 years","18 to under 65 years":"18 to under 65 years","18 years":"18 years","20 to under 24 years":"20 to under 24 years","20 to under 25 years":"20 to under 25 years","2010 = 100":"2010 = 100","2015 = 100":"2015 = 100","21 to under 24 years":"21 to under 24 years","21 to under 25 years":"21 to under 25 years","21 to under 60 years":"21 to under 60 years","25 to under 30 years":"25 to under 30 years","25 to under 45 years":"25 to under 45 years","25 to under 65 years":"25 to under 65 years","25 to under 75 years":"25 to under 75 years","25 years and over":"25 years and older","30 to under 35 years":"30 to under 35 years","30 to under 45 years":"30 to under 45 years","30 to under 70 years":"30 to under 70 years","35 to under 40 years":"35 to under 40 years","3g":"3G","40 to under 45 years":"40 to under 45 years","45 to under 50 years":"45 to under 50 years","45 to under 55 years":"45 to under 55 years","45 to under 65 years":"45 to under 65 years","50 to under 55 years":"50 to under 55 years","55 to under 60 years":"55 to under 60 years","55 to under 65 years":"55 to under 65 years","60 to under 65 years":"60 to under 65 years","60 years and over":"60 years and older","65 to under 75 years":"65 to under 75 years","65 years and over":"65 years and older","Feelings of insecurity":"Feelings of insecurity","Series":"Time series","Using copy or cut and paste tools to duplicate or move information on screen":"Using copy or cut and paste tools to duplicate or move information on screen","Year":"Year","a) agriculture, forestry and fishing (nace rev 2, section a)":"Agriculture, forestry and fishing","a) branches of payment service providers (per 100 000 adults)":"Branches of payment service providers","a) cardiovascular disease":"a) Cardiovascular disease","a) diarrhoea":"a) Diarrhoea","a) drugs":"Drugs","a) government expenditure on health (cofog division 7) (%)":"Government expenditure on health","a) hazardous waste generated per capita":"Hazardous waste generated per capita","a) literacy skills":"a) Literacy skills","a) medical doctors":"Medical doctors","a) not at risk":"Not at risk","a) oda (commitments) for biodiversity":"ODA (commitments) for biodiversity","a) over 144 kbps to under 2 mbps":"a) Over 144 kbps to under 2 mbps","a) police reporting rate for physical assault (%)":"Reporting rate for physical assault","a) population using safely managed sanitation services (%)":"Safely managed sanitation services","a) schools with access to electricity":"a) Schools with access to electricity","above-ground biomass stock in forest":"Above-ground biomass stock in forest","access to sexual and reproductive health care, information and education":"Access to sexual and reproductive health care, information and education","accounts at payment service providers":"Accounts at payment service providers","accounts at payment service providers (1 000)":"Accounts at payment service providers","activities":"Activities","admissible applications":"Admissible applications","adult population achieving at least a fixed level of proficiency in functional (a) literacy and (b) numeracy skills":"Adult population achieving at least a fixed level of proficiency in functional (a) literacy and (b) numeracy skills","adult population achieving at least a fixed level of proficiency in functional literacy and numeracy skills":"Adult population achieving at least a fixed level of proficiency in functional (a) literacy and (b) numeracy skills","afghanistan":"Afghanistan","age":"Age group","age of mother":"Age of mother","age of victim":"Age of victims","agreement on sanitary and phytosanitary measures of the world trade organisation":"Agreement on Sanitary and Phytosanitary Measures of the World Trade Organisation","agricultural holdings with the legal form of a sole proprietorship":"Agricultural holdings with the legal form of a sole proprietorship","agricultural holdings with the legal of a form sole proprietorship":"Agricultural holdings with the legal form of a sole proprietorship","agriculture":"Agriculture","agriculture orientation index for government expenditures":"Agriculture orientation index for government expenditures","aid for trade commitments (oda and oof)":"ODA and OOF (commitments) for aid for trade","aid for trade commitments (oda and oof) (mn usd, constant prices (2016))":"ODA and OOF (commitments) for aid for trade","aid for trade gross disbursements (oda and oof)":"ODA and OOF (gross disbursement) for aid for trade","aid for trade gross disbursements (oda and oof) (mn usd, constant prices (2016))":"ODA and OOF (gross disbursement) for aid for trade","alcohol consumption (by national factors)":"Alcohol consumption (by national factors)","alcohol consumption (by un factors)":"Alcohol consumption (by UN factors)","alcohol consumption (conversion by national factors)":"Alcohol consumption (by national factors)","alcohol consumption (conversion by un factors)":"Alcohol consumption (by UN factors)","all domains":"All Domains","animal genetic resources":"Animal genetic resources","animal genetic resources (number)":"Animal genetic resources","annual growth rate of real gdp":"Annual growth rate of real GDP","annual growth rate of real gdp per capita":"Annual growth rate of real GDP per capita","annual growth rate of real gdp per capita (%)":"Annual growth rate of real GDP per capita","annual growth rate of real gdp per employed person":"Annual growth rate of real GDP per employed person","annual growth rate of real gdp per employed person (%)":"Annual growth rate of real GDP per employed person","antimicrobial-resistant organisms":"Pathogens and resistance","applications finally processed":"Applications finally processed","applications received":"Applications received","area":"Area","area 1 overarching legal frameworks and public life":"Area 1: Overarching legal frameworks and public life","area 2 violence against women":"Area 2: Violence against women","area 3 employment and economic benefits":"Area 3: Employment and economic benefit","area 4 marriage and family":"Area 4: Marriage and family","area of law":"Area of law","area2":"Area","as proportion of total gross value added":"As proportion of total gross value added (%)","at least one population and housing census in the last 10 years conducted":"At least one population and housing census in the last 10 years conducted","at-risk-of-poverty rate":"At-risk-of-poverty rate","at-risk-of-poverty rate (according to eurostat definition) (%)":"At-risk-of-poverty rate","atms of national payment service providers":"ATMs of national payment service providers","available":"Yes","available income of private households":"Available income of private households","average energy supply":"Average energy supply","average hourly earnings of employees":"Average hourly earnings of employees","average of 13 ihr core capacity scores":"Average of 13 IHR core capacity scores","average of 13 ihr core capacity scores (%)":"Average of 13 IHR core capacity scores","average ph-concentration in the german bight":"Average pH-concentration in the German Bight","average ph-concentration in the german bight (ph-value)":"Average pH-concentration in the German Bight","b) 2 mbps to under 10 mbps":"b) 2 mbps to under 10 mbps","b) alcohol and other psychoactive substances":"Alcohol and other psychoactive substances","b) at risk":"At risk","b) at the end of lower primary education":"b) At the end of primary education","b) atms of national payment service providers (per 100 000 adults)":"ATMs of national payment service providers","b) cancer":"b) Cancer","b) dentists":"Dentists","b) environmental protection expenditure":"Environmental protection expenditure","b) government expenditure on education (cofog division 9) (%)":"Government expenditure on education","b) hazardous waste treated":"Hazardous waste treated","b) intestinal nematode infections":"b) Intestinal nematode infections","b) mimec (nace rev 2, sections b, c, d, f)":"MIMEC","b) numeracy skills":"b) Numeracy skills","b) oda (disbursements) for biodiversity":"ODA (gross disbursements) for biodiversity","b) oda (gross disbursements) to the forestry sector":"ODA (gross disbursements) to the forestry sector","b) population with a bathtub or a shower (%)":"Bathtub or a shower","b) under observation":"Under observation","bachelor/equivalent degree completed and masters/equivalent degree or above":"Bachelor/equivalent degree completed and masters/equivalent degree or above","baden-wuerttemberg":"Baden-Württemberg","baltic sea":"Baltic sea","basel convention":"Basel Convention","bathtub or shower":"Population with (own) bathtub or shower","bavaria":"Bavaria","berlin":"Berlin","birth registration":"Birth registration","births of young women":"Births of young women","bn eur":"Billion EUR","bound":"Bound","branches of payment service providers":"Branches of payment service providers","brandenburg":"Brandenburg","bremen":"Bremen","buruli ulcer":"Buruli ulcer","businesses who had the impression that public officials are corruptible":"Businesses who had the impression that public officials are corruptible during their interactions with public agencies in the previous two years","businesses who had the impression that public officials are corruptible during their interactions with public agencies in the previous two years":"Businesses who had the impression that public officials are corruptible during their interactions with public agencies in the previous two years","by national factors":"By national factors","by un factors":"By UN factors","c) 10 mbps to under 30 mbps":"c) 10 mbps to under 30 mbps","c) alcohol and other psychoactive substances (alcohol)":"Alcohol and other psychoactive substances (alcohol)","c) at the end of lower secondary education":"c) At the end of lower secondary education","c) breeding programs for preservation":"Breeding programs for preservation","c) diabetes mellitus":"c) Diabetes mellitus","c) environmental protection expenditure":"Environmental protection expenditure","c) government expenditure on social protection (cofog division 10) (%)":"Government expenditure on social protection","c) nursing and midwifery personnel":"Nursing and midwifery personnel","c) oda (gross disbursements) to the forestry sector":"ODA (gross disbursements) to the forestry sector","c) police reporting rate for robbery (%)":"Reporting rate for robbery","c) protein-energy malnutrition":"c) Protein-energy malnutrition","c) services (nace rev 2, sections e, g to t)":"Services","c) unknown":"Unknown","capital to assets ratio":"Capital to assets ratio","capital to assets ratio (%)":"Capital to assets ratio","cartagena protocol":"Cartagena Protocol","characteristics":"Availability","child deliveries in hospitals":"Child deliveries in hospitals","child mortality":"Child mortality","children and youth with a minimum proficiency level in reading and mathematics":"Children and youths with a minimum proficiency in reading or mathematics","children and youths with a minimum proficiency in reading or mathematics":"Children and youths with a minimum proficiency in reading or mathematics","children at acute risk of harm with signs of abuse":"Children at acute risk of harm with signs of abuse","children at acute risk of harm with signs of physical or psychological abuse (%)":"Children at acute risk of harm with signs of abuse","children in child day care at the age of 5":"Children in child day care at the age of 5","children in child day care at the age of 5, by sex":"Children in child day care at the age of 5","children under 5 years of age whose births have been registered with a civil authority":"Children under 5 years of age whose births have been registered with a civil authority","children under 5 years of age whose births have been registered with a civil authority (%)":"Children under 5 years of age whose births have been registered with a civil authority","cities":"Cities","cities with a legally required direct participation of civil society in urban planning and management":"Cities with a legally required direct participation of civil society in urban planning and management","cities with a legally required direct participation of civil society in urban planning and management (%)":"Cities with a legally required direct participation of civil society in urban planning and management","class 3 areas (elevation 2500-3500 meters)":"Class 3 areas (elavation 2500-3500 meters)","class 4 areas (elevation 1500-2500 meters)":"Class 4 areas (elavation 1500-2500 meters)","class 5 areas (elevation 1000-1500 meters)":"Class 5 areas (elavation 1000-1500 meters)","class 6 areas (elevation  300-1000 meters)":"Class 6 areas (elavation 300-1000 meters)","classification":"Classification","climate action plan 2050":"Climate Action Plan 2050","climate finance flows":"Climate finance flows","climate finance flows to developing countries":"Climate finance flows to developing countries","co2 emission per real gdp":"CO₂ emissions per real GDP","co2 emissions per gross value added (price adjusted) in manufacturing industries":"CO₂ emissions per gross value added (price adjusted) in manufacturing industries","co2 emissions per gross value added (price adjusted) in manufacturing industries (g/eur (constant 2010))":"CO₂ emissions per gross value added (price adjusted) in manufacturing industries","co2 emissions per real gdp":"CO₂ emissions per real GDP","cohabiting":"Cohabiting","commercial air transport":"Air transport","compliance with the basel convention (%)":"Basel Convention","compliance with the minamata convention (%)":"Minamata Convention","compliance with the montreal protocol (%)":"Montreal Protocol","compliance with the rotterdam convention (%)":"Rotterdam Convention","compliance with the stockholm convention (%)":"Stockholm Convention","comprehensive sexuality education and information":"Section 3: Comprehensive sexuality education and information","conflict-related deaths":"Conflict-related deaths","connecting and installing new devices, eg a printer or a modem":"Connecting and installing new devices, eg a printer or a modem","consumer conciliation":"Consumer conciliation","consumption by private households":"Consumption by private households","contraceptive and family planning":"Section 2: Contraception and family planning","contracting parties to the international treaty on plant genetic resources for food and agriculture":"Contracting Parties to the International Treaty on Plant Genetic Resources for Food and Agriculture","contractingparties to the international treaty on plant genetic resources for food and agriculture":"Contracting Parties to the International Treaty on Plant Genetic Resources for Food and Agriculture","convention on biological diversity":"Convention on Biological Diversity","convention on international trade in endangered species":"Convention on International Trade in Endangered Species","convention on the conservation of migratory species of wildanimals":"Convention on the Conservation of Migratory Species of Wild Animals","conversion":"Conversion","cooling water":"Cooling water","copied or moved a file and folder":"Copying or moving of files and folders","corporations":"Corporations","countries that have legislative, administrative and policy framework or measures reported through the online reporting system on compliance  of the international treaty on plant genetic resources for food and agriculture":"Countries that have legislative, administrative and policy framework or measures reported through the Online Reporting System on Compliance  of the International Treaty on Plant Genetic Resources for Food and Agriculture","countries that have legislative, administrative and policy framework or measures reported to the access and benefit-sharing clearing-house":"Countries that have legislative, administrative and policy framework or measures reported to the Access and Benefit-Sharing Clearing-House","countries with national statistical legislation that complies with the fundamental principles of offical statistics (number)":"Countries with national statistical legislation that complies with the Fundamental Principles of Official Statistics","countries with national statistical legislation that complies with the fundamental principles of official statistics":"Countries with national statistical legislation that complies with the Fundamental Principles of Official Statistics","country of origin":"Country of citizenship","creating electronic presentations with presentation software (e.g. slides), including e.g. images, sound, video or charts":"Creating electronic presentations with presentation software, including e.g. images, sound, video or charts","current accounts":"Current accounts","current tobacco use among persons aged 15 years and older":"Current tobacco use among persons aged 15 years and older","current tobacco use among persons aged 15 years and older (%)":"Current tobacco use among persons aged 15 years and older","current tobacco use among persons aged 15 years and older (age-standardised to who standard population)":"Current tobacco use among persons aged 15 years and older (age-standardised to WHO Standard Population)","current tobacco use among persons aged 15 years and older (age-standardised to who standard population) (%)":"Current tobacco use among persons aged 15 years and older (age-standardised to WHO Standard Population)","d) 30 mbps to under 100 mbps":"d) 30 mbps to under 100 mbps","d) alcohol and other psychoactive substances (other psychoactive substances)":"Alcohol and other psychoactive substances (other psychoactive substances)","d) chronic respiratory disease":"d) Chronic respiratory disease","d) pharmacists":"Pharmacists","d) rudiments remaining":"Rudiments remaining","death registration":"Death registration","debt level of the total public budget":"Debts of the total public budget","debts of the total public budget":"Debts of the total public budget","declination":"Outcome of the application process","degree of combat illegal, unreported and unregulated fishing (/)":"Degree of combat illegal, unreported and unregulated fishing","degree of combatting illegal, unreported and unregulated fishing":"Degree of combatting illegal, unreported and unregulated fishing","degree of combatting illegal, unreported and unregulated fishing (/)":"Degree of combatting illegal, unreported and unregulated fishing","degree of integrated water resources management implementation":"Degree of integrated water resources management implementation","degree of integrated water resources management implementation (%)":"Degree of integrated water resources management implementation","degree to which women are guaranteed equal rights to land ownership and/or control":"Degree to which women are guaranteed equal rights to land ownership and/or control","dengue":"Dengue","deposit onto or into land and land treatment and release into water bodies":"Deposit onto or into land and land treatment and release into water bodies","disability":"Disability status","divers":"Divers","divorced":"Divorced","dmc":"Domestic material consumption (DMC)","documents issued for the import and export of protected species":"Documents issued for the import and export of protected species","documents issued for the import and export of protected species (number)":"Documents issued for the import and export of protected species","domain":"Policy area","domain 1. migrant rights":"Domain 1. Migrant rights","domain 2. whole-of-government/evidence-based policies":"Domain 2. Whole-of-government/ Evidence-based policies","domain 3. cooperation and partnerships":"Domain 3. Cooperation and partnerships","domain 4. socioeconomic well-being":"Domain 4. Socioeconomic well-being","domain 5. mobility dimensions of crises":"Domain 5. Mobility dimensions of crises","domain 6. safe, orderly and regular migration":"Domain 6. Safe, orderly and regular migration","domestic material consumption (dmc)":"Domestic material consumption (DMC)","domestic material consumption per real gdp":"Domestic material consumption per real GDP","dracunculiasis":"Dracunculiasis","dtp vaccination coverage at school entry":"DTP vaccination coverage at school entry","dtp vaccination rate at school entrance":"DTP vaccination coverage at school entry","e) 100 mbps and over":"e) 100 mbps and over","e) schools with access to basic drinking water":"e) Schools with access to basic drinking water","ecdc":"European Centre for Disease Prevention and Control (ECDC)","echinococcosis":"Echinococcosis","economic sector":"Economic activity","education level":"Education level","education, science, research, cultural affairs":"Education, science, research, cultural affairs","educational level":"Educational level","energy intake":"Energy intake","energy intensity measured in primary energy in relation to gdp":"Energy intensity measured in primary energy in relation to GDP","energy recovery":"Energy recovery","energy supply":"Energy intake","environmental protection expenditure":"Environmental protection expenditure","equipment of schools":"Proportion of schools offering basic services","escherichia coli resistant to 3rd-generation cephalosporin (e.g., esbl- e. coli)":"Escherichia coli, 3GCR","estimate of high risk use (based on treatment entrants) of the substances opioids, cocaine, and other stimulants in the age group 15 to under 65 years":"Estimate of high risk use (based on treatment entrants) of the substances opioids, cocaine, and other stimulants in the age group 15 to under 65 years","eur":"EUR","eur per inhabitant":"EUR per inhabitant","eur/h":"EUR per hour","exploitation of labour":"Labour exploitation","export refunds":"Export refunds","extent of use of country-owned results frameworks by providers of development co-operation":"Extent of use of country-owned results frameworks by providers of development co-operation","f) schools with access to single-sex basic sanitation facilities":"f) Schools with access to single-sex basic sanitation facilities","facilities":"Facilities","fatal occupational accidents":"Fatal occupational accidents","fatal occupational accidents (per 100 000 employees)":"Fatal occupational accidents","federal budget on research and development in the field of coastal, ocean and polar science, geoscience":"Federal budget on research and development in the field of coastal, ocean and polar science, geoscience","federal budget on research and development in the field of coastal, ocean and polar science, geoscience (mn eur)":"Federal budget on research and development in the field of coastal, ocean and polar science, geoscience","feeling of (in)security of the population in its neighbourhood (at night)":"Feeling of (in)security of the population in its neighbourhood (at night)","feelings of insecurity":"Feelings of insecurity","feelings of insecurity in the neighbourhood":"Feeling of (in)security of the population in its neighbourhood (at night)","female":"Female","female employees in public sector (%)":"Female employees in public sector","female owners of agricultural holdings with the legal form of a sole proprietorship":"Female owners of agricultural holdings with the legal form of a sole proprietorship","female victims of criminal offences having/ had an intimate relationship with the suspect (number)":"Female victims of criminal offences having/ had an intimate relationship with the suspect","female victims of genital mutilation":"Female victims of genital mutilation","female victims of sexual violence by an intimate partner":"Female victims of sexual violence by an intimate partner","female victims of sexual violence by someone other than an intimate partner":"Female victims of sexual violence by someone other than an intimate partner","field of work":"Field of work","fine particulate matter":"Fine particulate matter","fish stocks within biologically sustainable levels (%)":"Proportion of sustainable managed stocks in all MSY examined stocks","fixed internet broadband access lines":"Fixed internet broadband access lines","food price index (food items and alcohol-free beverages)":"Food Price Index (food items and alcohol-free beverages)","forest area (%)":"Forest area as a proportion of total land area","forest area as a proportion of total land area":"Forest area as a proportion of total land area","forest area located within protected areas":"Forest area located within protected areas","forest area net change rate":"Forest area net change rate","forest area under an independently verified forest management certification scheme":"Forest area under an independently verified forest management certification scheme","forestry":"Forestry","form of abuse":"Form of abuse","form of exploitation":"Form of exploitation","former federal territory":"Former Federal territory","fourth":"Fourth","freight transport":"Freight transport","freight transports":"Freight transport","frequency":"Frequency","g) schools with access to basic handwashing facilities (as per the wash indicator definitions)":"g) Schools with access to basic handwashing facilities","g/dl":"Grams per decilitre","g/eur constant (2010)":"Grams per EUR, constant (2010)","gender parity index":"Gender Parity Index","gender pay gap":"Gender Pay Gap","general government":"General government","germany":"Germany","giving birth":"Births of young women","goverment expenditure on cultural services (cofog division 8.2) (bn eur)":"Government expenditure on cultural services (COFOG division 8.2)","goverment expenditure on environmental protection (cofog division 5) (bn eur)":"Government expenditure on environmental protection (COFOG division 5)","goverment expenditure on protection of biodiversity and landscape (cofog division 5.4) (bn eur)":"Government expenditure on protection of biodiversity and landscape (COFOG division 5.4)","goverment expenditure on recreation, culture and religion (cofog division 8) (bn eur)":"Government expenditure on recreation, culture and religion (COFOG division 8)","government expenditure on cultural services (cofog division 8.2)":"Government expenditure on cultural services (COFOG division 8.2)","government expenditure on education":"Government expenditure on education","government expenditure on health":"Government expenditure on health","government expenditure on protection of biodiversity and landscape (cofog division 5.4)":"Government expenditure on protection of biodiversity and landscape (COFOG division 5.4)","government expenditure on social protection":"Government expenditure on social protection","government fiscal balance":"Government fiscal balance","greater 10 percentage":"Greater 10 %","greater 25 percentage":"Greater 25 %","greater north sea":"Greater North Sea","greenhouse gas emissions":"Total greenhouse gas emissions","gross fixed capital formation":"Gross fixed capital formation","gross fixed capital formation on environmental protection":"Gross fixed capital formation on environmental protection","gross value added of medium- and high-tech industries to total manufacturing value added":"Gross value added of medium- and high-tech industries to total manufacturing value added","gross value added of medium- and high-tech industries to total manufacturing value added (%)":"Gross value added of medium- and high-tech industries to total manufacturing value added","gross value added of small-scale industries in manufacturing":"Gross value added of small-scale industries in manufacturing","gross value added of small-scale industries in manufacturing (%)":"Gross value added of small-scale industries in manufacturing","gross value added of the tourism industry":"Gross value added of the tourism industry","growth rate of income of the bottom 40 per cent of the population (%)":"Growth rate of net equivalent income of the bottom 40 per cent of the population","growth rate of income of the total population (%)":"Growth rate of net equivalent income of the total population","growth rate of net equivalent income of the bottom 40 per cent of the population":"Growth rate of net equivalent income of the bottom 40 per cent of the population","growth rate of net equivalent income of the total population":"Growth rate of net equivalent income of the total population","hamburg":"Hamburg","hazardous waste generated per capita":"Hazardous waste generated per capita","hazardous waste treated":"Hazardous waste treated","hb concentrations in female adolescents":"Hb concentrations in female adolescents","hb concentrations in female adolescents (g/dl)":"Hb concentrations in female adolescents","health workers with direct patient contact (practising concept)":"Health workers with direct patient contact (practising concept)","health workers, according to the practising concept (with direct patient contact)":"Health workers with direct patient contact (practising concept)","health, environment, sports and recreation":"Health, environment, sports and recreation","hepatitis b incidence":"Hepatitis B incidence","hepatitis b incidence (per 100 000 inhabitants)":"Hepatitis B incidence","hesse":"Hesse","high-tech":"High-tech","higher-level courts":"Higher-level courts","hiv and hpv":"Section 4: HIV and HPV","hiv incidence":"HIV incidence","hours worked by employees":"Hours worked by employees","hours worked by persons employed":"Hours worked by persons employed","household expenditures on health":"Household expenditures on health","households and small-sized enterprises connected to the electricity network":"Households and small-sized enterprises connected to the electricity network","households covered by 3g or lte":"Households covered by 3G or LTE","housing conditions":"Housing conditions","housing cost overburden rate":"Housing cost overburden rate","housing deprivation":"Housing deprivation","hpv vaccination coverages among 15 years old girls and boys":"HPV vaccination coverages among 15 years old girls and boys","hpv vaccination rate among 15 years old girls":"HPV vaccination coverages among 15 years old girls and boys","human african trypanosomiasis":"Human African Trypanosomiasis","implementation and progress on national targets in accordance with or similar to aichi biodiversity target 2 of the strategic plan for biodiversity 2011-2020":"Implementation and progress on national targets in accordance with or similar to Aichi Biodiversity Target 2 of the Strategic Plan for Biodiversity 2011-2020","implementation of the system of environmental-economic accounting (seea)":"Implementation of the System of Environmental-Economic Accounting (SEEA)","incineration":"Incineration","income quintile":"Income quintile","indicator":"Indicator","inland waterway transport":"Inland waterway transport","inpatient treatment of neglected tropical diseases":"Inpatient treatment of neglected tropical diseases","inpatient treatment of substance use disorders":"Inpatient treatment of substance use disorders","installed software or applications (apps)":"Installing software or apps","integration of \"global citizenship education\" and \"education for sustainable development\" into the education system":"Integration of \"global citizenship education\" and \"education for sustainable development\" into the education system","integration of (i) global citizenship education and (ii) education for sustainable development in the education system":"Integration of \"global citizenship education\" and \"education for sustainable development\" into the education system","intended nationally determined contribution of the eu and its member states":"Intended Nationally Determined Contribution of the EU and its member States","international convention for the control and management of ship's ballast water and sediments":"International Convention for the Control and Management of Ship's Ballast Water and Sediments","international plant protection convention":"International Plant Protection Convention","iran":"Iran","iraq":"Iraq","items":"Items","kcal/d":"Kilocalories per day","key biodiversity areas (kbas) covered by protected areas":"Mountain Key Biodiversity Areas (KBAs) covered by protected areas","key biodiversity areas (kbas) covered by protected areas (%)":"Terrestrial and freshwater Key Biodiversity Areas (KBAs) covered by protected areas","kg per capita":"Kilogram per capita","km2":"km²","labour productivity":"Labour productivity","labour productivity per hour worked by employee":"Labour productivity per hour worked by employee","labour productivity per hour worked by persons employed":"Labour productivity per hour worked by persons employed","labour share of gdp":"Labour share of GDP","labour share of gdp (%)":"Labour share of GDP","lakes and rivers permanent water area":"Lakes and Rivers permanent water area","lakes and rivers permanent water area as a proportion of total land area":"Lakes and rivers permanent water area as a proportion of total land area","lakes and rivers permanent water area change":"Lakes and Rivers permanent water area change (compared to 2015)","lakes and rivers permanent water area change (compared to 2015)":"Lakes and Rivers permanent water area change (compared to 2015)","land consumption rate":"Land consumption rate","leasehold":"Leasehold","legal frameworks that promote, enforce and monitor gender equality":"Legal frameworks that promote, enforce and monitor gender equality","legislation":"Legislation","leishmaniases":"Leishmaniases","leprosy":"Leprosy","level of court":"Level of court","level of national compliance with labour rights (freedom of association and collective bargaining) based on international labour organization (ilo) textual sources and national legislation":"Level of national compliance with labour rights (freedom of association and collective bargaining) based on International Labour Organization (ILO) textual sources and national legislation","level of proficiency":"Level of proficiency","level of risk of extinction":"Level of risk of extinction","level of risk of extinction (according to fao classification)":"Level of risk of extinction (according to FAO classification)","level of risk of extinction (according to national classification)":"Level of risk of extinction (according to national classification)","level of water stress - share of withdrawal in renewable water resources":"Level of water stress: share of withdrawal in renewable water resources","level of water stress - share of withdrawal in renewable water resources, excluding cooling water":"Level of water stress: share of withdrawal in renewable water resources, excluding cooling water","level of water stress: share of withdrawal in renewable water resources":"Level of water stress: share of withdrawal in renewable water resources","level of water stress: share of withdrawal in renewable water resources, excluding cooling water":"Level of water stress: share of withdrawal in renewable water resources, excluding cooling water","level of waterstress":"Water use index","liquid assets to short-term liabilities":"Liquid assets to short-term liabilities","liquid assets to short-term liabilities (%)":"Liquid assets to short-term liabilities","litres of pure alcohol per capita":"Litres of pure alcohol per capita","live births in total":"Live births in total","live births total":"Live births in total","local livestock breeds (horses, cows, pigs, sheep and goats)":"Local livestock breeds (horses, cows, pigs, sheep and goats)","long-term exposure to fine particulate matter: mortality due to cardiopulmonary diseases (adults > 30 years)":"Long-term exposure to fine particulate matter: mortality due to cardiopulmonary diseases (adults > 30 years)","long-term exposure to particulate matter: mortality due to lung cancer (adults > 30 years)":"Long-term exposure to particulate matter: mortality due to lung cancer (adults > 30 years)","lower bound":"Lower bound","lower saxony":"Lower Saxony","lower secondary school completed":"Lower secondary school completed","lower-level courts":"Lower-level courts","lte":"LTE","malaria incidence":"Malaria incidence","malaria incidence (per 1 000 inhabitants)":"Malaria incidence","male":"Male","manufacturing gross value added":"Manufacturing gross value added","manufacturing gross value added as a proportion of gdp":"Manufacturing gross value added as a proportion of GDP","manufacturing gross value added as a proportion of total gross value added":"Manufacturing gross value added as a proportion of total gross value added","manufacturing gross value added per capita":"Manufacturing gross value added per capita","manufacturing persons employed":"Manufacturing persons employed","manufacturing persons employed (%)":"Manufacturing persons employed","marine areas covered by protected areas":"Marine areas covered by protected areas","marine key biodiversity areas (kbas) covered by protected areas":"Marine Key Biodiversity Areas (KBAs) covered by protected areas","marine key biodiversity areas (kbas) covered by protected areas (%)":"Marine Key Biodiversity Areas (KBAs) covered by protected areas","marital status":"Marital status","married":"Married","married girls":"Married girls","material deprivation for food insecurity":"Population living in households with food insecurity","material deprivation for the housing dimension":"Material deprivation for the housing dimension, total (1-4 items)","material recovery":"Material recovery","maternal mortality":"Maternal mortality","maternal mortality (per 100 000 live births)":"Maternal mortality","maternity care":"Section 1: Maternity care","mathematics":"Mathematics","measles vaccination coverage at school entry":"Measles vaccination coverage at school entry","measles vaccination rate at sschool entrance":"Measles vaccination coverage at school entry","mecklenburg western pomerania":"Mecklenburg Western Pomerania","medium-high-tech":"Medium-high-tech","membership ganhri (category a)":"Membership GANHRI (category A)","membership ganhri (category a) (number)":"Membership GANHRI (category A)","methicillin-resistant staphylococcus aureus (mrsa)":"Staphylococcus aureus, MR","micrograms per qubic meters":"Micrograms per cubic meters","middle":"Middle","migrant background":"Migrant background","migratory status":"Migratory status","minamata convention":"Minamata Convention","minimum requirement level i":"Minimum requirement level I","minimum requirement level ii":"Minimum requirement level II","mj/d":"Megajoule per day","mj/eur":"Megajoule per EUR","mn eur":"Million EUR","mn h":"Million hours","mn inhabitants":"Million inhabitants","mn m3 per a":"Million m³ per year","mn pkm":"Million passenger-kilometre","mn t":"Million tonnes","mn t of co2 equivalents":"Million tonnes of CO2 equivalents","mn tkm":"Million tonne-kilometres","mn usd, constant prices (2016)":"Million USD, constant prices (2016)","mn usd, constant prices (2018)":"Million USD, constant prices (2018)","mn usd, constant prices (2019)":"Million USD, constant prices (2019)","mn usd, constant prices (2020)":"Million USD, constant prices (2020)","mobile penetration rate":"Mobile penetration rate","mobility impaired people":"Mobility impaired people","mode of transport":"Mode of transport","montreal protocol":"Montreal Protocol","mortality at the age of 30 to under 70 years":"Mortality at the age of 30 to under 70 years","mortality due to contact to unsafe water, unsafe sanitation and lack of hygiene":"Mortality due to contact to unsafe water, unsafe sanitation and lack of hygiene","mortality due to road traffic accidents":"Mortality due to road traffic accidents","mortality due to suicide":"Mortality due to suicide","mortality due to unintentional poisoning":"Mortality due to unintentional poisoning","mortality due to wash":"Mortality due to contact to contaminated water, inadequate sanitation and lack of hygiene","mortality rate due to unintentional poisoning":"Mortality due to unintentional poisoning","motorised private transport":"Motorised private transport","mountain green cover index":"\"Mountain Green Cover\" Index","mountain key biodiversity areas (kbas) covered by protected areas":"Mountain Key Biodiversity Areas (KBAs) covered by protected areas","mountain regions, covered by protected areas":"Mountain regions, covered by protected areas","multiple citizenships":"Multiple citizenships","municipal solid waste in total":"Municipal solid waste in total","municipal solid waste regularly collected and treated":"Municipal solid waste regularly collected and treated","municipal waste":"Municipal waste","national biodiversity strategy and action plan (nbsap) targets alignment to aichi biodiversity target 9 set out in the strategic plan for biodiversity 2011-2020":"(1) (b) National Biodiversity Strategy and Action Plan (NBSAP) targets alignment to Aichi Biodiversity target 9 set out in the Strategic Plan for Biodiversity 2011-2020","national legislation considered relevant to the prevention of introduction of invasive alien species and control":"(1) (a) National Legislation considered relevant to the prevention of introduction of invasive alien species and control","national sustainable development strategie (number)":"German Sustainable Development Strategy","nationally derived quantity of rivers":"Nationally derived quantity of rivers","neet rates of young people (15 to under 25 years), by sex":"Young people (15 to under 25 years) neither in employment nor in education and training (NEET rates)","neonatal mortality":"Neonatal mortality","net development expenditures":"Total official and private resource flows for development (net disbursements)","net open position in foreign exchange to capital":"Net open position in foreign exchange to capital","net open position in foreign exchange to capital (%)":"Net open position in foreign exchange to capital","never married":"Single / Never married","new german states":"New German states","no migrant background":"No migrant background","no unit":"No Unit","non-fatal occupational accidents":"Non-fatal occupational accidents","non-fatal occupational accidents (per 100 000 employees)":"Non-fatal occupational accidents","nonperforming loans net of provisions to capital":"Nonperforming loans net of provisions to capital","nonperforming loans net of provisions to capital (%)":"Nonperforming loans net of provisions to capital","nonperforming loans net of provisions to gross loans":"Nonperforming loans net of provisions to gross loans","nonperforming loans net of provisions to gross loans (%)":"Nonperforming loans net of provisions to gross loans","north rhine-westphalia":"North Rhine-Westphalia","not available":"No","not classified":"Not classified","number":"Number","number and value of supported outward investment projects to ldcs":"Number and value of supported outward investment projects to LDCs","number of countries that established national targets in accordance with aichi biodiversity target 2 of the strategic plan for biodiversity 2011-2020 in their national biodiversity strategy and action plan (nbsap) and the progress reported towards these targets":"Number of countries that established national targets in accordance with Aichi Biodiversity Target 2 of the Strategic Plan for Biodiversity 2011-2020 in their National Biodiversity Strategy and Action Plan (NBSAP) and the progress reported towards these targets","number of standard material transfer agreements (smtas)":"Number of Standard Material Transfer Agreements (SMTAs)","observation status":"Observation status","oda (commitments) for biodiversity":"ODA (commitments) for biodiversity","oda (commitments) for poverty reduction":"ODA (commitments) for poverty reduction","oda (commitments) to public-private partnerships (ppp) for infrastructure":"ODA (commitments) to public-private partnerships (PPP) for infrastructure","oda (gross disbursements) for biodiversity":"ODA (gross disbursements) for biodiversity","oda (gross disbursements) for imputed student costs":"ODA (gross disbursements) for imputed student costs","oda (gross disbursements) for other related purposes":"ODA (gross disbursements) for other related purposes","oda (gross disbursements) for other related water and sanitation purposes (mn usd, constant prices (2016))":"ODA (gross disbursements) for other related water and sanitation purposes","oda (gross disbursements) for poverty reduction":"ODA (gross disbursements) for poverty reduction","oda (gross disbursements) for scholarships":"ODA (gross disbursements) for scholarships","oda (gross disbursements) for water and sanitation":"ODA (gross disbursements) for water and sanitation","oda (gross disbursements) for water and sanitation (mn usd, constant prices (2016))":"ODA (gross disbursements) for water and sanitation","oda (gross disbursements) to infrastructure":"ODA (gross disbursements) to infrastructure","oda (gross disbursements) to medical research and basic health sectors":"ODA (gross disbursements) to medical research and basic health sectors","oda (gross disbursements) to medical research and basic health sectors (mn usd, constant prices (2016))":"ODA (gross disbursements) to medical research and basic health sectors","oda (gross disbursements) to public-private partnerships (ppp) for infrastructure":"ODA (gross disbursements) to public-private partnerships (PPP) for infrastructure","oda (gross disbursements) to the agriculture sector":"ODA (gross disbursements) to the agriculture sector","oda (gross disbursements) to the forestry sector":"ODA (gross disbursements) to the forestry sector","oda (net disbursements)":"ODA (net disbursements)","oda and oof (commitments) for aid for trade":"ODA and OOF (commitments) for aid for trade","oda and oof (commitments) for capacity building and national planning (without south-south cooperation)":"ODA and OOF (commitments) for capacity building and national planning (without South-South cooperations)","oda and oof (commitments) for capacity building and national planning (without south-south cooperations)":"ODA and OOF (commitments) for capacity building and national planning (without South-South cooperations)","oda and oof (commitments) of all resources made available to strengthen statistical capacity in developing countries (mn usd, constant prices (2016))":"ODA and OOF (commitments) of all resources made available to strengthen statistical capacity in developing countries","oda and oof (commitments) to developing countries for capacity building and national planning (without south-south cooperation)":"ODA and OOF (commitments) to developing countries for capacity building and national planning (without South-South cooperations)","oda and oof (commitments) to strengthen statistical capacity":"ODA and OOF (commitments) to strengthen statistical capacity","oda and oof (gross disbursement) for aid for trade":"ODA and OOF (gross disbursement) for aid for trade","oda and oof (gross disbursements) for capacity building and national planning (without south-south cooperation)":"ODA and OOF (gross disbursements) for capacity building and national planning (without South-South cooperations)","oda and oof (gross disbursements) for capacity building and national planning (without south-south cooperations)":"ODA and OOF (gross disbursements) for capacity building and national planning (without South-South cooperations)","oda and oof (gross disbursements) of all resources made available to strengthen statistical capacity":"ODA and OOF (gross disbursements) to strengthen statistical capacity","oda and oof (gross disbursements) of all resources made available to strengthen statistical capacity in developing countries (mn usd, constant prices (2016))":"ODA and OOF (gross disbursements) of all resources made available to strengthen statistical capacity in developing countries","oda and oof (gross disbursements) to developing countries for capacity building and national planning (without south-south cooperation)":"ODA and OOF (gross disbursements) to developing countries for capacity building and national planning (without South-South cooperations)","oda and oof (gross disbursements) to infrastructure":"ODA and OOF (gross disbursements) to infrastructure","oda and oof (gross disbursements) to strengthen statistical capacity":"ODA and OOF (gross disbursements) to strengthen statistical capacity","officially supported export credits (net disbursements)":"Officially supported export credits (net disbursements)","online accounts":"Online accounts","online survey on policy responses, mandate, legal authority, and resourcing to manage the threat of invasive alien species":"(2) Online survey on Policy responses, mandate, legal authority, and resourcing to manage the threat of invasive alien species","oof (net disbursements)":"OOF (net disbursements)","open water bodies":"Open water bodies","organically farmed agricultural land (data from bmel)":"Organically farmed agricultural land (data from BMEL)","organically farmed agricultural land (data from destatis)":"Organically farmed agricultural land (data from Destatis)","organisational form":"Organisational form","organisations with emas registration":"Organisations with EMAS registration","organisations with emas registration (number)":"Organisations with EMAS registration","other country outside eu":"Other country outside of the EU","other country within eu":"Other country within the EU","other wastewater that does not have to undergo treatment":"Other wastewater","overcrowding rate":"Overcrowding rate","overweight":"Overweight","overweight among children under the age of 5 years (%)":"Overweight","owned and leased agricultural land":"Owned and leased agricultural land","ownership":"Ownership","p10":"P10","p25":"P25","p5":"P5","p50":"P50","p75":"P75","p90":"P90","p95":"P95","participation rate in formal and non-formal education and training in the previous 12 months":"Participation rate in formal and non-formal education and training in the previous 12 months","parties to the nagoya protocol":"Parties to the Nagoya Protocol","passenger transport":"Passenger transport","passenger transports":"Passenger transport","people requiring interventions against neglected tropical diseases":"People requiring interventions against neglected tropical diseases","per 1 000 inhabitants":"Per 1,000 inhabitants","per 1 000 live birth":"Per 1,000 live birth","per 1 000 live births":"Per 1,000 live births","per 1 000 women of same age":"Per 1,000 women of same age","per 1 mn inhabitants":"Per 1 million inhabitants","per 10 000 adults":"Per 10,000 adults","per 10 000 inhabitants":"Per 10,000 inhabitants","per 100 000 adults":"Per 100,000 adults","per 100 000 in employment":"Per 100,000 employees","per 100 000 inhabitants":"Per 100,000 inhabitants","per 100 000 live birth":"Per 100,000 live birth","per 100 000 live births":"Per 100,000 live births","per 100 inhabitants":"Per 100 inhabitants","per real gdp (2010 = 100)":"Per real GDP (2010 = 100)","per real gdp (2015 = 100)":"Per real GDP (2015 = 100)","percentage of bloodstream infections due to selected antimicrobial-resistant organisms":"Proportion of resistant isolates tested from blood cultures","percentiles":"Percentiles","persons at risk of poverty or social exclusion":"Persons at risk of poverty or social exclusion","persons employed":"Persons employed","persons who died during migration":"Persons who died during migration","persons with computer-related activities in the last 12 months":"Share of population with computer-related activities","persons with disability":"Persons with disability","persons without disability":"Persons without disability","ph-value":"pH-value","physical abuse":"Physical abuse","physical harassment":"Victims of physical harassment","plant genetic resources":"Plant genetic resources","plant genetic resources (number)":"Plant genetic resources","pm10":"PM10","pm2.5":"PM2.5","pneumococcal vaccination coverage at school entry":"Pneumococcal vaccination coverage at school entry","pneumococcal vaccination rate at school entrance":"Pneumococcal vaccination coverage at school entry","points":"Points","police":"Police","policy domains and sub-categories of sdg indicators 10.7.2 for germany":"State of migration policies","political leadership and central administration, foreign affairs":"Political leadership and central administration, foreign affairs","poorest":"Poorest","population connected to the public water supply system":"Population connected to the public water supply system","population connected to the public water supply system (%)":"Population connected to the public water supply system","population considering their dwelling as too dark":"Population considering their dwelling as too dark","population covered by health insurance":"Population covered by health insurance","population covered by health insurance (%)":"Population covered by health insurance","population growth rate":"Population growth rate","population having neither a bath, nor a shower in their dwelling":"Population having neither a bath, nor a shower in their dwelling","population living below 50% of median income":"Population living below 50% of median income","population living below 50% of median income, by sex and age":"Population living below 50% of median income","population living in a dwelling with a leaking roof, damp walls, floors or foundation, or rot in window frames or floor":"Population living in a dwelling with a leaking roof, damp walls, floors or foundation, or rot in window frames or floor","population living in a dwelling with a leaky roof, moisture in the walls, floors, foundation, or rot in the window frames or floor":"Population living in a dwelling with a leaky roof, moisture in the walls, floors, foundation, or rot in the window frames or floor","population living in an area with crime, violence or vandalism":"Population living in an area with crime, violence or vandalism","population living in an area with noise pollution":"Population living in an area with noise pollution","population living in households with food insecurity":"Population living in households with food insecurity","population living in households with moisture damages":"Population living in households with moisture damages","population not having indoor flushing toilet for the sole use of their household":"Population not having indoor flushing toilet for the sole use of their household","population not living in an area with crime, violence or vandalism":"Population not living in an area with crime, violence or vandalism","population not living in an area with crime, violence or vandalism (%)":"Population not living in an area with crime, violence or vandalism","population satisfied with their experience of government services during the previous two years":"Population satisfied with their experience of government services during the previous two years","population satisfied with their experience of government services during the previous two years (%)":"Population satisfied with their experience of government services during the previous two years","population subjected to physical violence":"Population who were exposed to physical violence","population that considers their accommodation too dark":"Population that considers their accommodation too dark","population that does not have a toilet for the sole use of their household":"Population that does not have a toilet for the sole use of their household","population that has convenient access to public transport (within 10 minutes walking distance)":"Population that has convenient access to public transport (within 10 minutes walking distance)","population that has convenient access to public transport (within 10 minutes walking distance) (%)":"Population that has convenient access to public transport (within 10 minutes walking distance)","population that has convenient access to public transport (within 500 meters)":"Population that has convenient access to public transport (within 500 meters)","population that has convenient access to public transport (within 500 meters) (%)":"Population that has convenient access to public transport (within 500 meters)","population that has neither a bath, nor a shower in their home":"Population that has neither a bath, nor a shower in their home","population using safely managed drinking water services":"Population using safely managed drinking water services","population using safely managed drinking water services (%)":"Population using safely managed drinking water services","population weighted annual mean levels of pm10":"Population weighted annual mean levels of PM<sub>10</sub>","population weighted annual mean levels of pm10 (micrograms per cubic meter)":"Population weighted annual mean levels of PM<sub>10</sub>","population who considers their experiences with public agencies free of discrimination during the previous two years":"Population who considers their experiences with public agencies free of discrimination during the previous two years","population who considers their experiences with public agencies free of discrimination during the previous two years (%)":"Population who considers their experiences with public agencies free of discrimination during the previous two years","population who felt discriminated in their contacts with public services in the last two years":"Population who felt discriminated in their contacts with public services in the last two years","population who had the impression that public officials are corruptible":"Population who had the impression that public officials are corruptible during their interactions with public agencies in the previous two years","population who had the impression that public officials are corruptible during their interactions with public agencies in the previous two years":"Population who had the impression that public officials are corruptible during their interactions with public agencies in the previous two years","population who were exposed to physical violence":"Population who were exposed to physical violence","population who were victims of criminal offences":"Population who were victims of criminal offences","population with (own) bathtub or shower":"Population with (own) bathtub or shower","population with (own) toilet":"Population with (own) toilet","population with access to electricity":"Population with access to electricity","population with excessive exposure to fine particulate matter":"Population with excessive exposure to fine particulate matter","population with primary reliance on clean fuels and technology":"Population with primary reliance on clean fuels and technology","primary school completed":"Primary school completed","private":"Private","private concessional flows (net disbursements)":"Private concessional flows (net disbursements)","private households with at least one mobile phone":"Private households with at least one mobile phone","private households with at least one mobile phone (%)":"Private households with at least one mobile phone","private persons (donors) suspected in the context of corruption offences":"Private persons (donors) suspected in the context of corruption offences","private sector flows at market terms (net disbursements)":"Private sector flows at market terms (net disbursement)","product type":"Product type","profession":"Profession","progress in multi-stakeholder development effectiveness monitoring frameworks":"Progress in multi-stakeholder development effectiveness monitoring frameworks","property":"Property","proportion flowing water with good ecological status for total phosphorous":"Proportion flowing water with good ecological status for total phosphorous","proportion groundwater below threshold for nitrate":"Proportion groundwater below threshold for nitrate","proportion of bilateral and imputed multilateral net oda for ldcs to the gni (%)":"Proportion of bilateral and imputed multilateral net ODA for LDCs to the GNI","proportion of bilateral and imputed multilateral oda (net disbursements) for lcds to the gross national income (gni)":"Proportion of bilateral and imputed multilateral ODA (net disbursements) for LDCs to the gross national income (GNI)","proportion of bilateral and imputed multilateral oda (net disbursements) for ldcs to the gross national income (gni)":"Proportion of bilateral and imputed multilateral ODA (net disbursements) for LDCs to the gross national income (GNI)","proportion of domestic expenditures funded by national taxes":"Proportion of domestic expenditures funded by national taxes","proportion of domestic expenditures funded by national taxes (%)":"Proportion of domestic expenditures funded by national taxes","proportion of domestic expenditures funded by national taxes and insurance contributions":"Proportion of domestic expenditures funded by national taxes and insurance contributions","proportion of domestic expenditures funded by national taxes and insurance contributions (%)":"Proportion of domestic expenditures funded by national taxes and insurance contributions","proportion of fish stocks monitored based on the maximum sustainable yield (msy) approach in all managed stocks":"Proportion of MSY examined in all managed stocks","proportion of flowing water with good ecological status for total phosphorous":"Proportion of flowing water with good ecological status for total phosphorous","proportion of groundwater mesuring points below the threshold value for nitrate":"Proportion of groundwater mesuring points below the threshold value for nitrate","proportion of individuals using the internet":"Proportion of individuals using the Internet","proportion of msy examined in all managed stocks":"Proportion of MSY examined in all managed stocks","proportion of net oda to gni (%)":"Proportion of net ODA to GNI","proportion of new development interventions drawn from country-led result frameworks by providers of development cooperation (%)":"Proportion of indicator results drawn from country-led results frameworks by providers of development cooperation","proportion of oda (net disbursements) to gni":"Proportion of ODA (net disbursements) to GNI","proportion of people seeking protection with granted protection status as a percentage of the total population":"Proportion of people seeking protection with granted protection status to total population","proportion of people seeking protection with granted protection status to total population":"Proportion of people seeking protection with granted protection status to total population","proportion of population felt discriminated in their contacts with public services in the last two years":"Population who felt discriminated in their contacts with public services in the last two years","proportion of population with large household expenditures on health as a share of total household expenditure or income":"Proportion of population with large household expenditures on health as a share of total household expenditure or income","proportion of primary government expenditures to original approved budget":"Proportion of primary government expenditures to original approved budget","proportion of r&d expenditures to gdp":"Proportion of R&D expenditures to GDP","proportion of resistant isolates tested from blood cultures":"Proportion of resistant isolates tested from blood cultures","proportion of results indicators drawn from country-led results frameworks by providers of development cooperation (%)":"Proportion of results drawn from country-led result frameworks by providers of development cooperation","proportion of results indicators which will be monitored using government sources and monitoring systems by providers of development cooperation (%)":"Proportion of indicator results monitored using the partner country's own sources and monitoring systems by providers of development cooperation","proportion of schools offering basic services":"Proportion of schools offering basic services","proportion of settlement and transport areas to population":"Proportion of settlement and transport areas to population","proportion of sustainable managed stocks in all msy examined stocks":"Proportion of sustainable managed stocks in all MSY examined stocks","proportion of the rural population who live within 2 km of an all-season road":"Proportion of the rural population who live within 2 km of an all-season road","proportion of time spent on unpaid domestic and care work":"Proportion of time spent on unpaid domestic and care work","proportion of total government revenue to gdp":"Proportion of total government revenue to GDP","proportion of total government revenue to gdp (%)":"Proportion of total government revenue to GDP","proportion of women in local governments":"Proportion of women in local governments","proportion of women in parliaments":"Proportion of women in parliaments","proportions of positions of women in the public service compared to the national distribution, by field of work":"Ratio of female members in the public service","protected marine area (%)":"Marine areas covered by protected areas","protected terrestrial areas (%)":"Terrestrial and freshwater areas covered by protected areas","psychological abuse":"Psychological abuse","public":"Public","public access to information (number)":"UNESCO Survey on Public Access to Information","rabies":"Rabies","rail transport":"Rail transport","ramsar convention":"Ramsar Convention","rate of overburdening by housing costs":"Rate of overburdening by housing costs","ratio of female members in the judiciary":"Ratio of female members in the judiciary","ratio of female members in the public service":"Ratio of female members in the public service","ratio of land consumption rate to population growth rate":"Ratio of land consumption rate to population growth rate (year-to-year)","ratio of land consumption rate to population growth rate (year-to-year)":"Ratio of land consumption rate to population growth rate (year-to-year)","ratio of proportion of women in the judiciary to proportion of women in the total population, by level of court":"Ratio of female members in the judiciary","raw material consumption (rmc)":"Raw material consumption (RMC)","raw material consumption per real gdp":"Raw material consumption per real GDP","reading":"Reading","real gdp per capita":"Real GDP per capita","recovery other than energy recovery":"Recovery other than energy recovery","recycled waste":"Material recovery","recycling rate":"Recycling rate","red list index (%)":"\"Red List\" Index","region":"Region","regulatory tier 1 capital to risk-weighted assets":"Regulatory Tier 1 capital to risk-weighted assets","regulatory tier 1 capital to risk-weighted assets (%)":"Regulatory Tier 1 capital to risk-weighted assets","rejected applications":"Rejected applications","relative to gdp":"Relative to GDP (%)","renewable energy share in gross final energy consumption":"Renewable energy share in gross final energy consumption","renewable energy share in total final energy consumption":"Renewable energy share in total final energy consumption","reporting rate for physical assault":"Reporting rate for physical assault","reporting rate for robbery":"Reporting rate for robbery","reporting type":"Reporting type","requests for the implementation of a dispute resolution procedure":"Requests for the implementation of a dispute resolution procedure","researchers in full-time equivalents":"Researchers in full-time equivalents","researchers in full-time equivalents (per 1 mn inhabitants)":"Researchers in full-time equivalents","return on assets":"Return on assets","return on assets (%)":"Return on assets","rhineland palatinate":"Rhineland Palatinate","richest":"Richest","river water bodies":"River water bodies","rmc":"Raw material consumption (RMC)","road transport":"Road transport","rotterdam convention":"Rotterdam Convention","rural areas":"Rural areas","russian federation":"Russian Federation","saarland":"Saarland","safe":"Safe","safely treated wastewater (total)":"Wastewater safely treated (total)","saxony":"Saxony","saxony-anhalt":"Saxony-Anhalt","schleswig-holstein":"Schleswig-Holstein","score for the implementation of unclos and ist two implementing agreements":"Score for the implementation of UNCLOS and ist two implementing agreements","score for the ratification of and accession to unclos and ist two implementing agreements":"Score for the ratification of and accession to UNCLOS and ist two implementing agreements","sdg indicator 4-2-2":"SDG indicator 4.2.2","sdg indicator 4-3-1 (adults)":"SDG-Indicator 4.3.1 (Adults)","sdg indicator 4-3-1 (youth)":"SDG-Indicator 4.3.1 (Youths)","sea":"Sea","seats held by women in national parliament":"Proportion of women in parliaments","second":"Second","sector":"Sector","seea tables":"SEEA tables","seized arms and parts":"Seized arms and parts","seized arms and parts (number)":"Seized arms and parts","seizures by authorities concerning the protection of species":"Seizures by authorities concerning the protection of species","seizures by authorities concerning the protection of species (number)":"Seizures by authorities concerning the protection of species","separated":"Separated","severely materially deprived persons":"Severely materially deprived persons","sex":"Sex","sex of victim":"Gender of victims","sexual exploitation":"Sexual exploitation","sexual harassment":"Victims of sexual harassment","share of open space to total area in cities with more than 100,000 inhabitants":"Share of open space to total area in cities with more than 100,000 inhabitants","share of population with computer-related activities":"Share of population with computer-related activities","share of the population with excessive exposure to fine particulate matter":"Population with excessive exposure to fine particulate matter","share of tourism industries to total value added (%)":"Gross value added of the tourism industry","share of withdrawal in renewable water resources":"Share of withdrawal in renewable water resources","share of withdrawal in renewable water resources (excluding cooling water)":"Share of withdrawal in renewable water resources (excluding cooling water)","short-term exposure to particulate matter: mortality due to acute respiratory diseases (children < 5 years)":"Short-term exposure to particulate matter: mortality due to acute respiratory diseases (children < 5 years)","skill":"Skill","smaller towns and suburbs":"Towns and suburbs","source":"Data source","speed":"Speed","standard accounting system":"Standard accounting system","standard accounting tools to monitor sustainability in tourism":"Standard accounting tools to monitor sustainability in tourism","state of migration policies":"State of migration policies","stockholm convention":"Stockholm Convention","strategy for adaptation to climate change":"Strategy for Adaptation to Climate Change","stunting among children":"Stunting among children","stunting among children under the age of 5 years":"Stunting among children","sub-indicator 1: spatial extent of water-related ecosystems":"Sub-indicator 1: Spatial extent of water-related ecosystems","sub-indicator 3:  quantity discharge of water in rivers":"Sub-indicator 3:  Quantity discharge of water in rivers","sub-indicator 4: water bodies with good quality":"Sub-indicator 4: Water bodies with good quality","subject":"Subject","substance":"Substance","supreme/constitutional courts":"Supreme/Constitutional courts","sustainability programme":"Sustainability Programme","syria":"Syria","t per capita":"Tonnes per capita","technological intensity":"Technological intensity","technology":"Technology","technology sectors":"Technology sectors","terrestrial and freshwater areas covered by protected areas":"Terrestrial and freshwater areas covered by protected areas","terrestrial and freshwater key biodiversity areas (kbas) covered by protected areas":"Terrestrial and freshwater Key Biodiversity Areas (KBAs) covered by protected areas","thematic area":"Thematic area","theme":"Theme","thuringia":"Thuringia","time series":"Time series","time spent on unpaid domestic and care work":"Proportion of time spent on unpaid domestic and care work","timeseries":"Time series","toilet":"Population with (own) toilet","total":"Total","total (one to four items)":"Total (one to four items)","total female persons in employment (%)":"Total female persons in employment","total greenhouse gas emissions":"Total greenhouse gas emissions","total municipal solid waste generated":"Municipal solid waste in total","total of deaths recorded in germany":"Persons who died during migration","total official and private resource flows for development (net disbursements)":"Total official and private resource flows for development (net disbursements)","total waste":"Total waste","total wastewater produced from public and non-public disposal":"Total wastewater produced from public and non-public disposal","trade balance":"Trade balance","transboundary basin area with an operational arrangement for water cooperation":"Transboundary basin area with an operational arrangement for water cooperation","transboundary basin area with an operational arrangement for water cooperation (%)":"Transboundary basin area with an operational arrangement for water cooperation","transferred files between computer and other devices":"Transferring files between computer and other devices","transport via pipeline crude oil":"Pipelines: crude oil","treated wastewater":"Treated wastewater","treatment":"Treatment","tsa tables":"TSA tables","tuberculosis incidence":"Tuberculosis incidence","tuberculosis incidence (per 100 000 inhabitants)":"Tuberculosis incidence","turkey":"Turkey","type of account":"Type of account","type of disease":"Type of disease","type of flow":"Type of flow","type of waste":"Type of waste","type of waste treatment":"Type of waste treatment","type of waste water":"Type of waste water","type of water body":"Type of water body","typification":"Degree of urbanisation","under 1 year":"11 months and younger","under 14 years":"13 years and younger","under 15 years":"14 years and younger","under 18 years":"17 years and younger","under 5 years":"4 years and younger","unemployed persons with unemployment benefits":"Unemployed persons with unemployment benefits","unemployed persons with unemployment benefits (%)":"Unemployed persons with unemployment benefits","unemployment rate":"Unemployment rate","unemployment rate (15 to under 75 years), by sex and age classes":"Unemployment rate","unesco survey on public access to information":"UNESCO Survey on Public Access to Information","unit multiplicator":"Unit multiplicator","unknown":"Unknown","unknown age":"Unknown age","unsafe":"Unsafe","unsentenced detainees":"Unsentenced detainees","unsentenced detainees (%)":"Unsentenced detainees","untreated wastewater":"Untreated wastewater","untreated wastewater that does not have to undergo treatment":"Untreated wastewater that does not have to undergo treatment","upper bound":"Upper bound","upper secondary school completed and post-secondary non-tertiary education":"Upper secondary school completed and post-secondary non-tertiary education","urban":"Urban","urbanisation":"Degree of urbanisation","used spreadsheet`s advanced functions to organize and analyze data, such as sorting, filtering, using formulas, creating charts":"Using spreadsheet`s advanced functions to organize and analyze data, such as sorting, filtering, using formulas, creating charts","using copy or cut and paste tools to duplicate or move information on screen":"Using copy or cut and paste tools to duplicate or move information on screen","very safe":"Very safe","very unsafe":"Very unsafe","victims of criminal offences":"Victims of criminal offences","victims of female genital mutilation (number)":"Female victims of genital mutilation","victims of human trafficking":"Victims of human trafficking","victims of intentional homicide":"Victims of intentional homicide","victims of physical harassment":"Victims of physical harassment","victims of sexual harassment":"Victims of sexual harassment","wastewater and cooling water":"Wastewater and cooling water","wastewater safely treated":"Wastewater safely treated","wastewater that is safely treated or does not require treatment":"Wastewater that is safely treated or does not require treatment","wasting":"Wasting","wasting among children under the age of 5 years (%)":"Wasting","water bodies with good quality":"Water bodies with good quality","water use efficiency":"Water use efficiency","wetlands area":"Wetlands area","wetlands area as a proportion of total land area":"Wetlands area as a proportion of total land area","who":"World Health Organization (WHO)","widowed":"Widowed","women in managerial positions":"Women in managerial positions","women in managerial positions (%)":"Women in managerial positions","world heritage convention":"World Heritage Convention","world organisation for animal health":"World Organisation for Animal Health","written code in a programming language":"Writing code in a programming language","yaws":"Yaws","year":"Year","yes=1, no=0":"yes=1, no=0","young people (15 to under 25 years) neither in employment nor in education and training (neet rates)":"Young people (15 to under 25 years) neither in employment nor in education and training (NEET rates)","young victims being exploited or intended to being exploited":"Young victims being exploited or intended to being exploited"};</script>
 
 
-
-<!-- Last check: 16.08.2021 -->
 <div class="heading goal-banner indicator goal-6">
   <div class="container">
     <div class="row">
@@ -548,6 +518,7 @@ data-event-label="high"
     </div>
   </div>
 </div>
+
 
 <div class="container">
   
@@ -587,7 +558,9 @@ data-event-label="high"
   
 <!--#8 addNavigationButtons---stop-------------------------------------->
 
+  
 </div>
+
 <div id="main-content" class="container goal-6" role="main">
   
 
@@ -605,8 +578,7 @@ data-event-label="high"
 </div>
 
 
-  <!-- Last check: 21.10.2021 -->
-
+  
 
 
 
@@ -621,6 +593,7 @@ data-event-label="high"
   data-xaxislabel=""
   data-showdata="true"
   data-graphtype="bar"
+  data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Population with (own) toilet&quot;},{&quot;field&quot;:&quot;Availability&quot;,&quot;value&quot;:&quot;Yes&quot;},{&quot;field&quot;:&quot;Availability&quot;,&quot;value&quot;:&quot;No&quot;}]"
@@ -705,396 +678,11 @@ data-event-label="high"
   <span id="table-alternative"></span>
 </div>
 <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  <li role="presentation" class="nav-item active">
-    <a class="nav-link" data-toggle="tab"  href="#chartview" aria-controls="chartview" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Chart tab"
- aria-describedby="table-alternative"><i class="fa fa-line-chart" aria-hidden="true"></i> <span class="hidden-xs" style="color:black">Chart</span></a>
-  </li>
-  <li role="presentation" class="nav-item">
-    <a class="nav-link" data-toggle="tab" id="tab-tableview" href="#tableview" aria-controls="tableview" role="tab" data-on="click"
-data-event-category="Tab change"
-data-event-action="Change data view"
-data-event-label="Change to Table tab"
-><i class="fa fa-table" aria-hidden="true"></i> <span class="hidden-xs" style="color:black">Table</span></a>
-  </li></ul>
+  
+</ul>
 
     <div class="tab-content data-view">
-  <div role="tabpanel" class="tab-pane active" id="chartview">
-    
-
-    <div id="dataset-size-warning" style="display:none" role="alert">
-      <i class="fa fa-bolt"><span class="sr-only"></span></i>
-      There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
-    </div>
-
-    
-    
-    <div id="selectionsChart">
-      <figure role="group">
-        <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Population having access to adequate sanitation and hygiene</h4>
-          <div id="chart" class="plot-container">
-            
-<canvas
-    role="img"
-    aria-labelledby="chart-heading"
-    aria-describedby="table-alternative chart-annotations"
-    tabindex="0"
- ></canvas>
-
-<script>
-// Add a chart alteration to support the chart_graph_limits metadata field.
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphLimits && Object.keys(info.graphLimits).length > 0) {
-    var overrides = {
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              min: info.graphLimits.minimum,
-              max: info.graphLimits.maximum,
-            }
-          }]
-        }
-      }
-    }
-    // Add these overrides onto the normal config.
-    $.extend(true, config, overrides);
-  }
-  else {
-    // Otherwise remove any min/max that may be there.
-    try {
-      delete config.options.scales.yAxes[0].ticks.min;
-      delete config.options.scales.yAxes[0].ticks.max;
-    }
-    catch(e) {}
-  }
-});
-</script>
-
-<span style="display: none;" id="chart-annotations" role="status"></span>
-<script>
-opensdg.annotationPresets = {
-    common: {
-        // This "common" preset is applied to all annotations automatically.
-        borderColor: '#949494',
-        type: 'line',
-        borderDash: [10, 5],
-        borderWidth: 1,
-        label: {
-            backgroundColor: 'white',
-            fontColor: 'black',
-        },
-        // This "highContrast" overrides colors when in high-contrast mode.
-        highContrast: {
-            label: {
-                backgroundColor: 'black',
-                fontColor: 'white'
-            }
-        },
-        // This callback is used to generate a generic description for screenreaders.
-        // This can be overridden to be a more specific string, eg:
-        //
-        //     description: 'Chart annotation showing a 2030 target of 15%'
-        //
-        description: function() {
-            var descriptionParts = [translations.indicator.chart_annotation];
-            if (this.label && this.label.content) {
-                descriptionParts.push(translations.t(this.label.content));
-            }
-            else {
-                // If there is no label, just specify whether it is a box or line.
-                if (this.type == 'line') {
-                    descriptionParts.push(this.mode + ' line');
-                }
-                if (this.type == 'box') {
-                    descriptionParts.push('box');
-                }
-            }
-            if (typeof this.value !== 'undefined') {
-                descriptionParts.push(this.value);
-            }
-            return descriptionParts.join(': ');
-        },
-    },
-    target_line: {
-        mode: 'horizontal',
-        borderWidth: 2,
-        borderDash: [15, 10],
-        borderColor: '#757575',
-        label: {
-            position: 'right',
-            content: translations.indicator.annotation_2030_target,
-        },
-    },
-    series_break: {
-        mode: 'vertical',
-        borderDash: [2, 2],
-        label: {
-            position: 'top',
-            content: translations.indicator.annotation_series_break,
-            xAdjust: +60,
-        },
-
-    },
-};
-
-// Add a chart alteration to support the chart_annotations metadata field.
-opensdg.chartConfigAlter(function(config, info) {
-    if (info.graphAnnotations && info.graphAnnotations.length > 0) {
-        // Apply some helpers/fixes to the annotations.
-        var annotations = info.graphAnnotations.map(function(annotationOverrides) {
-            var annotation = {};
-            // Apply the "common" preset.
-            if (opensdg.annotationPresets.common) {
-                $.extend(true, annotation, opensdg.annotationPresets.common);
-            }
-            // Apply any specified presets.
-            if (annotationOverrides.preset) {
-                var preset = annotationOverrides.preset;
-                if (opensdg.annotationPresets[preset]) {
-                    $.extend(true, annotation, opensdg.annotationPresets[preset]);
-                }
-            }
-            // Now add any more annotation config.
-            $.extend(true, annotation, annotationOverrides);
-            // Default to horizontal lines.
-            if (!annotation.mode && annotation.type === 'line') {
-                annotation.mode = 'horizontal';
-            }
-            // Provide the obscure scaleID properties on user's behalf.
-            if (!annotation.scaleID && annotation.type === 'line') {
-                if (annotation.mode === 'horizontal') {
-                    annotation.scaleID = 'y-axis-0';
-                }
-                if (annotation.mode === 'vertical') {
-                    annotation.scaleID = 'x-axis-0';
-                }
-            }
-            if (!annotation.xScaleID && annotation.type === 'box') {
-                annotation.xScaleID = 'x-axis-0';
-            }
-            if (!annotation.yScaleID && annotation.type === 'box') {
-                annotation.yScaleID = 'y-axis-0';
-            }
-            // Provide the "enabled" label property on the user's behalf.
-            if (annotation.label && annotation.label.content) {
-                annotation.label.enabled = true;
-            }
-            // Translate any label content.
-            if (annotation.label && annotation.label.content) {
-                annotation.label.content = translations.t(annotation.label.content);
-            }
-            // Save some original values for later used when contrast mode is switched.
-            if (typeof annotation.defaultContrast === 'undefined') {
-                annotation.defaultContrast = {};
-                if (annotation.borderColor) {
-                    annotation.defaultContrast.borderColor = annotation.borderColor;
-                }
-                if (annotation.backgroundColor) {
-                    annotation.defaultContrast.backgroundColor = annotation.backgroundColor;
-                }
-                if (annotation.label) {
-                    annotation.defaultContrast.label = {};
-                    if (annotation.label.fontColor) {
-                        annotation.defaultContrast.label.fontColor = annotation.label.fontColor;
-                    }
-                    if (annotation.label.backgroundColor) {
-                        annotation.defaultContrast.label.backgroundColor = annotation.label.backgroundColor;
-                    }
-                }
-            }
-            return annotation;
-        });
-        if (annotations.length > 0) {
-            var overrides = {
-                options: {
-                    annotation: {
-                        drawTime: 'beforeDatasetsDraw',
-                        annotations: annotations
-                    }
-                }
-            };
-            // Add these overrides onto the normal config.
-            $.extend(true, config, overrides);
-
-            // Update the chart annotations element.
-            var descriptions = annotations.map(function(annotation) {
-                var description = '';
-                if (annotation.description) {
-                    if (typeof annotation.description === 'function') {
-                        description = annotation.description.call(annotation);
-                    }
-                    else {
-                        description = translations.t(annotation.description);
-                    }
-                }
-                return description;
-            }).filter(function(description) { return description != ''; });
-
-            var currentDescription = $('#chart-annotations').text();
-            var newDescription = descriptions.join('. ');
-            if (currentDescription != newDescription) {
-                $('#chart-annotations').text(newDescription);
-            }
-        }
-    }
-    else if (config.options && config.options.annotation) {
-        delete config.options.annotation;
-    }
-});
-</script>
-
-<script>
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
-    var overrides = {
-      options: {
-        scales: {
-          yAxes: [{
-            ticks: {
-              stepSize: info.graphStepsize.step,
-            }
-          }]
-        }
-      }
-    }
-    // Add these overrides onto the normal config.
-    $.extend(true, config, overrides);
-  }
-});
-</script>
-
-
-<script>
-opensdg.chartConfigAlter(function(config, info) {
-  if (info.stackedDisaggregation) {
-    var overrides = {
-      options: {
-        scales: {
-          xAxes: [{ stacked: true }],
-          yAxes: [{ stacked: true }],
-        }
-      }
-    };
-    // If we have stackedDisaggregation, we need to group datasets into stacks.
-    config.data.datasets.forEach(function(dataset) {
-      var disaggregation = $.extend({}, dataset.disaggregation);
-      // We're going to "stringify" each combination of disaggregations in order
-      // to place them in their own "stacks". To place "stacked" disaggregations
-      // into the same stack, we set them as "samestack" before stringifying.
-      // Note that the string "samestack" is completely arbitrary.
-      if (typeof disaggregation[info.stackedDisaggregation] !== 'undefined') {
-        disaggregation[info.stackedDisaggregation] = 'samestack';
-      }
-      // Use the disaggregation as a unique id for each stack.
-      dataset.stack = JSON.stringify(disaggregation);
-    });
-    // Add these overrides onto the normal config, and return it.
-    $.extend(true, config, overrides);
-  }
-});
-</script>
-
-          </div>
-          <div id="plotLegend"></div>
-          </u>
-
-
-
-<div id="selectionChartFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-          
-          <dt><u>Data sources</u>:</dt>
-          
-        <dd><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a>; <a href="https://ec.europa.eu/eurostat/en/home"> Statistical office of the European Union (Eurostat) </a></dd>
-        
-
-        
-        <dt><u>Geographic coverage</u>:</dt>
-        <dd>Germany</dd>
-        
-
-        
-        <dt><u>Unit of measurement</u>:</dt>
-        <dd>Percentage</dd>
-        
-
-        
-
-        
-
-        
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
-        
-    <dl>
-</div>
-
-        </div>
-      </figure>
-      <div id="chartSelectionDownload" class="clearfix">
-        <button id="btnSave" title="" class='btn btn-primary btn-download'>
-          Download Chart Image
-        </button>
-      </div>
-    </div>
-
-
-
-  </div>
-  <div role="tabpanel" class="tab-pane" id="tableview">
-    <div style="display: none;">
-      <span id="column-sort-info"></span>
-    </div>
-    <div id="selectionsTable"></div>
-<dl id="tableTargetLines" class="clearfix"></dl>
-</u>
-
-
-
-<div id="selectionTableFooter" class="table-footer-text">
-  <h5 class="sr-only">Chart details</h5>
-    <dl>
-        
-          
-          <dt><u>Data sources</u>:</dt>
-          
-        <dd><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a>; <a href="https://ec.europa.eu/eurostat/en/home"> Statistical office of the European Union (Eurostat) </a></dd>
-        
-
-        
-        <dt><u>Geographic coverage</u>:</dt>
-        <dd>Germany</dd>
-        
-
-        
-        <dt><u>Unit of measurement</u>:</dt>
-        <dd>Percentage</dd>
-        
-
-        
-
-        
-
-        
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2022</dd>
-        
-    <dl>
-</div>
-
-<div id="tableSelectionDownload" class="clearfix"></div>
-
-  </div>
+  
 </div>
 
 
@@ -2576,22 +2164,21 @@ data-event-label="Change to Sources tab"
         </div>
       </div>
     </div>
+    
   </div>
 </footer>
 
-<!-- Digital Analytics Program roll-up, see https://analytics.usa.gov for data -->
-<!-- <script id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA"></script> -->
-<!-- Google Analytics -->
-
-<!-- /.container </div> -->
-<!-- Last check: 09.09.2021 -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -2611,86 +2198,15 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220504094649'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220504101456'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220504094649"></script><script>
-$(function() {
-    if($('#indicatorData').length) {
-      var domData = $('#indicatorData').data();
-
-      if (domData.showdata) {
-
-        $('.async-loading').each(function(i, obj) {
-            $(obj).append($('<img />').attr('src', $(obj).data('img')).attr('alt', translations.indicator.loading));
-        });
-
-        var remoteUrl = '/comb/' + domData.id + '.json';
-        if (opensdg.remoteDataBaseUrl !== '/') {
-          remoteUrl = opensdg.remoteDataBaseUrl + remoteUrl;
-        }
-
-        $.ajax({
-          url: remoteUrl,
-          success: function(res) {
-
-            $('.async-loading').remove();
-            $('.async-loaded').show();
-
-            var model = new indicatorModel({
-              data: res.data,
-              edgesData: res.edges,
-              showMap: domData.showmap,
-              country: domData.country,
-              indicatorId: domData.indicatorid,
-              shortIndicatorId: domData.id,
-              chartTitle: domData.charttitle,
-              chartTitles: domData.charttitles,
-              measurementUnit: domData.measurementunit,
-              xAxisLabel: domData.xaxislabel,
-              showData: domData.showdata,
-              graphType: domData.graphtype,
-              startValues: domData.startvalues,
-              graphLimits: domData.graphlimits,
-              stackedDisaggregation: domData.stackeddisaggregation,
-              showLine: domData.showline,
-              spanGaps: domData.spangaps,
-              graphAnnotations: domData.graphannotations,
-              graphTargetLines: domData.graphtargetlines,
-              graphSeriesBreaks: domData.graphseriesbreaks,
-              indicatorDownloads: domData.indicatordownloads,
-              dataSchema: domData.dataschema,
-              compositeBreakdownLabel: domData.compositebreakdownlabel,
-              precision: domData.precision,
-              graphStepsize: domData.graphstepsize,
-            }),
-            view  = new indicatorView(model, {
-              rootElement: '#indicatorData',
-              legendElement: '#plotLegend',
-              decimalSeparator: ',',
-              maxChartHeight: 420,
-              tableColumnDefs: [
-                { maxCharCount: 25 }, // nowrap
-                { maxCharCount: 35, width: 200 },
-                { maxCharCount: Infinity, width: 250 }
-              ]
-            }),
-            controller = new indicatorController(model, view);
-            controller.initialise();
-          }
-        });
-      }
-    }
-
-    var switcher = new accessibilitySwitcher();
-
-
-});
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220504101456"></script><script>
+    new indicatorInit();
+    new accessibilitySwitcher();
 </script>
-
-
 
 
 </body>
