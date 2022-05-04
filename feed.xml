@@ -1,7 +1,13 @@
-source "https://rubygems.org"
-
-gem "jekyll", "3.8.4"
-gem "html-proofer"
-gem "jekyll-remote-theme"
-gem "deep_merge"
-gem "jekyll-open-sdg-plugins", "1.8.0.pre.beta1"
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>general.tabTitle</title>
+    <description>Data Platform Prototype</description>
+    <link>/sdg-indicators/</link>
+    <atom:link href="/sdg-indicators/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 04 May 2022 11:25:11 +0000</pubDate>
+    <lastBuildDate>Wed, 04 May 2022 11:25:11 +0000</lastBuildDate>
+    <generator>Jekyll v3.8.4</generator>
+    
+  </channel>
+</rss>
