@@ -28,4 +28,4 @@ Bei einigen Indikatoren liegen zwar Daten auf nationaler Ebene vor, aber die zug
 In diesen Fällen wird nach neuen Datenquellen gesucht oder es müssen die bestehenden Quellen verknüpft oder auch Daten modelliert werden. Hierzu tragen die jeweils betroffenen Fachbereiche im Statistischen Bundesamt (Destatis) kontinuierlich bei.
 
 ## Können andere Länder diese Website kopieren?
-Die Website kann von anderen Staaten frei verwendet werden, um eine eigene Online Plattform zu erstellen. Es gelten die Bedingungen für die Nutzung von [GitHub](https://github.com/). Weitere Informationen finden Sie unter [Technische Hinweise](https://sdg-indicators.de/guidance/).
+Die Website kann von anderen Staaten frei verwendet werden, um eine eigene Online Plattform zu erstellen. Es gelten die Bedingungen für die Nutzung von [GitHub](https://github.com/). Weitere Informationen finden Sie unter [Technische Hinweise](https://sdg-indikatoren.de/guidance/).

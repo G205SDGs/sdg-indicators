@@ -29,4 +29,4 @@ Thus, either  new data sources need to be found, or existing ones to be linked, 
 Disaggregation is used to assess an indicator in more detail by dividing it into subcategories. The most common ones are age or gender. Every indicator has its own specific set of disaggregation categories which are provided either in the indicator’s name or by the international organization responsible for the indicator.
 
 ## Can other countries copy this website?
-The website may be used by other countries to build their own national reporting platform. Conditions for using Github apply. For more information please visit [guidance](https://g205sdgs.github.io/sdg-indicators/en/guidance/).
+The website may be used by other countries to build their own national reporting platform. Conditions for using Github apply. For more information please visit [guidance](https://sdg-indikatoren.de/en/guidance/).
