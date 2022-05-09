@@ -1,4 +1,3 @@
-<!-- Last check: 21.10.2021 -->
 {% assign show_data = false %}
 {% if page.indicator.reporting_status == "complete" and page.indicator.data_non_statistical != true %}
   {% assign show_data = true %}
@@ -16,6 +15,7 @@
   data-xaxislabel="{{ page.indicator.x_axis_label | t | default: site.x_axis_label | t }}"
   data-showdata="{{ show_data }}"
   data-graphtype="{{ page.indicator.graph_type }}"
+  data-graphtypes="{{ page.indicator.graph_types | jsonify | xml_escape }}"
   data-geocoderegex="{{ page.indicator.data_geocode_regex }}"
   data-showmap="{{ page.indicator.data_show_map }}"
   data-startvalues="{{ page.indicator.data_start_values | jsonify | xml_escape }}"

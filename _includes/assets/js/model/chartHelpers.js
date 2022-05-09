@@ -1,4 +1,3 @@
-//Last check: 17.09.2021
 /**
  * Model helper functions related to charts and datasets.
  */
@@ -13,6 +12,25 @@
 function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
   var match = getMatchByUnitSeries(allTitles, selectedUnit, selectedSeries);
   return (match) ? match.title : currentTitle;
+}
+
+/**
+ * @param {string} currentType
+ * @param {Array} allTypes Objects containing 'unit', 'series', and 'type'
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @param {Boolean} chartjs3
+ * @return {String} Updated type
+ */
+function getChartType(currentType, allTypes, selectedUnit, selectedSeries, chartjs3) {
+  if (!chartjs3) {
+    return currentType;
+  }
+  if (!currentType) {
+    currentType = 'line';
+  }
+  var match = getMatchByUnitSeries(allTypes, selectedUnit, selectedSeries);
+  return (match) ? match.type : currentType;
 }
 
 /**
@@ -345,6 +363,7 @@ function getBaseDataset() {
     tension: 0,
     spanGaps: true,
     showLine: true,
+    maxBarThickness: 150,
   });
 }
 

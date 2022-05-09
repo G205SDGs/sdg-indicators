@@ -1,4 +1,3 @@
-//Last check: 17.09.2021
 /**
  * TODO:
  * Integrate with high-contrast switcher.
@@ -297,7 +296,6 @@
       var minimumValues = [],
           maximumValues = [],
           availableYears = [];
-          avaialbleValues = [];
 
       // At this point we need to load the GeoJSON layer/s.
       var geoURLs = this.mapLayers.map(function(item) {
@@ -389,29 +387,24 @@
           $(plugin.element).parent().append(downloadButton);
 
           // Keep track of the minimums and maximums.
-          console.log("features: ", geoJson.features);
           _.each(geoJson.features, function(feature) {
-            if (feature.properties.values && feature.properties.values.length) {
-              availableYears = availableYears.concat(Object.keys(feature.properties.values[0]));
-              for (var year in feature.properties.values[0]){
-                if (! _.isNaN(feature.properties.values[0][year]) && feature.properties.values[0][year]!="") {
-                  //availableYears.concat(year);
-                  avaialbleValues.push(feature.properties.values[0][year]);
-                }
-              };
-              // _.each(feature.properties.values[0], function(year){
-              //   if (!_.isNaN(year.values(year))) {
-              //     availableYears.concat(Object.key(year));
-              //     avaialbleValues.push(Object.values(year));
-              //   }
-              // });
-              minimumValues.push(_.min(avaialbleValues));
-              maximumValues.push(_.max(avaialbleValues));
+            if (feature.properties.values && feature.properties.values.length > 0) {
+              var validEntries = _.reject(Object.entries(feature.properties.values[0]), function(entry) {
+                return isMapValueInvalid(entry[1]);
+              });
+              if (validEntries.length > 0) {
+                var validKeys = validEntries.map(function(entry) {
+                  return entry[0];
+                });
+                var validValues = validEntries.map(function(entry) {
+                  return entry[1];
+                })
+                availableYears = availableYears.concat(validKeys);
+                minimumValues.push(_.min(validValues));
+                maximumValues.push(_.max(validValues));
+              }
             }
           });
-          console.log("minArray: ", minimumValues);
-          console.log("Values: ", avaialbleValues);
-          console.log("Years: ", availableYears);
         }
 
         // Calculate the ranges of values, years and colors.
@@ -544,8 +537,16 @@
         }
       });
 
-      // Perform some last-minute tasks when the user clicks on the "Map" tab.
-      $('.map .nav-link').click(function() {
+      // Certain things cannot be done until the map is visible. Because our
+      // map is in a tab which might not be visible, we have to postpone those
+      // things until it becomes visible.
+      if ($('#map').is(':visible')) {
+        finalMapPreparation();
+      }
+      else {
+        $('#tab-mapview').parent().click(finalMapPreparation);
+      }
+      function finalMapPreparation() {
         setTimeout(function() {
           $('#map #loader-container').hide();
           // Leaflet needs "invalidateSize()" if it was originally rendered in a
@@ -573,7 +574,7 @@
             $('#map').height(maxHeight);
           }
         }, 500);
-      });
+      };
     },
 
     featureShouldDisplay: function(feature) {

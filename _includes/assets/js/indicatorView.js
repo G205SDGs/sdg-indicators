@@ -27,8 +27,11 @@ var indicatorView = function (model, options) {
       }
     });
 
-    // Provide the hide/show functionality for the sidebar.
-    $('.data-view .nav-link').on('click', function(e) {
+    // Execute the hide/show functionality for the sidebar, both on
+    // the currently active tab, and each time a tab is clicked on.
+    $('.data-view .nav-item.active .nav-link').each(toggleSidebar);
+    $('.data-view .nav-link').on('click', toggleSidebar);
+    function toggleSidebar() {
       var $sidebar = $('.indicator-sidebar'),
           $main = $('.indicator-main'),
           hideSidebar = $(this).data('no-disagg'),
@@ -47,7 +50,7 @@ var indicatorView = function (model, options) {
         $sidebar.removeClass('indicator-sidebar-hidden');
         $main.removeClass('indicator-main-full');
       }
-    });
+    };
   });
 
   this._model.onDataComplete.attach(function (sender, args) {
@@ -68,6 +71,9 @@ var indicatorView = function (model, options) {
     view_obj.createSelectionsTable(args);
 
     view_obj.updateChartTitle(args.chartTitle.replace("<sub>","").replace("</sub>",""));
+    view_obj.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
+    view_obj.updateUnitElements(args.selectedUnit);
+    view_obj.updateTimeSeriesAttributes(args.timeSeriesAttributes);
   });
 
   this._model.onFieldsComplete.attach(function(sender, args) {
@@ -389,13 +395,69 @@ var indicatorView = function (model, options) {
     }
   }
 
+  this.updateSeriesAndUnitElements = function(selectedSeries, selectedUnit) {
+    var hasSeries = typeof selectedSeries !== 'undefined',
+        hasUnit = typeof selectedUnit !== 'undefined',
+        hasBoth = hasSeries && hasUnit;
+    if (hasSeries || hasUnit || hasBoth) {
+      $('[data-for-series], [data-for-unit]').each(function() {
+        var elementSeries = $(this).data('for-series'),
+            elementUnit = $(this).data('for-unit'),
+            seriesMatches = elementSeries === selectedSeries,
+            unitMatches = elementUnit === selectedUnit;
+        if ((hasSeries || hasBoth) && !seriesMatches && elementSeries !== '') {
+          $(this).hide();
+        }
+        else if ((hasUnit || hasBoth) && !unitMatches && elementUnit !== '') {
+          $(this).hide();
+        }
+        else {
+          $(this).show();
+        }
+      });
+    }
+  }
+
+  this.updateUnitElements = function(selectedUnit) {
+    var hasUnit = typeof selectedUnit !== 'undefined';
+    var fallback = this._model.measurementUnit;
+    if (hasUnit || fallback) {
+        var unitToDisplay = selectedUnit || fallback;
+        $('.data-controlled-footer-field.unit-from-data').show();
+        $('dd.data-controlled-footer-field.unit-from-data').text(translations.t(unitToDisplay));
+    }
+    else {
+        $('.data-controlled-footer-field.unit-from-data').hide();
+    }
+  }
+
+  this.updateTimeSeriesAttributes = function(tsAttributeValues) {
+    var timeSeriesAttributes = {{ site.time_series_attributes | jsonify }};
+    timeSeriesAttributes.forEach(function(tsAttribute) {
+      var field = tsAttribute.field,
+          valueMatch = tsAttributeValues.find(function(tsAttributeValue) {
+            return tsAttributeValue.field === field;
+          }),
+          value = (valueMatch) ? valueMatch.value : '',
+          $labelElement = $('dt[data-ts-attribute="' + field + '"]'),
+          $valueElement = $('dd[data-ts-attribute="' + field + '"]');
+
+      if (!value) {
+        $labelElement.hide();
+        $valueElement.hide();
+      }
+      else {
+        $labelElement.show();
+        $valueElement.show().text(translations.t(value));
+      }
+    });
+  }
+
   this.updatePlot = function(chartInfo) {
     this.updateIndicatorDataViewStatus(view_obj._chartInstance.data.datasets, chartInfo.datasets);
     view_obj._chartInstance.data.datasets = chartInfo.datasets;
     view_obj._chartInstance.data.labels = chartInfo.labels;
     this.updateHeadlineColor(this.isHighContrast() ? 'high' : 'default', view_obj._chartInstance);
-    // TODO: Investigate assets/js/chartjs/rescaler.js and why "allLabels" is needed.
-    view_obj._chartInstance.data.allLabels = chartInfo.labels;
 
     if(chartInfo.selectedUnit) {
       view_obj._chartInstance.options.scales.yAxes[0].scaleLabel.labelString = translations.t(chartInfo.selectedUnit);
@@ -605,9 +667,8 @@ var indicatorView = function (model, options) {
     $("#btnSave").click(function() {
       var filename = chartInfo.indicatorId + '.png',
           element = document.getElementById('chart-canvas'),
-          footer = document.getElementById('selectionChartFooter'),
-          height = element.clientHeight + 25 + ((footer) ? footer.clientHeight : 0),
-          width = element.clientWidth + 25;
+          height = element.clientHeight + 70,
+          width = element.clientWidth + 50;
       var options = {
         // These options fix the height, width, and position.
         height: height,
@@ -618,13 +679,14 @@ var indicatorView = function (model, options) {
         y: 0,
         scrollX: 0,
         scrollY: 0,
+        backgroundColor: view_obj.isHighContrast() ? '#000000' : '#FFFFFF',
         // Allow a chance to alter the screenshot's HTML.
-        onclone: function(clone) {
+        onclone: function (clone) {
           // Add a body class so that the screenshot style can be custom.
           clone.body.classList.add('image-download-in-progress');
         },
         // Decide which elements to skip.
-        ignoreElements: function(el) {
+        ignoreElements: function (el) {
           // Keep all style, head, and link elements.
           var keepTags = ['STYLE', 'HEAD', 'LINK'];
           if (keepTags.indexOf(el.tagName) !== -1) {
@@ -640,9 +702,9 @@ var indicatorView = function (model, options) {
         }
       };
       // First convert the target to a canvas.
-      html2canvas(element, options).then(function(canvas) {
+      html2canvas(element, options).then(function (canvas) {
         // Then download that canvas as a PNG file.
-        canvas.toBlob(function(blob) {
+        canvas.toBlob(function (blob) {
           saveAs(blob, filename);
         });
       });

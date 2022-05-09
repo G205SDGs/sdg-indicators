@@ -50,7 +50,7 @@
           '<span class="arrow right"></span>' +
         '</div>';
 
-
+      
       var swatchTpl = '<span class="legend-swatch" style="width:{width}%; background:{color};"></span>';
       var swatchWidth = 100 / this.plugin.options.colorRange[this.plugin.goalNr].length;
       var swatches = this.plugin.options.colorRange[this.plugin.goalNr].map(function(swatchColor) { //[this.plugin.goalNr]
@@ -88,8 +88,6 @@
         '</li>';
       var plugin = this.plugin;
       var valueRange = this.plugin.valueRange;
-
-
       selectionList.innerHTML = this.selections.map(function(selection) {
         var value = plugin.getData(selection.feature.properties);
         var percentage, valueStatus;
@@ -122,7 +120,6 @@
     }
 
   });
-
 
   // Factory function for this class.
   L.Control.selectionLegend = function(plugin) {
