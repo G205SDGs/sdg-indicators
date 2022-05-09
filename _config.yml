@@ -12,11 +12,11 @@ baseurl: "/sdg-indicators" # the subpath of your site, e.g. /blog
 url: ""
 data_dir: data
 environment: staging
-remote_data_prefix: "https://SdgTestEnvironment.github.io/sdg-data"
+remote_data_prefix: "https://g205SDGs.github.io/sdg-data"
 # URL for the "Edit Data" button on indicators.
-data_edit_url: http://prose.io/#SdgTestEnvironment/sdg-data/edit/develop/data/indicator_[id].csv
+data_edit_url: http://prose.io/#g205SDGs/sdg-data/edit/develop/data/indicator_[id].csv
 # URL for the "Edit Metadata" button on indicators.
-metadata_edit_url: http://prose.io/#SdgTestEnvironment/sdg-data/edit/develop/meta/[id].md
+metadata_edit_url: http://prose.io/#g205SDGs/sdg-data/edit/develop/meta/[id].md
 # permalink: /news/:year/:month/:day/:title.html
 
 logos:
