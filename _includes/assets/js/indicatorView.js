@@ -1075,7 +1075,7 @@ var indicatorView = function (model, options) {
           var isYear = (index == 0);
           var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
           var cell_suffix = (isYear) ? '</th>' : '</td>';
-          var no_value_char = '{{ site.no_value_character | default: "-" }}'
+          var no_value_char = '{{ site.no_value_character | default: "." }}'
           row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ? data[index] : no_value_char) + cell_suffix;
         });
         row_html += '</tr>';
