@@ -38,12 +38,11 @@ var opensdg = {
     this.dataDisplayAlterations.push(callback);
   },
 
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
   language: 'de',
 };
-
-// For backwards compatibility, some of these might need to be global.
-// @TODO: Remove these eventually.
-var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
 
 </script>
 
@@ -118,22 +117,18 @@ var translations = {
         <script src="/sdg-indicators/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        
-
-
-
-
-<link rel="shortcut icon" type="image/ico" href="/sdg-indicators/assets/img/favicons/favicon.ico">
-<link rel="icon" type="image/png" href="/sdg-indicators/assets/img/favicons/favicon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/sdg-indicators/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/sdg-indicators/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/sdg-indicators/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/sdg-indicators/assets/img/favicons/favicon.ico" />
 
 
         
-        
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220905025726">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220905125204">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -144,954 +139,685 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
 
+        <!--[if IE]>
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/ie.css">
+        <![endif]-->
+
         
 
     </head>
 <body class="language-de
-layout-goal-by-target
+layout-goal
 ">
 <!-- <div class="container"> -->
 
-
-
 <script>translations['header'] = {"alpha":"Beta-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_address\">Kommentare</a>.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title"></h2>
+    <p class="internet-explorer-message-body"></p>
+</div>
 <div id="disclaimer">
-  
+    
 <div class="container">
   <div class="disclaimer-alert">
-    <strong class="phase-tag">Beta-Version</strong>
+    <strong class="phase-tag">beta</strong>
     
-    Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href="mailto:sdg-indicators@destatis.de">Kommentare</a>.
+    Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href="mailto:%email_address">Kommentare</a>.
     
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="header-default">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-indicators/" id="home" onclick="updateVisitCountMinus()">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/sdg-indicators/" id="home" onclick="updateVisitCountMinus()">
     <img src="/sdg-indicators/assets/img/de/SDG_logo.png" alt="Zum Hauptinhalt springen" />
 </a>
 
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">Deutsch</span>
-      <span class="language-abbreviation">de</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-en">
-            <a href="/sdg-indicators/en/10/">
-              English
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menü</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-indicators/">17 Ziele</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/about_navigation/">Navigation</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/facts_dns/">DNS</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/">Open SDG Plattformen anderer Staaten</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/publications/">Publikationen</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
-</li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-en">
-      <a class="language-toggle-link" href="/sdg-indicators/en/10/"><span class="language-name">English</span>
-        <span class="language-abbreviation">en</span></a>
-    </li></ul>
-</div>
-
-
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Suche</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/sdg-indicators/search/">
-    <label class="sr-only" for="indicator_search-mobile">Suche</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Suche" /><!--
-    --><button aria-label="Suche" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <div id="search" class="menu-target">
-  <form action="/sdg-indicators/search/">
-    <label class="sr-only" for="indicator_search">Suche</label>
-    <input type="text" name="q" id="indicator_search" title="Suche" /><!--
-    --><button aria-label="Suche" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sdg-indicators/">17 Ziele</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/">17 Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Über uns
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/about_navigation/">Navigation</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/about_navigation/">Navigation</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
 </li></ul>
-            </div>
-        </li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Wissenswertes
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/facts_dns/">DNS</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/facts_dns/">DNS</a>
 </li><li>
-                        <a tabindex="-1">
-                            Open SDG Plattformen anderer Staaten
-                            <i class="fa fa-chevron-down"></i>
-                        </a>
-                        <ul class="dropdown-menu" style="margin-left: 0px"><li class="nav-link ">
-    <a href="https://armstat.github.io/sdg-site-armenia/">Armenien</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.bhas.gov.ba/">Bosnien und Herzegowina</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.hagstova.fo/">Färöer</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-ghana.github.io/">Ghana</a>
-</li><li class="nav-link ">
-    <a href="https://visar.hagstofa.is/heimsmarkmidin/">Island</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kirgisistan</a>
-</li><li class="nav-link ">
-    <a href="https://www.lsb.gov.la/sdg/">Laos</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-rwanda.github.io/">Ruanda</a>
-</li><li class="nav-link ">
-    <a href="http://kostat.go.kr/sdg">Südkorea</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.ukrstat.gov.ua/">Ukraine</a>
-</li><li class="nav-link ">
-    <a href="https://sdgdata.gov.uk/">Vereinigtes Königreich</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.data.gov/">USA</a>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          Open SDG Plattformen anderer Staaten
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenien</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnien und Herzegowina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Färöer</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Island</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kirgisistan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Laos</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Ruanda</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">Südkorea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">Vereinigtes Königreich</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">USA</a></li></ul>
+                    </li></ul>
+          </li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/publications/">Publikationen</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
 </li></ul>
-                      </li></ul>
-            </div>
-        </li><li class="nav-link ">
-    <a href="/sdg-indicators/publications/">Publikationen</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Plattform</span></a>
-</li><li class="language-toggle-menu-header">
-    
+
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/sdg-indicators/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Suche</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Suche">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Suche" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
 
 
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-en">
-      <a class="language-toggle-link" href="/sdg-indicators/en/10/"><span class="language-name">English</span>
-        <span class="language-abbreviation">en</span></a>
-    </li></ul>
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/en/10/">
+                English
+            </a>
+        </li></ul>
 </div>
 
 
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/en/10/">
+                English
+            </a>
+        </li></ul>
+</div></span><a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </nav>
-  </div>
-
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
-
-
-
-
-
 
 
 
 <div class="heading goal-banner goal-10">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" id="goal-10" />
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" id="goal-10" class="goal-icon-image goal-icon-image-" />
       </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Ziel 10: </span>Ungleichheit in und zwischen Ländern verringern
+      <div class="col-8 col-md-9 col-lg-10 goal-details">
+        <h1 class="titles goal-10">
+          Ungleichheit in und zwischen Ländern verringern
         </h1>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sdg-indicators/">Start</a></li>
-  <li class="active">Ziel 10</li>
-  
-</ol>
 
+<div class="container">
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/sdg-indicators/">Start</a>
+        </li>
+        <li class="breadcrumb-item active">Ziel 10</li>
+        
+    </ol>
+</nav>
+  
 </div>
 
 <div id="main-content" class="container goal-indicators goal-10 goal-by-target" role="main">
 
-  
-
-  
-
-  
-
-
-  
-
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators//9" class="btn btn-primary btn-block goal-10 navigation-btn" role="button">
-      <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Vorheriges Ziel</b>
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-6 col-lg-4">
-    <a href="https://sustainabledevelopment-deutschland.github.io//10" class="btn btn-primary btn-block goal-10 navigation-btn" title="" role="button">
-      <b class="btn-label hidden-sm hidden-xs">Nationale Indikatoren zu Ziel 10 </b><b class="btn-label visible-sm visible-xs">Ziel 10 - National</b>
-    </a>
-  </div>
-
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators//11" class="btn btn-primary btn-block goal-10 navigation-btn" role="button">
-      <b class="btn-label hidden-sm hidden-xs">Nächstes Ziel</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
-    </a>
-  </div>
-
-
-
 
   
 
 
 
-  <div class="visible-md-block visible-lg-block">
-    <div class="col-md-6">
-      <h2>Unterziele</h2>
-    </div>
-    <div class="col-md-6">
-      <h2>Indikatoren</h2>
-    </div>
-  </div>
-
   
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.1
-      </span>
-      Bis 2030 nach und nach ein über dem nationalen Durchschnitt liegendes Einkommenswachstum der ärmsten 40 Prozent der Bevölkerung erreichen und aufrechterhalten
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
 
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.1.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-1-1">
-          Wachstumsraten der Haushaltsausgaben oder des Pro-Kopf-Einkommens bei den ärmsten 40 Prozent der Bevölkerung und der Gesamtbevölkerung
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.2
-      </span>
-      Bis 2030 alle Menschen unabhängig von Alter, Geschlecht, Behinderung, Rasse, Ethnizität, Herkunft, Religion oder wirtschaftlichem oder sonstigem Status zu Selbstbestimmung befähigen und ihre soziale, wirtschaftliche und politische Inklusion fördern
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.2.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-2-1">
-          Anteil der Bevölkerung, dessen Einkommen weniger als 50 Prozent des Medians beträgt, nach Geschlecht, Alter und Menschen mit Behinderungen
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.3
-      </span>
-      Chancengleichheit gewährleisten und Ungleichheit der Ergebnisse reduzieren, namentlich durch die Abschaffung diskriminierender Gesetze, Politiken und Praktiken und die Förderung geeigneter gesetzgeberischer, politischer und sonstiger Maßnahmen in dieser Hinsicht
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.3.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-3-1">
-          Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsnormen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.4
-      </span>
-      Politische Maßnahmen beschließen, insbesondere fiskalische, lohnpolitische und den Sozialschutz betreffende Maßnahmen, und schrittweise größere Gleichheit erzielen
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.4.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-4-1">
-          Anteil des Arbeitseinkommens am BIP
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.4.2
-          
-
-
-
-<span class="status inprogress">
-    <span class="status-inner">In Bearbeitung</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-4-2">
-          Umverteilende Wirkung der Fiskalpolitik
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.5
-      </span>
-      Die Regulierung und Überwachung der globalen Finanzmärkte und -institutionen verbessern und die Anwendung der einschlägigen Vorschriften verstärken
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.5.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-5-1">
-          Indikatoren zur Finanzstabilität
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.6
-      </span>
-      Eine bessere Vertretung und verstärkte Mitsprache der Entwicklungsländer bei der Entscheidungsfindung in den globalen internationalen Wirtschafts- und Finanzinstitutionen sicherstellen, um die Wirksamkeit, Glaubwürdigkeit, Rechenschaftslegung und Legitimation dieser Institutionen zu erhöhen
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.6.1
-          
-
-
-
-<span class="status notapplicable">
-    <span class="status-inner">Nicht zutreffend</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-6-1">
-          Mitglieder- und Stimmrechtsanteil von Entwicklungsländern in internationalen Organisationen
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.7
-      </span>
-      Eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen erleichtern, unter anderem durch die Anwendung einer planvollen und gut gesteuerten Migrationspolitik
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.7.1
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Nicht verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-7-1">
-          Von Beschäftigten getragene Einstellungskosten im Verhältnis zum Monatseinkommen im Zielland
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.7.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-7-2">
-          Anzahl der Staaten mit einer Migrationspolitik, die eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen ermöglicht
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.7.3
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-7-3">
-          Anzahl der Menschen, die im Laufe ihrer Migration zu einem internationalen Zielort gestorben oder verschwunden sind
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.7.4
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-7-4">
-          Anteil der Flüchtlinge an der Bevölkerung, nach Herkunftsland
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.a
-      </span>
-      Den Grundsatz der besonderen und differenzierten Behandlung der Entwicklungsländer, insbesondere der am wenigsten entwickelten Länder, im Einklang mit den Übereinkünften der Welthandelsorganisation anwenden
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.a.1
-          
-
-
-
-<span class="status inprogress">
-    <span class="status-inner">In Bearbeitung</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-a-1">
-          Anteil der Zolltarifpositionen, die auf Importe aus den am wenigsten entwickelten Ländern und Entwicklungsländern mit Zollfreiheit angewandt werden
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.b
-      </span>
-      Öffentliche Entwicklungshilfe und Finanzströme einschließlich ausländischer Direktinvestitionen in die Staaten fördern, in denen der Bedarf am größten ist, insbesondere in die am wenigsten entwickelten Länder, die afrikanischen Länder, die kleinen Inselentwicklungsländer und die Binnenentwicklungsländer, im Einklang mit ihren jeweiligen nationalen Plänen und Programmen
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.b.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-b-1">
-          Gesamte Finanzströme für Entwicklung, nach Nehmer- und Geberländern und Art des Zahlungsstroms (z. B. öffentliche Entwicklungszusammenarbeit (ODA), ausländische Direktinvestitionen und sonstige Finanzströme)
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Unterziel</label>
-        10.c
-      </span>
-      Bis 2030 die Transaktionskosten für Heimatüberweisungen von Migranten auf weniger als 3 Prozent senken und Überweisungskorridore mit Kosten von über 5 Prozent beseitigen
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          10.c.1
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Nicht verfügbar</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/10-c-1">
-          Rücküberweisungskosten im Verhältnis zum überwiesenen Betrag
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-</div>
-
-
-<footer role="contentinfo">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Seite basiert auf Open SDG</a></li>
-            
-              <li>
-                
-                  <a href="mailto:sdg-indicators@destatis.de" target="_blank">Kontakt</a>
-                
-                </li>
-              <li>
-                
-                  <a href="https://twitter.com/destatis?lang=de" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                
-                </li>
-              <li>
-                <a href="/sdg-indicators/faq/">FAQ</a>
-                
-                </li>
-              <li>
-                <a href="/sdg-indicators/imprint/">Im­pres­s­um</a>
-                
-                </li>
-              
-            
-            </ul>
-        </div>
+    <div class="row justify-content-md-center">
+      <div class="col d-grid gap-2">
+        <a href="/sdg-indicators//9" class="btn btn-primary btn-block goal-10 navigation-btn text-nowrap" role="button">
+          <b><i class="fa fa-chevron-left" aria-hidden="true"></i> Vorheriges Ziel</b>
+        </a>
+      </div>
+
+      <div class="col-md-auto">
+        <a href="https://sustainabledevelopment-deutschland.github.io//10" class="btn btn-primary btn-block goal-10 navigation-btn" title="" role="button">
+          <b class="btn-label d-none d-md-block">Nationale Indikatoren zu Ziel 10 </b><b class="btn-label d-block d-md-none">Ziel 10 - National</b>
+        </a>
+      </div>
+
+      <div class="col d-grid gap-2">
+        <a href="/sdg-indicators//11" class="btn btn-primary btn-block goal-10 navigation-btn text-nowrap" role="button">
+          <b>Nächstes Ziel <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
+        </a>
       </div>
     </div>
-    
   </div>
+
+
+  <div class="container g-0">
+    <div class="row">
+      <div class="col" style="padding-right: 0px;">
+        <h2>Unterziele</h2>
+      </div>
+      <div class="col" style="paddig-left: 0px;">
+        <h2>Indikatoren</h2>
+      </div>
+    </div>
+
+    
+    
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.1
+            </span>
+            <p>
+              Bis 2030 nach und nach ein über dem nationalen Durchschnitt liegendes Einkommenswachstum der ärmsten 40 Prozent der Bevölkerung erreichen und aufrechterhalten
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.1.1
+              </span>
+              <a href="/sdg-indicators/10-1-1" >
+                Wachstumsraten der Haushaltsausgaben oder des Pro-Kopf-Einkommens bei den ärmsten 40 Prozent der Bevölkerung und der Gesamtbevölkerung
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.2
+            </span>
+            <p>
+              Bis 2030 alle Menschen unabhängig von Alter, Geschlecht, Behinderung, Rasse, Ethnizität, Herkunft, Religion oder wirtschaftlichem oder sonstigem Status zu Selbstbestimmung befähigen und ihre soziale, wirtschaftliche und politische Inklusion fördern
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.2.1
+              </span>
+              <a href="/sdg-indicators/10-2-1" >
+                Anteil der Bevölkerung, dessen Einkommen weniger als 50 Prozent des Medians beträgt, nach Geschlecht, Alter und Menschen mit Behinderungen
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.3
+            </span>
+            <p>
+              Chancengleichheit gewährleisten und Ungleichheit der Ergebnisse reduzieren, namentlich durch die Abschaffung diskriminierender Gesetze, Politiken und Praktiken und die Förderung geeigneter gesetzgeberischer, politischer und sonstiger Maßnahmen in dieser Hinsicht
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.3.1
+              </span>
+              <a href="/sdg-indicators/10-3-1" >
+                Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsnormen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.4
+            </span>
+            <p>
+              Politische Maßnahmen beschließen, insbesondere fiskalische, lohnpolitische und den Sozialschutz betreffende Maßnahmen, und schrittweise größere Gleichheit erzielen
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.4.1
+              </span>
+              <a href="/sdg-indicators/10-4-1" >
+                Anteil des Arbeitseinkommens am BIP
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.4.2
+              </span>
+              <a href="/sdg-indicators/10-4-2" >
+                Umverteilende Wirkung der Fiskalpolitik
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.5
+            </span>
+            <p>
+              Die Regulierung und Überwachung der globalen Finanzmärkte und -institutionen verbessern und die Anwendung der einschlägigen Vorschriften verstärken
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.5.1
+              </span>
+              <a href="/sdg-indicators/10-5-1" >
+                Indikatoren zur Finanzstabilität
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.6
+            </span>
+            <p>
+              Eine bessere Vertretung und verstärkte Mitsprache der Entwicklungsländer bei der Entscheidungsfindung in den globalen internationalen Wirtschafts- und Finanzinstitutionen sicherstellen, um die Wirksamkeit, Glaubwürdigkeit, Rechenschaftslegung und Legitimation dieser Institutionen zu erhöhen
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.6.1
+              </span>
+              <a href="/sdg-indicators/10-6-1" >
+                Mitglieder- und Stimmrechtsanteil von Entwicklungsländern in internationalen Organisationen
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.7
+            </span>
+            <p>
+              Eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen erleichtern, unter anderem durch die Anwendung einer planvollen und gut gesteuerten Migrationspolitik
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.7.1
+              </span>
+              <a href="/sdg-indicators/10-7-1" >
+                Von Beschäftigten getragene Einstellungskosten im Verhältnis zum Monatseinkommen im Zielland
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.7.2
+              </span>
+              <a href="/sdg-indicators/10-7-2" >
+                Anzahl der Staaten mit einer Migrationspolitik, die eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen ermöglicht
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.7.3
+              </span>
+              <a href="/sdg-indicators/10-7-3" >
+                Anzahl der Menschen, die im Laufe ihrer Migration zu einem internationalen Zielort gestorben oder verschwunden sind
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.7.4
+              </span>
+              <a href="/sdg-indicators/10-7-4" >
+                Anteil der Flüchtlinge an der Bevölkerung, nach Herkunftsland
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.a
+            </span>
+            <p>
+              Den Grundsatz der besonderen und differenzierten Behandlung der Entwicklungsländer, insbesondere der am wenigsten entwickelten Länder, im Einklang mit den Übereinkünften der Welthandelsorganisation anwenden
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.a.1
+              </span>
+              <a href="/sdg-indicators/10-a-1" >
+                Anteil der Zolltarifpositionen, die auf Importe aus den am wenigsten entwickelten Ländern und Entwicklungsländern mit Zollfreiheit angewandt werden
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.b
+            </span>
+            <p>
+              Öffentliche Entwicklungshilfe und Finanzströme einschließlich ausländischer Direktinvestitionen in die Staaten fördern, in denen der Bedarf am größten ist, insbesondere in die am wenigsten entwickelten Länder, die afrikanischen Länder, die kleinen Inselentwicklungsländer und die Binnenentwicklungsländer, im Einklang mit ihren jeweiligen nationalen Plänen und Programmen
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.b.1
+              </span>
+              <a href="/sdg-indicators/10-b-1" >
+                Gesamte Finanzströme für Entwicklung, nach Nehmer- und Geberländern und Art des Zahlungsstroms (z. B. öffentliche Entwicklungszusammenarbeit (ODA), ausländische Direktinvestitionen und sonstige Finanzströme)
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              10.c
+            </span>
+            <p>
+              Bis 2030 die Transaktionskosten für Heimatüberweisungen von Migranten auf weniger als 3 Prozent senken und Überweisungskorridore mit Kosten von über 5 Prozent beseitigen
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                10.c.1
+              </span>
+              <a href="/sdg-indicators/10-c-1" >
+                Rücküberweisungskosten im Verhältnis zum überwiesenen Betrag
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </div>
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Seite basiert auf Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            
+                            <a href="mailto:sdg-indicators@destatis.de" target="_blank">Kontakt</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://twitter.com/destatis?lang=de" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-indicators/faq/">FAQ</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-indicators/imprint/">Im­pres­s­um</a>
+                            
+                        </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -1111,12 +837,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220905025726'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220905125204'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220905025726"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220905125204"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1124,4 +850,3 @@ data-event-label="high"
 
 </body>
 </html>
-

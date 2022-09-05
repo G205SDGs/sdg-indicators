@@ -38,12 +38,11 @@ var opensdg = {
     this.dataDisplayAlterations.push(callback);
   },
 
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
   language: 'en',
 };
-
-// For backwards compatibility, some of these might need to be global.
-// @TODO: Remove these eventually.
-var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
 
 </script>
 
@@ -118,22 +117,18 @@ var translations = {
         <script src="/sdg-indicators/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        
-
-
-
-
-<link rel="shortcut icon" type="image/ico" href="/sdg-indicators/assets/img/favicons/favicon.ico">
-<link rel="icon" type="image/png" href="/sdg-indicators/assets/img/favicons/favicon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/sdg-indicators/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/sdg-indicators/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/sdg-indicators/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/sdg-indicators/assets/img/favicons/favicon.ico" />
 
 
         
-        
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220905025726">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220905125204">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -144,1288 +139,893 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
 
+        <!--[if IE]>
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/ie.css">
+        <![endif]-->
+
         
 
     </head>
 <body class="language-en
-layout-goal-by-target
+layout-goal
 ">
 <!-- <div class="container"> -->
 
-
-
 <script>translations['header'] = {"alpha":"Beta","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title"></h2>
+    <p class="internet-explorer-message-body"></p>
+</div>
 <div id="disclaimer">
-  
+    
 <div class="container">
   <div class="disclaimer-alert">
-    <strong class="phase-tag">Beta</strong>
+    <strong class="phase-tag">beta</strong>
     
-    This is a development website. We welcome your <a href="mailto:sdg-indicators@destatis.de">feedback</a>.
+    This is a development website. We welcome your <a href="mailto:%email_address">feedback</a>.
     
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="header-default">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-indicators/en/" id="home" onclick="updateVisitCountMinus()">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/sdg-indicators/en/" id="home" onclick="updateVisitCountMinus()">
     <img src="/sdg-indicators/assets/img/en/SDG_logo.png" alt="To main menu" />
 </a>
 
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-de">
-            <a href="/sdg-indicators/16/">
-              Deutsch
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-indicators/en/">17 Goals</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/">Open SDG platforms of other countries</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/publications/">Publications</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/sdg-indicators/16/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
-</div>
-
-
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Search</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/sdg-indicators/en/search/">
-    <label class="sr-only" for="indicator_search-mobile">Search</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
-    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <div id="search" class="menu-target">
-  <form action="/sdg-indicators/en/search/">
-    <label class="sr-only" for="indicator_search">Search</label>
-    <input type="text" name="q" id="indicator_search" title="Search" /><!--
-    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sdg-indicators/en/">17 Goals</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/en/">17 Goals</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     About us
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/about_navigation/">Navigation</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
 </li></ul>
-            </div>
-        </li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Useful information
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
 </li><li>
-                        <a tabindex="-1">
-                            Open SDG platforms of other countries
-                            <i class="fa fa-chevron-down"></i>
-                        </a>
-                        <ul class="dropdown-menu" style="margin-left: 0px"><li class="nav-link ">
-    <a href="https://armstat.github.io/sdg-site-armenia/">Armenia</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.hagstova.fo/">Faroe Islands</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-ghana.github.io/">Ghana</a>
-</li><li class="nav-link ">
-    <a href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a>
-</li><li class="nav-link ">
-    <a href="https://www.lsb.gov.la/sdg/">Lao PDR</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a>
-</li><li class="nav-link ">
-    <a href="http://kostat.go.kr/sdg">South korea</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.ukrstat.gov.ua/">Ukraine</a>
-</li><li class="nav-link ">
-    <a href="https://sdgdata.gov.uk/">United Kingdom</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.data.gov/">United States</a>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          Open SDG platforms of other countries
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenia</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Faroe Islands</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Lao PDR</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">South korea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">United Kingdom</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">United States</a></li></ul>
+                    </li></ul>
+          </li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/en/publications/">Publications</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
 </li></ul>
-                      </li></ul>
-            </div>
-        </li><li class="nav-link ">
-    <a href="/sdg-indicators/en/publications/">Publications</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li><li class="language-toggle-menu-header">
-    
+
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/sdg-indicators/en/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
 
 
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/sdg-indicators/16/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/16/">
+                Deutsch
+            </a>
+        </li></ul>
 </div>
 
 
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/16/">
+                Deutsch
+            </a>
+        </li></ul>
+</div></span><a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </nav>
-  </div>
-
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
-
-
-
-
-
 
 
 
 <div class="heading goal-banner goal-16">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" id="goal-16" />
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" id="goal-16" class="goal-icon-image goal-icon-image-" />
       </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 16: </span>Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels
+      <div class="col-8 col-md-9 col-lg-10 goal-details">
+        <h1 class="titles goal-16">
+          Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels
         </h1>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sdg-indicators/en/">Home</a></li>
-  <li class="active">Goal 16</li>
-  
-</ol>
 
+<div class="container">
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/sdg-indicators/en/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Goal 16</li>
+        
+    </ol>
+</nav>
+  
 </div>
 
 <div id="main-content" class="container goal-indicators goal-16 goal-by-target" role="main">
 
-  
-
-  
-
-  
-
-
-  
-
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/en/15" class="btn btn-primary btn-block goal-16 navigation-btn" role="button">
-      <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous goal</b>
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-6 col-lg-4">
-    <a href="https://sustainabledevelopment-deutschland.github.io/en/16" class="btn btn-primary btn-block goal-16 navigation-btn" title="" role="button">
-      <b class="btn-label hidden-sm hidden-xs">National indicators on Goal 16 </b><b class="btn-label visible-sm visible-xs">Goal 16 - National</b>
-    </a>
-  </div>
-
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/en/17" class="btn btn-primary btn-block goal-16 navigation-btn" role="button">
-      <b class="btn-label hidden-sm hidden-xs">Next goal</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
-    </a>
-  </div>
-
-
-
 
   
 
 
 
-  <div class="visible-md-block visible-lg-block">
-    <div class="col-md-6">
-      <h2>Targets</h2>
-    </div>
-    <div class="col-md-6">
-      <h2>Indicators</h2>
-    </div>
-  </div>
-
   
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.1
-      </span>
-      Significantly reduce all forms of violence and related death rates everywhere
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
 
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.1.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-1-1">
-          Number of victims of intentional homicide per 100,000 population, by sex and age
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.1.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-1-2">
-          Conflict-related deaths per 100,000 population, by sex, age and cause
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.1.3
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-1-3">
-          Proportion of population subjected to (a) physical violence; (b) psychological violence; and (c) sexual violence in the previous 12 months
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.1.4
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-1-4">
-          Proportion of population that feel safe walking alone around the area they live after dark
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.2
-      </span>
-      End abuse, exploitation, trafficking and all forms of violence against and torture of children
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.2.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-2-1">
-          Proportion of children aged 1-17 years who experienced any physical punishment and/ or psychological aggression by caregivers in the past month
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.2.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-2-2">
-          Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.2.3
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Not available</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-2-3">
-          Proportion of young women and men aged 18–29 years who experienced sexual violence by age 18
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.3
-      </span>
-      Promote the rule of law at the national and international levels and ensure equal access to justice for all
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.3.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-3-1">
-          Proportion of victims of violence in the previous 12 months who reported their victimization to competent authorities or other officially recognized conflict resolution mechanisms
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.3.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-3-2">
-          Unsentenced detainees as a proportion of overall prison population
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.3.3
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-3-3">
-          Proportion of the population who have experienced a dispute in the past two years and who accessed a formal or informal dispute resolution mechanism, by type of mechanism
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.4
-      </span>
-      By 2030, significantly reduce illicit financial and arms flows, strengthen the recovery and return of stolen assets and combat all forms of organized crime
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.4.1
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Not available</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-4-1">
-          Total value of inward and outward illicit financial flows (in current United States dollars)
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.4.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-4-2">
-          Proportion of seized, found or surrendered arms whose illicit origin or context has been traced or established by a competent authority in line with international instruments
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.5
-      </span>
-      Substantially reduce corruption and bribery in all their forms
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.5.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-5-1">
-          Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.5.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-5-2">
-          Proportion of businesses that had at least one contact with a public official and that paid a bribe to a public official, or were asked for a bribe by those public officials during the previous 12 months
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.6
-      </span>
-      Develop effective, accountable and transparent institutions at all levels
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.6.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-6-1">
-          Primary government expenditures as a proportion of original approved budget, by sector (or by budget codes or similar)
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.6.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-6-2">
-          Proportion of population satisfied with their last experience of public services
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.7
-      </span>
-      Ensure responsive, inclusive, participatory and representative decision-making at all levels
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.7.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-7-1">
-          Proportions of positions in national and local institutions, including (a) the legislatures; (b) the public service; and (c) the judiciary, compared to national distributions, by sex, age, persons with disabilities and population groups
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.7.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-7-2">
-          Proportion of population who believe decision-making is inclusive and responsive, by sex, age, disability and population group
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.8
-      </span>
-      Broaden and strengthen the participation of developing countries in the institutions of global governance
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.8.1
-          
-
-
-
-<span class="status notapplicable">
-    <span class="status-inner">Not applicable</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-8-1">
-          Proportion of members and voting rights of developing countries in international organizations
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.9
-      </span>
-      By 2030, provide legal identity for all, including birth registration
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.9.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-9-1">
-          Proportion of children under 5 years of age whose births have been registered with a civil authority, by age
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.10
-      </span>
-      Ensure public access to information and protect fundamental freedoms, in accordance with national legislation and international agreements
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.10.1
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Not available</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-10-1">
-          Number of verified cases of killing, kidnapping, enforced disappearance, arbitrary detention and torture of journalists, associated media personnel, trade unionists and human rights advocates in the previous 12 months
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.10.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-10-2">
-          Number of countries that adopt and implement constitutional, statutory and/ or policy guarantees for public access to information
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.a
-      </span>
-      Strengthen relevant national institutions, including through international cooperation, for building capacity at all levels, in particular in developing countries, to prevent violence and combat terrorism and crime
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.a.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-a-1">
-          Existence of independent national human rights institutions in compliance with the Paris Principles
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        16.b
-      </span>
-      Promote and enforce non-discriminatory laws and policies for sustainable development
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          16.b.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/16-b-1">
-          Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-</div>
-
-
-<footer role="contentinfo">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Site built using Open SDG</a></li>
-            
-              <li>
-                
-                  <a href="mailto:sdg-indicators@destatis.de" target="_blank">Contact us</a>
-                
-                </li>
-              <li>
-                
-                  <a href="https://twitter.com/destatis?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                
-                </li>
-              <li>
-                <a href="/sdg-indicators/en/faq/">FAQs</a>
-                
-                </li>
-              <li>
-                <a href="/sdg-indicators/en/imprint/">Legal Notice</a>
-                
-                </li>
-              
-            
-            </ul>
-        </div>
+    <div class="row justify-content-md-center">
+      <div class="col d-grid gap-2">
+        <a href="/sdg-indicators//15" class="btn btn-primary btn-block goal-16 navigation-btn text-nowrap" role="button">
+          <b><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous goal</b>
+        </a>
+      </div>
+
+      <div class="col-md-auto">
+        <a href="https://sustainabledevelopment-deutschland.github.io//16" class="btn btn-primary btn-block goal-16 navigation-btn" title="" role="button">
+          <b class="btn-label d-none d-md-block">National indicators on Goal 16 </b><b class="btn-label d-block d-md-none">Goal 16 - National</b>
+        </a>
+      </div>
+
+      <div class="col d-grid gap-2">
+        <a href="/sdg-indicators//17" class="btn btn-primary btn-block goal-16 navigation-btn text-nowrap" role="button">
+          <b>Next goal <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
+        </a>
       </div>
     </div>
-    
   </div>
+
+
+  <div class="container g-0">
+    <div class="row">
+      <div class="col" style="padding-right: 0px;">
+        <h2>Targets</h2>
+      </div>
+      <div class="col" style="paddig-left: 0px;">
+        <h2>Indicators</h2>
+      </div>
+    </div>
+
+    
+    
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.1
+            </span>
+            <p>
+              Significantly reduce all forms of violence and related death rates everywhere
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.1.1
+              </span>
+              <a href="/sdg-indicators/en/16-1-1" >
+                Number of victims of intentional homicide per 100,000 population, by sex and age
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.1.2
+              </span>
+              <a href="/sdg-indicators/en/16-1-2" >
+                Conflict-related deaths per 100,000 population, by sex, age and cause
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.1.3
+              </span>
+              <a href="/sdg-indicators/en/16-1-3" >
+                Proportion of population subjected to (a) physical violence; (b) psychological violence; and (c) sexual violence in the previous 12 months
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.1.4
+              </span>
+              <a href="/sdg-indicators/en/16-1-4" >
+                Proportion of population that feel safe walking alone around the area they live after dark
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.2
+            </span>
+            <p>
+              End abuse, exploitation, trafficking and all forms of violence against and torture of children
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.2.1
+              </span>
+              <a href="/sdg-indicators/en/16-2-1" >
+                Proportion of children aged 1-17 years who experienced any physical punishment and/ or psychological aggression by caregivers in the past month
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.2.2
+              </span>
+              <a href="/sdg-indicators/en/16-2-2" >
+                Number of victims of human trafficking per 100,000 population, by sex, age and form of exploitation
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.2.3
+              </span>
+              <a href="/sdg-indicators/en/16-2-3" >
+                Proportion of young women and men aged 18–29 years who experienced sexual violence by age 18
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.3
+            </span>
+            <p>
+              Promote the rule of law at the national and international levels and ensure equal access to justice for all
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.3.1
+              </span>
+              <a href="/sdg-indicators/en/16-3-1" >
+                Proportion of victims of violence in the previous 12 months who reported their victimization to competent authorities or other officially recognized conflict resolution mechanisms
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.3.2
+              </span>
+              <a href="/sdg-indicators/en/16-3-2" >
+                Unsentenced detainees as a proportion of overall prison population
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.3.3
+              </span>
+              <a href="/sdg-indicators/en/16-3-3" >
+                Proportion of the population who have experienced a dispute in the past two years and who accessed a formal or informal dispute resolution mechanism, by type of mechanism
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.4
+            </span>
+            <p>
+              By 2030, significantly reduce illicit financial and arms flows, strengthen the recovery and return of stolen assets and combat all forms of organized crime
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.4.1
+              </span>
+              <a href="/sdg-indicators/en/16-4-1" >
+                Total value of inward and outward illicit financial flows (in current United States dollars)
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.4.2
+              </span>
+              <a href="/sdg-indicators/en/16-4-2" >
+                Proportion of seized, found or surrendered arms whose illicit origin or context has been traced or established by a competent authority in line with international instruments
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.5
+            </span>
+            <p>
+              Substantially reduce corruption and bribery in all their forms
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.5.1
+              </span>
+              <a href="/sdg-indicators/en/16-5-1" >
+                Proportion of persons who had at least one contact with a public official and who paid a bribe to a public official, or were asked for a bribe by those public officials, during the previous 12 months
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.5.2
+              </span>
+              <a href="/sdg-indicators/en/16-5-2" >
+                Proportion of businesses that had at least one contact with a public official and that paid a bribe to a public official, or were asked for a bribe by those public officials during the previous 12 months
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.6
+            </span>
+            <p>
+              Develop effective, accountable and transparent institutions at all levels
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.6.1
+              </span>
+              <a href="/sdg-indicators/en/16-6-1" >
+                Primary government expenditures as a proportion of original approved budget, by sector (or by budget codes or similar)
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.6.2
+              </span>
+              <a href="/sdg-indicators/en/16-6-2" >
+                Proportion of population satisfied with their last experience of public services
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.7
+            </span>
+            <p>
+              Ensure responsive, inclusive, participatory and representative decision-making at all levels
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.7.1
+              </span>
+              <a href="/sdg-indicators/en/16-7-1" >
+                Proportions of positions in national and local institutions, including (a) the legislatures; (b) the public service; and (c) the judiciary, compared to national distributions, by sex, age, persons with disabilities and population groups
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.7.2
+              </span>
+              <a href="/sdg-indicators/en/16-7-2" >
+                Proportion of population who believe decision-making is inclusive and responsive, by sex, age, disability and population group
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.8
+            </span>
+            <p>
+              Broaden and strengthen the participation of developing countries in the institutions of global governance
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.8.1
+              </span>
+              <a href="/sdg-indicators/en/16-8-1" >
+                Proportion of members and voting rights of developing countries in international organizations
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.9
+            </span>
+            <p>
+              By 2030, provide legal identity for all, including birth registration
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.9.1
+              </span>
+              <a href="/sdg-indicators/en/16-9-1" >
+                Proportion of children under 5 years of age whose births have been registered with a civil authority, by age
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.10
+            </span>
+            <p>
+              Ensure public access to information and protect fundamental freedoms, in accordance with national legislation and international agreements
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.10.1
+              </span>
+              <a href="/sdg-indicators/en/16-10-1" >
+                Number of verified cases of killing, kidnapping, enforced disappearance, arbitrary detention and torture of journalists, associated media personnel, trade unionists and human rights advocates in the previous 12 months
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.10.2
+              </span>
+              <a href="/sdg-indicators/en/16-10-2" >
+                Number of countries that adopt and implement constitutional, statutory and/ or policy guarantees for public access to information
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.a
+            </span>
+            <p>
+              Strengthen relevant national institutions, including through international cooperation, for building capacity at all levels, in particular in developing countries, to prevent violence and combat terrorism and crime
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.a.1
+              </span>
+              <a href="/sdg-indicators/en/16-a-1" >
+                Existence of independent national human rights institutions in compliance with the Paris Principles
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              16.b
+            </span>
+            <p>
+              Promote and enforce non-discriminatory laws and policies for sustainable development
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                16.b.1
+              </span>
+              <a href="/sdg-indicators/en/16-b-1" >
+                Proportion of population reporting having personally felt discriminated against or harassed in the previous 12 months on the basis of a ground of discrimination prohibited under international human rights law
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </div>
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Site built using Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            
+                            <a href="mailto:sdg-indicators@destatis.de" target="_blank">Contact us</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://twitter.com/destatis?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-indicators/en/faq/">FAQs</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-indicators/en/imprint/">Legal Notice</a>
+                            
+                        </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -1445,12 +1045,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220905025726'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220905125204'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220905025726"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220905125204"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1458,4 +1058,3 @@ data-event-label="high"
 
 </body>
 </html>
-

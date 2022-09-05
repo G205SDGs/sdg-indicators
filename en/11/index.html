@@ -38,12 +38,11 @@ var opensdg = {
     this.dataDisplayAlterations.push(callback);
   },
 
+  // Disaggregations which should be ignored on indicator pages.
+  ignoredDisaggregations: null,
+
   language: 'en',
 };
-
-// For backwards compatibility, some of these might need to be global.
-// @TODO: Remove these eventually.
-var remoteDataBaseUrl = opensdg.remoteDataBaseUrl;
 
 </script>
 
@@ -118,22 +117,18 @@ var translations = {
         <script src="/sdg-indicators/assets/js/lib/classList.js"></script>
         <![endif]-->
 
-        
-
-
-
-
-<link rel="shortcut icon" type="image/ico" href="/sdg-indicators/assets/img/favicons/favicon.ico">
-<link rel="icon" type="image/png" href="/sdg-indicators/assets/img/favicons/favicon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/sdg-indicators/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/sdg-indicators/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/sdg-indicators/assets/img/favicons/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/sdg-indicators/assets/img/favicons/favicon.ico" />
 
 
         
-        
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="">
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220905025726">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220905125204">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -144,999 +139,717 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
 
+        <!--[if IE]>
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/ie.css">
+        <![endif]-->
+
         
 
     </head>
 <body class="language-en
-layout-goal-by-target
+layout-goal
 ">
 <!-- <div class="container"> -->
 
-
-
 <script>translations['header'] = {"alpha":"Beta","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_address\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
-<a class="sr-only sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
+<div class="container internet-explorer-message">
+    <h2 class="internet-explorer-message-title"></h2>
+    <p class="internet-explorer-message-body"></p>
+</div>
 <div id="disclaimer">
-  
+    
 <div class="container">
   <div class="disclaimer-alert">
-    <strong class="phase-tag">Beta</strong>
+    <strong class="phase-tag">beta</strong>
     
-    This is a development website. We welcome your <a href="mailto:sdg-indicators@destatis.de">feedback</a>.
+    This is a development website. We welcome your <a href="mailto:%email_address">feedback</a>.
     
   </div>
 </div>
 
 </div>
 
-<header role="banner" class="header-default">
-  <div class="container">
-
-    <div class="logo-and-mobile-widgets">
-      <a class="navbar-brand" href="/sdg-indicators/en/" id="home" onclick="updateVisitCountMinus()">
+<header role="banner" class="">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
+            <a class="navbar-brand" href="/sdg-indicators/en/" id="home" onclick="updateVisitCountMinus()">
     <img src="/sdg-indicators/assets/img/en/SDG_logo.png" alt="To main menu" />
 </a>
 
-      <div class="mobile-widgets">
-    <ul id='accessibility-nav' class='contrast-switcher'>
-        
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-    </ul><div class="language-toggle-mobile">
-        <div class="language-toggle-container">
-  
-  <div class="btn-group language-toggle-dropdown ">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <span class="language-globe-in-dropdown"><i class="fa fa-globe language-toggle-globe-dropdown"></i></span><span class="language-name">English</span>
-      <span class="language-abbreviation">en</span><i class="language-toggle-caret fa fa-chevron-down"></i></button>
-    <ul class="dropdown-menu"><li class="language-option-de">
-            <a href="/sdg-indicators/11/">
-              Deutsch
-            </a>
-          </li></ul>
-  </div>
-</div>
-
-    </div></div>
-    </div>
-
-    <nav class="navbar navbar-default" id="main-nav">
-      <ul class="top-level">
-    <li id="menuToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="menu-mobile" aria-expanded="false">Menu</button>
-        <ul class="nav navbar-nav menu-target contrast-switcher" id="menu-mobile"><li class="nav-link ">
-    <a href="/sdg-indicators/en/">17 Goals</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/">Open SDG platforms of other countries</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/publications/">Publications</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li><li class="language-toggle-menu-header">
-    
-
-
-
-
-
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/sdg-indicators/11/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
-</div>
-
-
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
-data-event-category="Accessibility"
-data-event-action="Change contrast setting"
-data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </li>
-    <li id="searchToggle"
-        aria-label=""
-        aria-haspopup="true">
-        <button data-target="search-mobile" aria-expanded="false">Search</button>
-        <div id="search-mobile" class="menu-target">
-  <form action="/sdg-indicators/en/search/">
-    <label class="sr-only" for="indicator_search-mobile">Search</label>
-    <input type="text" name="q" id="indicator_search-mobile" title="Search" /><!--
-    --><button aria-label="Search" id="search-mobile-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-    </li>
-</ul>
-      <div id="search" class="menu-target">
-  <form action="/sdg-indicators/en/search/">
-    <label class="sr-only" for="indicator_search">Search</label>
-    <input type="text" name="q" id="indicator_search" title="Search" /><!--
-    --><button aria-label="Search" id="search-btn" type="submit"><i class="fa fa-search" aria-hidden="false"></i></button>
-  </form>
-</div>
-
-      <ul class="nav navbar-nav menu-target contrast-switcher" id="menu"><li class="nav-link ">
-    <a href="/sdg-indicators/en/">17 Goals</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex flex-wrap w-100 justify-content-between">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/en/">17 Goals</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     About us
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_navigation/">Navigation</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/about_navigation/">Navigation</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
 </li></ul>
-            </div>
-        </li><li class="nav-link">
-            <div class="btn-group menu-dropdown">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Useful information
-                    <i class="fa fa-chevron-down"></i>
-                </button>
-                <ul class="dropdown-menu"><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li><li class="nav-link ">
-    <a href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
 </li><li>
-                        <a tabindex="-1">
-                            Open SDG platforms of other countries
-                            <i class="fa fa-chevron-down"></i>
-                        </a>
-                        <ul class="dropdown-menu" style="margin-left: 0px"><li class="nav-link ">
-    <a href="https://armstat.github.io/sdg-site-armenia/">Armenia</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.hagstova.fo/">Faroe Islands</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-ghana.github.io/">Ghana</a>
-</li><li class="nav-link ">
-    <a href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a>
-</li><li class="nav-link ">
-    <a href="https://www.lsb.gov.la/sdg/">Lao PDR</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a>
-</li><li class="nav-link ">
-    <a href="http://kostat.go.kr/sdg">South korea</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.ukrstat.gov.ua/">Ukraine</a>
-</li><li class="nav-link ">
-    <a href="https://sdgdata.gov.uk/">United Kingdom</a>
-</li><li class="nav-link ">
-    <a href="https://sdg.data.gov/">United States</a>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          Open SDG platforms of other countries
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenia</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Faroe Islands</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Lao PDR</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">South korea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">United Kingdom</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">United States</a></li></ul>
+                    </li></ul>
+          </li><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/en/publications/">Publications</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
 </li></ul>
-                      </li></ul>
-            </div>
-        </li><li class="nav-link ">
-    <a href="/sdg-indicators/en/publications/">Publications</a>
-</li><li class="nav-link ">
-    <a href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/><span class="hidden-sm hidden-md hidden-lg">DNS-Platform</span></a>
-</li><li class="language-toggle-menu-header">
-    
+
+                </div>
+                <div class="header-search-bar">
+                    <form class="align-self-lg-end" id="search" action="/sdg-indicators/en/search/">
+    <div class="input-group">
+        <label class="visually-hidden" for="indicator_search">Search</label>
+        <input class="form-control" type="search" name="q" id="indicator_search" title="Search">
+        <span class="input-group-append">
+            <button class="btn btn-outline-secondary ms-n5" aria-label="Search" id="search-btn" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+</form>
+
+                </div>
+                <div class="header-toggles d-flex">
 
 
 
 
 
-  <div class="language-toggle-container">
-  <i class="fa fa-globe language-toggle-globe-links"></i>
-  <ul class="language-toggle-links"><li class="language-option-de">
-      <a class="language-toggle-link" href="/sdg-indicators/11/"><span class="language-name">Deutsch</span>
-        <span class="language-abbreviation">de</span></a>
-    </li></ul>
+  <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/11/">
+                Deutsch
+            </a>
+        </li></ul>
 </div>
 
 
-
-</li>
-
-
-
-    <li class="nav-link contrast contrast-high contrast-type-single">
-        <a title=""
-           aria-label=""
-           data-contrast-switch-to="high"
-           href="javascript:void(0)"
-           data-on="click"
+                    <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/11/">
+                Deutsch
+            </a>
+        </li></ul>
+</div></span><a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
-
-        >A</a>
-    </li>
-
-
-
-</ul>
-
-    </nav>
-  </div>
-
+>A</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
 <div id="top" tabindex=-1></div>
-
-
-
-
-
 
 
 
 <div class="heading goal-banner goal-11">
   <div class="container">
     <div class="row">
-      <div class="col-xs-4 col-md-3 col-lg-2 goal-tiles">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" id="goal-11" />
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" id="goal-11" class="goal-icon-image goal-icon-image-" />
       </div>
-      <div class="col-xs-8 col-md-9 col-lg-10">
-        <h1>
-          <span class="hidden-sm hidden-md hidden-lg">Goal 11: </span>Make cities and human settlements inclusive, safe, resilient and sustainable
+      <div class="col-8 col-md-9 col-lg-10 goal-details">
+        <h1 class="titles goal-11">
+          Make cities and human settlements inclusive, safe, resilient and sustainable
         </h1>
       </div>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <ol class="breadcrumb">
-  
-  <li><a href="/sdg-indicators/en/">Home</a></li>
-  <li class="active">Goal 11</li>
-  
-</ol>
 
+<div class="container">
+  <nav>
+    <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
+        
+        <li class="breadcrumb-item" >
+            <a href="/sdg-indicators/en/">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Goal 11</li>
+        
+    </ol>
+</nav>
+  
 </div>
 
 <div id="main-content" class="container goal-indicators goal-11 goal-by-target" role="main">
 
-  
-
-  
-
-  
-
-
-  
-
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/en/10" class="btn btn-primary btn-block goal-11 navigation-btn" role="button">
-      <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">Previous goal</b>
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-6 col-lg-4">
-    <a href="https://sustainabledevelopment-deutschland.github.io/en/11" class="btn btn-primary btn-block goal-11 navigation-btn" title="" role="button">
-      <b class="btn-label hidden-sm hidden-xs">National indicators on Goal 11 </b><b class="btn-label visible-sm visible-xs">Goal 11 - National</b>
-    </a>
-  </div>
-
-  <div class="col-xs-3 col-md-3 col-lg-4">
-    <a href="https://g205sdgs.github.io/sdg-indicators/en/12" class="btn btn-primary btn-block goal-11 navigation-btn" role="button">
-      <b class="btn-label hidden-sm hidden-xs">Next goal</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
-    </a>
-  </div>
-
-
-
 
   
 
 
 
-  <div class="visible-md-block visible-lg-block">
-    <div class="col-md-6">
-      <h2>Targets</h2>
-    </div>
-    <div class="col-md-6">
-      <h2>Indicators</h2>
-    </div>
-  </div>
-
   
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.1
-      </span>
-      By 2030, ensure access for all to adequate, safe and affordable housing and basic services and upgrade slums
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
 
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.1.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-1-1">
-          Proportion of urban population living in slums, informal settlements or inadequate housing
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.2
-      </span>
-      By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.2.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-2-1">
-          Proportion of population that has convenient access to public transport, by sex, age and persons with disabilities
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.3
-      </span>
-      By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.3.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-3-1">
-          Ratio of land consumption rate to population growth rate
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.3.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-3-2">
-          Proportion of cities with a direct participation structure of civil society in urban planning and management that operate regularly and democratically
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.4
-      </span>
-      Strengthen efforts to protect and safeguard the world’s cultural and natural heritage
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.4.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-4-1">
-          Total per capita expenditure on the preservation, protection and conservation of all cultural and natural heritage, by source of funding (public, private), type of heritage (cultural, natural) and level of government (national, regional, and local/ municipal)
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.5
-      </span>
-      By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters, with a focus on protecting the poor and people in vulnerable situations
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.5.1
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Not available</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-5-1">
-          Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.5.2
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Not available</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-5-2">
-          Direct economic loss attributed to disasters in relation to global gross domestic product (GDP)
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.5.3
-          
-
-
-
-<span class="status notstarted">
-    <span class="status-inner">Not available</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-5-3">
-          (a) Damage to critical infrastructure and (b) number of disruptions to basic services, attributed to disasters
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.6
-      </span>
-      By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.6.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-6-1">
-          Proportion of municipal solid waste collected and managed in controlled facilities out of total municipal waste generated, by cities
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.6.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-6-2">
-          Annual mean levels of fine particulate matter (e.g. PM₂.₅ and PM₁₀) in cities (population weighted)
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.7
-      </span>
-      By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.7.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-7-1">
-          Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.7.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-7-2">
-          Proportion of persons victim of physical or sexual harassment, by sex, age, disability status and place of occurrence, in the previous 12 months
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.a
-      </span>
-      Support positive economic, social and environmental links between urban, peri-urban and rural areas by strengthening national and regional development planning
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.a.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-a-1">
-          Number of countries that have national urban policies or regional development plans that (a) respond to population dynamics; (b) ensure balanced territorial development; and (c) increase local fiscal space
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.b
-      </span>
-      By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, and develop and implement, in line with the S<small>ENDAI</small> F<small>RAMEWORK FOR</small> D<small>ISASTER</small> R<small>ISK</small> R<small>EDUCTION</small> 2015–2030, holistic disaster risk management at all levels
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.b.1
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-b-1">
-          Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015–2030
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.b.2
-          
-
-
-
-<span class="status complete">
-    <span class="status-inner">Reported</span>
-</span>
-
-
-        </span>
-        <a href="/sdg-indicators/en/11-b-2">
-          Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies
-        </a>
-        
-
-
-
-
-
-        
-      </div>
-    
-    </div>
-  
-    
-    <div class="indicator-cards target goal-target col-md-6">
-      <span class="indicator-card-number">
-        <label class="hidden-md hidden-lg">Target</label>
-        11.c
-      </span>
-      Support least developed countries, including through financial and technical assistance, in building sustainable and resilient buildings utilizing local materials
-    </div>
-    <div class="indicator-cards col-md-6 row no-gutters">
-    
-
-      
-      
-      
-
-      <div class="col-md-12  goal-indicator">
-        
-        <span class="indicator-card-number">
-          11.c.1
-        </span>
-        Currently, there is no indicator available for this target.
-        
-      </div>
-    
-    </div>
-  
-</div>
-
-
-<footer role="contentinfo">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <div id="footerLinks">
-          <ul>
-            <li><a href="https://open-sdg.org">Site built using Open SDG</a></li>
-            
-              <li>
-                
-                  <a href="mailto:sdg-indicators@destatis.de" target="_blank">Contact us</a>
-                
-                </li>
-              <li>
-                
-                  <a href="https://twitter.com/destatis?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                
-                </li>
-              <li>
-                <a href="/sdg-indicators/en/faq/">FAQs</a>
-                
-                </li>
-              <li>
-                <a href="/sdg-indicators/en/imprint/">Legal Notice</a>
-                
-                </li>
-              
-            
-            </ul>
-        </div>
+    <div class="row justify-content-md-center">
+      <div class="col d-grid gap-2">
+        <a href="/sdg-indicators//10" class="btn btn-primary btn-block goal-11 navigation-btn text-nowrap" role="button">
+          <b><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous goal</b>
+        </a>
+      </div>
+
+      <div class="col-md-auto">
+        <a href="https://sustainabledevelopment-deutschland.github.io//11" class="btn btn-primary btn-block goal-11 navigation-btn" title="" role="button">
+          <b class="btn-label d-none d-md-block">National indicators on Goal 11 </b><b class="btn-label d-block d-md-none">Goal 11 - National</b>
+        </a>
+      </div>
+
+      <div class="col d-grid gap-2">
+        <a href="/sdg-indicators//12" class="btn btn-primary btn-block goal-11 navigation-btn text-nowrap" role="button">
+          <b>Next goal <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
+        </a>
       </div>
     </div>
-    
   </div>
+
+
+  <div class="container g-0">
+    <div class="row">
+      <div class="col" style="padding-right: 0px;">
+        <h2>Targets</h2>
+      </div>
+      <div class="col" style="paddig-left: 0px;">
+        <h2>Indicators</h2>
+      </div>
+    </div>
+
+    
+    
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.1
+            </span>
+            <p>
+              By 2030, ensure access for all to adequate, safe and affordable housing and basic services and upgrade slums
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.1.1
+              </span>
+              <a href="/sdg-indicators/en/11-1-1" >
+                Proportion of urban population living in slums, informal settlements or inadequate housing
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.2
+            </span>
+            <p>
+              By 2030, provide access to safe, affordable, accessible and sustainable transport systems for all, improving road safety, notably by expanding public transport, with special attention to the needs of those in vulnerable situations, women, children, persons with disabilities and older persons
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.2.1
+              </span>
+              <a href="/sdg-indicators/en/11-2-1" >
+                Proportion of population that has convenient access to public transport, by sex, age and persons with disabilities
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.3
+            </span>
+            <p>
+              By 2030, enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning and management in all countries
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.3.1
+              </span>
+              <a href="/sdg-indicators/en/11-3-1" >
+                Ratio of land consumption rate to population growth rate
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.3.2
+              </span>
+              <a href="/sdg-indicators/en/11-3-2" >
+                Proportion of cities with a direct participation structure of civil society in urban planning and management that operate regularly and democratically
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.4
+            </span>
+            <p>
+              Strengthen efforts to protect and safeguard the world’s cultural and natural heritage
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.4.1
+              </span>
+              <a href="/sdg-indicators/en/11-4-1" >
+                Total per capita expenditure on the preservation, protection and conservation of all cultural and natural heritage, by source of funding (public, private), type of heritage (cultural, natural) and level of government (national, regional, and local/ municipal)
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.5
+            </span>
+            <p>
+              By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters, with a focus on protecting the poor and people in vulnerable situations
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.5.1
+              </span>
+              <a href="/sdg-indicators/en/11-5-1" >
+                Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.5.2
+              </span>
+              <a href="/sdg-indicators/en/11-5-2" >
+                Direct economic loss attributed to disasters in relation to global gross domestic product (GDP)
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.5.3
+              </span>
+              <a href="/sdg-indicators/en/11-5-3" >
+                (a) Damage to critical infrastructure and (b) number of disruptions to basic services, attributed to disasters
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.6
+            </span>
+            <p>
+              By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.6.1
+              </span>
+              <a href="/sdg-indicators/en/11-6-1" >
+                Proportion of municipal solid waste collected and managed in controlled facilities out of total municipal waste generated, by cities
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.6.2
+              </span>
+              <a href="/sdg-indicators/en/11-6-2" >
+                Annual mean levels of fine particulate matter (e.g. PM₂.₅ and PM₁₀) in cities (population weighted)
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.7
+            </span>
+            <p>
+              By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.7.1
+              </span>
+              <a href="/sdg-indicators/en/11-7-1" >
+                Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.7.2
+              </span>
+              <a href="/sdg-indicators/en/11-7-2" >
+                Proportion of persons victim of physical or sexual harassment, by sex, age, disability status and place of occurrence, in the previous 12 months
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.a
+            </span>
+            <p>
+              Support positive economic, social and environmental links between urban, peri-urban and rural areas by strengthening national and regional development planning
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.a.1
+              </span>
+              <a href="/sdg-indicators/en/11-a-1" >
+                Number of countries that have national urban policies or regional development plans that (a) respond to population dynamics; (b) ensure balanced territorial development; and (c) increase local fiscal space
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.b
+            </span>
+            <p>
+              By 2020, substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change, resilience to disasters, and develop and implement, in line with the S<small>ENDAI</small> F<small>RAMEWORK FOR</small> D<small>ISASTER</small> R<small>ISK</small> R<small>EDUCTION</small> 2015–2030, holistic disaster risk management at all levels
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.b.1
+              </span>
+              <a href="/sdg-indicators/en/11-b-1" >
+                Number of countries that adopt and implement national disaster risk reduction strategies in line with the Sendai Framework for Disaster Risk Reduction 2015–2030
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                11.b.2
+              </span>
+              <a href="/sdg-indicators/en/11-b-2" >
+                Proportion of local governments that adopt and implement local disaster risk reduction strategies in line with national disaster risk reduction strategies
+              </a>
+              
+            </div>
+          
+          </div>
+        </div>
+      
+      
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              11.c
+            </span>
+            <p>
+              Support least developed countries, including through financial and technical assistance, in building sustainable and resilient buildings utilizing local materials
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number">
+                11.c.1
+              </span>
+              Currently, there is no indicator available for this target.
+              
+            </div>
+          
+          </div>
+        </div>
+      
+    </div>
+  </div>
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org">Site built using Open SDG</a>
+                        </li>
+                        
+                        <li>
+                            
+                            <a href="mailto:sdg-indicators@destatis.de" target="_blank">Contact us</a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://twitter.com/destatis?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-indicators/en/faq/">FAQs</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/sdg-indicators/en/imprint/">Legal Notice</a>
+                            
+                        </li>
+                        
+                        
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
 
@@ -1156,12 +869,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220905025726'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220905125204'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220905025726"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220905125204"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1169,4 +882,3 @@ data-event-label="high"
 
 </body>
 </html>
-
