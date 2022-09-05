@@ -1,5 +1,5 @@
 <div style="display: none;">
-  <span id="table-alternative">{{ page.t.indicator.data_tabular_alternative }}</span>
+    <span id="table-alternative">{{ page.t.indicator.data_tabular_alternative }}</span>
 </div>
 <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
   {% for tab in page.indicator.indicator_tabs_list %}
@@ -8,41 +8,41 @@
       nav-item
       {% if tab.type == 'map' %}map{% endif %}
       {% if tab.type == 'embed' %}embedded-map{% endif %}
-      {% if forloop.first %}active{% endif %}
     ">
-    <a
-      class="nav-link"
-      data-toggle="tab"
+    <button
+      class="nav-link {% if forloop.first %}active{% endif %}"
+      data-bs-toggle="tab"
       role="tab"
+      type="button"
       {% if tab.type == 'chart' %}
         id="tab-chartview"
-        href="#chartview"
+        data-bs-target="#chartview"
         aria-controls="chartview"
         aria-describedby="table-alternative"
         {% include autotrack.html preset="tab_data_chart" category="Tab change" action="Change data view" label="Change to Chart tab" %}
         ><i class="fa fa-line-chart" aria-hidden="true"></i>
       {% elsif tab.type == 'table' %}
         id="tab-tableview"
-        href="#tableview"
+        data-bs-target="#tableview"
         aria-controls="tableview"
         {% include autotrack.html preset="tab_data_table" category="Tab change" action="Change data view" label="Change to Table tab" %}
         ><i class="fa fa-table" aria-hidden="true"></i>
       {% elsif tab.type == 'map' %}
         id="tab-mapview"
-        href="#mapview"
+        data-bs-target="#mapview"
         aria-controls="mapview"
         data-no-disagg="true"
         {% include autotrack.html preset="tab_data_map" category="Tab change" action="Change data view" label="Change to Map tab" %}
         ><i class="fa fa-map" aria-hidden="true"></i>
       {% elsif tab.type == 'embed' %}
         id="tab-embeddedmapview"
-        href="#embeddedmapview"
+        data-bs-target="#embeddedmapview"
         aria-controls="embeddedmapview"
         data-no-disagg="true"
         {% include autotrack.html preset="tab_data_embed" category="Tab change" action="Change data view" label="Change to embedded item tab" %}
         ><i class="fa fa-plus-square" aria-hidden="true"></i>
       {% endif %}
-    <span class="hidden-xs" style="color:black">{{ tab.label | t }}</span></a>
+    <span class="hidden-xs" style="color:black">{{ tab.label | t }}</span></button>
   </li>
   {% endfor %}
 </ul>

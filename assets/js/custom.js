@@ -23,3 +23,5 @@ opensdg.dataRoundingDp = function(value, dcmplc) {
     return value.toFixed(dcmplc)
   }
 };
+
+//------------------------------------------------

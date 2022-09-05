@@ -1,0 +1,114 @@
+{% include head.html %}
+{% include header.html %}
+
+{% include components/goal/header.html %}
+
+<div class="container">
+  {% include components/goal/breadcrumbs.html %}
+  {% if site.create_goals.previous_next_links %}
+    {% include components/previous-next-links.html previous_label=page.t.goal.previous next_label=page.t.goal.next %}
+  {% endif %}
+</div>
+
+<div id="main-content" class="container goal-indicators goal-{{ page.goal.number }} goal-by-target" role="main">
+
+
+  {% include components/goal/goal-content.html content=content %}
+
+  {% if page.goal.number == '1' %}
+    {% assign next_goal = '2' %}
+    {% assign previous_goal = '17' %}
+  {% elsif page.goal.number == '17' %}
+    {% assign next_goal = '1' %}
+    {% assign previous_goal = '16' %}
+  {% else %}
+    {% assign previous_goal = page.goal.number | minus: 1 %}
+    {% assign next_goal = page.goal.number | plus: 1 %}
+  {% endif %}
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col d-grid gap-2">
+        <a href="{{ site.baseurl }}/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+          <b><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.t.general.prev_goal }}</b>
+        </a>
+      </div>
+
+      <div class="col-md-auto">
+        <a href="https://sustainabledevelopment-deutschland.github.io/{{ language }}/{{ page.goal.number }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
+          <b class="btn-label d-none d-md-block">{{ page.t.general.target_link_dns }} {{ page.t.general.goal }} {{ page.goal.number }} </b><b class="btn-label d-block d-md-none">{{ page.t.general.goal }} {{ page.goal.number }} {{ page.t.general.national }}</b>
+        </a>
+      </div>
+
+      <div class="col d-grid gap-2">
+        <a href="{{ site.baseurl }}/{{ language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+          <b>{{ page.t.general.next_goal }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container g-0">
+    <div class="row">
+      <div class="col" style="padding-right: 0px;">
+        <h2>{{ page.t.general.targets }}</h2>
+      </div>
+      <div class="col" style="paddig-left: 0px;">
+        <h2>{{ page.t.general.indicators }}</h2>
+      </div>
+    </div>
+
+    {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
+    {% for group in goal_indicators %}
+      {% assign target = group.name | sdg_lookup %}
+      <div class="row">
+        <div class="col indicator-cards target goal-target no-gutters">
+          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
+            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
+              {{ target.number }}
+            </span>
+            <p>
+              {{ target.name }}
+            </p>
+          </div>
+        </div>
+
+        <div class="col indicator-cards no-gutters">
+
+          {% for indicator in group.items %}
+
+            {% assign tag_classes = "" | split: "," %}
+            {% if indicator.tags %}
+              {% for tag in indicator.tags %}
+                {% assign tag_slug = "indicator-" | append: tag | slugify %}
+                {% assign tag_classes = tag_classes | push: tag_slug %}
+              {% endfor %}
+            {% endif %}
+            {% assign tag_classes = tag_classes | join: " " %}
+            {% if indicator.progress_status and indicator.progress_status != '' %}
+              {% assign indicator_has_progress = true %}
+            {% endif %}
+
+            <div class="row" style="margin-bottom: 25px;">
+              {% if indicator.placeholder and indicator.placeholder != '' %}
+              <span class="indicator-card-number">
+                {{ indicator.number }}
+              </span>
+              {{ indicator.placeholder }}
+              {% else %}
+              <span class="indicator-card-number" >
+                {{ indicator.number }}
+              </span>
+              <a href="{{ indicator.url }}" >
+                {{ indicator.name }}
+              </a>
+              {% endif %}
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% include footer.html %}
