@@ -56,10 +56,9 @@ frontpage_cards:
       # This displays any file in the `_includes` folder.
       include: components/download-all-data.html
       # This controls the text for a call-to-action button.
-      button_label: My button text
+      #button_label: My button text
       # This controls the URL the button links to.
-      button_link: https://example.com
-    -
+      #button_link: https://example.com
 
 analytics:
   ga_prod: ''
