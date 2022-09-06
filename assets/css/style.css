@@ -1479,7 +1479,7 @@ body.contrast-high .status.notapplicable {
 body.contrast-high .previous-next-links .btn-primary span {
   color: black !important; }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1000px) {
   .metadata-content > tbody > tr {
     table-layout: fixed; }
     .metadata-content > tbody > tr > th, .metadata-content > tbody > tr > td {
@@ -1490,6 +1490,32 @@ body.contrast-high .previous-next-links .btn-primary span {
 
 #sources .row > div:nth-child(odd) {
   clear: left; }
+
+@media only screen and (max-width: 1000px) {
+  .indicator-source-table {
+    table-layout: fixed; } }
+.indicator-source-table img {
+  max-width: 100%; }
+
+.publication {
+  clear: both;
+  margin-bottom: 10px; }
+  .publication .publication-title {
+    font-size: 16px;
+    margin-bottom: 7px !important; }
+  .publication .publication-description p:last-child {
+    margin-bottom: 0.5rem; }
+
+#related_indicators ul {
+  padding: 0;
+  margin: 0 0 10px 0;
+  list-style-type: none; }
+  #related_indicators ul li {
+    padding: 0;
+    margin: 0 0 10px 0; }
+#related_indicators .related-indicator-goal {
+  font-size: 16px;
+  font-weight: bold; }
 
 #main-content .nav-tabs {
   border-bottom: 1px solid #888; }
