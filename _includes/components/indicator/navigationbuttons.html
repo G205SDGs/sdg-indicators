@@ -25,13 +25,13 @@
     {% assign buttonLabel3 = page.indicator.dns_indicator3 | replace: "/", "" | replace: "-", "." %}
   {% endif %}
 {% endif %}
-<!---
+
 {% if site.environment == 'staging' %}
   {% assign baseurl = 'https://g205sdgs.github.io/sdg-indicators' %}
 {% else %}
   {% assign baseurl = 'https://sdg-indikatoren.de' %}
 {% endif %}
--->
+
 <!---Indicator page-->
 <!---3 Btns if there is a corresponding Indicator-->
 <div class="container">
@@ -40,7 +40,7 @@
       {% if page.indicator.dns_indicator2 %}
         {% if page.indicator.dns_indicator3 %}
           <div class="col d-grid gap-2">
-            <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+            <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
               <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.prev_indicator }} </b>
             </a>
           </div>
@@ -61,13 +61,13 @@
             </a>
           </div>
           <div class="col d-grid gap-2">
-            <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+            <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
               <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.next_indicator }}</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </a>
           </div>
         {% else %}
           <div class="col d-grid gap-2">
-            <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+            <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
               <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.prev_indicator }} </b>
             </a>
           </div>
@@ -83,14 +83,14 @@
             </a>
           </div>
           <div class="col d-grid gap-2">
-            <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+            <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
               <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.next_indicator }}</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </a>
           </div>
         {% endif %}
       {% else %}
         <div class="col d-grid gap-2">
-          <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+          <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
             <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.prev_indicator }} </b>
           </a>
         </div>
@@ -102,7 +102,7 @@
         </div>
 
         <div class="col d-grid gap-2">
-          <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+          <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
             <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.next_indicator }}</b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
           </a>
         </div>
@@ -110,13 +110,13 @@
     <!---2 Btns if there is no corresponding Indicator-->
     {% else  %}
       <div class="col d-grid gap-2">
-        <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+        <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.previous }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
           <i class="fa fa-chevron-left" aria-hidden="true"></i> <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.prev_indicator }} </b>
         </a>
       </div>
 
       <div class="col d-grid gap-2">
-        <a href="{{ site.baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
+        <a href="{{ baseurl }}/{{ language }}/{{ page.indicator.next }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" role="button">
           <b class="btn-label hidden-sm hidden-xs">{{ page.t.general.next_indicator }} </b> <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </a>
       </div>
