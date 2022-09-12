@@ -35,7 +35,7 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col d-grid gap-2">
-        <a href="sdg-indikatoren.de/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+        <a href="{{ baseurl }}/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
           <b><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.t.general.prev_goal }}</b>
         </a>
       </div>
@@ -47,7 +47,7 @@
       </div>
 
       <div class="col d-grid gap-2">
-        <a href="sdg-indikatoren.de/{{ language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+        <a href="{{ baseurl }}/{{ language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
           <b>{{ page.t.general.next_goal }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
         </a>
       </div>
