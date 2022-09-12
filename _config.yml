@@ -33,8 +33,32 @@ create_indicators:
   layout: indicator
 create_goals:
   layout: goal-by-target
+  previous_next_links: false
+
 create_pages: true
 
+frontpage_goals_grid:
+    title: frontpage.heading
+    description: frontpage.instructions
+
+frontpage_cards:
+    -
+      # This controls the color of the line at the top of the card.
+      rule_color: orange
+      # This sets the title of the card.
+      title: Alle Daten herunterladen
+      # This sets the content of the card. Markdown is supported. Note that all
+      # internal links should be relative to the frontpage. For example, instead
+      # of [link](/path) you should use [link](path).
+      #content: |
+      #  * List item
+      #  * List item with [link](https://example.com)
+      # This displays any file in the `_includes` folder.
+      include: components/download-all-data.html
+      # This controls the text for a call-to-action button.
+      #button_label: My button text
+      # This controls the URL the button links to.
+      #button_link: https://example.com
 
 analytics:
   ga_prod: ''
@@ -82,8 +106,8 @@ collections:
 
 # The list of languages that are translated. The first one is the default.
 languages:
-    - de
-    - en
+  - de
+  - en
 
 # Menu
 menu:
@@ -91,46 +115,46 @@ menu:
     translation_key: general.seventeen_goals
   - path: /reporting-status/
     translation_key: menu.reporting_status
-  - translation_key: menu.about
-    dropdown:
-      - path: /about_platform/
-        translation_key: menu.about_platform
-      - path: /about_navigation/
-        translation_key: menu.about_navigation
-      - path: /about_guidance/
-        translation_key: menu.about_guidance
-  - translation_key: menu.facts
-    dropdown:
-      - path: /facts_agenda/
-        translation_key: menu.facts_agenda
-      - path: /facts_dns/
-        translation_key: menu.facts_dns
-      - translation_key: menu.other_countries
-        dropdown:
-          - path: https://armstat.github.io/sdg-site-armenia/
-            translation_key: menu.armenia
-          - path: https://sdg.bhas.gov.ba/
-            translation_key: menu.bosnia_and_herzegovina
-          - path: https://sdg.hagstova.fo/
-            translation_key: menu.faroe
-          - path: https://sustainabledevelopment-ghana.github.io/
-            translation_key: menu.ghana
-          - path: https://visar.hagstofa.is/heimsmarkmidin/
-            translation_key: menu.iceland
-          - path: https://sustainabledevelopment-kyrgyzstan.github.io/
-            translation_key: menu.kyrgyzstan
-          - path: https://www.lsb.gov.la/sdg/
-            translation_key: menu.lao
-          - path: https://sustainabledevelopment-rwanda.github.io/
-            translation_key: menu.rwanda
-          - path: http://kostat.go.kr/sdg
-            translation_key: menu.south_korea
-          - path: https://sdg.ukrstat.gov.ua/
-            translation_key: menu.ukrain
-          - path: https://sdgdata.gov.uk/
-            translation_key: menu.united_kingdom
-          - path: https://sdg.data.gov/
-            translation_key: menu.unites_states
+  # - translation_key: menu.about
+  #   dropdown:
+  #     - path: /about_platform/
+  #       translation_key: menu.about_platform
+  #     - path: /about_navigation/
+  #       translation_key: menu.about_navigation
+  #     - path: /about_guidance/
+  #       translation_key: menu.about_guidance
+  # - translation_key: menu.facts
+  #   dropdown:
+  #     - path: /facts_agenda/
+  #       translation_key: menu.facts_agenda
+  #     - path: /facts_dns/
+  #       translation_key: menu.facts_dns
+      # - translation_key: menu.other_countries
+      #   dropdown:
+      #     - path: https://armstat.github.io/sdg-site-armenia/
+      #       translation_key: menu.armenia
+      #     - path: https://sdg.bhas.gov.ba/
+      #       translation_key: menu.bosnia_and_herzegovina
+      #     - path: https://sdg.hagstova.fo/
+      #       translation_key: menu.faroe
+      #     - path: https://sustainabledevelopment-ghana.github.io/
+      #       translation_key: menu.ghana
+      #     - path: https://visar.hagstofa.is/heimsmarkmidin/
+      #       translation_key: menu.iceland
+      #     - path: https://sustainabledevelopment-kyrgyzstan.github.io/
+      #       translation_key: menu.kyrgyzstan
+      #     - path: https://www.lsb.gov.la/sdg/
+      #       translation_key: menu.lao
+      #     - path: https://sustainabledevelopment-rwanda.github.io/
+      #       translation_key: menu.rwanda
+      #     - path: http://kostat.go.kr/sdg
+      #       translation_key: menu.south_korea
+      #     - path: https://sdg.ukrstat.gov.ua/
+      #       translation_key: menu.ukrain
+      #     - path: https://sdgdata.gov.uk/
+      #       translation_key: menu.united_kingdom
+      #     - path: https://sdg.data.gov/
+      #       translation_key: menu.unites_states
   - path: /publications/
     translation_key: menu.publications
   - path: https://sustainabledevelopment-deutschland.github.io
@@ -177,6 +201,7 @@ footer_fields:
 series_toggle: true
 graph_title_from_series: true
 decimal_separator: ','
+thousands_separator: ' '
 graph_color_headline: '#b8b8b8' #
 #graph_color_headline: ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#26bde2', '#fcc30b', '#a21942', '#fd6925', '#dd1367', '#fd9d24', '#bf8b2e', '#3f7e44', '#0a97d9', '#56c02b', '#00689d', '#19486a']
 useHeadlineColor: false
@@ -196,8 +221,9 @@ plugins:
 
 
 # Use a remote Jekyll theme.
-#remote_theme: brockfanning/open-sdg@data-schema
-remote_theme: open-sdg/open-sdg@1.8.0-dev
+#remote_theme: brockfanning/open-sdg@map-series-unit-behaviors
+remote_theme: open-sdg/open-sdg@2.1.0-dev
+
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
 goal_image_base: https://g205sdgs.github.io/sdg-indicators/assets/img/goals
@@ -211,9 +237,13 @@ custom_js:
 graph_color_set: 'goal'
 graph_color_number: 9
 
+disclaimer:
+  phase: beta
 
 # Mapping
 map_options:
+  disaggregation_controls: true
+
   # Control the limits on zooming in/out in the map:
   minZoom: 5
   maxZoom: 10
@@ -227,22 +257,22 @@ map_options:
   # 1 map color depending on goal --- start ---
   #colorRange: ["#F6E8EC", "#E3BAC6", "#D18CA1", "#BE5E7B", "#AB3055", "#A21942", "#821435", "#610F28", "#410A1A", "#20050D"]
   colorRange: [["#FCE9EB", "#F7BDC4", "#F2929D", "#ED6676", "#E83A4F", "#E5243B", "#B71D2F", "#891623", "#5C0E18", "#2E070C"],
-               ["#FCF8EB", "#F7E9C2", "#F2DB9A", "#EDCD72", "#E8BE49", "#E5B735", "#CEA530", "#A08025", "#735C1B", "#453710"],
-               ["#EDF5EB", "#C9E2C3", "#A6CF9C", "#82BC74", "#5EA94C", "#4C9F38", "#3D7F2D", "#2E5F22", "#1E4016", "#0F200B"],
-               ["#F9E8EA", "#EEBAC0", "#E28C96", "#D65E6C", "#CB3042", "#C5192D", "#9E1424", "#760F1B", "#4F0A12", "#270509"],
-               ["#FFEBE9", "#FFC4BC", "#FF9D90", "#FF7564", "#FF4E37", "#FF3A21", "#CC2E1A", "#992314", "#66170D", "#330C07"],
-               ["#E9F8FB", "#BEEBF6", "#93DEF0", "#67D1EA", "#3CC4E5", "#26BDE2", "#1E97B5", "#177188", "#0F4C5A", "#08262D"],
-               ["#FFF9E7", "#FEEDB6", "#FEE185", "#FDD554", "#FCC923", "#FCC30B", "#CA9C09", "#977507", "#654E04", "#322702"],
-               ["#F6E8EC", "#E3BAC6", "#D18CA1", "#BE5E7B", "#AB3055", "#A21942", "#821435", "#610F28", "#410A1A", "#20050D"],
-               ["#FFF0E9", "#FED2BE", "#FEB492", "#FE9666", "#FD783B", "#FD6925", "#CA541E", "#983F16", "#652A0F", "#331507"],
-               ["#FCE7F0", "#F5B8D1", "#EE89B3", "#E75A95", "#E02B76", "#DD1367", "#B10F52", "#850B3E", "#580829", "#2C0415"],
-               ["#FFF5E6", "#FEE2B3", "#FECE80", "#FEBA4D", "#FDA71A", "#FD9D00", "#CA7E00", "#985E00", "#653F00", "#331F00"],
-               ["#FAF5EA", "#EFE0C0", "#E4CC96", "#D9B86C", "#CEA342", "#C9992D", "#A17A24", "#795C1B", "#503D12", "#281F09"],
-               ["#ECF2EC", "#C5D8C7", "#9FBFA2", "#79A57C", "#528B57", "#3F7E44", "#326536", "#264C29", "#19321B", "#0D190E"],
-               ["#E7F5FB", "#B6E0F4", "#85CBEC", "#54B6E4", "#23A1DD", "#0A97D9", "#0879AE", "#065B82", "#043C57", "#021E2B"],
-               ["#EEF9EA", "#CCECBF", "#ABE095", "#89D36B", "#67C640", "#56C02B", "#459A22", "#34731A", "#224D11", "#112609"],
-               ["#E6F0F5", "#B3D2E2", "#80B4CE", "#4D95BA", "#1A77A7", "#00689D", "#00537E", "#003E5E", "#002A3F", "#00151F"],
-               ["#E8EDF0", "#BAC8D2", "#8CA4B5", "#5E7F97", "#305A79", "#19486A", "#143A55", "#0F2B40", "#0A1D2A", "#050E15"]]
+              ["#FCF8EB", "#F7E9C2", "#F2DB9A", "#EDCD72", "#E8BE49", "#E5B735", "#CEA530", "#A08025", "#735C1B", "#453710"],
+              ["#EDF5EB", "#C9E2C3", "#A6CF9C", "#82BC74", "#5EA94C", "#4C9F38", "#3D7F2D", "#2E5F22", "#1E4016", "#0F200B"],
+              ["#F9E8EA", "#EEBAC0", "#E28C96", "#D65E6C", "#CB3042", "#C5192D", "#9E1424", "#760F1B", "#4F0A12", "#270509"],
+              ["#FFEBE9", "#FFC4BC", "#FF9D90", "#FF7564", "#FF4E37", "#FF3A21", "#CC2E1A", "#992314", "#66170D", "#330C07"],
+              ["#E9F8FB", "#BEEBF6", "#93DEF0", "#67D1EA", "#3CC4E5", "#26BDE2", "#1E97B5", "#177188", "#0F4C5A", "#08262D"],
+              ["#FFF9E7", "#FEEDB6", "#FEE185", "#FDD554", "#FCC923", "#FCC30B", "#CA9C09", "#977507", "#654E04", "#322702"],
+              ["#F6E8EC", "#E3BAC6", "#D18CA1", "#BE5E7B", "#AB3055", "#A21942", "#821435", "#610F28", "#410A1A", "#20050D"],
+              ["#FFF0E9", "#FED2BE", "#FEB492", "#FE9666", "#FD783B", "#FD6925", "#CA541E", "#983F16", "#652A0F", "#331507"],
+              ["#FCE7F0", "#F5B8D1", "#EE89B3", "#E75A95", "#E02B76", "#DD1367", "#B10F52", "#850B3E", "#580829", "#2C0415"],
+              ["#FFF5E6", "#FEE2B3", "#FECE80", "#FEBA4D", "#FDA71A", "#FD9D00", "#CA7E00", "#985E00", "#653F00", "#331F00"],
+              ["#FAF5EA", "#EFE0C0", "#E4CC96", "#D9B86C", "#CEA342", "#C9992D", "#A17A24", "#795C1B", "#503D12", "#281F09"],
+              ["#ECF2EC", "#C5D8C7", "#9FBFA2", "#79A57C", "#528B57", "#3F7E44", "#326536", "#264C29", "#19321B", "#0D190E"],
+              ["#E7F5FB", "#B6E0F4", "#85CBEC", "#54B6E4", "#23A1DD", "#0A97D9", "#0879AE", "#065B82", "#043C57", "#021E2B"],
+              ["#EEF9EA", "#CCECBF", "#ABE095", "#89D36B", "#67C640", "#56C02B", "#459A22", "#34731A", "#224D11", "#112609"],
+              ["#E6F0F5", "#B3D2E2", "#80B4CE", "#4D95BA", "#1A77A7", "#00689D", "#00537E", "#003E5E", "#002A3F", "#00151F"],
+              ["#E8EDF0", "#BAC8D2", "#8CA4B5", "#5E7F97", "#305A79", "#19486A", "#143A55", "#0F2B40", "#0A1D2A", "#050E15"]]
   # --- stop ---
 
   # Set the color for boundaries that have no data.
@@ -270,16 +300,16 @@ map_options:
     color: '#172d44'
     dashArray: 5,5
 
-
 map_layers:
-  -
-    # The subfolder under 'geojson' in the data repository holding the GeoJSON files:
-    subfolder: regions
-    # The label to use in the "Download GeoJSON" button:
-    label: Region
-    # The minimum zoom at which this layer should be visible.
-    min_zoom: 0
-    # The maximum zoom at which this layer should be visible.
-    max_zoom: 20
-    # Whether or not these boundaries should display statically on lower layers.
+  - serviceUrl:  https://sdgtestenvironment.github.io/dns-indicators/assets/maps/boundaries.geojson
+    min_zoom: 4.5
+    max_zoom: 6.5
     staticBorders: true
+    subfolder: laender
+    label: indicator.map
+  - serviceUrl:  https://sdgtestenvironment.github.io/dns-indicators/assets/maps/boundariesKrs.geojson
+    min_zoom: 7
+    max_zoom: 11
+    staticBorders: false
+    subfolder: kreise
+    label: indicator.map

@@ -1,0 +1,29 @@
+{% if include.graph_type %}
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only">{{ page.t.general.label_warning }}</span></i>
+      {{ page.t.indicator.dataset_size_warning }}
+    </div>
+
+    {% assign graph_title = page.indicator.graph_titles.first.title | default: page.indicator.graph_title %}
+    {% assign graph_subtitle = page.indicator.graph_subtitles.first.title | default: page.indicator.graph_subtitle %}
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">{{ graph_title }}</h4>
+          <h6 id="chart-heading" class="chart-subtitle">{{ graph_subtitle }}</h6>
+          <div id="chart" class="plot-container">
+            {% include components/charts/canvas.html %}
+          </div>
+          <div id="plotLegend"></div>
+          {% include components/indicator/data-footer.html %}
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button id="btnSave" title="{{ page.t.indicator.download_chart_image_title }}" class='btn btn-primary btn-download'>
+          {{ page.t.indicator.download_chart_image }}
+        </button><!--
+   --></div>
+    </div>
+
+{% endif %}
