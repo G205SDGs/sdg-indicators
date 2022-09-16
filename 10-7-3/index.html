@@ -133,7 +133,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220916031705">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220916101243">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -192,7 +192,25 @@ layout-indicator
     <a class="nav-link" href="/sdg-indicators/">17 Ziele</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li><li class="nav-item ">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Über uns
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/about_platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/about_navigation/">Navigation</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/about_guidance/">Technische&nbspHinweise</a>
+</li></ul>
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Wissenswertes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
+</li><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/facts_dns/">DNS</a>
+</li></ul>
+            </li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/publications/">Publikationen</a>
 </li><li class="nav-item ">
     <a class="nav-link" href="https://sustainabledevelopment-deutschland.github.io"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/></a>
@@ -788,42 +806,34 @@ data-event-label="Change to Table tab"
           <dd>Deutschland</dd>
         
 
-        
-          <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-          <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
 
-        
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Die Angaben sind Schätzungen von IOM, nationalen Behörden und Medienquellen.<br>• Daten sind erst ab 2014 verfügbar.</dd>
         
 
         
 
         
           
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ><u>Anmerkung</u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ></dd>
+          <dt
+            class="data-controlled-footer-field"
+            data-ts-attribute="COMMENT_TS"
+          ><u>Anmerkung</u>:</dt>
+          <dd
+            class="data-controlled-footer-field"
+            data-ts-attribute="COMMENT_TS"
+          ></dd>
           
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ></dd>
+          <dt
+            class="data-controlled-footer-field"
+            data-ts-attribute="DATA_LAST_UPDATE"
+          ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
+          <dd
+            class="data-controlled-footer-field"
+            data-ts-attribute="DATA_LAST_UPDATE"
+          ></dd>
           
         
-
 
         
           <dt><u>Copyright</u>:</dt>
@@ -872,42 +882,34 @@ data-event-label="Change to Table tab"
           <dd>Deutschland</dd>
         
 
-        
-          <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
-          <dd class="data-controlled-footer-field unit-from-data"></dd>
-        
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
 
-        
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Die Angaben sind Schätzungen von IOM, nationalen Behörden und Medienquellen.<br>• Daten sind erst ab 2014 verfügbar.</dd>
         
 
         
 
         
           
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ><u>Anmerkung</u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="COMMENT_TS"
-            ></dd>
+          <dt
+            class="data-controlled-footer-field"
+            data-ts-attribute="COMMENT_TS"
+          ><u>Anmerkung</u>:</dt>
+          <dd
+            class="data-controlled-footer-field"
+            data-ts-attribute="COMMENT_TS"
+          ></dd>
           
-            <dt
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
-            <dd
-              class="data-controlled-footer-field"
-              data-ts-attribute="DATA_LAST_UPDATE"
-            ></dd>
+          <dt
+            class="data-controlled-footer-field"
+            data-ts-attribute="DATA_LAST_UPDATE"
+          ><u>Letzte Änderung des Codes <small>(Daten)</small></u>:</dt>
+          <dd
+            class="data-controlled-footer-field"
+            data-ts-attribute="DATA_LAST_UPDATE"
+          ></dd>
           
         
-
 
         
           <dt><u>Copyright</u>:</dt>
@@ -2138,12 +2140,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220916031705'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220916101243'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220916031705"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220916101243"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
