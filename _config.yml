@@ -46,7 +46,7 @@ frontpage_cards:
       # This controls the color of the line at the top of the card.
       rule_color: orange
       # This sets the title of the card.
-      title: Alle Daten herunterladen
+      title: frontpage.download_all
       # This sets the content of the card. Markdown is supported. Note that all
       # internal links should be relative to the frontpage. For example, instead
       # of [link](/path) you should use [link](path).
