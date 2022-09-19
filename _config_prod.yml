@@ -27,7 +27,7 @@
 #   ga_prod: ''
 
 
-baseurl: "https://sdg-indikatoren.de"
+baseurl: ""
 environment: production
 # Replace my-github-org and open-sdg-data-starter as needed.
 #remote_data_prefix: "https://sustainabledevelopment-germany.github.io/sdg-data-pub"
