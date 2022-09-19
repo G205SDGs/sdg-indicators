@@ -115,20 +115,20 @@ menu:
     translation_key: general.seventeen_goals
   - path: /reporting-status/
     translation_key: menu.reporting_status
-  - translation_key: menu.about
-    dropdown:
-      - path: /about_platform/
-        translation_key: menu.about_platform
-      - path: /about_navigation/
-        translation_key: menu.about_navigation
-      - path: /about_guidance/
-        translation_key: menu.about_guidance
-  - translation_key: menu.facts
-    dropdown:
-      - path: /facts_agenda/
-        translation_key: menu.facts_agenda
-      - path: /facts_dns/
-        translation_key: menu.facts_dns
+  # - translation_key: menu.about
+  #   dropdown:
+  #     - path: /about_platform/
+  #       translation_key: menu.about_platform
+  #     - path: /about_navigation/
+  #       translation_key: menu.about_navigation
+  #     - path: /about_guidance/
+  #       translation_key: menu.about_guidance
+  # - translation_key: menu.facts
+  #   dropdown:
+  #     - path: /facts_agenda/
+  #       translation_key: menu.facts_agenda
+  #     - path: /facts_dns/
+  #       translation_key: menu.facts_dns
       # - translation_key: menu.other_countries
       #   dropdown:
       #     - path: https://armstat.github.io/sdg-site-armenia/
