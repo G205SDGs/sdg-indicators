@@ -3117,4 +3117,6 @@ body {
   float: left; }
 
 .align-right {
-  float: right; }
+  float: right;
+  margin-top: 0px;
+  margin-bottom: 0px; }
