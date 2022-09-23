@@ -32,7 +32,7 @@ logos:
 create_indicators:
   layout: indicator
 create_goals:
-  layout: goal-by-target
+  layout: goal-with-progress
   previous_next_links: false
 
 create_pages: true
