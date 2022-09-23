@@ -92,7 +92,7 @@
               {% endfor %}
             {% endif %}
             {% assign tag_classes = tag_classes | join: " " %}
-            {% if (indicator.progress_status and indicator.progress_status != '') or indicator.reporting_status %}
+            {% if indicator.progress_status and indicator.progress_status != '' %}
               {% assign indicator_has_progress = true %}
             {% endif %}
 
@@ -114,6 +114,7 @@
               {% endif %}
               <a href="{{ indicator.url }}" >
                 {{ indicator.name }}
+                {% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}
               </a>
               {% endif %}
             </div>
