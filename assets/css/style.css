@@ -2573,7 +2573,8 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   border-bottom-width: 2px;
   border-bottom-style: solid;
   position: relative;
-  padding: 5px 0; }
+  padding: 5px 0;
+  padding-bottom: 8px; }
 
 /**
  * custom.scss
