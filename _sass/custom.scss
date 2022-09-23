@@ -211,36 +211,23 @@ body{
 
 
 // for multiple levels of dropdowns
-// .dropdown-submenu {
-//   position: relative;
-// }
-//
-// .dropdown-submenu .dropdown-menu {
-//   top: 0;
-//   left: 100%;
-//   margin-top: -1px;
-//   margin-left: 0px;
-// }
-//
-// .dropdown-menu li:hover > ul
-// {
-//     /* On hover, display the next level's menu */
-//     display: inline;
-//     top: 0;
-//     left: 100%;
-//     margin-top: -1px;
-//     margin-left: 0px;
-// }
-@media all and (min-width: 992px) {
-	.dropdown-menu li{ position: relative; 	}
-	.nav-item .submenu{
-		display: none;
-		position: absolute;
-		left:100%; top:-7px;
-	}
-	.nav-item .submenu-left{
-		right:100%; left:auto;
-	}
-	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
-	.dropdown-menu > li:hover > .submenu{ display: block; }
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  margin-left: 0px;
+}
+
+.dropdown-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    margin-left: 0px;
 }
