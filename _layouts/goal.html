@@ -107,10 +107,10 @@
                 {{ indicator.number }}
               </span>
               {% if indicator_has_progress %}
-              <div class="col-lg-1 goal-page-indicator-progress">
-                <span class="visually-hidden">{{ site.progress_status.status_heading | t }}</span>
-                {% include components/progress/progress-status.html indicator=indicator %}
-              </div>
+                <div class="col-lg-1 goal-page-indicator-progress">x
+                  <span class="visually-hidden">{{ site.progress_status.status_heading | t }}</span>
+                  {% include components/progress/progress-status.html indicator=indicator %}
+                </div>
               {% endif %}
               <a href="{{ indicator.url }}" >
                 {{ indicator.name }}
