@@ -92,7 +92,7 @@
               {% endfor %}
             {% endif %}
             {% assign tag_classes = tag_classes | join: " " %}
-            {% if indicator.progress_status and indicator.progress_status != '' %}
+            {% if (indicator.progress_status and indicator.progress_status != '') or indicator.reporting_status %}
               {% assign indicator_has_progress = true %}
             {% endif %}
 
