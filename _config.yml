@@ -208,9 +208,23 @@ useHeadlineColor: false
 no_value_character: '.'
 
 reporting_status:
-    title: status.reporting_status
-    description: status.status_blurb
-    disaggregation_tabs: false
+  title: status.reporting_status
+  description: status.status_blurb
+  disaggregation_tabs: false
+  status_types:
+    - value: notstarted
+      label: status.exploring_data_sources
+      hide_on_goal_pages: false
+    - value: complete
+      label: status.reported_online
+      hide_on_goal_pages: false
+    - value: notapplicable
+      label: status.not_applicable
+      hide_on_goal_pages: false
+    - value: inprogress
+      lable: status.statistics_in_progress
+      hide_on_goal_pages: false
+
 
 hide_empty_metadata: true
 hide_single_unit: true
