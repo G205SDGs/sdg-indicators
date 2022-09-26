@@ -10,7 +10,7 @@
     {% endunless %}
 {% endif %}
 {% if show_reporting_status or has_tags %}
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px" aria-label="{{ page.t.indicator.tags }}">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="{{ page.t.indicator.tags }}">
     {%- if show_reporting_status -%}
         <li class="list-inline-item">
         <span class="visually-hidden">{{ page.t.indicator.status }}</span>
