@@ -7,17 +7,17 @@
 $goal-banner-backgroundColors: #E52B3D #DDA63A #4C9F38 #C42130 #FF3E24 #28BCE1 #FCC30B #A21942 #FD6925 #DD1367 #FD9C27 #BF8B2E #417D46 #0A96D8 #57BE2F #00689C #1F4A6A;
 $goal-banner-color: white;
 
-$status-backgroundColor-complete: #111111; //#5cb85c;
+$status-backgroundColor-complete: #5cb85c;
 $status-backgroundColor-inprogress: #f0ad4e;
 $status-backgroundColor-notstarted: #E27874;
 $status-backgroundColor-notapplicable: #B7B7B7;
 $status-backgroundColor-inner-notapplicable: #B7B7B7;
 
 
-$status-color-complete: black;
-$status-color-inprogress: black;
-$status-color-notstarted: black;
-$status-color-notapplicable: black;
+$status-color-complete: #111111;
+$status-color-inprogress: #111111;
+$status-color-notstarted: #111111;
+$status-color-notapplicable: #111111;
 
 $status-border-complete: none;
 $status-border-inprogress: none;
