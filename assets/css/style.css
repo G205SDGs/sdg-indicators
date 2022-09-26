@@ -1416,11 +1416,11 @@ body.contrast-high div#serieses {
   .status.complete {
     color: black;
     border: none;
-    background-color: #5cb85c;
-    background: #5cb85c; }
+    background-color: #111111;
+    background: #111111; }
     .status.complete .status-inner {
-      background-color: #5cb85c;
-      background: #5cb85c; }
+      background-color: #111111;
+      background: #111111; }
   .status.inprogress {
     color: black;
     border: none;
@@ -1704,11 +1704,11 @@ body.contrast-high #main-content .nav-tabs {
     .layout-reportingstatus #main-content .statuses > div .status.complete {
       color: black;
       border: none;
-      background-color: #5cb85c;
-      background: #5cb85c; }
+      background-color: #111111;
+      background: #111111; }
       .layout-reportingstatus #main-content .statuses > div .status.complete .status-inner {
-        background-color: #5cb85c;
-        background: #5cb85c; }
+        background-color: #111111;
+        background: #111111; }
     .layout-reportingstatus #main-content .statuses > div .status.inprogress {
       color: black;
       border: none;
@@ -1762,8 +1762,8 @@ body.contrast-high #main-content .nav-tabs {
     background-color: #f0ad4e;
     background: #f0ad4e; }
   .layout-reportingstatus #main-content .goal-stats .complete {
-    background-color: #5cb85c;
-    background: #5cb85c; }
+    background-color: #111111;
+    background: #111111; }
 .layout-reportingstatus #main-content .divider {
   height: 15px; }
 .layout-reportingstatus #main-content .goal {
