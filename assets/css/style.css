@@ -1385,7 +1385,7 @@ body.contrast-high div#serieses {
   color: white; }
 
 .progress-status .progress-status-image {
-  max-width: 100px; }
+  max-width: 136px; }
   .progress-status .progress-status-image img {
     max-width: 100%; }
 
@@ -1591,8 +1591,6 @@ body.contrast-high #main-content .nav-tabs {
   padding-top: 0px;
   padding-bottom: 15px; }
 
-.layout-goal .goal-page-heading {
-  margin-bottom: 14px; }
 .layout-goal .goal-page-target-number {
   min-width: 60px; }
   .layout-goal .goal-page-target-number h3 {
@@ -1604,7 +1602,7 @@ body.contrast-high #main-content .nav-tabs {
   margin-top: 0; }
 .layout-goal .goal-indicator {
   margin-top: 20px; }
-.layout-goal .goal-page-target-rule {
+.layout-goal .goal-page-target-rule, .layout-goal .goal-page-column-header-rule {
   border: 0;
   border-top: 0.1px solid #ccc;
   margin-bottom: 25px;
@@ -1629,7 +1627,7 @@ body.contrast-high #main-content .nav-tabs {
     min-width: 0; }
   .layout-goal .goal-page-target-number {
     min-width: 0; }
-  .layout-goal .goal-page-target-rule {
+  .layout-goal .goal-page-target-rule, .layout-goal .goal-page-column-header-rule {
     margin-left: 60px; } }
 .layout-goal .tags {
   margin-top: 10px; }
@@ -1639,6 +1637,12 @@ body.contrast-high #main-content .nav-tabs {
   .layout-goal .container .goal-details {
     float: none;
     width: 100%; } }
+@media only screen and (min-width: 992px) {
+  .layout-goal .goal-showing-progress .goal-page-target-name, .layout-goal .goal-showing-progress .goal-page-indicator-name {
+    padding-right: 40px; }
+  .layout-goal .goal-showing-progress .progress-column-header {
+    font-size: 16px;
+    margin-top: 20px; } }
 
 .layout-indicator #page-content {
   border-top: 1px solid #faebcc;
