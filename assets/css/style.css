@@ -1681,6 +1681,9 @@ body.contrast-high #main-content .nav-tabs {
   font-style: italic;
   color: #505A5F; }
 
+.layout-page #main-content h2 {
+  margin-top: 30px; }
+
 .layout-reportingstatus .reporting-status-description {
   margin-bottom: 25px; }
 .layout-reportingstatus #main-content .statuses strong {
@@ -2431,6 +2434,8 @@ body.contrast-high .success {
   width: 50%;
   max-width: 150px; }
 
+.layout-post #main-content h2 {
+  margin-top: 30px; }
 .layout-post .post-header {
   margin-bottom: 20px; }
 .layout-post .post-categories {
