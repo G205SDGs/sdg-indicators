@@ -13,60 +13,60 @@
  * a similarly named file for custom styles.
  */
 
-// /*#2.1 Navigation Buttons */
-//  @for $i from 1 through length($goal-banner-backgroundColors) {
-//    $background-c: nth($goal-banner-backgroundColors, $i);
-//    .goal-#{$i} {
-//      &.goal-banner {
-//        background-color: $background-c;
-//      }
-//      &.sup-goal-banner {
-//        height: 5px;
-//        background-color: lighten($background-c,10%);
-//        padding-top: 0px;
-//        padding-bottom: 0px;
-//      }
-//      &.sub-goal-banner {
-//        height: 5px;
-//        background-color: darken($background-c,10%);
-//        padding-top: 0px;
-//        padding-bottom: 0px;
-//      }
-//      &.navigation-btn {
-//        background-color: $background-c;
-//        color: white;
-//        height: 36px;
-//        border-color: transparent;
-//        margin-bottom: 10px;
-//        margin-top: 10px;
-//        padding-top: 6px;
-//        padding-bottom: 6px;
-//      }
-//      &.navigation-btn:hover {
-//        background-color: darken($background-c,10%);
-//      }
-//    }
-//  }
-//
-//  .goal-banner {
-//    h1, p {
-//      color: $goal-banner-color;
-//      @media only screen and (max-width: 600px) {
-//        font-size:4vw;
-//      }
-//      @media only screen and (max-width: 500px) {
-//        font-size:5vw;
-//      }
-//      @media only screen and (max-width: 400px) {
-//        font-size:6vw;
-//      }
-//      @media only screen and (max-width: 300px) {
-//        font-size:7vw;
-//      }
-//
-//    }
-//  }
-// /*#2.1*/
+/*#2.1 Navigation Buttons */
+ @for $i from 1 through length($goal-banner-backgroundColors) {
+   $background-c: nth($goal-banner-backgroundColors, $i);
+   .goal-#{$i} {
+     &.goal-banner {
+       background-color: $background-c;
+     }
+     &.sup-goal-banner {
+       height: 5px;
+       background-color: lighten($background-c,10%);
+       padding-top: 0px;
+       padding-bottom: 0px;
+     }
+     &.sub-goal-banner {
+       height: 5px;
+       background-color: darken($background-c,10%);
+       padding-top: 0px;
+       padding-bottom: 0px;
+     }
+     &.navigation-btn {
+       background-color: $background-c;
+       color: white;
+       height: 36px;
+       border-color: transparent;
+       margin-bottom: 10px;
+       margin-top: 10px;
+       padding-top: 6px;
+       padding-bottom: 6px;
+     }
+     &.navigation-btn:hover {
+       background-color: darken($background-c,10%);
+     }
+   }
+ }
+
+ .goal-banner {
+   h1, p {
+     color: $goal-banner-color;
+     @media only screen and (max-width: 600px) {
+       font-size:4vw;
+     }
+     @media only screen and (max-width: 500px) {
+       font-size:5vw;
+     }
+     @media only screen and (max-width: 400px) {
+       font-size:6vw;
+     }
+     @media only screen and (max-width: 300px) {
+       font-size:7vw;
+     }
+
+   }
+ }
+/*#2.1*/
 
 body{
   background: $backgroundColor;
