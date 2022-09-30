@@ -54,13 +54,12 @@
     </div>
   </div>
 
-
   <div class="container g-0">
     <div class="row">
-      <div class="col" style="padding-right: 0px;">
         <h2>{{ page.t.general.targets }}</h2>
+      <div class="col heading-goal-page">
       </div>
-      <div class="col" style="paddig-left: 0px;">
+      <div class="col heading-goal-page" >
         <h2>{{ page.t.general.indicators }}</h2>
       </div>
     </div>
@@ -70,11 +69,11 @@
       {% assign target = group.name | sdg_lookup %}
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">{{ target.number }}</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left">{{ target_range }}</div>
             </span>
-            <p>
+            <p class="postulate">
               {{ target.name }}
             </p>
           </div>
@@ -103,13 +102,13 @@
                 </span>
                 {{ indicator.placeholder }}
               {% else %}
-                <span class="indicator-card-number" >
-                  <div class="align-left">{{ indicator.number }}</div>
-                  <div class="align-right">{% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}</div>
-                </span>
-                <a href="{{ indicator.url }}" >
-                  {{ indicator.name }}
-                </a>
+              <span class="indicator-card-number" >
+                <div class="align-left">{{ indicator.number }}</div>
+                <div class="align-right" style= "color: black">{% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}</div>
+              </span>
+              <a class="indicator-link-goal-page" href="{{ indicator.url }}" >
+                {{ indicator.name }}
+              </a>
               {% endif %}
             </div>
           {% endfor %}
