@@ -3,12 +3,6 @@
 
 {% include components/goal/header.html %}
 
-{% if site.environment == 'staging' %}
-  {% assign baseurl = 'https://g205sdgs.github.io/sdg-indicators' %}
-{% else %}
-  {% assign baseurl = 'https://sdg-indikatoren.de' %}
-{% endif %}
-
 <div class="container">
   {% include components/goal/breadcrumbs.html %}
   {% if site.create_goals.previous_next_links %}
@@ -18,36 +12,35 @@
 
 <div id="main-content" class="container goal-indicators goal-{{ page.goal.number }} goal-by-target" role="main">
 
-
   {% include components/goal/goal-content.html content=content %}
 
-  {% if page.goal.number == '1' %}
+  {% if page.goal_number == '1' %}
     {% assign next_goal = '2' %}
     {% assign previous_goal = '17' %}
-  {% elsif page.goal.number == '17' %}
+  {% elsif page.goal_number == '17' %}
     {% assign next_goal = '1' %}
     {% assign previous_goal = '16' %}
   {% else %}
-    {% assign previous_goal = page.goal.number | minus: 1 %}
-    {% assign next_goal = page.goal.number | plus: 1 %}
+    {% assign previous_goal = page.goal_number | minus: 1 %}
+    {% assign next_goal = page.goal_number | plus: 1 %}
   {% endif %}
 
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col d-grid gap-2">
-        <a href="{{ baseurl }}/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+        <a href="{{ site.baseurl }}/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal_number }} navigation-btn text-nowrap" role="button">
           <b><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.t.general.prev_goal }}</b>
         </a>
       </div>
 
       <div class="col-md-auto">
-        <a href="https://sustainabledevelopment-deutschland.github.io/{{ language }}/{{ page.goal.number }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
-          <b class="btn-label d-none d-md-block">{{ page.t.general.target_link_dns }} {{ page.t.general.goal }} {{ page.goal.number }} </b><b class="btn-label d-block d-md-none">{{ page.t.general.goal }} {{ page.goal.number }} {{ page.t.general.national }}</b>
+        <a href="https://sustainabledevelopment-germany.github.io/{{ language }}/{{ page.goal_number }}" class="btn btn-primary btn-block goal-{{ page.goal_number }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
+          <b class="btn-label d-none d-md-block">{{ page.t.general.link_sdg_goal }} {{ page.goal_number }} </b><b class="btn-label d-block d-md-none">{{ page.t.general.goal }} {{ page.goal_number }} {{ page.t.general.national }}</b>
         </a>
       </div>
 
       <div class="col d-grid gap-2">
-        <a href="{{ baseurl }}/{{ language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+        <a href="{{ site.baseurl }}/{{ language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal_number }} navigation-btn text-nowrap" role="button">
           <b>{{ page.t.general.next_goal }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
         </a>
       </div>
@@ -56,25 +49,37 @@
 
   <div class="container g-0">
     <div class="row">
-        <h2>{{ page.t.general.targets }}</h2>
       <div class="col heading-goal-page">
+        <h2>{{ page.t.general.dns_target }}</h2>
       </div>
       <div class="col heading-goal-page" >
         <h2>{{ page.t.general.indicators }}</h2>
       </div>
     </div>
 
-    {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_number' %}
+    {% assign goal_indicators = page.indicators | where: 'goal_number', page.goal.number | group_by: 'target_id' %}
     {% for group in goal_indicators %}
-      {% assign target = group.name | sdg_lookup %}
+      {% assign target = group.name %}
+      {%- assign target_id_dashes = target | replace: ".", "-" -%}
+
+      {%- assign target_title_key = target | append: '-title' -%}
+      {%- assign target_title_key_dashes = target_id_dashes | append: '-title' -%}
+      {%- assign target_title = page.t.dns_targets[target_title_key_dashes] | default: t.dns_targets[target_title_key] -%}
+
+      {%- assign size = target | size | minus: 2 -%}
+      {%- assign range_id = target | slice: 0, size | replace: "-", "." -%}
+
+      {%- assign range_title_key = range_id  | append: '-title' -%}
+      {%- assign target_range = page.t.dns_ranges[ range_title_key ] -%}
+      {%- assign target = page.t.dns_targets[ target_title_key ] -%}
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
           <div class="row range-and-postulate">
             <span class="indicator-card-number">
-              <div class="align-left">{{ target_range }}</div>
+              {{ target_range }}
             </span>
             <p class="postulate">
-              {{ target.name }}
+              {{ target }}
             </p>
           </div>
         </div>
@@ -97,14 +102,13 @@
 
             <div class="row" style="margin-bottom: 25px;">
               {% if indicator.placeholder and indicator.placeholder != '' %}
-                <span class="indicator-card-number">
-                  {{ indicator.number }}
-                </span>
-                {{ indicator.placeholder }}
+              <span class="indicator-card-number">
+                {{ indicator.indicator_display }}
+              </span>
+              {{ indicator.placeholder }}
               {% else %}
               <span class="indicator-card-number" >
-                <div class="align-left">{{ indicator.number }}</div>
-                <div class="align-right" style= "color: black">{% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}</div>
+                {{ indicator.indicator_display }}
               </span>
               <a class="indicator-link-goal-page" href="{{ indicator.url }}" >
                 {{ indicator.name }}
