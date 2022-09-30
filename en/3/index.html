@@ -128,7 +128,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220930032704">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220930193010">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -151,12 +151,12 @@ layout-goal
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Beta","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_contacts.suggestions\">feedback</a>.","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
+<script>translations['header'] = {"alpha":"Beta","disclaimer":"This is a development website. We welcome your <a href=\"mailto:%email_contacts.suggestions\">feedback</a>.","internet_explorer_message":"We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.","internet_explorer_message_title":"This internet browser is no longer supported","skip_link":"Skip to main content","tag_line":"17 Goals to Transform our World"};</script>
 
 <a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0">Skip to main content</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title"></h2>
-    <p class="internet-explorer-message-body"></p>
+    <h2 class="internet-explorer-message-title">This internet browser is no longer supported</h2>
+    <p class="internet-explorer-message-body">We have detected that you are using Internet Explorer to visit this website. Internet Explorer is now being phased out by Microsoft. As a result, this website no longer supports any version of Internet Explorer. Some features on this site will not work. You should use a modern browser such as Edge, Chrome, Firefox, or Safari. If you have difficulty installing or accessing a different browser, please contact your IT support team.</p>
 </div>
 <div id="disclaimer">
     
@@ -341,13 +341,12 @@ data-event-label="high"
     </div>
   </div>
 
-
   <div class="container g-0">
     <div class="row">
-      <div class="col" style="padding-right: 0px;">
         <h2>Targets</h2>
+      <div class="col heading-goal-page">
       </div>
-      <div class="col" style="paddig-left: 0px;">
+      <div class="col heading-goal-page" >
         <h2>Indicators</h2>
       </div>
     </div>
@@ -357,11 +356,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.1</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               By 2030, reduce the global maternal mortality ratio to less than 70 per 100,000 live births
             </p>
           </div>
@@ -378,14 +377,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.1.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.1.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -399,10 +398,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-1-1" >
-                  Maternal mortality ratio
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-1-1" >
+                Maternal mortality ratio
+              </a>
               
             </div>
           
@@ -414,14 +413,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.1.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.1.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -435,10 +434,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-1-2" >
-                  Proportion of births attended by skilled health personnel
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-1-2" >
+                Proportion of births attended by skilled health personnel
+              </a>
               
             </div>
           
@@ -448,11 +447,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.2</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               By 2030, end preventable deaths of newborns and children under 5 years of age, with all countries aiming to reduce neonatal mortality to at least as low as 12 per 1,000 live births and under‐5 mortality to at least as low as 25 per 1,000 live births
             </p>
           </div>
@@ -469,14 +468,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.2.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.2.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -490,10 +489,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-2-1" >
-                  Under‑5 mortality rate
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-2-1" >
+                Under‑5 mortality rate
+              </a>
               
             </div>
           
@@ -505,14 +504,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.2.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.2.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -526,10 +525,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-2-2" >
-                  Neonatal mortality rate
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-2-2" >
+                Neonatal mortality rate
+              </a>
               
             </div>
           
@@ -539,11 +538,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.3</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               By 2030, end the epidemics of AIDS, tuberculosis, malaria and neglected tropical diseases and combat hepatitis, water-borne diseases and other communicable diseases
             </p>
           </div>
@@ -560,14 +559,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.3.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.3.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -581,10 +580,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-3-1" >
-                  Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-3-1" >
+                Number of new HIV infections per 1,000 uninfected population, by sex, age and key populations
+              </a>
               
             </div>
           
@@ -596,14 +595,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.3.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.3.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -617,10 +616,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-3-2" >
-                  Tuberculosis incidence per 100,000 population
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-3-2" >
+                Tuberculosis incidence per 100,000 population
+              </a>
               
             </div>
           
@@ -632,14 +631,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.3.3</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.3.3</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -653,10 +652,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-3-3" >
-                  Malaria incidence per 1,000 population
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-3-3" >
+                Malaria incidence per 1,000 population
+              </a>
               
             </div>
           
@@ -668,14 +667,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.3.4</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.3.4</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -689,10 +688,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-3-4" >
-                  Hepatitis B incidence per 100,000 population
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-3-4" >
+                Hepatitis B incidence per 100,000 population
+              </a>
               
             </div>
           
@@ -704,14 +703,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.3.5</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.3.5</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -725,10 +724,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-3-5" >
-                  Number of people requiring interventions against neglected tropical diseases
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-3-5" >
+                Number of people requiring interventions against neglected tropical diseases
+              </a>
               
             </div>
           
@@ -738,11 +737,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.4</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               By 2030, reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being
             </p>
           </div>
@@ -759,14 +758,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.4.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.4.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -780,10 +779,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-4-1" >
-                  Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-4-1" >
+                Mortality rate attributed to cardiovascular disease, cancer, diabetes or chronic respiratory disease
+              </a>
               
             </div>
           
@@ -795,14 +794,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.4.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.4.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -816,10 +815,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-4-2" >
-                  Suicide mortality rate
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-4-2" >
+                Suicide mortality rate
+              </a>
               
             </div>
           
@@ -829,11 +828,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.5</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Strengthen the prevention and treatment of substance abuse, including narcotic drug abuse and harmful use of alcohol
             </p>
           </div>
@@ -850,14 +849,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.5.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.5.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -871,10 +870,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-5-1" >
-                  Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-5-1" >
+                Coverage of treatment interventions (pharmacological, psychosocial and rehabilitation and aftercare services) for substance use disorders
+              </a>
               
             </div>
           
@@ -886,14 +885,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.5.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.5.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -907,10 +906,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-5-2" >
-                  Alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-5-2" >
+                Alcohol per capita consumption (aged 15 years and older) within a calendar year in litres of pure alcohol
+              </a>
               
             </div>
           
@@ -920,11 +919,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.6</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               By 2020, halve the number of global deaths and injuries from road traffic accidents
             </p>
           </div>
@@ -941,14 +940,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.6.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.6.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -962,10 +961,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-6-1" >
-                  Death rate due to road traffic injuries
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-6-1" >
+                Death rate due to road traffic injuries
+              </a>
               
             </div>
           
@@ -975,11 +974,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.7</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               By 2030, ensure universal access to sexual and reproductive health-care services, including for family planning, information and education, and the integration of reproductive health into national strategies and programmes
             </p>
           </div>
@@ -996,14 +995,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.7.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.7.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1017,10 +1016,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-7-1" >
-                  Proportion of women of reproductive age (aged 15-49 years) who have their need for family planning satisfied with modern methods
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-7-1" >
+                Proportion of women of reproductive age (aged 15-49 years) who have their need for family planning satisfied with modern methods
+              </a>
               
             </div>
           
@@ -1032,14 +1031,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.7.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.7.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1053,10 +1052,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-7-2" >
-                  Adolescent birth rate (aged 10-14 years; aged 15-19 years) per 1,000 women in that age group
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-7-2" >
+                Adolescent birth rate (aged 10-14 years; aged 15-19 years) per 1,000 women in that age group
+              </a>
               
             </div>
           
@@ -1066,11 +1065,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.8</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Achieve universal health coverage, including financial risk protection, access to quality essential health-care services and access to safe, effective, quality and affordable essential medicines and vaccines for all
             </p>
           </div>
@@ -1087,14 +1086,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.8.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.8.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1108,10 +1107,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-8-1" >
-                  Coverage of essential health services
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-8-1" >
+                Coverage of essential health services
+              </a>
               
             </div>
           
@@ -1123,14 +1122,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.8.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.8.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1144,10 +1143,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-8-2" >
-                  Proportion of population with large household expenditures on health as a share of total household expenditure or income
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-8-2" >
+                Proportion of population with large household expenditures on health as a share of total household expenditure or income
+              </a>
               
             </div>
           
@@ -1157,11 +1156,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.9</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               By 2030, substantially reduce the number of deaths and illnesses from hazardous chemicals and air, water and soil pollution and contamination
             </p>
           </div>
@@ -1178,50 +1177,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.9.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.9.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
-        <span class="visually-hidden"></span>
-        
-
-
-
-<span class="status inprogress">
-    <span class="status-inner">In progress</span>
-</span>
-
-
-        </li></ul>
-
-</div>
-                </span>
-                <a href="/sdg-indicators/en/3-9-1" >
-                  Mortality rate attributed to household and ambient air pollution
-                </a>
-              
-            </div>
-          
-
-            
-            
-            
-            
-
-            <div class="row" style="margin-bottom: 25px;">
-              
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.9.2</div>
-                  <div class="align-right">
-
-
-
-
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1235,10 +1198,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-9-2" >
-                  Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (exposure to unsafe Water, Sanitation and Hygiene for All (WASH) services)
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-9-1" >
+                Mortality rate attributed to household and ambient air pollution
+              </a>
               
             </div>
           
@@ -1250,14 +1213,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.9.3</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.9.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1271,10 +1234,46 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-9-3" >
-                  Mortality rate attributed to unintentional poisoning
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-9-2" >
+                Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (exposure to unsafe Water, Sanitation and Hygiene for All (WASH) services)
+              </a>
+              
+            </div>
+          
+
+            
+            
+            
+            
+
+            <div class="row" style="margin-bottom: 25px;">
+              
+              <span class="indicator-card-number" >
+                <div class="align-left">3.9.3</div>
+                <div class="align-right" style= "color: black">
+
+
+
+
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
+        <span class="visually-hidden"></span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Reported</span>
+</span>
+
+
+        </li></ul>
+
+</div>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-9-3" >
+                Mortality rate attributed to unintentional poisoning
+              </a>
               
             </div>
           
@@ -1284,11 +1283,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.a</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Strengthen the implementation of the W<small>ORLD</small> H<small>EALTH</small> O<small>RGANIZATION</small> F<small>RAMEWORK</small> C<small>ONVENTION ON</small> T<small>OBACCO</small> C<small>ONTROL</small> in all countries, as appropriate
             </p>
           </div>
@@ -1305,14 +1304,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.a.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.a.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1326,10 +1325,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-a-1" >
-                  Age-standardized prevalence of current tobacco use among persons aged 15 years and older
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-a-1" >
+                Age-standardized prevalence of current tobacco use among persons aged 15 years and older
+              </a>
               
             </div>
           
@@ -1339,11 +1338,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.b</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Support the research and development of vaccines and medicines for the communicable and non‐communicable diseases that primarily affect developing countries, provide access to affordable essential medicines and vaccines, in accordance with the D<small>OHA</small> D<small>ECLARATION ON THE</small> TRIPS A<small>GREEMENT AND</small> P<small>UBLIC</small> H<small>EALTH</small>, which affirms the right of developing countries to use to the full the provisions in the A<small>GREEMENT ON</small> T<small>RADE-</small>R<small>ELATED</small> A<small>SPECTS OF</small> I<small>NTELLECTUAL</small> P<small>ROPERTY</small> R<small>IGHTS</small> regarding flexibilities to protect public health, and, in particular, provide access to medicines for all
             </p>
           </div>
@@ -1360,14 +1359,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.b.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.b.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1381,10 +1380,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-b-1" >
-                  Proportion of the target population covered by all vaccines included in their national programme
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-b-1" >
+                Proportion of the target population covered by all vaccines included in their national programme
+              </a>
               
             </div>
           
@@ -1396,14 +1395,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.b.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.b.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1417,10 +1416,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-b-2" >
-                  Total net official development assistance to medical research and basic health sectors
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-b-2" >
+                Total net official development assistance to medical research and basic health sectors
+              </a>
               
             </div>
           
@@ -1432,14 +1431,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.b.3</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.b.3</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1453,10 +1452,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-b-3" >
-                  Proportion of health facilities that have a core set of relevant essential medicines available and affordable on a sustainable basis
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-b-3" >
+                Proportion of health facilities that have a core set of relevant essential medicines available and affordable on a sustainable basis
+              </a>
               
             </div>
           
@@ -1466,11 +1465,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.c</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Substantially increase health financing and the recruitment, development, training and retention of the health workforce in developing countries, especially in least developed countries and small island developing States
             </p>
           </div>
@@ -1487,14 +1486,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.c.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.c.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1508,10 +1507,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-c-1" >
-                  Health worker density and distribution
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-c-1" >
+                Health worker density and distribution
+              </a>
               
             </div>
           
@@ -1521,11 +1520,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">3.d</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Strengthen the capacity of all countries, in particular developing countries, for early warning, risk reduction and management of national and global health risks
             </p>
           </div>
@@ -1542,14 +1541,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.d.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.d.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1563,10 +1562,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-d-1" >
-                  International Health Regulations (IHR) capacity and health emergency preparedness
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-d-1" >
+                International Health Regulations (IHR) capacity and health emergency preparedness
+              </a>
               
             </div>
           
@@ -1578,14 +1577,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">3.d.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">3.d.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Field to display the indicator's reporting status"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1599,10 +1598,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/en/3-d-2" >
-                  Percentage of bloodstream infections due to selected antimicrobial-resistant organisms
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/en/3-d-2" >
+                Percentage of bloodstream infections due to selected antimicrobial-resistant organisms
+              </a>
               
             </div>
           
@@ -1675,12 +1674,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220930032704'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220930193010'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220930032704"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220930193010"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

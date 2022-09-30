@@ -128,7 +128,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220930032704">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20220930193010">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -151,12 +151,12 @@ layout-goal
 ">
 <!-- <div class="container"> -->
 
-<script>translations['header'] = {"alpha":"Beta-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_contacts.suggestions\">Kommentare</a>.","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
+<script>translations['header'] = {"alpha":"Beta-Version","disclaimer":"Diese Seite befindet sich im Entwicklungsstadium. Wir freuen uns über Ihre <a href=\"mailto:%email_contacts.suggestions\">Kommentare</a>.","internet_explorer_message":"Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari. Wenn Sie Schwierigkeiten haben, einen anderen Browser zu installieren oder darauf zuzugreifen, wenden Sie sich bitte an Ihr IT-Supportteam.","internet_explorer_message_title":"Dieser Internet-Browser wird nicht mehr unterstützt","skip_link":" Zum Hauptinhalt springen","tag_line":""};</script>
 
 <a class="sr-only-focusable" id="skiplink" href="#main-content" tabindex="0"> Zum Hauptinhalt springen</a>
 <div class="container internet-explorer-message">
-    <h2 class="internet-explorer-message-title"></h2>
-    <p class="internet-explorer-message-body"></p>
+    <h2 class="internet-explorer-message-title">Dieser Internet-Browser wird nicht mehr unterstützt</h2>
+    <p class="internet-explorer-message-body">Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari. Wenn Sie Schwierigkeiten haben, einen anderen Browser zu installieren oder darauf zuzugreifen, wenden Sie sich bitte an Ihr IT-Supportteam.</p>
 </div>
 <div id="disclaimer">
     
@@ -341,13 +341,12 @@ data-event-label="high"
     </div>
   </div>
 
-
   <div class="container g-0">
     <div class="row">
-      <div class="col" style="padding-right: 0px;">
         <h2>Unterziele</h2>
+      <div class="col heading-goal-page">
       </div>
-      <div class="col" style="paddig-left: 0px;">
+      <div class="col heading-goal-page" >
         <h2>Indikatoren</h2>
       </div>
     </div>
@@ -357,11 +356,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.1</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Bis 2030 nach und nach ein über dem nationalen Durchschnitt liegendes Einkommenswachstum der ärmsten 40 Prozent der Bevölkerung erreichen und aufrechterhalten
             </p>
           </div>
@@ -378,14 +377,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.1.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.1.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -399,10 +398,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-1-1" >
-                  Wachstumsraten der Haushaltsausgaben oder des Pro-Kopf-Einkommens bei den ärmsten 40 Prozent der Bevölkerung und der Gesamtbevölkerung
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-1-1" >
+                Wachstumsraten der Haushaltsausgaben oder des Pro-Kopf-Einkommens bei den ärmsten 40 Prozent der Bevölkerung und der Gesamtbevölkerung
+              </a>
               
             </div>
           
@@ -412,11 +411,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.2</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Bis 2030 alle Menschen unabhängig von Alter, Geschlecht, Behinderung, Rasse, Ethnizität, Herkunft, Religion oder wirtschaftlichem oder sonstigem Status zu Selbstbestimmung befähigen und ihre soziale, wirtschaftliche und politische Inklusion fördern
             </p>
           </div>
@@ -433,14 +432,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.2.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.2.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -454,10 +453,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-2-1" >
-                  Anteil der Bevölkerung, dessen Einkommen weniger als 50 Prozent des Medians beträgt, nach Geschlecht, Alter und Menschen mit Behinderungen
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-2-1" >
+                Anteil der Bevölkerung, dessen Einkommen weniger als 50 Prozent des Medians beträgt, nach Geschlecht, Alter und Menschen mit Behinderungen
+              </a>
               
             </div>
           
@@ -467,11 +466,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.3</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Chancengleichheit gewährleisten und Ungleichheit der Ergebnisse reduzieren, namentlich durch die Abschaffung diskriminierender Gesetze, Politiken und Praktiken und die Förderung geeigneter gesetzgeberischer, politischer und sonstiger Maßnahmen in dieser Hinsicht
             </p>
           </div>
@@ -488,14 +487,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.3.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.3.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -509,10 +508,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-3-1" >
-                  Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsnormen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-3-1" >
+                Anteil der Bevölkerung, der sich in den vorangegangenen 12 Monaten wegen eines nach den internationalen Menschenrechtsnormen verbotenen Diskriminierungsgrunds persönlich diskriminiert oder belästigt gefühlt hat
+              </a>
               
             </div>
           
@@ -522,11 +521,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.4</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Politische Maßnahmen beschließen, insbesondere fiskalische, lohnpolitische und den Sozialschutz betreffende Maßnahmen, und schrittweise größere Gleichheit erzielen
             </p>
           </div>
@@ -543,14 +542,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.4.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.4.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -564,10 +563,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-4-1" >
-                  Anteil des Arbeitseinkommens am BIP
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-4-1" >
+                Anteil des Arbeitseinkommens am BIP
+              </a>
               
             </div>
           
@@ -579,14 +578,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.4.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.4.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -600,10 +599,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-4-2" >
-                  Umverteilende Wirkung der Fiskalpolitik
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-4-2" >
+                Umverteilende Wirkung der Fiskalpolitik
+              </a>
               
             </div>
           
@@ -613,11 +612,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.5</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Die Regulierung und Überwachung der globalen Finanzmärkte und -institutionen verbessern und die Anwendung der einschlägigen Vorschriften verstärken
             </p>
           </div>
@@ -634,14 +633,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.5.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.5.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -655,10 +654,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-5-1" >
-                  Indikatoren zur Finanzstabilität
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-5-1" >
+                Indikatoren zur Finanzstabilität
+              </a>
               
             </div>
           
@@ -668,11 +667,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.6</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Eine bessere Vertretung und verstärkte Mitsprache der Entwicklungsländer bei der Entscheidungsfindung in den globalen internationalen Wirtschafts- und Finanzinstitutionen sicherstellen, um die Wirksamkeit, Glaubwürdigkeit, Rechenschaftslegung und Legitimation dieser Institutionen zu erhöhen
             </p>
           </div>
@@ -689,14 +688,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.6.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.6.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -710,10 +709,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-6-1" >
-                  Mitglieder- und Stimmrechtsanteil von Entwicklungsländern in internationalen Organisationen
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-6-1" >
+                Mitglieder- und Stimmrechtsanteil von Entwicklungsländern in internationalen Organisationen
+              </a>
               
             </div>
           
@@ -723,11 +722,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.7</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen erleichtern, unter anderem durch die Anwendung einer planvollen und gut gesteuerten Migrationspolitik
             </p>
           </div>
@@ -744,14 +743,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.7.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.7.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -765,10 +764,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-7-1" >
-                  Von Beschäftigten getragene Einstellungskosten im Verhältnis zum Monatseinkommen im Zielland
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-7-1" >
+                Von Beschäftigten getragene Einstellungskosten im Verhältnis zum Monatseinkommen im Zielland
+              </a>
               
             </div>
           
@@ -780,14 +779,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.7.2</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.7.2</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -801,10 +800,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-7-2" >
-                  Anzahl der Staaten mit einer Migrationspolitik, die eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen ermöglicht
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-7-2" >
+                Anzahl der Staaten mit einer Migrationspolitik, die eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen ermöglicht
+              </a>
               
             </div>
           
@@ -816,14 +815,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.7.3</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.7.3</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -837,10 +836,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-7-3" >
-                  Anzahl der Menschen, die im Laufe ihrer Migration zu einem internationalen Zielort gestorben oder verschwunden sind
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-7-3" >
+                Anzahl der Menschen, die im Laufe ihrer Migration zu einem internationalen Zielort gestorben oder verschwunden sind
+              </a>
               
             </div>
           
@@ -852,14 +851,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.7.4</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.7.4</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -873,10 +872,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-7-4" >
-                  Anteil der Flüchtlinge an der Bevölkerung, nach Herkunftsland
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-7-4" >
+                Anteil der Flüchtlinge an der Bevölkerung, nach Herkunftsland
+              </a>
               
             </div>
           
@@ -886,11 +885,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.a</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Den Grundsatz der besonderen und differenzierten Behandlung der Entwicklungsländer, insbesondere der am wenigsten entwickelten Länder, im Einklang mit den Übereinkünften der Welthandelsorganisation anwenden
             </p>
           </div>
@@ -907,14 +906,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.a.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.a.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -928,10 +927,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-a-1" >
-                  Anteil der Zolltarifpositionen, die auf Importe aus den am wenigsten entwickelten Ländern und Entwicklungsländern mit Zollfreiheit angewandt werden
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-a-1" >
+                Anteil der Zolltarifpositionen, die auf Importe aus den am wenigsten entwickelten Ländern und Entwicklungsländern mit Zollfreiheit angewandt werden
+              </a>
               
             </div>
           
@@ -941,11 +940,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.b</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Öffentliche Entwicklungshilfe und Finanzströme einschließlich ausländischer Direktinvestitionen in die Staaten fördern, in denen der Bedarf am größten ist, insbesondere in die am wenigsten entwickelten Länder, die afrikanischen Länder, die kleinen Inselentwicklungsländer und die Binnenentwicklungsländer, im Einklang mit ihren jeweiligen nationalen Plänen und Programmen
             </p>
           </div>
@@ -962,14 +961,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.b.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.b.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -983,10 +982,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-b-1" >
-                  Gesamte Finanzströme für Entwicklung, nach Nehmer- und Geberländern und Art des Zahlungsstroms (z. B. öffentliche Entwicklungszusammenarbeit (ODA), ausländische Direktinvestitionen und sonstige Finanzströme)
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-b-1" >
+                Gesamte Finanzströme für Entwicklung, nach Nehmer- und Geberländern und Art des Zahlungsstroms (z. B. öffentliche Entwicklungszusammenarbeit (ODA), ausländische Direktinvestitionen und sonstige Finanzströme)
+              </a>
               
             </div>
           
@@ -996,11 +995,11 @@ data-event-label="high"
       
       <div class="row">
         <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
-            <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              <div class="align-left">10.c</div>
+          <div class="row range-and-postulate">
+            <span class="indicator-card-number">
+              <div class="align-left"></div>
             </span>
-            <p>
+            <p class="postulate">
               Bis 2030 die Transaktionskosten für Heimatüberweisungen von Migranten auf weniger als 3 Prozent senken und Überweisungskorridore mit Kosten von über 5 Prozent beseitigen
             </p>
           </div>
@@ -1017,14 +1016,14 @@ data-event-label="high"
 
             <div class="row" style="margin-bottom: 25px;">
               
-                <span class="indicator-card-number" >
-                  <div class="align-left">10.c.1</div>
-                  <div class="align-right">
+              <span class="indicator-card-number" >
+                <div class="align-left">10.c.1</div>
+                <div class="align-right" style= "color: black">
 
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1038,10 +1037,10 @@ data-event-label="high"
         </li></ul>
 
 </div>
-                </span>
-                <a href="/sdg-indicators/10-c-1" >
-                  Rücküberweisungskosten im Verhältnis zum überwiesenen Betrag
-                </a>
+              </span>
+              <a class="indicator-link-goal-page" href="/sdg-indicators/10-c-1" >
+                Rücküberweisungskosten im Verhältnis zum überwiesenen Betrag
+              </a>
               
             </div>
           
@@ -1114,12 +1113,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20220930032704'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20220930193010'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20220930032704"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20220930193010"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

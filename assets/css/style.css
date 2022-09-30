@@ -2574,17 +2574,6 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   margin-bottom: 0px;
   padding-top: 10px; }
 
-.indicator-card-number {
-  display: block;
-  margin-bottom: 0.5rem;
-  margin-top: 0rem;
-  font-weight: bold;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  position: relative;
-  padding: 5px 0;
-  padding-bottom: 10px; }
-
 /**
  * custom.scss
  *
@@ -3130,3 +3119,25 @@ body {
   float: right;
   margin-top: 0px;
   margin-bottom: 0px; }
+
+.indicator-card-number {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  font-weight: bold;
+  padding-bottom: 0px;
+  padding-left: 0px; }
+
+.heading-goal-page {
+  padding-right: 0px;
+  padding-left: 0px; }
+
+.range-and-postulate {
+  margin-bottom: 25px;
+  padding-right: 15px; }
+
+.postulate {
+  padding-left: 0px;
+  font-style: italic; }
+
+.indicator-link-goal-page {
+  padding-left: 0px; }
