@@ -218,20 +218,20 @@ body{
 
 .align-left {
   float: left;
-  padding-bottom: 3px;
  }
 
 .align-right{
  float: right;
  margin-top: 0px;
  margin-bottom: 0px;
+ padding-bottom: 0px;
  }
  // for goal-by-target layout
 .indicator-card-number {
   border-bottom-width: 2px;
   border-bottom-style: solid;
   font-weight: bold;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   padding-left: 0px;
 }
 .heading-goal-page {
