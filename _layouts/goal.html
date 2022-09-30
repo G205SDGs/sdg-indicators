@@ -72,7 +72,7 @@
         <div class="col indicator-cards target goal-target no-gutters">
           <div class="row" style="margin-bottom: 25px; padding-right: 15px;">
             <span class="indicator-card-number"> <!-- style="padding-bottom: 8px;">-->
-              {{ target.number }}
+              <div class="align-left">{{ target.number }}</div>
             </span>
             <p>
               {{ target.name }}
@@ -98,17 +98,18 @@
 
             <div class="row" style="margin-bottom: 25px;">
               {% if indicator.placeholder and indicator.placeholder != '' %}
-              <span class="indicator-card-number">
-                {{ indicator.number }}
-              </span>
-              {{ indicator.placeholder }}
+                <span class="indicator-card-number">
+                  {{ indicator.number }}
+                </span>
+                {{ indicator.placeholder }}
               {% else %}
-              <span class="indicator-card-number" >
-                {{ indicator.number }}
-              </span>
-              <a href="{{ indicator.url }}" >
-                {{ indicator.name }}
-              </a>
+                <span class="indicator-card-number" >
+                  <div class="align-left">{{ indicator.number }}</div>
+                  <div class="align-right">{% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}</div>
+                </span>
+                <a href="{{ indicator.url }}" >
+                  {{ indicator.name }}
+                </a>
               {% endif %}
             </div>
           {% endfor %}

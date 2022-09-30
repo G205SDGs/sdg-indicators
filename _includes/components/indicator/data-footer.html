@@ -34,6 +34,11 @@
           <dd>{{ page.indicator.data_footnote }}</dd>
         {% endif %}
 
+        {% if page.indicator.data_footnotes and page.indicator.data_footnotes != '' %}
+          <dt><u>{{ page.t.indicator.footnotes }}</u>:</dt>
+          <dd><br>• {{ page.indicator.data_footnotes }}</dd>
+        {% endif %}
+
         {% if page.indicator.footer_fields and page.indicator.footer_fields.size > 0 %}
           {% for footer_field in page.indicator.footer_fields %}
           <dt
