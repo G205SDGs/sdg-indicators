@@ -1908,10 +1908,21 @@ body.contrast-high.layout-goals #main-content .goal-tiles .global-goals-extra-ic
   background-color: #f5f5f5;
   padding: 20px; }
   .layout-config-builder .config-widgets #button_holder {
-    text-align: right; }
-    .layout-config-builder .config-widgets #button_holder button {
-      margin-top: 0;
-      margin-bottom: 10px; }
+    margin-top: 10px; }
+    .layout-config-builder .config-widgets #button_holder .config-download-button {
+      margin-top: 10px;
+      margin-bottom: 0; }
+    .layout-config-builder .config-widgets #button_holder .config-repository-button {
+      margin-top: 10px; }
+    @media only screen and (min-width: 768px) {
+      .layout-config-builder .config-widgets #button_holder {
+        margin-top: 0;
+        text-align: right; }
+        .layout-config-builder .config-widgets #button_holder .config-repository-button {
+          margin-left: 10px; } }
+    @media only screen and (min-width: 1200px) {
+      .layout-config-builder .config-widgets #button_holder .config-download-button, .layout-config-builder .config-widgets #button_holder .config-repository-button {
+        margin-top: 0; } }
 .layout-config-builder .well {
   background: none;
   padding: 0;
@@ -2308,72 +2319,6 @@ body.contrast-high .warning {
 body.contrast-high .success {
   background-color: green; }
 
-.layout-config-builder i.fa {
-  color: #0b0c0c; }
-.layout-config-builder .btn-group .btn span {
-  color: #0b0c0c; }
-.layout-config-builder .config-widgets {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  background-color: #f5f5f5;
-  padding: 20px; }
-  .layout-config-builder .config-widgets #button_holder {
-    text-align: right; }
-    .layout-config-builder .config-widgets #button_holder button {
-      margin-top: 0;
-      margin-bottom: 10px; }
-.layout-config-builder .well {
-  background: none;
-  padding: 0;
-  border: none; }
-.layout-config-builder div[data-schemapath="root"] > .well > div > div > .row {
-  margin-bottom: 30px;
-  padding-bottom: 5px;
-  padding-top: 10px;
-  background-color: #f5f5f5; }
-.layout-config-builder div[data-schemapath="root"] > .well > div > div > .row > div[data-schematype] > div > label {
-  font-size: 24px;
-  font-weight: 700; }
-.layout-config-builder div[data-schemapath="root"] > .well > div > div > .row > div[data-schematype] > div a {
-  margin-top: 15px;
-  display: block;
-  margin-bottom: 15px; }
-.layout-config-builder div[data-schemapath="root"] > .je-header {
-  display: none !important; }
-.layout-config-builder .help-block {
-  color: #0b0c0c; }
-.layout-config-builder #no_results {
-  background-color: #f0ad4e;
-  padding: 20px;
-  margin: 20px; }
-.layout-config-builder .errormsg {
-  color: #a94442;
-  font-weight: bold; }
-.layout-config-builder .config-required {
-  color: #a94442; }
-.layout-config-builder .translation-link {
-  margin-top: 0;
-  margin-bottom: 20px; }
-.layout-config-builder.contrast-high .config-widgets {
-  background-color: black; }
-.layout-config-builder.contrast-high div[data-schemapath="root"] > .well > div > div > .row {
-  background-color: black; }
-.layout-config-builder.contrast-high .help-block {
-  color: white; }
-.layout-config-builder.contrast-high #no_results {
-  background-color: #FFDD00;
-  color: black; }
-.layout-config-builder.contrast-high .errormsg {
-  color: #a94442; }
-.layout-config-builder.contrast-high .config-required {
-  color: #a94442; }
-.layout-config-builder.contrast-high .editor-toolbar {
-  background-color: white;
-  opacity: 1;
-  border-bottom: 2px solid black; }
-.layout-config-builder.contrast-high .btn-group .btn span {
-  color: black; }
-
 .layout-data-editor .editor-wrapper {
   margin-top: 20px; }
 .layout-data-editor .config-widgets {
@@ -2382,13 +2327,20 @@ body.contrast-high .success {
   background-color: #f5f5f5;
   padding: 20px; }
   .layout-data-editor .config-widgets .data-download-buttons {
-    text-align: right; }
-    .layout-data-editor .config-widgets .data-download-buttons button {
-      margin-top: 0;
-      margin-bottom: 10px; }
+    margin-top: 10px; }
+    .layout-data-editor .config-widgets .data-download-buttons .config-download-button {
+      margin-top: 0; }
+    .layout-data-editor .config-widgets .data-download-buttons .config-repository-button {
+      margin-left: 10px; }
+    @media only screen and (min-width: 768px) {
+      .layout-data-editor .config-widgets .data-download-buttons {
+        margin-top: 0;
+        text-align: right; } }
   .layout-data-editor .config-widgets .data-grid-buttons label, .layout-data-editor .config-widgets .data-grid-buttons #add-column-name {
     float: left;
     margin-right: 10px; }
+  .layout-data-editor .config-widgets .data-grid-buttons #add-column-name {
+    margin-bottom: 10px; }
   .layout-data-editor .config-widgets .data-grid-buttons #add-column {
     margin-top: 0; }
 
