@@ -2021,6 +2021,9 @@ body.contrast-high.layout-goals #main-content .goal-tiles .global-goals-extra-ic
       border-color: #0b0c0c; }
     #main-content #map .leaflet-bar-timecontrol .timecontrol-slider .slider {
       border-color: #484f4f; }
+    #main-content #map .leaflet-bar-timecontrol .timecontrol-backward[disabled], #main-content #map .leaflet-bar-timecontrol .timecontrol-forward[disabled] {
+      opacity: 0.4;
+      cursor: default; }
     #main-content #map .leaflet-bar-timecontrol.leaflet-control-attribution {
       background: white; }
       #main-content #map .leaflet-bar-timecontrol.leaflet-control-attribution a {
