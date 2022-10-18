@@ -2278,23 +2278,62 @@ body.contrast-high #main-content #map .disaggregation-controls {
   .klaro .cookie-notice .cn-body .cm-btn.cn-decline {
     background: #f0ad4e;
     color: #0b0c0c; }
+.klaro .cookie-modal .cm-modal .cm-list-input:focus + label .cm-switch .slider {
+  outline: 3px solid #ffdd00;
+  box-shadow: 0 0 0 4px #0b0c0c; }
+.klaro .cookie-modal .cm-modal .cm-footer-buttons .cm-btn {
+  border-radius: 0; }
 
-body.contrast-high .cookie-notice .cn-body p span {
-  color: black; }
-body.contrast-high .cookie-notice .cn-body .cm-link {
-  color: black; }
-body.contrast-high .cookie-notice .cn-body strong {
-  text-transform: lowercase; }
-body.contrast-high .cookie-notice .cn-body .cn-changes {
-  text-decoration: none !important;
-  font-weight: bold; }
-body.contrast-high .cookie-notice .cn-body .cm-btn {
-  background: #eeeeee;
-  color: black; }
-  body.contrast-high .cookie-notice .cn-body .cm-btn.cm-btn-success {
-    background: #eeeeee; }
-  body.contrast-high .cookie-notice .cn-body .cm-btn.cn-decline {
-    background: #eeeeee; }
+body.contrast-high .cookie-modal .cm-modal {
+  border: 1px solid white !important;
+  background-color: black !important; }
+  body.contrast-high .cookie-modal .cm-modal span {
+    color: white; }
+    body.contrast-high .cookie-modal .cm-modal span.cm-required {
+      color: white !important; }
+  body.contrast-high .cookie-modal .cm-modal .cm-caret a span {
+    color: white !important; }
+  body.contrast-high .cookie-modal .cm-modal .cm-caret a:focus span {
+    color: black !important; }
+  body.contrast-high .cookie-modal .cm-modal .cm-list-label:focus span {
+    color: black !important; }
+  body.contrast-high .cookie-modal .cm-modal .cm-header .hide svg {
+    stroke: white; }
+  body.contrast-high .cookie-modal .cm-modal .cm-list-input + label .cm-switch .slider {
+    background-color: black !important;
+    border: 1px solid white !important; }
+    body.contrast-high .cookie-modal .cm-modal .cm-list-input + label .cm-switch .slider::before {
+      bottom: 3.5px; }
+  body.contrast-high .cookie-modal .cm-modal .cm-list-input:checked + label .cm-switch .slider {
+    background-color: white !important;
+    border: 1px solid transparent !important; }
+    body.contrast-high .cookie-modal .cm-modal .cm-list-input:checked + label .cm-switch .slider::before {
+      background-color: black !important; }
+  body.contrast-high .cookie-modal .cm-modal .cm-footer-buttons .cm-btn {
+    background-color: white !important;
+    color: black !important; }
+    body.contrast-high .cookie-modal .cm-modal .cm-footer-buttons .cm-btn:focus {
+      background-color: #FFDD00 !important; }
+body.contrast-high .cookie-notice {
+  border: 1px solid white;
+  background-color: black !important; }
+  body.contrast-high .cookie-notice .cn-body p span, body.contrast-high .cookie-notice .cn-body p {
+    color: white; }
+  body.contrast-high .cookie-notice .cn-body .cm-link {
+    color: #FFDD00; }
+  body.contrast-high .cookie-notice .cn-body strong {
+    text-transform: lowercase;
+    color: white !important; }
+  body.contrast-high .cookie-notice .cn-body .cn-changes {
+    text-decoration: none !important;
+    font-weight: bold; }
+  body.contrast-high .cookie-notice .cn-body .cm-btn {
+    background: #eeeeee;
+    color: black; }
+    body.contrast-high .cookie-notice .cn-body .cm-btn.cm-btn-success {
+      background: #eeeeee; }
+    body.contrast-high .cookie-notice .cn-body .cm-btn.cn-decline {
+      background: #eeeeee; }
 
 .danger {
   background-color: #E27874; }
