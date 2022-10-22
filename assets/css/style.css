@@ -1796,8 +1796,13 @@ body.contrast-high #main-content .nav-tabs {
   width: 115px;
   float: left;
   min-height: 1px; }
-  .layout-reportingstatus #main-content .frame > a:focus {
-    outline: 6px #ffdd00 solid !important; }
+  .layout-reportingstatus #main-content .frame > a {
+    display: block;
+    width: calc(100% - 15px); }
+    .layout-reportingstatus #main-content .frame > a:focus {
+      outline: 2px #0b0c0c solid !important; }
+      .layout-reportingstatus #main-content .frame > a:focus .goal-icon-image {
+        outline: 8px #ffdd00 solid !important; }
 .layout-reportingstatus #main-content .details {
   width: calc(100% - 125px);
   float: left; }
@@ -1973,6 +1978,11 @@ body.contrast-high.layout-goals #main-content .goal-tiles .global-goals-extra-ic
   opacity: 1;
   border-bottom: 2px solid black; }
 .layout-config-builder.contrast-high .btn-group .btn span {
+  color: black; }
+
+body.contrast-high.layout-config-builder .config-widgets {
+  background-color: black; }
+body.contrast-high.layout-config-builder .config-repository-button span {
   color: black; }
 
 #main-content #map {
@@ -2385,6 +2395,14 @@ body.contrast-high .success {
     margin-bottom: 10px; }
   .layout-data-editor .config-widgets .data-grid-buttons #add-column {
     margin-top: 0; }
+
+body.contrast-high.layout-data-editor .config-widgets {
+  background-color: black; }
+body.contrast-high.layout-data-editor .config-repository-button span {
+  color: black; }
+body.contrast-high.layout-data-editor .ag-root-wrapper, body.contrast-high.layout-data-editor .ag-root-wrapper .ag-header, body.contrast-high.layout-data-editor .ag-root-wrapper .ag-row {
+  background-color: black;
+  color: white; }
 
 .layout-news .post-listing {
   clear: both;
