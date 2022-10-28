@@ -5202,6 +5202,7 @@ var indicatorSearch = function() {
         if (opensdg.language != 'en' && lunr[opensdg.language]) {
           this.use(lunr[opensdg.language]);
         }
+        this.use(storeUnstemmed);
         this.ref('url');
         // Index the expected fields.
         this.field('title', getSearchFieldOptions('title'));
@@ -5305,9 +5306,13 @@ var indicatorSearch = function() {
   function getMatchedTerms(results) {
     var matchedTerms = {};
     results.forEach(function(result) {
-      Object.keys(result.matchData.metadata).forEach(function(matchedTerm) {
-        matchedTerms[matchedTerm] = true;
-      })
+      Object.keys(result.matchData.metadata).forEach(function(stemmedTerm) {
+        Object.keys(result.matchData.metadata[stemmedTerm]).forEach(function(fieldName) {
+          result.matchData.metadata[stemmedTerm][fieldName].unstemmed.forEach(function(unstemmedTerm) {
+            matchedTerms[unstemmedTerm] = true;
+          });
+        });
+      });
     });
     return Object.keys(matchedTerms);
   }
@@ -5328,6 +5333,19 @@ var indicatorSearch = function() {
   function escapeRegExp(str) {
     return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/gi, "\\$&");
   };
+
+  // Define a pipeline function that keeps the unstemmed word.
+  // See: https://github.com/olivernn/lunr.js/issues/287#issuecomment-454923675
+  function storeUnstemmed(builder) {
+    function pipelineFunction(token) {
+      token.metadata['unstemmed'] = token.toString();
+      return token;
+    };
+    lunr.Pipeline.registerFunction(pipelineFunction, 'storeUnstemmed');
+    var firstPipelineFunction = builder.pipeline._stack[0];
+    builder.pipeline.before(firstPipelineFunction, pipelineFunction);
+    builder.metadataWhitelist.push('unstemmed');
+  }
 };
 
 $(function() {

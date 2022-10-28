@@ -1681,6 +1681,26 @@ body.contrast-high #main-content .nav-tabs {
   font-style: italic;
   color: #505A5F; }
 
+.indicator.goal-banner .goal-tiles a {
+  display: block;
+  width: calc(100% - 3px);
+  margin-bottom: 3px; }
+.indicator.goal-banner .goal-tiles a:focus {
+  outline: 2px #0b0c0c solid !important; }
+  .indicator.goal-banner .goal-tiles a:focus .goal-icon-image {
+    outline: 8px #ffdd00 solid !important; }
+.indicator.goal-banner .goal-tiles img {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+body.contrast-high .indicator.goal-banner .goal-tiles img {
+  background-color: black !important; }
+  body.contrast-high .indicator.goal-banner .goal-tiles img:hover {
+    background-color: black !important;
+    box-shadow: 0px 0px 0px 5px #FFDD00; }
+
 .layout-page #main-content h2 {
   margin-top: 30px; }
 
