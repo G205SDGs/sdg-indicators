@@ -2062,7 +2062,11 @@ body.contrast-high.layout-config-builder .config-repository-button span {
     background-image: none;
     font-size: 20px; }
   #main-content #map .disaggregation-controls {
-    z-index: 801; }
+    z-index: 801;
+    margin-right: 10px; }
+    @media only screen and (min-width: 800px) {
+      #main-content #map .disaggregation-controls {
+        max-width: 250px; } }
     #main-content #map .disaggregation-controls .disaggregation-list {
       background: white;
       padding: 5px;
@@ -2084,7 +2088,8 @@ body.contrast-high.layout-config-builder .config-repository-button span {
         #main-content #map .disaggregation-controls .disaggregation-list .disaggregation-container .disaggregation-definition {
           flex: 0 1 auto;
           margin: 0px 0px 0px 0px;
-          order: 3; }
+          order: 3;
+          text-align: right; }
     #main-content #map .disaggregation-controls .disaggregation-button {
       background: white;
       padding: 5px;
