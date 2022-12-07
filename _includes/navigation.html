@@ -17,7 +17,7 @@
                       </a>
                       <ul class="submenu dropdown-menu">
                         {%- for double_dropdown_item in dropdown_item.dropdown -%}
-                          {%- assign double_dropdown_item_path = double_dropdown_item.path | t -%}
+                          {%- assign double_dropdown_item_path = double_dropdown_item.path -%}
                           <li><a class="dropdown-item" href="{% unless double_dropdown_item_path contains 'http' %}{{ page.baseurl }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
                         {%- endfor -%}
                       </ul>
