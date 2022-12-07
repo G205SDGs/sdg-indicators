@@ -1167,23 +1167,23 @@ opensdg.chartColors = function(indicatorId) {
   var customColorList = null;
 
   this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
-  this.goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
-                ['e5b735', '896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
-                ['4c9f38', '2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'],
-                ['c5192d', '760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'],
-                ['ff3a21', 'b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'],
-                ['26bde2', '167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'],
-                ['fcc30b', '977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'],
-                ['a21942', '610f27', 'c7758d', '610F28', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'],
-                ['fd6925', '973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'],
-                ['dd1367', '840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'd5358b', '580729', 'f1a0c2'],
-                ['fd9d24', '653e0e', 'fed7a7', 'b16d19', 'fdba65', 'b14a1e', 'fd976b', '000000', 'fed2bf'],
-                ['c9992d', '785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'],
-                ['3f7e44', '254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'],
-                ['0a97d9', '065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'],
-                ['56c02b', '337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'],
-                ['00689d', '00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'],
-                ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
+  this.goalColors = [['891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
+                ['896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
+                ['2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'],
+                ['760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'],
+                ['b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'],
+                ['167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'],
+                ['977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'],
+                ['610f27', 'c7758d', '610F28', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'],
+                ['973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'],
+                ['840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'd5358b', '580729', 'f1a0c2'],
+                ['653e0e', 'fed7a7', 'b16d19', 'fdba65', 'b14a1e', 'fd976b', '000000', 'fed2bf'],
+                ['785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'],
+                ['254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'],
+                ['065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'],
+                ['337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'],
+                ['00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'],
+                ['0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
   this.colorSets = {'classic':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdg':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
                   'goal': this.goalColors[this.goalNumber-1],
@@ -3074,7 +3074,7 @@ function getTimeSeriesAttributes(rows) {
     }
 
     var combinations = helpers.getCombinationData(this.selectedFields);
-    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps , this.errorBars);
+    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps);
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
 
     var datasetCountExceedsMax = false;
@@ -3415,12 +3415,13 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @param {Object} chartInfo
  * @return null
  */
-function updateHeadlineColor(contrast, chartInfo) {
+function updateHeadlineColor(contrast, chartInfo, indicatorId) {
+    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
         if (isHeadline) {
-            var newColor = getHeadlineColor(contrast);
+            var newColor = getHeadlineColor(contrast, goalNumber);
             firstDataset.backgroundColor = newColor;
             firstDataset.borderColor = newColor;
             firstDataset.pointBackgroundColor = newColor;
@@ -3433,8 +3434,16 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
-function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '#FFDD00' : '#b8b8b8';
+//Override: No Headline Color
+//function getHeadlineColor(contrast) {
+    //return isHighContrast(contrast) ? '#FFDD00' : '#b8b8b8';
+function getHeadlineColor(contrast, goalNumber) {
+
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
+  var headlineColor = headlineColors[goalNumber-1];
+  var htmlString = '' + headlineColor + '';
+  console.log("goalNumber: ", htmlString);
+    return isHighContrast(contrast) ? '#FFDD00' : htmlString;
 }
 
 /**
@@ -3466,7 +3475,7 @@ function setPlotEvents(chartInfo) {
     window.addEventListener('contrastChange', function (e) {
         var gridColor = getGridColor(e.detail);
         var tickColor = getTickColor(e.detail);
-        updateHeadlineColor(e.detail, VIEW._chartInstance);
+        updateHeadlineColor(e.detail, VIEW._chartInstance, chartInfo.indicatorId);
         updateGraphAnnotationColors(e.detail, VIEW._chartInstance);
         VIEW._chartInstance.options.scales.y.title.color = tickColor;
         VIEW._chartInstance.options.scales.x.title.color = tickColor;
@@ -3544,10 +3553,15 @@ function createPlot(chartInfo) {
     alterChartConfig(chartConfig, chartInfo);
     if (isHighContrast()) {
         updateGraphAnnotationColors('high', chartConfig);
-        updateHeadlineColor('high', chartConfig);
+        //Override: No headline color
+        //updateHeadlineColor('high', chartConfig);
+        updateHeadlineColor('high', chartConfig, chartInfo.indicatorId);
+
     }
     else {
-        updateHeadlineColor('default', chartConfig);
+      //Override: No headline color
+      //updateHeadlineColor('default', chartConfig);
+      updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
     }
     refreshChartLineWrapping(chartConfig);
 
@@ -3570,7 +3584,9 @@ function createPlot(chartInfo) {
     }
 
     updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
-    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    // Override: No headline color
+    //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig, chartInfo.indicatorId);
 
     if (chartInfo.selectedUnit) {
         updatedConfig.options.scales.y.title.text = translations.t(chartInfo.selectedUnit);
@@ -3620,6 +3636,7 @@ function generateChartLegend(chart) {
     text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
     _.each(chart.data.datasets, function (dataset) {
         text.push('<li>');
+        //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
         text.push('</span>');
@@ -3731,7 +3748,8 @@ function strToArray (str, limit) {
         adjustScaleRange: true,
         drawTime: 'afterDatasetsDraw',
         type: 'line',
-        backgroundColor: 'blue',
+        backgroundColor: '#383838',
+        borderColor: '#383838',
         xScaleID: 'x',
         yScaleID: 'y',
         xMin: 2,
@@ -3836,7 +3854,7 @@ opensdg.chartTypes.base = function(info) {
                             }
                             return line;
                           } else {
-                            return label + ': ' + alterDataDisplay(tooltipItem.formattedValue, tooltipItem.dataset, 'chart tooltip');
+                            return label + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip');
                           }
                         },
                         afterLabel: function(tooltipItem) {
@@ -5019,7 +5037,7 @@ var indicatorInit = function () {
                         tableColumnDefs: [
                             { maxCharCount: 25 }, // nowrap
                             { maxCharCount: 35, width: 200 },
-                            { maxCharCount: Infinity, width: 250 }
+                            { maxCharCount: Infinity, width: 300 }
                         ]
                     });
                     var controller = new indicatorController(model, view);

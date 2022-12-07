@@ -2611,6 +2611,27 @@ body.contrast-high.layout-search form input, body.contrast-high.layout-search fo
   margin-bottom: 0px;
   padding-top: 10px; }
 
+.indicator-card-number {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  font-weight: bold;
+  padding-bottom: 0px;
+  padding-left: 0px; }
+
+.heading-goal-page {
+  padding-right: 0px;
+  padding-left: 0px; }
+
+.range-and-postulate {
+  margin-bottom: 25px;
+  padding-right: 15px; }
+
+.postulate {
+  padding-left: 0px; }
+
+.indicator-link-goal-page {
+  padding-left: 0px; }
+
 /**
  * custom.scss
  *
@@ -3046,6 +3067,16 @@ body {
   background: white;
   padding-top: 15px; }
 
+#mapHead {
+  display: block;
+  font-size: 1.0em;
+  margin-top: 1.0em;
+  margin-bottom: 1.0em;
+  padding-left: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold; }
+
 .responsiveImg {
   width: 75%;
   display: block;
@@ -3119,7 +3150,13 @@ body {
         border-radius: 10px; }
 
 .chart-title {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 1.0rem; }
+
+.chart-subtitle {
+  margin-left: 20px;
+  text-align: center;
+  color: #777; }
 
 .dropdown-submenu {
   position: relative; }
@@ -3137,35 +3174,3 @@ body {
   left: 100%;
   margin-top: -1px;
   margin-left: 0px; }
-
-.align-left {
-  float: left;
-  padding-bottom: 2px; }
-
-.align-right {
-  float: right;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px; }
-
-.indicator-card-number {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  font-weight: bold;
-  padding-bottom: 8px;
-  padding-left: 0px; }
-
-.heading-goal-page {
-  padding-right: 0px;
-  padding-left: 0px; }
-
-.range-and-postulate {
-  margin-bottom: 25px;
-  padding-right: 15px; }
-
-.postulate {
-  padding-left: 0px;
-  font-style: italic; }
-
-.indicator-link-goal-page {
-  padding-left: 0px; }
