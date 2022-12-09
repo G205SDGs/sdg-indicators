@@ -3158,6 +3158,16 @@ body {
   text-align: center;
   color: #777; }
 
+.align-left {
+  float: left;
+  padding-bottom: 2px; }
+
+.align-right {
+  float: right;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px; }
+
 .dropdown-submenu {
   position: relative; }
 
