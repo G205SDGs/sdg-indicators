@@ -98,12 +98,15 @@
             <div class="row" style="margin-bottom: 25px;">
               {% if indicator.placeholder and indicator.placeholder != '' %}
               <span class="indicator-card-number">
-                {{ indicator.number }}
+                <div class="align-left">{{ indicator.number }}</div>
+                <div class="align-right">{% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}</div>
               </span>
               {{ indicator.placeholder }}
               {% else %}
               <span class="indicator-card-number" >
-                {{ indicator.number }}
+                <div class="align-left">{{ indicator.number }}</div>
+                <div class="align-right">{% include components/indicator/tags.html tags=indicator.tags reporting_status=true indicator=indicator %}</div>
+
               </span>
               <a class="indicator-link-goal-page" href="{{ indicator.url }}" >
                 {{ indicator.name }}
