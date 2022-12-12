@@ -3,31 +3,7 @@
   padding-top: 10px;
 }
 
-// for goal-by-target layout
-.indicator-card-number {
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  font-weight: bold;
-  padding-bottom: 0px;
-  padding-left: 0px;
-}
-.heading-goal-page {
-  padding-right: 0px;
-  padding-left: 0px;
-}
 
-.range-and-postulate {
-  margin-bottom: 25px;
-  padding-right: 15px;
-}
-
-.postulate {
-  padding-left: 0px;
-  //font-style: italic;
-}
-.indicator-link-goal-page {
-  padding-left: 0px;
-}
 
 
 /**
@@ -97,17 +73,7 @@ body{
   padding-top: 15px;
 }
 
-//---#2 TimeSeriesNameDisplayedInMaps---start--------------------------------------------------------------
-#mapHead {
-  display: block;
-  font-size: 1.0em;
-  margin-top: 1.0em;
-  margin-bottom: 1.0em;
-  padding-left: 10px;
-  margin-left: 0;
-  margin-right: 0;
-  font-weight: bold;
-}
+
 //---#2 TimeSeriesNameDisplayedInMaps---stop---------------------------------------------------------------
 
 .responsiveImg {
@@ -218,31 +184,13 @@ body{
 
 
 
-  // to center the chart-title
-  .chart-title {
-    //margin-left: 20px;
-   text-align: center;
-   margin-bottom: 1.0rem;
-  }
-
-  .chart-subtitle {
-   margin-left: 20px;
-   text-align: center;
-   color: #777
-  }
+//--- recenter chart title 25.8.21
+.chart-title {
+  //margin-left: 20px;
+ text-align: center
+}
 
 
-.align-left {
-  float: left;
-  padding-bottom: 2px;
- }
-
-.align-right{
- float: right;
- margin-top: 0px;
- margin-bottom: 0px;
- padding-bottom: 0px;
- }
 // for multiple levels of dropdowns
 .dropdown-submenu {
   position: relative;
@@ -263,4 +211,44 @@ body{
     left: 100%;
     margin-top: -1px;
     margin-left: 0px;
+}
+
+
+
+
+.align-left {
+  float: left;
+  padding-bottom: 2px;
+ }
+
+.align-right{
+ float: right;
+ margin-top: 0px;
+ margin-bottom: 0px;
+ padding-bottom: 0px;
+ }
+ // for goal-by-target layout
+.indicator-card-number {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  font-weight: bold;
+  padding-bottom: 8px;
+  padding-left: 0px;
+}
+.heading-goal-page {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.range-and-postulate {
+  margin-bottom: 25px;
+  padding-right: 15px;
+}
+
+.postulate {
+  padding-left: 0px;
+  font-style: italic;
+}
+.indicator-link-goal-page {
+  padding-left: 0px;
 }
