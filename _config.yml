@@ -157,7 +157,7 @@ menu:
             translation_key: menu.unites_states
   - path: /publications/
     translation_key: menu.publications
-  - path: https://sustainabledevelopment-deutschland.github.io
+  - path: https://dns-indikatoren.de
     translation_key: menu.linkToDnsPlatform
 
 

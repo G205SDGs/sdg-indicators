@@ -78,12 +78,13 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
  * @param {Object} chartInfo
  * @return null
  */
-function updateHeadlineColor(contrast, chartInfo) {
+function updateHeadlineColor(contrast, chartInfo, indicatorId) {
+    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
         if (isHeadline) {
-            var newColor = getHeadlineColor(contrast);
+            var newColor = getHeadlineColor(contrast, goalNumber);
             firstDataset.backgroundColor = newColor;
             firstDataset.borderColor = newColor;
             firstDataset.pointBackgroundColor = newColor;
@@ -96,8 +97,16 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
-function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
+//Override: No Headline Color
+//function getHeadlineColor(contrast) {
+    //return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : '{{ site.graph_color_headline | default: "#00006a" }}';
+function getHeadlineColor(contrast, goalNumber) {
+
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
+  var headlineColor = headlineColors[goalNumber-1];
+  var htmlString = '{{ "' + headlineColor + '" | default: "#00006a" }}';
+  console.log("goalNumber: ", htmlString);
+    return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : htmlString;
 }
 
 /**
@@ -129,7 +138,7 @@ function setPlotEvents(chartInfo) {
     window.addEventListener('contrastChange', function (e) {
         var gridColor = getGridColor(e.detail);
         var tickColor = getTickColor(e.detail);
-        updateHeadlineColor(e.detail, VIEW._chartInstance);
+        updateHeadlineColor(e.detail, VIEW._chartInstance, chartInfo.indicatorId);
         updateGraphAnnotationColors(e.detail, VIEW._chartInstance);
         VIEW._chartInstance.options.scales.y.title.color = tickColor;
         VIEW._chartInstance.options.scales.x.title.color = tickColor;
@@ -207,10 +216,15 @@ function createPlot(chartInfo) {
     alterChartConfig(chartConfig, chartInfo);
     if (isHighContrast()) {
         updateGraphAnnotationColors('high', chartConfig);
-        updateHeadlineColor('high', chartConfig);
+        //Override: No headline color
+        //updateHeadlineColor('high', chartConfig);
+        updateHeadlineColor('high', chartConfig, chartInfo.indicatorId);
+
     }
     else {
-        updateHeadlineColor('default', chartConfig);
+      //Override: No headline color
+      //updateHeadlineColor('default', chartConfig);
+      updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
     }
     refreshChartLineWrapping(chartConfig);
 
@@ -233,7 +247,9 @@ function createPlot(chartInfo) {
     }
 
     updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
-    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    // Override: No headline color
+    //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig, chartInfo.indicatorId);
 
     if (chartInfo.selectedUnit) {
         updatedConfig.options.scales.y.title.text = translations.t(chartInfo.selectedUnit);
@@ -283,6 +299,7 @@ function generateChartLegend(chart) {
     text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
     _.each(chart.data.datasets, function (dataset) {
         text.push('<li>');
+        //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
         text.push('</span>');

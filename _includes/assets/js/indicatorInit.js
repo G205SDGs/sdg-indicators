@@ -60,7 +60,7 @@ var indicatorInit = function () {
                         tableColumnDefs: [
                             { maxCharCount: 25 }, // nowrap
                             { maxCharCount: 35, width: 200 },
-                            { maxCharCount: Infinity, width: 250 }
+                            { maxCharCount: Infinity, width: 300 }
                         ]
                     });
                     var controller = new indicatorController(model, view);
