@@ -109,7 +109,7 @@ Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen
 
 ## Kontaktdaten des Verantwortlichen
 
-Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch dir [Präsidentin](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
+Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch die [Präsidentin](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
 
 ## Kontaktdaten des/der behördlichen Datenschutzbeauftragten
 
