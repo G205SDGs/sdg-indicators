@@ -119,13 +119,13 @@ As we value the trust you place in us, we will be pleased to answer any question
 Data Protection Commissioner at the Federal Statistical Office<br>
 D-65180 Wiesbaden<br>
 Phone: +49 (0)611 75-4449<br>
-E-mail:	[datenschutzbeauftragter@destatis.de](mailto:datenschutzbeauftragter@destatis.de)<br>
+E-mail:	[datenschutz@destatis.de](mailto:datenschutz@destatis.de)<br>
 
 ## General copyright
 
 The following applies to all standard publications of the Federal Statistical Office, either in printed or electronic form, and for the content of this website, including charts and downloadable products, unless additional or other information is given on the product/web page itself.
 
-© Statistisches Bundesamt (Destatis), 2022 <br>
+© Statistisches Bundesamt (Destatis), 2023 <br>
 Reproduction and distribution, also of parts, are permitted provided that the source is mentioned.
 
 This applies to any redistribution of texts, data and charts by third parties where the Federal Statistical Office is the copyright owner and holds exclusive publishing rights. Re-use is permitted both for commercial and non-commercial purposes. There are also no restrictions on distribution by electronic means, via the internet or in printed form. No express authorisation is required from the Federal Statistical Office. It is, however, required to provide a source note. Statistisches Bundesamt (Destatis) shall be named as the publisher in the list of references.
@@ -142,7 +142,7 @@ Source: Exact designation of reference (table, publication, edition, or, for web
 - <i>Sample source note for table from publication (downloadable product):</i><br>
 Source: Daten zur Energiepreisentwicklung – Lange Reihe von Januar 2000 bis November 2017, Tabelle 5.3.1 Erdgas – Indizes, Statistisches Bundesamt (Destatis), 2017<br><br>
 - <i>Sample source note for website extract:</i><br>
-Source: Number of deaths by chapters of the International Statistical Classification of Diseases and Related Health Problems (10th Revision) and by gender 2017, Statistisches Bundesamt (Destatis), 2022.<br>
+Source: Number of deaths by chapters of the International Statistical Classification of Diseases and Related Health Problems (10th Revision) and by gender 2017, Statistisches Bundesamt (Destatis), 2023.<br>
 http://www.destatis.de/EN/Themes/Society-Environment/Health/Causes-Death/_node.html<br><br>
 - <i>Example of supplements to the source note if the data are only used as the basis for the user’s own calculations or if the data are used to generate the user’s own graphs:
 Source: …; own calculation / …; own representationSource: …; own calculation / …; own representation</i><br>
