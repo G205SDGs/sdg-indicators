@@ -8,7 +8,7 @@ Dieses Impressum gilt auch für unseren [Twitter-Account](https://twitter.com/de
 
 ## Herausgeber
 
-<b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch den Präsidenten
+<b>Herausgeber</b> dieser Website ist das Statistische Bundesamt, Zweigstelle Bonn, vertreten durch die Präsidentin
 <br><br>
 <b>Rechtsform</b>: Obere Bundesbehörde im Geschäftsbereich des Bundesministeriums des Innern und für Heimat
 <br><br>
@@ -109,7 +109,7 @@ Liegt aus Ihrer Sicht ein Verstoß gegen die datenschutzrechtlichen Bestimmungen
 
 ## Kontaktdaten des Verantwortlichen
 
-Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch den [Präsidenten](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
+Statistisches Bundesamt,<br>Gustav-Stresemann-Ring 11,<br>65189 Wiesbaden,<br> vertreten durch dir [Präsidentin](https://www.destatis.de/DE/Ueber-uns/Leitung-Organisation/_inhalt.html#sprg240100).
 
 ## Kontaktdaten des/der behördlichen Datenschutzbeauftragten
 
@@ -118,13 +118,13 @@ Da uns Ihr Vertrauen wichtig ist, möchten wir Ihnen jederzeit Rede und Antwort 
 Datenschutzbeauftragte im Statistischen Bundesamt<br>
 65180 Wiesbaden<br>
 Telefon:	+49 (0)611 75-4449<br>
-E-Mail:	[datenschutzbeauftragter@destatis.de](mailto:datenschutzbeauftragter@destatis.de)
+E-Mail:	[datenschutz@destatis.de](mailto:datenschutz@destatis.de)
 
 ## Copyright allgemein
 
 Für die Standard-Veröffentlichungen des Statistischen Bundesamtes in gedruckter und elektronischer Form sowie für die Inhalte auf dieser Website einschließlich Grafiken sowie der zum Download bereitgestellten Produkte gilt, soweit bei dem jeweiligen Produkt/Internetseite keine ergänzenden oder anderslautenden Angaben ausgewiesen sind:
 
-© Statistisches Bundesamt (Destatis), 2022 <br>
+© Statistisches Bundesamt (Destatis), 2023 <br>
 Vervielfältigung und Verbreitung, auch auszugsweise, mit Quellennachweis gestattet.
 
 Diese Regelung gilt für jede Art der Weiterverbreitung von Texten, Daten und Grafiken durch Dritte, soweit das Statistische Bundesamt Inhaber des Urheberrechts ist und die alleinigen Herausgeberrechte besitzt. Die Weiterverwendung ist sowohl für nicht gewerbliche als auch gewerbliche Zwecke erlaubt. Auch die Verbreitungsform elektronisch, via Internet oder als Print ist nicht eingeschränkt. Es bedarf keiner ausdrücklichen Genehmigung durch unser Haus. Eine Quellenangabe ist jedoch erforderlich. Das Statistische Bundesamt (Destatis) ist als Herausgeber in den Quellennachweis aufzunehmen.
@@ -142,7 +142,7 @@ Quelle: Genaue Bezeichnung der Fundstelle (Tabelle, Publikation, Ausgabe bzw. be
 - <i>Beispiel für Tabelle aus Publikation (Download-Produkt):</i><br>
 Quelle: Daten zur Energiepreisentwicklung – Lange Reihe von Januar 2000 bis November 2017, Tabelle 5.3.1 Erdgas – Indizes, Statistisches Bundesamt (Destatis), 2017<br><br>
 - <i>Beispiel Internet-Auszug:</i><br>
-Quelle: Sterbefälle 2017 nach den 10 häufigsten Todesursachen der ICD-10, Statistisches Bundesamt (Destatis), 2022.<br>
+Quelle: Sterbefälle 2017 nach den 10 häufigsten Todesursachen der ICD-10, Statistisches Bundesamt (Destatis), 2023.<br>
 In http://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Gesundheit/Todesursachen/Tabellen/gestorbene_anzahl.html<br><br>
 - <i>Beispiel für die Zusätze zum Quellennachweis, wenn die Daten nur als Grundlage für eigene Berechnungen verwendet wurden oder Daten als Grundlage für die Erstellung eigener Graphiken dienen:</i><br>
 Quelle: …; eigene Berechnung / …; eigene Darstellung
