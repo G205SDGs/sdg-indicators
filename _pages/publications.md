@@ -11,6 +11,6 @@ layout: page
 <br><br>
 ## Berichte zum HLPF
 
-[Bericht der Bundesregierung zum High-Level Political Forum für Nachhaltige Entwicklung 2016 (nur auf Englisch verfügbar)](https://sdg-indikatoren.de//public/HLPF_Bericht.pdf)
+[Bericht der Bundesregierung zum High-Level Political Forum für Nachhaltige Entwicklung 2016 (nur auf Englisch verfügbar)](https://sdg-indikatoren.de//public/HLPF_Bericht_2016_en.pdf)
 <br><br>
-[Bericht der Bundesregierung zum High-Level Political Forum für Nachhaltige Entwicklung 2021 (nur auf Englisch verfügbar)](https://sdg-indikatoren.de//public/HLPF_Bericht_2021.pdf)
+[Bericht der Bundesregierung zum High-Level Political Forum für Nachhaltige Entwicklung 2021 ](https://sdg-indikatoren.de//public/HLPF_Bericht_2021_de.pdf)
