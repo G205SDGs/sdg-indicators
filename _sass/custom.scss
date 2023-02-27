@@ -184,10 +184,17 @@ body{
 
 
 
-//--- recenter chart title 25.8.21
+// to center the chart-title
 .chart-title {
   //margin-left: 20px;
- text-align: center
+ text-align: center;
+ margin-bottom: 1.0rem;
+}
+
+.chart-subtitle {
+ margin-left: 20px;
+ text-align: center;
+ color: #777
 }
 
 
