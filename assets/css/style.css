@@ -3119,7 +3119,13 @@ body {
         border-radius: 10px; }
 
 .chart-title {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 1.0rem; }
+
+.chart-subtitle {
+  margin-left: 20px;
+  text-align: center;
+  color: #777; }
 
 .dropdown-submenu {
   position: relative; }
