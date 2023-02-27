@@ -12,6 +12,6 @@ layout: page
 <br><br>
 ## HLPF Reports
 
-[Report of the German Federal Government to the High-Level Political Forum on Sustainable Development 2016](https://sdg-indikatoren.de//public/HLPF_Bericht.pdf)
+[Report of the German Federal Government to the High-Level Political Forum on Sustainable Development 2016](https://sdg-indikatoren.de//public/HLPF_Bericht_2016_en.pdf)
 <br><br>
-[Report of the German Federal Government to the High-Level Political Forum on Sustainable Development 2021](https://sdg-indikatoren.de//public/HLPF_Bericht_2021.pdf)
+[Report of the German Federal Government to the High-Level Political Forum on Sustainable Development 2021](https://sdg-indikatoren.de//public/HLPF_Bericht_2021_en.pdf)
