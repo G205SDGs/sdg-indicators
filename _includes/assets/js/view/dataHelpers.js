@@ -49,7 +49,7 @@ function alterDataDisplay(value, info, context) {
         altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
     }
     // Apply thousands seperator if needed
-    if (OPTIONS.thousandsSeparator){
+    if (OPTIONS.thousandsSeparator && precision <= 3){
         altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.thousandsSeparator);
     }
 
