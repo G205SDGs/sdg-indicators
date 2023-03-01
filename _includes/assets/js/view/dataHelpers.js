@@ -34,7 +34,7 @@ function alterDataDisplay(value, info, context) {
     // StepSize >= 1 --> 0 decimal places, Stepsize >= 0.1 --> 1 decimal place, StepSize >= 0.01 --> 2 decimal places ...
     if (context == 'chart y-axis tick' && VIEW._graphStepsize && VIEW.graphStepsize != 0 && VIEW.graphStepsize != '') {
       precision = Math.ceil(Math.log(1 / VIEW._graphStepsize.step) / Math.LN10);
-      if (precision < 0) {
+      if (precision <= 0) {
         precision = 0
       }
     }
