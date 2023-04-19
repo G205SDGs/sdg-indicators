@@ -14,6 +14,7 @@ A direct link to the homepage of the DNS online platform can be found at the top
 Both sets of indicators are structured according to the 17 goals of the United Nations 2030 Agenda. Accordingly, the icons and the colours chosen for the 17 goals (Fig. 1 and Fig. 2) which are used here and on the DNS online platform correspond to those of the United Nations. The icons are protected by copyright.
 
 <div class="container" style="padding-left: 0px;">
+<div class="row">
 <div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIcons.PNG" alt="Abbildung 1: SDG Icons" class="responsiveImg" style="width: 100%;">
 <small> Fig. 1: 17 SDG icons of the United Nations used on the <b>SDG online platform for Germany</b></small>
@@ -23,7 +24,7 @@ Both sets of indicators are structured according to the 17 goals of the United N
 <img src="https://nachhaltige-entwicklung-deutschland.github.io/open-sdg-site-starter//assets/img/about/en/sdgIconsInvert.PNG" alt="Abbildung 2: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
 <small> Fig. 2: 17 inverted SDG icons of the United Nations and the N in the circle of the German Sustainable Development Strategy used on the <b>DNS online platform</b></small>
 </div>
-
+</div>
 </div>
 
 ## Aim and background
