@@ -107,7 +107,7 @@ var translations = {
         
         Indicator 15.4.2 -
         
-        Mountain Green Cover Index - German Indicators For The UN Sustainable Development Goals
+        (a) Mountain Green Cover Index; and (b) proportion of degraded mountain land - German Indicators For The UN Sustainable Development Goals
     </title>
 
 
@@ -134,7 +134,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230420014431">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230420070126">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -383,7 +383,7 @@ data-event-label="high"
                         
                         Indicator 15.4.2
                         
-                        <span class="lead-copy">Mountain Green Cover Index</span>
+                        <span class="lead-copy">(a) Mountain Green Cover Index; and (b) proportion of degraded mountain land</span>
                     </h1>
                 </div>
             </div>
@@ -471,14 +471,14 @@ data-event-label="high"
   data-indicatorid='indicator_15-4-2'
   data-id="15-4-2"
   data-country="Germany"
-  data-charttitle="Montain Green Cover Index"
-  data-charttitles="null"
+  data-charttitle="a) Index der Grünbedeckung in Gebirgen und b) Anteil der degradierten Gebirgsfläche"
+  data-charttitles="[{&quot;series&quot;:&quot;(a) mountain green cover index&quot;,&quot;title&quot;:&quot;Montain Green Cover Index&quot;},{&quot;series&quot;:&quot;(b) proportion of degraded mountain area&quot;,&quot;title&quot;:&quot;Proportion of degraded mountain area&quot;}]"
   data-chartsubtitle=""
   data-chartsubtitles="null"
   data-measurementunit="Percentage"
   data-xaxislabel=""
   data-showdata="true"
-  data-graphtype="bar"
+  data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
@@ -492,10 +492,10 @@ data-event-label="high"
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;classification&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Class 3 areas (elavation 2500-3500 meters)&quot;,&quot;Class 4 areas (elavation 1500-2500 meters)&quot;,&quot;Class 5 areas (elavation 1000-1500 meters)&quot;,&quot;Class 6 areas (elavation 300-1000 meters)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Classification&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;(a) mountain green cover index&quot;,&quot;(b) proportion of degraded mountain area&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:2}]"
-  data-graphstepsize="[{&quot;step&quot;:10.0}]"
+  data-graphstepsize="[{&quot;series&quot;:&quot;(a) mountain green cover index&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;(a) mountain green cover index&quot;,&quot;step&quot;:0.02}]"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
@@ -533,7 +533,7 @@ data-event-label="high"
     
     <h3></h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Montain Green Cover Index</caption>
+      <caption>a) Index der Grünbedeckung in Gebirgen und b) Anteil der degradierten Gebirgsfläche</caption>
       <thead>
         
         
@@ -541,7 +541,11 @@ data-event-label="high"
         
         
         
-        <th scope="col" class="table-value">Value</th>
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col" class="table-value">Series</th>
         
         
       </thead>
@@ -554,7 +558,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">93.24</td>
+          <td>92.2</td>
+          
+          
+          
+          <td class="table-value">(a) mountain green cover index</td>
           
           
         </tr>
@@ -566,7 +574,59 @@ data-event-label="high"
           
           
           
-          <td class="table-value">93.11</td>
+          <td>92.15</td>
+          
+          
+          
+          <td class="table-value">(a) mountain green cover index</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td class="table-value">(b) proportion of degraded mountain area</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>0.05</td>
+          
+          
+          
+          <td class="table-value">(b) proportion of degraded mountain area</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td></td>
+          
+          
+          
+          <td class="table-value">(b) proportion of degraded mountain area</td>
           
           
         </tr>
@@ -579,7 +639,7 @@ data-event-label="high"
   
   <div id="datatableFooter">
     
-    <p>Data source: <a href="https://www.bkg.bund.de/EN/Home/home.html"> Federal Agency for Cartography and Geodesy </a></p>
+    <p>Data source: <a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a></p>
     
     
     <p>Geographic coverage: Germany</p>
@@ -697,9 +757,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Data source</u>:</dt>
+            <dt><u>Data sources</u>:</dt>
           
-          <dd><a href="https://www.bkg.bund.de/EN/Home/home.html"> Federal Agency for Cartography and Geodesy </a></dd>
+          <dd><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a>, <a href="https://www.bkg.bund.de/EN/Home/home.html"> Federal Agency for Cartography and Geodesy </a></dd>
         
 
         
@@ -782,9 +842,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Data source</u>:</dt>
+            <dt><u>Data sources</u>:</dt>
           
-          <dd><a href="https://www.bkg.bund.de/EN/Home/home.html"> Federal Agency for Cartography and Geodesy </a></dd>
+          <dd><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a>, <a href="https://www.bkg.bund.de/EN/Home/home.html"> Federal Agency for Cartography and Geodesy </a></dd>
         
 
         
@@ -914,12 +974,17 @@ data-event-label="Change to Sources tab"
       
       
       
+        
+          
+      
+      
+      
       
       <tr>
         <th scope="row">Time series available </th>
         <td>
           
-            <p>“Mountain Green Cover” Index</p>
+            <ul style="padding-left: 25px;"><li>(a) Mountain Green Cover Index</li> <li> (b) Proportion of degraded mountain area</li></ul>
 
           
         </td>
@@ -935,17 +1000,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
       
       <tr>
         <th scope="row">Comparability with the global metadata </th>
         <td>
           
-            <p>The time series is compliant with the global metadata.</p>
+            <p>The time series are compliant with the global metadata.</p>
 
           
         </td>
@@ -1255,7 +1315,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Indicator name </th>
         <td>
           
-            <p>Mountain Green Cover Index</p>
+            <p>(a) Mountain Green Cover Index; and (b) proportion of degraded mountain land</p>
 
           
         </td>
@@ -1557,6 +1617,8 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
+        <h4>Data source 1</h4>
+      
       <table class="table metadata-content">
   <tbody>
   
@@ -1615,7 +1677,7 @@ data-event-label="Change to Sources tab"
         <th scope="row"> </th>
         <td>
           
-            <p><a href="https://www.bkg.bund.de/EN/Home/home.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/bkg.png" alt="Logo bkg" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://www.destatis.de/EN"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/destatis.png" alt="Logo destatis" style="height:60px; width:148px" /></a></p>
 
           
         </td>
@@ -1631,7 +1693,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p><a href="https://www.bkg.bund.de/EN/Home/home.html"> Federal Agency for Cartography and Geodesy </a></p>
+            <p><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a></p>
 
           
         </td>
@@ -1657,13 +1719,33 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Data source </th>
+        <td>
           
-      
-      
-      
-        
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/EN/Themes/Society-Environment/Environment/Environmental-Economic-Accounting/ecosystem-account/_node.html" target="_blank">
+                Ecosystem Accounting <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
           
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
       
       
       
@@ -1931,6 +2013,402 @@ data-event-label="Change to Sources tab"
 
     </div>
     
+    
+    
+    <div class="col-md-6">
+      
+        <h4>Data source 2</h4>
+      
+      <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bkg.bund.de/EN/Home/home.html"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/bkg.png" alt="Logo bkg" style="height:60px; width:148px" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bkg.bund.de/EN/Home/home.html"> Federal Agency for Cartography and Geodesy </a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
   </div>
 
 
@@ -2032,12 +2510,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20230420014431'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20230420070126'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20230420014431"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20230420070126"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
