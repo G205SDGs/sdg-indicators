@@ -607,7 +607,7 @@
         },
         {
           "id": "5-3-2",
-          "title": "Anteil der Mädchen und Frauen im Alter von 15-49 Jahren, die Genitalverstümmelung/Beschneidung unterzogen wurden, nach Alter",
+          "title": "Anteil der Mädchen und Frauen im Alter von 15-49 Jahren, die einer Genitalverstümmelung unterzogen wurden, nach Alter",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/5-3-2",
@@ -1151,7 +1151,7 @@
         },
         {
           "id": "10-7-2",
-          "title": "Anzahl der Staaten mit einer Migrationspolitik, die eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen ermöglicht",
+          "title": "Anteil der Staaten mit einer Migrationspolitik, die eine geordnete, sichere, reguläre und verantwortungsvolle Migration und Mobilität von Menschen ermöglicht",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/10-7-2",
@@ -1407,7 +1407,7 @@
         },
         {
           "id": "12-7-1",
-          "title": "Umsetzungsgrad der Politikkonzepte und Aktionspläne für eine nachhaltige öffentliche Beschaffung",
+          "title": "Anzahl der Staaten, die Politikkonzepte und Aktionspläne für eine nachhaltige öffentliche Beschaffung umsetzen",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/12-7-1",
@@ -1443,7 +1443,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/12-c-1",
-          "status": "inprogress"
+          "status": "complete"
         }]
     }
   },

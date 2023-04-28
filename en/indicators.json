@@ -607,7 +607,7 @@
         },
         {
           "id": "5-3-2",
-          "title": "Proportion of girls and women aged 15-49 years who have undergone female genital mutilation/ cutting, by age",
+          "title": "Proportion of girls and women aged 15-49 years who have undergone female genital mutilation, by age",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/5-3-2",
@@ -1151,7 +1151,7 @@
         },
         {
           "id": "10-7-2",
-          "title": "Number of countries with migration policies that facilitate orderly, safe, regular and responsible migration and mobility of people",
+          "title": "Proportion of countries with migration policies that facilitate orderly, safe, regular and responsible migration and mobility of people",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/10-7-2",
@@ -1407,7 +1407,7 @@
         },
         {
           "id": "12-7-1",
-          "title": "Degree of sustainable public procurement policies and action plan implementation",
+          "title": "Number of countries implementing sustainable public procurement policies and action plans",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/12-7-1",
@@ -1443,7 +1443,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/12-c-1",
-          "status": "inprogress"
+          "status": "complete"
         }]
     }
   },
