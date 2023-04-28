@@ -3772,6 +3772,12 @@ opensdg.chartTypes.base = function(info) {
             labels: info.labels,
         },
         options: {
+            layout: {
+              padding: {
+                top: 5
+              }
+            },
+            clip: false,
             responsive: true,
             maintainAspectRatio: false,
             spanGaps: true,
@@ -3874,7 +3880,7 @@ opensdg.chartTypes.base = function(info) {
                                 line = line.concat(label[i] + ' ');
                               }
                             };
-                            re.push(line.slice(0, -1) + ': ' + alterDataDisplay(tooltipItem.formattedValue, tooltipItem.dataset, 'chart tooltip'));
+                            re.push(line.slice(0, -1) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip'));
                             re.shift();
                           }
                           return re;
@@ -3952,7 +3958,7 @@ opensdg.chartTypes.base = function(info) {
                 annotation.mode = 'horizontal';
             }
             // Provide the obscure scaleID properties on user's behalf.
-            if (!annotation.scaleID && annotation.type === 'line' && annotation.preset !== 'error_bar') {
+            if (!annotation.scaleID && annotation.type === 'line' && annotation.preset !== 'error_bar' && annotation.preset !== 'target_point' && annotation.preset !== 'target_label') {
                 if (annotation.mode === 'horizontal') {
                     annotation.scaleID = 'y';
                 }
@@ -3960,10 +3966,10 @@ opensdg.chartTypes.base = function(info) {
                     annotation.scaleID = 'x';
                 }
             }
-            if (!annotation.xScaleID && annotation.type === 'box') {
+            if (!annotation.xScaleID && (annotation.type === 'box' || annotation.type === 'point')) {
                 annotation.xScaleID = 'x';
             }
-            if (!annotation.yScaleID && annotation.type === 'box') {
+            if (!annotation.yScaleID && (annotation.type === 'box' || annotation.type === 'point')) {
                 annotation.yScaleID = 'y';
             }
             // Provide the "enabled" label property on the user's behalf.
