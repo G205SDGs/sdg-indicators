@@ -10,7 +10,7 @@ layout: page
 
 ## Überprüfung der Zielerreichung
 
-Die Statistische Kommission der Vereinten Nationen wurde beauftragt, gemeinsam mit den nationalen Statistischen Ämtern globale Indikatoren für die Unterziele zu entwickeln. Die dafür eingesetzte “Inter-Agency and Expert Group on SDG Indicators” ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/2020-comprev/UNSC-proposal/)) hat ein Indikatorenset vorgelegt und kontinuierlich weiterentwickelt. Die IAEG-SDGs setzt sich aus statistischen Ämtern einiger Mitgliedstaaten der Vereinten Nationen zusammen, darunter das Statistische Bundesamt in Vertretung für Deutschland.
+Die Statistische Kommission der Vereinten Nationen wurde beauftragt, gemeinsam mit den nationalen Statistischen Ämtern globale Indikatoren für die Unterziele zu entwickeln. Die dafür eingesetzte “Inter-agency and Expert Group on SDG Indicators” ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/2020-comprev/UNSC-proposal/)) hat ein Indikatorenset vorgelegt und kontinuierlich weiterentwickelt. Die IAEG-SDGs setzt sich aus statistischen Ämtern einiger Mitgliedstaaten der Vereinten Nationen zusammen, darunter das Statistische Bundesamt in Vertretung für Deutschland.
 
 ## Nationale Berichterstattung zur nachhaltigen Entwicklung in Deutschland
 
