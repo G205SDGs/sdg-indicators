@@ -11,7 +11,7 @@ layout: page
 
 ## Monitoring goal achievement
 
-The United Nations Statistical Commission was mandated to develop global indicators for the targets together with the national statistical offices. The Inter-Agency and Expert Group on SDG Indicators ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/2020-comprev/UNSC-proposal/)) established for this purpose presented a set of indicators and has continuously refined it. The IAEG-SDGs is composed of statistical offices of some Member States of the United Nations, including the Federal Statistical Office representing Germany.
+The United Nations Statistical Commission was mandated to develop global indicators for the targets together with the national statistical offices. The Inter-agency and Expert Group on SDG Indicators ([IAEG-SDGs](https://unstats.un.org/sdgs/iaeg-sdgs/2020-comprev/UNSC-proposal/)) established for this purpose presented a set of indicators and has continuously refined it. The IAEG-SDGs is composed of statistical offices of some Member States of the United Nations, including the Federal Statistical Office representing Germany.
 
 
 ## National reporting on sustainable development in Germany
