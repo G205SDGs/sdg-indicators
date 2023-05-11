@@ -3175,3 +3175,14 @@ body {
 
 .indicator-link-goal-page {
   padding-left: 0px; }
+
+.container_frontpage {
+  display: grid;
+  grid-template-columns: 95px 1fr;
+  column-gap: 10px; }
+
+.download-icon {
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 290%;
+  color: #b90e0a; }

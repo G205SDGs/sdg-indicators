@@ -134,7 +134,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230511014549">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230511074742">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -551,7 +551,8 @@ data-event-label="Change to Sources tab"
                 
                 The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodical explanations for the indicator - the so-called global metadata.<br><br>Here, national time series that fit the global metadata best as well as their comparability with the global metadata are presented. Please find further methodical and country-specific information in the related national metadata.
             </p>
-            <table class="table metadata-content">
+            
+<table class="table metadata-content">
   <tbody>
   
   
@@ -841,7 +842,8 @@ data-event-label="Change to Sources tab"
     <div>
         <article>
             <p>This tab provides relevant information on the SDG indicators - such as the political target, the primary responsible organisation (custodian agency) and a link to the global metadata. The <a href="https://unstats.un.org/sdgs/metadata/" target=”_blank”>global metadata</a> is provided by the Uited Nations Statistics Division.</p>
-            <table class="table metadata-content">
+            
+<table class="table metadata-content">
   <tbody>
   
   
@@ -929,10 +931,18 @@ data-event-label="Change to Sources tab"
             
             
             
+
             
-              <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-12-0a-01.pdf" target="_blank">
-                Metadata on this indicator <span class="visuallyhidden">opens in a new window</span>
-              </a>
+            
+            
+            
+
+            
+              
+                <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-12-0a-01.pdf" target="_blank" onclick="return confirm_alert('', 'En');">
+                  Metadata on this indicator <span class="visuallyhidden">opens in a new window</span>
+                </a>
+              
             
 
           
@@ -1267,12 +1277,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20230511014549'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20230511074742'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20230511014549"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20230511074742"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
