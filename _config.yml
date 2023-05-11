@@ -42,23 +42,9 @@ frontpage_goals_grid:
     description: frontpage.instructions
 
 frontpage_cards:
-    -
-      # This controls the color of the line at the top of the card.
-      rule_color: orange
-      # This sets the title of the card.
+    - rule_color: orange
       title: frontpage.download_all
-      # This sets the content of the card. Markdown is supported. Note that all
-      # internal links should be relative to the frontpage. For example, instead
-      # of [link](/path) you should use [link](path).
-      #content: |
-      #  * List item
-      #  * List item with [link](https://example.com)
-      # This displays any file in the `_includes` folder.
       include: components/download-all-data.html
-      # This controls the text for a call-to-action button.
-      #button_label: My button text
-      # This controls the URL the button links to.
-      #button_link: https://example.com
 
 analytics:
   ga_prod: ''
