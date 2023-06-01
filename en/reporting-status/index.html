@@ -129,7 +129,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230601022951">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230601103106">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -194,13 +194,13 @@ layout-reportingstatus
                     About us
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/about_platform/">SDG&nbsponline&nbspplatform</a>
+    <a class="dropdown-item" href="/sdg-indicators/en/platform/">SDG&nbsponline&nbspplatform</a>
 </li>
 <li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/about_navigation/">Navigation</a>
+    <a class="dropdown-item" href="/sdg-indicators/en/navigation/">Navigation</a>
 </li>
 <li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/about_guidance/">Technical instructions</a>
+    <a class="dropdown-item" href="/sdg-indicators/en/guidance/">Technical instructions</a>
 </li>
 </ul>
           </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -216,7 +216,7 @@ layout-reportingstatus
                       <a class="dropdown-item dropdown-toggle" href="#">
                           Open SDG platforms of other countries
                       </a>
-                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenia</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Faroe Islands</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Lao PDR</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">South korea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">United Kingdom</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">United States</a></li></ul>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenia</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Faroe Islands</a></li><li><a class="dropdown-item" href="https://odd-dashboard.cd/">Democratic Republic of the Congo</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Lao PDR</a></li><li><a class="dropdown-item" href="https://montestat.github.io/site/">Montenegro</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a></li><li><a class="dropdown-item" href="https://sdg.tuik.gov.tr/">Turkey</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">South korea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">United Kingdom</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">United States</a></li></ul>
                     </li></ul>
           </li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/en/publications/">Publications</a>
@@ -354,33 +354,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
             
             <div>
-                <span class="status notstarted"><span class="status-inner">26</span></span><strong>Not available</strong><span class="value">10%</span>
+                <span class="status complete"><span class="status-inner">206</span></span><strong>Reported</strong><span class="value">83%</span>
             </div>
             
             
             <div>
-                <span class="status complete"><span class="status-inner">206</span></span><strong>Reported</strong><span class="value">83%</span>
+                <span class="status inprogress"><span class="status-inner">6</span></span><strong>In progress</strong><span class="value">2%</span>
+            </div>
+            
+            
+            <div>
+                <span class="status notstarted"><span class="status-inner">26</span></span><strong>Not available</strong><span class="value">10%</span>
             </div>
             
             
             <div>
                 <span class="status notapplicable"><span class="status-inner">10</span></span><strong>Not applicable</strong><span class="value">4%</span>
             </div>
-            
-            
-            <div>
-                <span class="status inprogress"><span class="status-inner">6</span></span><strong></strong><span class="value">2%</span>
-            </div>
             <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-            
-            
-            
-            
-            <span class="notstarted" style="width:10.483870967741936%" title="Not available: 10%"></span>
-            
             
             
             
@@ -391,13 +385,19 @@ data-event-label="Change reporting status view to un_designated_tier"
             
             
             
+            <span class="inprogress" style="width:2.4193548387096775%" title="In progress: 2%"></span>
+            
+            
+            
+            
+            
+            <span class="notstarted" style="width:10.483870967741936%" title="Not available: 10%"></span>
+            
+            
+            
+            
+            
             <span class="notapplicable" style="width:4.032258064516129%" title="Not applicable: 4%"></span>
-            
-            
-            
-            
-            
-            <span class="inprogress" style="width:2.4193548387096775%" title=": 2%"></span>
             </div>
     </div>
     <br style="clear:both;">
@@ -418,33 +418,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">4</span></span><strong>Not available</strong><span class="value">31%</span>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported</strong><span class="value">69%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported</strong><span class="value">69%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">4</span></span><strong>Not available</strong><span class="value">31%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:30.76923076923077%" title="Not available: 31%"></span>
-                
                 
                 
                 
@@ -455,13 +449,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:30.76923076923077%" title="Not available: 31%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -481,33 +481,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">7%</span>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Reported</strong><span class="value">93%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">13</span></span><strong>Reported</strong><span class="value">93%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">7%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
-                
                 
                 
                 
@@ -518,13 +512,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -544,33 +544,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Not available</strong><span class="value">7%</span>
+                    <span class="status complete"><span class="status-inner">26</span></span><strong>Reported</strong><span class="value">93%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">26</span></span><strong>Reported</strong><span class="value">93%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Not available</strong><span class="value">7%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
-                
                 
                 
                 
@@ -581,13 +575,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -607,33 +607,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">25%</span>
+                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported</strong><span class="value">75%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">9</span></span><strong>Reported</strong><span class="value">75%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">25%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:25.0%" title="Not available: 25%"></span>
-                
                 
                 
                 
@@ -644,13 +638,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:25.0%" title="Not available: 25%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -670,33 +670,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">7%</span>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Reported</strong><span class="value">93%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">13</span></span><strong>Reported</strong><span class="value">93%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">7%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
-                
                 
                 
                 
@@ -707,13 +701,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -733,33 +733,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported</strong><span class="value">100%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported</strong><span class="value">100%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
-                
                 
                 
                 
@@ -770,13 +764,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -796,33 +796,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
+                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported</strong><span class="value">67%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">4</span></span><strong>Reported</strong><span class="value">67%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">2</span></span><strong>Not applicable</strong><span class="value">33%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
-                
                 
                 
                 
@@ -833,13 +827,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:33.33333333333333%" title="Not applicable: 33%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -859,33 +859,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">6%</span>
+                    <span class="status complete"><span class="status-inner">15</span></span><strong>Reported</strong><span class="value">94%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">15</span></span><strong>Reported</strong><span class="value">94%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">6%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:6.25%" title="Not available: 6%"></span>
-                
                 
                 
                 
@@ -896,13 +890,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:6.25%" title="Not available: 6%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -922,33 +922,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">8%</span>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported</strong><span class="value">92%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported</strong><span class="value">92%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">8%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:8.333333333333332%" title="Not available: 8%"></span>
-                
                 
                 
                 
@@ -959,13 +953,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:8.333333333333332%" title="Not available: 8%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -985,33 +985,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Not available</strong><span class="value">14%</span>
+                    <span class="status complete"><span class="status-inner">10</span></span><strong>Reported</strong><span class="value">71%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">10</span></span><strong>Reported</strong><span class="value">71%</span>
+                    <span class="status inprogress"><span class="status-inner">1</span></span><strong>In progress</strong><span class="value">7%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">2</span></span><strong>Not available</strong><span class="value">14%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">7%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">1</span></span><strong></strong><span class="value">7%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:14.285714285714285%" title="Not available: 14%"></span>
-                
                 
                 
                 
@@ -1022,13 +1016,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:7.142857142857142%" title="In progress: 7%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:14.285714285714285%" title="Not available: 14%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:7.142857142857142%" title="Not applicable: 7%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:7.142857142857142%" title=": 7%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1048,33 +1048,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">20%</span>
+                    <span class="status complete"><span class="status-inner">12</span></span><strong>Reported</strong><span class="value">80%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">12</span></span><strong>Reported</strong><span class="value">80%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">20%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:20.0%" title="Not available: 20%"></span>
-                
                 
                 
                 
@@ -1085,13 +1079,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:20.0%" title="Not available: 20%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1111,33 +1111,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
+                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported</strong><span class="value">85%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">11</span></span><strong>Reported</strong><span class="value">85%</span>
+                    <span class="status inprogress"><span class="status-inner">1</span></span><strong>In progress</strong><span class="value">8%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">8%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">1</span></span><strong></strong><span class="value">8%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
-                
                 
                 
                 
@@ -1148,13 +1142,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:7.692307692307693%" title="In progress: 8%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:7.692307692307693%" title="Not applicable: 8%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:7.692307692307693%" title=": 8%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1174,33 +1174,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">13%</span>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Reported</strong><span class="value">75%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">6</span></span><strong>Reported</strong><span class="value">75%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">13%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">13%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:12.5%" title="Not available: 13%"></span>
-                
                 
                 
                 
@@ -1211,13 +1205,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:12.5%" title="Not available: 13%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:12.5%" title="Not applicable: 13%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1237,33 +1237,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
+                    <span class="status complete"><span class="status-inner">6</span></span><strong>Reported</strong><span class="value">60%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">6</span></span><strong>Reported</strong><span class="value">60%</span>
+                    <span class="status inprogress"><span class="status-inner">3</span></span><strong>In progress</strong><span class="value">30%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">10%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">3</span></span><strong></strong><span class="value">30%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
-                
                 
                 
                 
@@ -1274,13 +1268,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:30.0%" title="In progress: 30%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:10.0%" title="Not applicable: 10%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:30.0%" title=": 30%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1300,33 +1300,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">7%</span>
+                    <span class="status complete"><span class="status-inner">13</span></span><strong>Reported</strong><span class="value">93%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">13</span></span><strong>Reported</strong><span class="value">93%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">7%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
-                
                 
                 
                 
@@ -1337,13 +1331,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:7.142857142857142%" title="Not available: 7%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1363,33 +1363,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">13%</span>
+                    <span class="status complete"><span class="status-inner">20</span></span><strong>Reported</strong><span class="value">83%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">20</span></span><strong>Reported</strong><span class="value">83%</span>
+                    <span class="status inprogress"><span class="status-inner">0</span></span><strong>In progress</strong><span class="value">0%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">13%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">4%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:12.5%" title="Not available: 13%"></span>
-                
                 
                 
                 
@@ -1400,13 +1394,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:0.0%" title="In progress: 0%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:12.5%" title="Not available: 13%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:4.166666666666666%" title="Not applicable: 4%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1426,33 +1426,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                 
                 <div>
-                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">13%</span>
+                    <span class="status complete"><span class="status-inner">17</span></span><strong>Reported</strong><span class="value">71%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">17</span></span><strong>Reported</strong><span class="value">71%</span>
+                    <span class="status inprogress"><span class="status-inner">1</span></span><strong>In progress</strong><span class="value">4%</span>
+                </div>
+                
+                
+                <div>
+                    <span class="status notstarted"><span class="status-inner">3</span></span><strong>Not available</strong><span class="value">13%</span>
                 </div>
                 
                 
                 <div>
                     <span class="status notapplicable"><span class="status-inner">3</span></span><strong>Not applicable</strong><span class="value">13%</span>
                 </div>
-                
-                
-                <div>
-                    <span class="status inprogress"><span class="status-inner">1</span></span><strong></strong><span class="value">4%</span>
-                </div>
                 <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:12.5%" title="Not available: 13%"></span>
-                
                 
                 
                 
@@ -1463,13 +1457,19 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
+                <span class="inprogress" style="width:4.166666666666666%" title="In progress: 4%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:12.5%" title="Not available: 13%"></span>
+                
+                
+                
+                
+                
                 <span class="notapplicable" style="width:12.5%" title="Not applicable: 13%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:4.166666666666666%" title=": 4%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1491,33 +1491,27 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
             
             <div>
-                <span class="status notstarted"><span class="status-inner">26</span></span><strong>Not available</strong><span class="value">10%</span>
+                <span class="status complete"><span class="status-inner">206</span></span><strong>Reported</strong><span class="value">83%</span>
             </div>
             
             
             <div>
-                <span class="status complete"><span class="status-inner">206</span></span><strong>Reported</strong><span class="value">83%</span>
+                <span class="status inprogress"><span class="status-inner">6</span></span><strong>In progress</strong><span class="value">2%</span>
+            </div>
+            
+            
+            <div>
+                <span class="status notstarted"><span class="status-inner">26</span></span><strong>Not available</strong><span class="value">10%</span>
             </div>
             
             
             <div>
                 <span class="status notapplicable"><span class="status-inner">10</span></span><strong>Not applicable</strong><span class="value">4%</span>
             </div>
-            
-            
-            <div>
-                <span class="status inprogress"><span class="status-inner">6</span></span><strong></strong><span class="value">2%</span>
-            </div>
             <br style="clear:both;">
             </div>
         </div>
         <div class="goal-stats">
-            
-            
-            
-            
-            <span class="notstarted" style="width:10.483870967741936%" title="Not available: 10%"></span>
-            
             
             
             
@@ -1528,13 +1522,19 @@ data-event-label="Change reporting status view to un_designated_tier"
             
             
             
+            <span class="inprogress" style="width:2.4193548387096775%" title="In progress: 2%"></span>
+            
+            
+            
+            
+            
+            <span class="notstarted" style="width:10.483870967741936%" title="Not available: 10%"></span>
+            
+            
+            
+            
+            
             <span class="notapplicable" style="width:4.032258064516129%" title="Not applicable: 4%"></span>
-            
-            
-            
-            
-            
-            <span class="inprogress" style="width:2.4193548387096775%" title=": 2%"></span>
             </div>
     </div>
     <br style="clear:both;">
@@ -1543,9 +1543,9 @@ data-event-label="Change reporting status view to un_designated_tier"
       
 <h2>Status by Tier category</h2><div class="goal details reporting-status-item">
         <h3 class="status-goal">
-            <span class="status-field"><a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/" title="Click here for more information on the UN tier classification."  target="_blank">Tier I/II</a></span>
+            <span class="status-field"><a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/" title="Click here for more information on the UN tier classification."  target="_blank">Tier I</a></span>
         </h3>
-        <span class="total">6
+        <span class="total">2
             
                 indicators
             
@@ -1554,23 +1554,23 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                     
                     <div>
-                        <span class="status notstarted"><span class="status-inner">1</span></span><strong>Not available</strong><span class="value">17%</span>
+                        <span class="status complete"><span class="status-inner">1</span></span><strong>Reported</strong><span class="value">50%</span>
                     </div>
                     
                     
                     <div>
-                        <span class="status complete"><span class="status-inner">5</span></span><strong>Reported</strong><span class="value">83%</span>
+                        <span class="status inprogress"><span class="status-inner">1</span></span><strong>In progress</strong><span class="value">50%</span>
+                    </div>
+                    
+                    
+                    <div>
+                        <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
                     </div>
                     
                     
                     <div>
                         <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                     </div>
-                    
-                    
-                    <div>
-                        <span class="status inprogress"><span class="status-inner">0</span></span><strong></strong><span class="value">0%</span>
-                    </div>
                     <br style="clear:both;">
             </div>
         </div>
@@ -1579,85 +1579,25 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
-                <span class="notstarted" style="width:16.666666666666664%" title="Not available: 17%"></span>
+                <span class="complete" style="width:50.0%" title="Reported: 50%"></span>
                 
                 
                 
                 
                 
-                <span class="complete" style="width:83.33333333333334%" title="Reported: 83%"></span>
+                <span class="inprogress" style="width:50.0%" title="In progress: 50%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
                 
                 
                 
                 
                 
                 <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:0.0%" title=": 0%"></span>
-                </div>
-        <div class="divider"></div>
-    </div>
-    <br style="clear:both;"><div class="goal details reporting-status-item">
-        <h3 class="status-goal">
-            <span class="status-field"><a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/" title="Click here for more information on the UN tier classification."  target="_blank">Tier I</a></span>
-        </h3>
-        <span class="total">157
-            
-                indicators
-            
-        </span>
-        <div class="summary">
-            <div class="statuses">
-                    
-                    <div>
-                        <span class="status notstarted"><span class="status-inner">13</span></span><strong>Not available</strong><span class="value">8%</span>
-                    </div>
-                    
-                    
-                    <div>
-                        <span class="status complete"><span class="status-inner">132</span></span><strong>Reported</strong><span class="value">84%</span>
-                    </div>
-                    
-                    
-                    <div>
-                        <span class="status notapplicable"><span class="status-inner">9</span></span><strong>Not applicable</strong><span class="value">6%</span>
-                    </div>
-                    
-                    
-                    <div>
-                        <span class="status inprogress"><span class="status-inner">3</span></span><strong></strong><span class="value">2%</span>
-                    </div>
-                    <br style="clear:both;">
-            </div>
-        </div>
-        <div class="goal-stats">
-                
-                
-                
-                
-                <span class="notstarted" style="width:8.280254777070063%" title="Not available: 8%"></span>
-                
-                
-                
-                
-                
-                <span class="complete" style="width:84.07643312101911%" title="Reported: 84%"></span>
-                
-                
-                
-                
-                
-                <span class="notapplicable" style="width:5.732484076433121%" title="Not applicable: 6%"></span>
-                
-                
-                
-                
-                
-                <span class="inprogress" style="width:1.910828025477707%" title=": 2%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1665,7 +1605,7 @@ data-event-label="Change reporting status view to un_designated_tier"
         <h3 class="status-goal">
             <span class="status-field"><a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/" title="Click here for more information on the UN tier classification."  target="_blank">Tier II</a></span>
         </h3>
-        <span class="total">85
+        <span class="total">4
             
                 indicators
             
@@ -1674,22 +1614,22 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                     
                     <div>
-                        <span class="status notstarted"><span class="status-inner">12</span></span><strong>Not available</strong><span class="value">14%</span>
+                        <span class="status complete"><span class="status-inner">2</span></span><strong>Reported</strong><span class="value">50%</span>
                     </div>
                     
                     
                     <div>
-                        <span class="status complete"><span class="status-inner">69</span></span><strong>Reported</strong><span class="value">81%</span>
+                        <span class="status inprogress"><span class="status-inner">2</span></span><strong>In progress</strong><span class="value">50%</span>
                     </div>
                     
                     
                     <div>
-                        <span class="status notapplicable"><span class="status-inner">1</span></span><strong>Not applicable</strong><span class="value">1%</span>
+                        <span class="status notstarted"><span class="status-inner">0</span></span><strong>Not available</strong><span class="value">0%</span>
                     </div>
                     
                     
                     <div>
-                        <span class="status inprogress"><span class="status-inner">3</span></span><strong></strong><span class="value">4%</span>
+                        <span class="status notapplicable"><span class="status-inner">0</span></span><strong>Not applicable</strong><span class="value">0%</span>
                     </div>
                     <br style="clear:both;">
             </div>
@@ -1699,25 +1639,85 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
-                <span class="notstarted" style="width:14.11764705882353%" title="Not available: 14%"></span>
+                <span class="complete" style="width:50.0%" title="Reported: 50%"></span>
                 
                 
                 
                 
                 
-                <span class="complete" style="width:81.17647058823529%" title="Reported: 81%"></span>
+                <span class="inprogress" style="width:50.0%" title="In progress: 50%"></span>
                 
                 
                 
                 
                 
-                <span class="notapplicable" style="width:1.1764705882352942%" title="Not applicable: 1%"></span>
+                <span class="notstarted" style="width:0.0%" title="Not available: 0%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:3.529411764705882%" title=": 4%"></span>
+                <span class="notapplicable" style="width:0.0%" title="Not applicable: 0%"></span>
+                </div>
+        <div class="divider"></div>
+    </div>
+    <br style="clear:both;"><div class="goal details reporting-status-item">
+        <h3 class="status-goal">
+            <span class="status-field">status.not_specified</span>
+        </h3>
+        <span class="total">242
+            
+                indicators
+            
+        </span>
+        <div class="summary">
+            <div class="statuses">
+                    
+                    <div>
+                        <span class="status complete"><span class="status-inner">203</span></span><strong>Reported</strong><span class="value">84%</span>
+                    </div>
+                    
+                    
+                    <div>
+                        <span class="status inprogress"><span class="status-inner">3</span></span><strong>In progress</strong><span class="value">1%</span>
+                    </div>
+                    
+                    
+                    <div>
+                        <span class="status notstarted"><span class="status-inner">26</span></span><strong>Not available</strong><span class="value">11%</span>
+                    </div>
+                    
+                    
+                    <div>
+                        <span class="status notapplicable"><span class="status-inner">10</span></span><strong>Not applicable</strong><span class="value">4%</span>
+                    </div>
+                    <br style="clear:both;">
+            </div>
+        </div>
+        <div class="goal-stats">
+                
+                
+                
+                
+                <span class="complete" style="width:83.88429752066116%" title="Reported: 84%"></span>
+                
+                
+                
+                
+                
+                <span class="inprogress" style="width:1.2396694214876034%" title="In progress: 1%"></span>
+                
+                
+                
+                
+                
+                <span class="notstarted" style="width:10.743801652892563%" title="Not available: 11%"></span>
+                
+                
+                
+                
+                
+                <span class="notapplicable" style="width:4.132231404958678%" title="Not applicable: 4%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1733,6 +1733,7 @@ data-event-label="Change reporting status view to un_designated_tier"
   </div>
   <a href="#top"></a>
 </div>
+
 <footer role="contentinfo">
     <div class="container">
         <div class="row">
@@ -1740,27 +1741,33 @@ data-event-label="Change reporting status view to un_designated_tier"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Site built using Open SDG</a>
+                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('open-sdg', 'En');">
+                              Site built using Open SDG
+                            </a>
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:sdg-indicators@destatis.de" target="_blank">Contact us</a>
-                            
-                        </li>
+                              
+                                
+                                  <a href="mailto:sdg-indicators@destatis.de">Contact us</a>
+                                
+                              
+                          </li>
                         <li>
-                            
-                            <a href="https://twitter.com/destatis?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                            
-                        </li>
+                              
+                                
+                                  <a href="https://twitter.com/destatis?lang=en" target="_blank" onclick="return confirm_alert('', 'En');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                                
+                              
+                          </li>
                         <li>
-                            <a href="/sdg-indicators/en/faq/">FAQs</a>
-                            
-                        </li>
+                              <a href="/sdg-indicators/en/faq/ ">FAQs</a>
+                              
+                          </li>
                         <li>
-                            <a href="/sdg-indicators/en/imprint/">Legal Notice</a>
-                            
-                        </li>
+                              <a href="/sdg-indicators/en/imprint/ ">Legal Notice</a>
+                              
+                          </li>
                         
                         
                         </ul>
@@ -1797,12 +1804,12 @@ data-event-label="Change reporting status view to un_designated_tier"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20230601022951'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20230601103106'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20230601022951"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20230601103106"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -1810,3 +1817,4 @@ data-event-label="Change reporting status view to un_designated_tier"
 
 </body>
 </html>
+
