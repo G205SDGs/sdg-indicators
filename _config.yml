@@ -27,12 +27,20 @@ logos:
     src: assets/img/en/SDG_logo.png
     alt: To main menu
 
+date_formats:
+  - type: standard
+    language: de
+    format: "%d.%m.%Y"
+  - type: standard
+    language: en
+    format: "%b %d, %Y"
+
 # Automatically create indicator pages, goal pages,
 # and some other required pages.
 create_indicators:
   layout: indicator
 create_goals:
-  layout: goal-with-progress
+  layout: goal-by-target
   previous_next_links: false
 
 create_pages: true
@@ -103,11 +111,11 @@ menu:
     translation_key: menu.reporting_status
   - translation_key: menu.about
     dropdown:
-      - path: /about_platform/
+      - path: /platform/
         translation_key: menu.about_platform
-      - path: /about_navigation/
+      - path: /navigation/
         translation_key: menu.about_navigation
-      - path: /about_guidance/
+      - path: /guidance/
         translation_key: menu.about_guidance
   - translation_key: menu.facts
     dropdown:
@@ -123,6 +131,8 @@ menu:
             translation_key: menu.bosnia_and_herzegovina
           - path: https://sdg.hagstova.fo/
             translation_key: menu.faroe
+          - path: https://odd-dashboard.cd/
+            translation_key: menu.domrepcongo
           - path: https://sustainabledevelopment-ghana.github.io/
             translation_key: menu.ghana
           - path: https://visar.hagstofa.is/heimsmarkmidin/
@@ -131,8 +141,12 @@ menu:
             translation_key: menu.kyrgyzstan
           - path: https://www.lsb.gov.la/sdg/
             translation_key: menu.lao
+          - path: https://montestat.github.io/site/
+            translation_key: menu.montenegro
           - path: https://sustainabledevelopment-rwanda.github.io/
             translation_key: menu.rwanda
+          - path: https://sdg.tuik.gov.tr/
+            translation_key: menu.turkey
           - path: http://kostat.go.kr/sdg
             translation_key: menu.south_korea
           - path: https://sdg.ukrstat.gov.ua/
@@ -158,6 +172,7 @@ footer_menu:
     translation_key: menu.contact_us
   - path: menu.twitterPath
     translation_key:  general.twitter
+    alert: twitter
   - path: /faq/
     translation_key: menu.faq
   - path: /imprint/
@@ -194,23 +209,9 @@ useHeadlineColor: false
 no_value_character: '.'
 
 reporting_status:
-  title: status.reporting_status
-  description: status.status_blurb
-  disaggregation_tabs: false
-  status_types:
-    - value: notstarted
-      label: status.exploring_data_sources
-      hide_on_goal_pages: false
-    - value: complete
-      label: status.reported_online
-      hide_on_goal_pages: false
-    - value: notapplicable
-      label: status.not_applicable
-      hide_on_goal_pages: false
-    - value: inprogress
-      lable: status.statistics_in_progress
-      hide_on_goal_pages: false
-
+    title: status.reporting_status
+    description: status.status_blurb
+    disaggregation_tabs: false
 
 hide_empty_metadata: true
 hide_single_unit: true
