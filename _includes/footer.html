@@ -1,0 +1,62 @@
+{% if page.language == 'de' %}
+  {% assign language = 'De' %}
+  {% assign opensdgalert = 'von open-sdg' %}
+{% else %}
+  {% assign language = 'En' %}
+  {% assign opensdgalert = 'open-sdg' %}
+{% endif %}
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="footerLinks">
+                    <ul>
+                        <li>
+                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('{{ opensdgalert }}', '{{ language }}');">
+                              {{ page.t.general.built_using_open_sdg }}
+                            </a>
+                        </li>
+                        {% if site.footer_menu %}
+                        {% for item in site.footer_menu %}
+                          {%- assign item_path = item.path | t -%}
+                          {%- assign item_alert = item.alert -%}
+                          <li>
+                              {% if item_path contains ":" %}
+                                {% if item_alert %}
+                                  <a href="{{ item_path }}" target="_blank" onclick="return confirm_alert('{{ url_alert }}', '{{ language }}');">{{ item.translation_key | t }}</a>
+                                {% else %}
+                                  <a href="{{ item_path }}">{{ item.translation_key | t }}</a>
+                                {% endif %}
+                              {% else %}
+                              {%- assign item_path_first = item_path | slice: 0 %}
+                              {%- if item_path_first == '/' -%}
+                              {%- assign item_path = item_path | slice: 1, item_path.size -%}
+                              {%- endif -%}
+                              <a href="{{ page.baseurl }}{{ item_path }} {% if item_alert %} onclick="return confirm_alert('{{ url_alert }}', '{{ language }}');"{% endif %}">{{ item.translation_key | t }}</a>
+                              {% endif %}
+                          </li>
+                        {% endfor %}
+                        {% endif %}
+                        {% if site.environment == 'staging' and site.site_config_form.enabled %}
+                        <li>
+                            <a href="{{ page.baseurl }}config">Configuration</a>
+                        </li>
+                        {% endif %}
+                        {%- if site.languages.size > 1 and site.footer_language_toggle and site.footer_language_toggle != 'none' -%}
+                        <li class="language-toggle-menu-footer">
+                            {% include components/language-toggle.html location="footer" %}
+                            <span class="no-js-language-toggle">{% include components/language-toggle-links.html %}</span>
+                        </li>
+                        {%- endif -%}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% include footer-custom.html %}
+    </div>
+</footer>
+
+{% include scripts.html %}
+
+</body>
+</html>
