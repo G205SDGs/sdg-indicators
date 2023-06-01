@@ -1,0 +1,47 @@
+{% include head.html %}
+{% include header.html %}
+<div id="main-content" class="container" role="main">
+
+    {% if site.frontpage_introduction_banner %}
+    <div class="site-intro">
+        <h1>{{ site.frontpage_introduction_banner.title | t }}</h1>
+        <div class="lead-copy">{{ site.frontpage_introduction_banner.description | t | markdownify }}</div>
+    </div>
+    {% endif %}
+
+    {% if site.frontpage_goals_grid %}
+    <div class="frontpage-goals-grid">
+
+        {% if site.frontpage_goals_grid.title %}
+        <h2 class="frontpage-goals-grid-title">{{ site.frontpage_goals_grid.title | t }}</h2>
+        {% endif %}
+
+        {% if site.frontpage_goals_grid.description %}
+        <div class="frontpage-goals-grid-description">{{ site.frontpage_goals_grid.description | t | markdownify }}</div>
+        {% endif %}
+
+        {% include components/goal-tiles.html %}
+    </div>
+    {% endif %}
+
+    {% if site.frontpage_cards %}
+    <div class="frontpage-cards">
+    {% for card in site.frontpage_cards %}
+        {% assign remainder = forloop.index | modulo: 3 %}
+
+        {% if remainder == 1 or forloop.first %}
+        <div class="row">
+        {% endif %}
+
+        {% include components/card.html card=card %}
+
+        {% if remainder == 0 or forloop.last %}
+        </div>
+        {% endif %}
+
+    {% endfor %}
+    </div>
+    {% endif %}
+
+</div>
+{% include footer.html %}
