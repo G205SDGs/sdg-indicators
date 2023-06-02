@@ -51,7 +51,7 @@ frontpage_goals_grid:
 
 frontpage_cards:
     - rule_color: orange
-      title: frontpage.download_all
+      title: ''
       include: components/download-all-data.html
 
 analytics:
