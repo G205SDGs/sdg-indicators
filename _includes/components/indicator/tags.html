@@ -20,7 +20,7 @@
     {%- for tag in include.tags -%}
         <li class="list-inline-item">
         {% assign tag_class = tag | slugify %}
-        <span class="tag tag-{{ tag_class }}">{{ tag | t }}</span>
+        <span class="tag tag-{{ tag_class }}" style="padding-bottom: 3px;">{{ tag | t }}</span>
         </li>
     {%- endfor -%}
     </ul>
