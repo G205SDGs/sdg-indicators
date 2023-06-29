@@ -1,6 +1,10 @@
 {% assign show_data = false %}
+{% assign show_info = false %}
 {% if page.indicator.reporting_status == "complete" and page.indicator.data_non_statistical != true %}
   {% assign show_data = true %}
+{% endif %}
+{% if page.indicator.reporting_status == "complete" and page.indicator.data_non_statistical == true and page.indicator.embedded_feature_html != "" %}
+  {% assign show_info = true %}
 {% endif %}
 {% assign datapackage_resource = site.data[page.language].data_packages.resources | where: "name", page.indicator.slug | first %}
 
@@ -16,6 +20,7 @@
   data-measurementunit="{{ page.indicator.computation_units }}"
   data-xaxislabel="{{ page.indicator.x_axis_label | t | default: site.x_axis_label | t }}"
   data-showdata="{{ show_data }}"
+  data-showinfo="{{ show_info }}"
   data-graphtype="{{ page.indicator.graph_type }}"
   data-graphtypes="{{ page.indicator.graph_types | jsonify | xml_escape }}"
   data-geocoderegex="{{ page.indicator.data_geocode_regex }}"
@@ -27,6 +32,8 @@
   data-spangaps="{{ page.indicator.span_gaps }}"
   data-graphannotations="{{ page.indicator.graph_annotations | jsonify | xml_escape }}"
   data-graphtargetlines="{{ page.indicator.graph_target_lines | jsonify | xml_escape }}"
+  data-graphtargetpoints="{{ page.indicator.graph_target_points | jsonify | xml_escape }}"
+  data-graphtargetlabels="{{ page.indicator.graph_target_labels | jsonify | xml_escape }}"
   data-graphseriesbreaks="{{ page.indicator.graph_series_breaks | jsonify | xml_escape }}"
   data-grapherrorbars="{{ page.indicator.graph_error_bars | jsonify | xml_escape }}"
   data-indicatordownloads="{{ site.data[page.language].indicator_downloads[page.indicator.number] | jsonify | xml_escape }}"
@@ -34,6 +41,8 @@
   data-compositebreakdownlabel="{{ page.indicator.composite_breakdown_label }}"
   data-precision="{{ page.indicator.precision | jsonify | xml_escape }}"
   data-graphstepsize="{{ page.indicator.graph_stepsize | jsonify | xml_escape }}"
+  data-proxy="{{ page.indicator.proxy }}"
+  data-proxyseries="{{ page.indicator.proxy_series | jsonify | xml_escape }}"
 >
   {% if show_data %}
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
@@ -44,6 +53,9 @@
     {% include components/indicator/data-main.html %}
   {% else %}
   <div id="indicator-main" class="indicator-main col-md-12">
+    {% if show_info %}
+      {% include components/indicator/data-main-info.html %}
+    {% endif %}
   {% endif %}
   {% include components/indicator/metadata-section.html %}
   </div>

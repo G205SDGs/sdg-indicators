@@ -6,7 +6,11 @@
       </div>
       <div class="col-8 col-md-9 col-lg-10 goal-details">
         <h1 class="titles goal-{{ page.goal.number }}">
-          {{ page.goal.name }}
+          {% if page.goal_heading and page.goal_heading != '' %}
+              {{ page.goal_heading | t }}
+          {% else %}
+              {{ page.goal.name }}
+          {% endif %}
         </h1>
       </div>
     </div>

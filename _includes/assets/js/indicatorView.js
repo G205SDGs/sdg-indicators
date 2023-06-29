@@ -55,8 +55,8 @@ var indicatorView = function (model, options) {
                 $main.removeClass('indicator-main-full');
                 // Make sure the unit/series items are updated, in case
                 // they were changed while on the map.
-                helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle);
                 helpers.updateChartSubtitle(VIEW._dataCompleteArgs.chartSubtitle);
+                helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle, VIEW._dataCompleteArgs.isProxy);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateTimeSeriesAttributes(VIEW._dataCompleteArgs.timeSeriesAttributes);
@@ -80,8 +80,8 @@ var indicatorView = function (model, options) {
         }
 
         helpers.createSelectionsTable(args);
-        helpers.updateChartTitle(args.chartTitle);
         helpers.updateChartSubtitle(args.chartSubtitle);
+        helpers.updateChartTitle(args.chartTitle, args.isProxy);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
         helpers.updateUnitElements(args.selectedUnit);
         helpers.updateTimeSeriesAttributes(args.timeSeriesAttributes);
@@ -106,6 +106,9 @@ var indicatorView = function (model, options) {
                 MODEL.helpers,
                 args.chartTitles,
                 args.chartSubtitles,
+                args.startValues,
+                args.proxy,
+                args.proxySerieses,
             );
         }
     });
@@ -180,7 +183,7 @@ var indicatorView = function (model, options) {
             fieldGroupElement.attr('data-has-data', fieldGroup.hasData);
             var fieldGroupButton = fieldGroupElement.find('> button'),
                 describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
-                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '.');
+                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
             if (!fieldGroup.hasData && !describedByCurrent.includes(noDataHintId)) {
                 fieldGroupButton.attr('aria-describedby', describedByCurrent + ' ' + noDataHintId);
             }

@@ -13,25 +13,25 @@
   <h5 class="sr-only">Chart details</h5>
     <dl>
         {% if uniqSources != '' %}
-          {% if sources_list.size < 2 %}
-            <dt><u>{{ page.t.indicator.source }}</u>:</dt>
-          {% else %}
-            <dt><u>{{ page.t.indicator.sources }}</u>:</dt>
-          {% endif %}
-          <dd>{{ uniqSources }}</dd>
+        {% if sources_list.size < 2 %}
+        <dt><u>{{ page.t.indicator.source }}</u>:</dt>
+        {% else %}
+        <dt><u>{{ page.t.indicator.sources }}</u>:</dt>
+        <dd>{{ uniqSources }}</dd>
+        {% endif %}
         {% endif %}
 
         {% if page.indicator.national_geographical_coverage and page.indicator.national_geographical_coverage != '' %}
-          <dt><u>{{ page.t.indicator.geographical_area}}</u>:</dt>
-          <dd>{{ page.indicator.national_geographical_coverage }}</dd>
+        <dt><u>{{ page.t.indicator.geographical_area }}</u>:</dt>
+        <dd>{{ page.indicator.national_geographical_coverage }}</dd>
         {% endif %}
 
         <dt class="data-controlled-footer-field unit-from-data"><u>{{ page.t.indicator.unit_of_measurement }}</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         {% if page.indicator.data_footnote and page.indicator.data_footnote != '' %}
-          <dt><u>{{ page.t.indicator.footnote }}</u>:</dt>
-          <dd>{{ page.indicator.data_footnote }}</dd>
+        <dt><u>{{ page.t.indicator.footnote }}</u>:</dt>
+        <dd>{{ page.indicator.data_footnote }}</dd>
         {% endif %}
 
         {% if page.indicator.data_footnotes and page.indicator.data_footnotes != '' %}
@@ -40,34 +40,34 @@
         {% endif %}
 
         {% if page.indicator.footer_fields and page.indicator.footer_fields.size > 0 %}
-          {% for footer_field in page.indicator.footer_fields %}
-          <dt
-            data-for-series={{ footer_field.series | default: "" | jsonify }}
-            data-for-unit={{ footer_field.unit | default: "" | jsonify }}
-          ><u>{{ footer_field.label | t  }}</u>:</dt>
-          <dd
-            data-for-series={{ footer_field.series | default: "" | jsonify }}
-            data-for-unit={{ footer_field.unit | default: "" | jsonify }}
-          >{{ footer_field.value | t  }}</dd>
-          {% endfor %}
+        {% for footer_field in page.indicator.footer_fields %}
+        <dt
+          data-for-series={{ footer_field.series | default: "" | jsonify }}
+          data-for-unit={{ footer_field.unit | default: "" | jsonify }}
+        ><u>{{ footer_field.label | t  }}</u>:</dt>
+        <dd
+          data-for-series={{ footer_field.series | default: "" | jsonify }}
+          data-for-unit={{ footer_field.unit | default: "" | jsonify }}
+        >{{ footer_field.value | t  }}</dd>
+        {% endfor %}
         {% endif %}
 
         {% if site.time_series_attributes and site.time_series_attributes.size > 0 %}
-          {% for ts_attribute in site.time_series_attributes %}
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute={{ ts_attribute.field | jsonify }}
-          ><u>{{ ts_attribute.label | t  }}</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute={{ ts_attribute.field | jsonify }}
-          ></dd>
-          {% endfor %}
+        {% for ts_attribute in site.time_series_attributes %}
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute={{ ts_attribute.field | jsonify }}
+        ><u>{{ ts_attribute.label | t  }}</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute={{ ts_attribute.field | jsonify }}
+        ></dd>
+        {% endfor %}
         {% endif %}
 
         {% if page.indicator.copyright and page.indicator.copyright != '' %}
-          <dt><u>{{ page.t.metadata_fields.copyright }}</u>:</dt>
-          <dd>{{ page.indicator.copyright }}</dd>
+        <dt><u>{{ page.t.metadata_fields.copyright }}</u>:</dt>
+        <dd>{{ page.indicator.copyright }}</dd>
         {% endif %}
     </dl>
 </div>
