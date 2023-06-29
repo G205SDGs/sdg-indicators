@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -43,6 +43,20 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
 };
 
 </script>
@@ -112,12 +126,9 @@ var translations = {
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
         
-        <link rel="canonical" href="/">
 
         <!--[if IE 9]>
         <script src="/sdg-indicators/assets/js/lib/classList.js"></script>
@@ -128,13 +139,16 @@ var translations = {
 <link rel="icon" type="image/png" sizes="16x16" href="/sdg-indicators/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/sdg-indicators/assets/img/favicons/favicon.ico" />
 
+        
+        <link rel="manifest" href="/sdg-indicators/manifest.json">
+        
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230629125549">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230629140410">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -144,6 +158,9 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
+
+        
+
 
         <!--[if IE]>
         <link rel="stylesheet" href="/sdg-indicators/assets/css/ie.css">
@@ -191,33 +208,26 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-item ">
+</li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     About us
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/platform/">SDG&nbsponline&nbspplatform</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/navigation/">Navigation</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/guidance/">Technical instructions</a>
-</li>
-</ul>
+</li></ul>
           </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Useful information
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li>
-<li>
+</li><li>
                       <a class="dropdown-item dropdown-toggle" href="#">
                           Open SDG platforms of other countries
                       </a>
@@ -225,11 +235,9 @@ layout-indicator
                     </li></ul>
           </li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/en/publications/">Publications</a>
-</li>
-<li class="nav-item ">
+</li><li class="nav-item ">
     <a class="nav-link" href="https://dns-indikatoren.de"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/></a>
-</li>
-</ul>
+</li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -352,8 +360,9 @@ data-event-label="high"
     <fieldset>
       <legend class="sr-only">Series</legend>
       <% _.each(serieses, function(seriesItem, index) { %>
+        <% var isProxy = (proxySerieses.includes(seriesItem)) %>
         <% var checked = (selectedSeries) ? (selectedSeries==seriesItem) : (index==0); %>
-        <label><input type="radio" name="series" value="<%=seriesItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(seriesItem)%></label>
+        <label><input type="radio" name="series" value="<%=seriesItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(seriesItem)%> <%=isProxy ? proxyPill : ''%></label>
       <% }); %>
     </fieldset>
   
@@ -369,7 +378,7 @@ data-event-label="high"
         <div class="row">
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/sdg-indicators/en/1" aria-label=" 1" title=" 1">
+                <a href="/sdg-indicators/en/1/" aria-label=" 1" title=" 1">
                     <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/1.png"
                         alt="No poverty - Goal 1"
                         id="goal-1"
@@ -400,7 +409,7 @@ data-event-label="high"
             <a href="/sdg-indicators/en/">Home</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="/sdg-indicators/en/1"
+            <a href="/sdg-indicators/en/1/"
                title="Goal 1 - No poverty"
                aria-label="Goal  - ">
                Goal 1
@@ -463,6 +472,8 @@ data-event-label="high"
 
   
 
+  
+
 <div class="row" id="page-content">
   <div class="col-xs-12">
     <p><span></span></p>
@@ -480,31 +491,36 @@ data-event-label="high"
   data-indicatorid='indicator_1-2-2'
   data-id="1-2-2"
   data-country="Germany"
-  data-charttitle="Severely materially deprived persons as well as persons at risk of poverty or social exclusion"
+  data-charttitle="Persons at risk of poverty or social exclusion"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
   data-measurementunit="Percentage"
   data-xaxislabel=""
   data-showdata="true"
+  data-showinfo=""
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Severely materially deprived persons&quot;}]"
+  data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Persons at risk of poverty or social exclusion&quot;}]"
   data-graphlimits="[{&quot;unit&quot;:&quot;Percentage&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:30.0}]"
   data-stackeddisaggregation=""
   data-showline="true"
   data-spangaps="true"
   data-graphannotations="null"
   data-graphtargetlines="null"
+  data-graphtargetpoints="null"
+  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:9.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Severely materially deprived persons&quot;,&quot;Persons at risk of poverty or social exclusion&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;17 years and younger&quot;,&quot;18 to under 65 years&quot;,&quot;65 years and older&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Persons at risk of poverty or social exclusion&quot;,&quot;At-risk-of-poverty rate&quot;,&quot;persons living in households with very low work intensity&quot;,&quot;severely materially and socially deprived persons&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
   data-graphstepsize="[{&quot;step&quot;:5.0}]"
+  data-proxy=""
+  data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
@@ -627,7 +643,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Severely materially deprived persons as well as persons at risk of poverty or social exclusion</h4>
+          <h4 id="chart-heading" class="chart-title">Persons at risk of poverty or social exclusion</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -647,15 +663,15 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-            <dt><u>Data sources</u>:</dt>
-          
-          <dd><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home"> Statistical office of the European Union (Eurostat) </a></dd>
+        
+        <dt><u>Data sources</u>:</dt>
+        <dd><a href="https://www.destatis.de/EN" target="_blank"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"> Statistical office of the European Union (Eurostat) </a></dd>
+        
         
 
         
-          <dt><u>Geographic coverage</u>:</dt>
-          <dd>Germany</dd>
+        <dt><u>Geographic coverage</u>:</dt>
+        <dd>Germany</dd>
         
 
         <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
@@ -665,36 +681,36 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Notes</u>:</dt>
-          <dd><br>• Deprivation is defined as economic restriction and the lack of durable consumer goods for financial reasons.<br>• As of reference year 2020 there have been two types of results: first and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
+          <dd><br>• Deprivation is defined as economic restriction and the lack of durable consumer goods for financial reasons.<br>• As of reference year 2020 there have been two types of results: first and final results. The results currently shown for 2020 to 2021 are final results, for 2022 first results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.<br>• Data is partially only available from 2015.</dd>
         
 
         
 
         
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ><u>Note</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ></dd>
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ><u>Last modification of data</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ></dd>
-          
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
 
         
-          <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
+        <dt><u>Copyright</u>:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
         
     </dl>
 </div>
@@ -732,15 +748,15 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-            <dt><u>Data sources</u>:</dt>
-          
-          <dd><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home"> Statistical office of the European Union (Eurostat) </a></dd>
+        
+        <dt><u>Data sources</u>:</dt>
+        <dd><a href="https://www.destatis.de/EN" target="_blank"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"> Statistical office of the European Union (Eurostat) </a></dd>
+        
         
 
         
-          <dt><u>Geographic coverage</u>:</dt>
-          <dd>Germany</dd>
+        <dt><u>Geographic coverage</u>:</dt>
+        <dd>Germany</dd>
         
 
         <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
@@ -750,36 +766,36 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Notes</u>:</dt>
-          <dd><br>• Deprivation is defined as economic restriction and the lack of durable consumer goods for financial reasons.<br>• As of reference year 2020 there have been two types of results: first and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
+          <dd><br>• Deprivation is defined as economic restriction and the lack of durable consumer goods for financial reasons.<br>• As of reference year 2020 there have been two types of results: first and final results. The results currently shown for 2020 to 2021 are final results, for 2022 first results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.<br>• Data is partially only available from 2015.</dd>
         
 
         
 
         
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ><u>Note</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ></dd>
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ><u>Last modification of data</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ></dd>
-          
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
 
         
-          <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
+        <dt><u>Copyright</u>:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
         
     </dl>
 </div>
@@ -876,7 +892,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Time series available </th>
         <td>
           
-            <ul style="padding-left: 25px;"><li>Severely materially deprived persons</li> <li> Persons at risk of poverty or social exclusion</li></ul>
+            <ul style="padding-left: 25px;"><li>Persons at risk of poverty or social exclusion</li> <li> At-risk-of-poverty rate</li> <li> Persons living in households with very low work intensity</li> <li> Severely materially and socially deprived persons</li></ul>
 
           
         </td>
@@ -918,7 +934,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
             
             
             
@@ -1227,19 +1242,8 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Tier category </th>
-        <td>
-          
-            <p><a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/" title="Click here for more information on the UN tier classification." target="_blank">Tier II</a></p>
-
-          
-        </td>
-        </tr>
         
-      
-  
+          
       
       
       
@@ -1277,11 +1281,10 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf" target="_blank" onclick="return confirm_alert('', 'En');">
+                <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-01-02-02.pdf" target="_blank" onclick="return confirm_alert('the Statistical Devision of the UN','En');">
                   Metadata on this indicator <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -1587,7 +1590,7 @@ data-event-label="Change to Sources tab"
         <th scope="row"> </th>
         <td>
           
-            <p><a href="https://www.destatis.de/EN"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/destatis.png" alt="Logo destatis" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://www.destatis.de/EN" target="_blank"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/destatis.png" alt="Logo destatis" style="height:60px; width:148px" /></a></p>
 
           
         </td>
@@ -1603,7 +1606,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p><a href="https://www.destatis.de/EN"> Federal Statistical Office (Destatis) </a></p>
+            <p><a href="https://www.destatis.de/EN" target="_blank"> Federal Statistical Office (Destatis) </a></p>
 
           
         </td>
@@ -2005,7 +2008,7 @@ data-event-label="Change to Sources tab"
         <th scope="row"> </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/en/home"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/eurostat.png" alt="Logo eurostat" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/eurostat.png" alt="Logo eurostat" style="height:60px; width:148px" /></a></p>
 
           
         </td>
@@ -2021,7 +2024,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/en/home"> Statistical office of the European Union (Eurostat) </a></p>
+            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"> Statistical office of the European Union (Eurostat) </a></p>
 
           
         </td>
@@ -2060,12 +2063,11 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_mddd11/default/table?lang=en" target="_blank" onclick="return confirm_alert('', 'En');">
-                  EU-SILC survey: Severe material deprivation rate - Eurostat table [ilc_mddd11] <span class="visuallyhidden">opens in a new window</span>
+                <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_PEPS01N/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
+                  EU-SILC survey: People at risk of poverty or social exclusion – Eurostat table [ilc_peps01n] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -2123,12 +2125,11 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_peps01/default/table?lang=en" target="_blank" onclick="return confirm_alert('', 'En');">
-                  EU-SILC survey: People at risk of poverty or social exclusion - Eurostat table [ilc_peps01] <span class="visuallyhidden">opens in a new window</span>
+                <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
+                  EU-SILC survey: At-risk-of-poverty rate – Eurostat table [ilc_li02] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -2148,23 +2149,77 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
           
-      
-      
-      
-        
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_lvhl11n/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
+                  Persons living in households with very low work intensity – Eurostat table [ilc_lvhl11n] <span class="visuallyhidden">opens in a new window</span>
+                </a>
+              
+            
+
           
-      
-      
-      
+        </td>
+        </tr>
         
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
           
-      
-      
-      
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_MDSD11__custom_4946119/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
+                  EU-SILC survey: SSevere material and social deprivation rate – Eurostat table [ilc_mdsd11] <span class="visuallyhidden">opens in a new window</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
         
-          
+      
+  
+      
+      
+      
+      
+      
+  
       
       
       
@@ -2394,6 +2449,7 @@ data-event-label="Change to Sources tab"
 </div>
 
 
+
 <footer role="contentinfo">
     <div class="container">
         <div class="row">
@@ -2416,7 +2472,7 @@ data-event-label="Change to Sources tab"
                         <li>
                               
                                 
-                                  <a href="https://twitter.com/destatis?lang=en" target="_blank" onclick="return confirm_alert('', 'En');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                                  <a href="https://twitter.com/destatis?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union', 'En');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
                                 
                               
                           </li>
@@ -2438,12 +2494,12 @@ data-event-label="Change to Sources tab"
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -2466,12 +2522,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20230629125549'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20230629140410'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20230629125549"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20230629140410"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

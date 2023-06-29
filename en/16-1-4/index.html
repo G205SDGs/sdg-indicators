@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -43,6 +43,20 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
 };
 
 </script>
@@ -112,12 +126,9 @@ var translations = {
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
         
-        <link rel="canonical" href="/">
 
         <!--[if IE 9]>
         <script src="/sdg-indicators/assets/js/lib/classList.js"></script>
@@ -128,13 +139,16 @@ var translations = {
 <link rel="icon" type="image/png" sizes="16x16" href="/sdg-indicators/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/sdg-indicators/assets/img/favicons/favicon.ico" />
 
+        
+        <link rel="manifest" href="/sdg-indicators/manifest.json">
+        
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230629125549">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230629140410">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -144,6 +158,9 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
+
+        
+
 
         <!--[if IE]>
         <link rel="stylesheet" href="/sdg-indicators/assets/css/ie.css">
@@ -191,33 +208,26 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/en/">17 Goals</a>
-</li>
-<li class="nav-item ">
+</li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     About us
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/platform/">SDG&nbsponline&nbspplatform</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/navigation/">Navigation</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/guidance/">Technical instructions</a>
-</li>
-</ul>
+</li></ul>
           </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Useful information
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li>
-<li>
+</li><li>
                       <a class="dropdown-item dropdown-toggle" href="#">
                           Open SDG platforms of other countries
                       </a>
@@ -225,11 +235,9 @@ layout-indicator
                     </li></ul>
           </li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/en/publications/">Publications</a>
-</li>
-<li class="nav-item ">
+</li><li class="nav-item ">
     <a class="nav-link" href="https://dns-indikatoren.de"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/></a>
-</li>
-</ul>
+</li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -352,8 +360,9 @@ data-event-label="high"
     <fieldset>
       <legend class="sr-only">Series</legend>
       <% _.each(serieses, function(seriesItem, index) { %>
+        <% var isProxy = (proxySerieses.includes(seriesItem)) %>
         <% var checked = (selectedSeries) ? (selectedSeries==seriesItem) : (index==0); %>
-        <label><input type="radio" name="series" value="<%=seriesItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(seriesItem)%></label>
+        <label><input type="radio" name="series" value="<%=seriesItem%>" tabindex=0 <%=checked ? 'checked' : ''%> /> <%=translations.t(seriesItem)%> <%=isProxy ? proxyPill : ''%></label>
       <% }); %>
     </fieldset>
   
@@ -369,7 +378,7 @@ data-event-label="high"
         <div class="row">
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/sdg-indicators/en/16" aria-label=" 16" title=" 16">
+                <a href="/sdg-indicators/en/16/" aria-label=" 16" title=" 16">
                     <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/en/16.png"
                         alt="Peace and justice - strong institutions - Goal 16"
                         id="goal-16"
@@ -400,7 +409,7 @@ data-event-label="high"
             <a href="/sdg-indicators/en/">Home</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="/sdg-indicators/en/16"
+            <a href="/sdg-indicators/en/16/"
                title="Goal 16 - Peace and justice - strong institutions"
                aria-label="Goal  - ">
                Goal 16
@@ -454,6 +463,8 @@ data-event-label="high"
 
   
 
+  
+
 <div class="row" id="page-content">
   <div class="col-xs-12">
     <p><span></span></p>
@@ -478,24 +489,29 @@ data-event-label="high"
   data-measurementunit="Percentage"
   data-xaxislabel=""
   data-showdata="true"
+  data-showinfo=""
   data-graphtype="line"
-  data-graphtypes="null"
+  data-graphtypes="[{&quot;series&quot;:&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;type&quot;:&quot;line&quot;},{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;type&quot;:&quot;bar&quot;}]"
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Very safe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Safe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Unsafe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Very unsafe&quot;}]"
   data-graphlimits="null"
-  data-stackeddisaggregation=""
+  data-stackeddisaggregation="Feelings of insecurity"
   data-showline="true"
-  data-spangaps="false"
+  data-spangaps="true"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphseriesbreaks="[{&quot;value&quot;:9.5}]"
+  data-graphtargetpoints="null"
+  data-graphtargetlabels="null"
+  data-graphseriesbreaks="[{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;value&quot;:1.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;feelings of insecurity&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Very safe&quot;,&quot;Safe&quot;,&quot;Unsafe&quot;,&quot;Very unsafe&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Feelings of insecurity&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
   data-graphstepsize="[{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;step&quot;:5.0},{&quot;series&quot;:&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;step&quot;:10.0}]"
+  data-proxy=""
+  data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
@@ -735,7 +751,7 @@ data-event-label="high"
   
   <div id="datatableFooter">
     
-    <p>Data source: <a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('','En');"> Federal Criminal Police Office </a></p>
+    <p>Data source: <a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');"> Federal Criminal Police Office </a></p>
     
     
     <p>Geographic coverage: Germany</p>
@@ -850,15 +866,15 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-            <dt><u>Data sources</u>:</dt>
-          
-          <dd><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('','En');"> Federal Criminal Police Office </a>, <a href="https://www.destatis.de/EN" target="_blank"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Federal Returning Officer','En');"> Statistical office of the European Union (Eurostat) </a></dd>
+        
+        <dt><u>Data sources</u>:</dt>
+        <dd><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');"> Federal Criminal Police Office </a>, <a href="https://www.destatis.de/EN" target="_blank"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"> Statistical office of the European Union (Eurostat) </a></dd>
+        
         
 
         
-          <dt><u>Geographic coverage</u>:</dt>
-          <dd>Germany</dd>
+        <dt><u>Geographic coverage</u>:</dt>
+        <dd>Germany</dd>
         
 
         <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
@@ -869,52 +885,52 @@ data-event-label="Change to Table tab"
         
 
         
-          
-          <dt
-            data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
-            data-for-unit=""
-          ><u>Note</u>:</dt>
-          <dd
-            data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
-            data-for-unit=""
-          >Due to methodological changes, the results from 2020 onwards are only comparable with previous years to a limited extend.</dd>
-          
-          <dt
-            data-for-series="Population not living in an area with crime, violence or vandalism"
-            data-for-unit=""
-          ><u>Note</u>:</dt>
-          <dd
-            data-for-series="Population not living in an area with crime, violence or vandalism"
-            data-for-unit=""
-          >As of reference year 2020 there have been two types of results: First and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
-          
+        
+        <dt
+          data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
+          data-for-unit=""
+        ><u>Note</u>:</dt>
+        <dd
+          data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
+          data-for-unit=""
+        >Due to methodological changes, the results from 2020 onwards are only comparable with previous years to a limited extend.</dd>
+        
+        <dt
+          data-for-series="Population not living in an area with crime, violence or vandalism"
+          data-for-unit=""
+        ><u>Note</u>:</dt>
+        <dd
+          data-for-series="Population not living in an area with crime, violence or vandalism"
+          data-for-unit=""
+        >As of reference year 2020 there have been two types of results: First and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
+        
         
 
         
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ><u>Note</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ></dd>
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ><u>Last modification of data</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ></dd>
-          
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
 
         
-          <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
+        <dt><u>Copyright</u>:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
         
     </dl>
 </div>
@@ -952,15 +968,15 @@ data-event-label="Change to Table tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          
-            <dt><u>Data sources</u>:</dt>
-          
-          <dd><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('','En');"> Federal Criminal Police Office </a>, <a href="https://www.destatis.de/EN" target="_blank"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Federal Returning Officer','En');"> Statistical office of the European Union (Eurostat) </a></dd>
+        
+        <dt><u>Data sources</u>:</dt>
+        <dd><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');"> Federal Criminal Police Office </a>, <a href="https://www.destatis.de/EN" target="_blank"> Federal Statistical Office (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"> Statistical office of the European Union (Eurostat) </a></dd>
+        
         
 
         
-          <dt><u>Geographic coverage</u>:</dt>
-          <dd>Germany</dd>
+        <dt><u>Geographic coverage</u>:</dt>
+        <dd>Germany</dd>
         
 
         <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
@@ -971,52 +987,52 @@ data-event-label="Change to Table tab"
         
 
         
-          
-          <dt
-            data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
-            data-for-unit=""
-          ><u>Note</u>:</dt>
-          <dd
-            data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
-            data-for-unit=""
-          >Due to methodological changes, the results from 2020 onwards are only comparable with previous years to a limited extend.</dd>
-          
-          <dt
-            data-for-series="Population not living in an area with crime, violence or vandalism"
-            data-for-unit=""
-          ><u>Note</u>:</dt>
-          <dd
-            data-for-series="Population not living in an area with crime, violence or vandalism"
-            data-for-unit=""
-          >As of reference year 2020 there have been two types of results: First and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
-          
+        
+        <dt
+          data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
+          data-for-unit=""
+        ><u>Note</u>:</dt>
+        <dd
+          data-for-series="Feeling of (in)security of the population in its neighbourhood (after dark)"
+          data-for-unit=""
+        >Due to methodological changes, the results from 2020 onwards are only comparable with previous years to a limited extend.</dd>
+        
+        <dt
+          data-for-series="Population not living in an area with crime, violence or vandalism"
+          data-for-unit=""
+        ><u>Note</u>:</dt>
+        <dd
+          data-for-series="Population not living in an area with crime, violence or vandalism"
+          data-for-unit=""
+        >As of reference year 2020 there have been two types of results: First and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
+        
         
 
         
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ><u>Note</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="COMMENT_TS"
-          ></dd>
-          
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ><u>Last modification of data</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute="DATA_LAST_UPDATE"
-          ></dd>
-          
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
 
         
-          <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
+        <dt><u>Copyright</u>:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2023</dd>
         
     </dl>
 </div>
@@ -1155,7 +1171,6 @@ data-event-label="Change to Sources tab"
             
             
 
-            
             
             
             
@@ -1503,11 +1518,10 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-16-01-04.pdf" target="_blank" onclick="return confirm_alert('the Statistical Devision ofthe UN', 'En');">
+                <a href="https://unstats.un.org/sdgs/metadata/files/Metadata-16-01-04.pdf" target="_blank" onclick="return confirm_alert('the Statistical Devision of the UN','En');">
                   Metadata on this indicator <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -1813,7 +1827,7 @@ data-event-label="Change to Sources tab"
         <th scope="row"> </th>
         <td>
           
-            <p><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('','En');"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/bka.png" alt="Logo bka" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/bka.png" alt="Logo bka" style="height:60px; width:148px" /></a></p>
 
           
         </td>
@@ -1829,7 +1843,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('','En');"> Federal Criminal Police Office </a></p>
+            <p><a href="https://www.bka.de/EN/Home/home_node.htm" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');"> Federal Criminal Police Office </a></p>
 
           
         </td>
@@ -1868,11 +1882,10 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/ViktimisierungssurveyDunkelfeldforschung/viktimisierungssurveyDunkelfeldforschung_node.html" target="_blank" onclick="return confirm_alert('', 'En');">
+                <a href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/ViktimisierungssurveyDunkelfeldforschung/viktimisierungssurveyDunkelfeldforschung_node.html" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');">
                   Dark field research / Victimization Surveys (only available in German) <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -1931,11 +1944,10 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/Publikationsreihen/Forschungsergebnisse/2019ersteErgebnisseDVS2017EN.pdf" target="_blank" onclick="return confirm_alert('', 'En');">
+                <a href="https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/Publikationsreihen/Forschungsergebnisse/2019ersteErgebnisseDVS2017EN.pdf" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');">
                   The 2017 German Victimisation Survey – final report <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -1969,11 +1981,10 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/Publikationsreihen/Forschungsergebnisse/SKiD2020_Ergebnisse_V1.2.pdf" target="_blank" onclick="return confirm_alert('', 'En');">
+                <a href="https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/Publikationsreihen/Forschungsergebnisse/SKiD2020_Ergebnisse_V1.2.pdf" target="_blank" onclick="return confirm_alert('the Federal Criminal Police Office','En');">
                   Security and crime in Germany – SKiD 2020 (only available in German) <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -2753,7 +2764,7 @@ data-event-label="Change to Sources tab"
         <th scope="row"> </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Federal Returning Officer','En');"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/eurostat.png" alt="Logo eurostat" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"><img src="https://g205sdgs.github.io/sdg-indicators/public/OrgImgEn/eurostat.png" alt="Logo eurostat" style="height:60px; width:148px" /></a></p>
 
           
         </td>
@@ -2769,7 +2780,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Organisation </th>
         <td>
           
-            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Federal Returning Officer','En');"> Statistical office of the European Union (Eurostat) </a></p>
+            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"> Statistical office of the European Union (Eurostat) </a></p>
 
           
         </td>
@@ -2808,11 +2819,10 @@ data-event-label="Change to Sources tab"
             
             
             
-            
 
             
               
-                <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_mddw03/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Federal Returning Officer', 'En');">
+                <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_mddw03/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
                   EU-SILC survey: Crime, violence or vandalism in the area – Eurostat table  [ilc_mddw03] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
@@ -2985,6 +2995,7 @@ data-event-label="Change to Sources tab"
 </div>
 
 
+
 <footer role="contentinfo">
     <div class="container">
         <div class="row">
@@ -3007,7 +3018,7 @@ data-event-label="Change to Sources tab"
                         <li>
                               
                                 
-                                  <a href="https://twitter.com/destatis?lang=en" target="_blank" onclick="return confirm_alert('the Federal Returning Officer', 'En');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                                  <a href="https://twitter.com/destatis?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union', 'En');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
                                 
                               
                           </li>
@@ -3029,12 +3040,12 @@ data-event-label="Change to Sources tab"
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -3057,12 +3068,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20230629125549'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20230629140410'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20230629125549"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20230629140410"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

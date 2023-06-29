@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex"></script>
+        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -43,6 +43,20 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  mapColors: {
+    "default": [
+        "#c4e1c6",
+        "#b0d1b3",
+        "#9bc2a1",
+        "#87b28f",
+        "#74a37c",
+        "#60946b",
+        "#4d8559",
+        "#3a7747",
+        "#276836"
+    ]
+},
 };
 
 </script>
@@ -107,12 +121,9 @@ var translations = {
 
 
 
-        <meta name="description" content="">
-        <meta property="og:description" content="">
         
         <meta name="robots" content="noindex, nofollow">
         
-        <link rel="canonical" href="/">
 
         <!--[if IE 9]>
         <script src="/sdg-indicators/assets/js/lib/classList.js"></script>
@@ -123,13 +134,16 @@ var translations = {
 <link rel="icon" type="image/png" sizes="16x16" href="/sdg-indicators/assets/img/favicons/favicon-16x16.png">
 <link rel="icon" type="image/x-icon" href="/sdg-indicators/assets/img/favicons/favicon.ico" />
 
+        
+        <link rel="manifest" href="/sdg-indicators/manifest.json">
+        
 
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230629125549">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230629140410">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -139,6 +153,9 @@ var translations = {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
+
+        
+
 
         <!--[if IE]>
         <link rel="stylesheet" href="/sdg-indicators/assets/css/ie.css">
@@ -186,33 +203,26 @@ layout-reportingstatus
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/">17 Ziele</a>
-</li>
-<li class="nav-item active">
+</li><li class="nav-item active">
     <a class="nav-link" href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Über uns
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/navigation/">Navigation</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/guidance/">Technische&nbspHinweise</a>
-</li>
-</ul>
+</li></ul>
           </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Wissenswertes
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/sdg-indicators/facts_dns/">DNS</a>
-</li>
-<li>
+</li><li>
                       <a class="dropdown-item dropdown-toggle" href="#">
                           Open SDG Plattformen anderer Staaten
                       </a>
@@ -220,11 +230,9 @@ layout-reportingstatus
                     </li></ul>
           </li><li class="nav-item ">
     <a class="nav-link" href="/sdg-indicators/publications/">Publikationen</a>
-</li>
-<li class="nav-item ">
+</li><li class="nav-item ">
     <a class="nav-link" href="https://dns-indikatoren.de"><img class="link_btn" src="https://g205sdgs.github.io/sdg-indicators/public/DNS Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/></a>
-</li>
-</ul>
+</li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -354,12 +362,12 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
             
             <div>
-                <span class="status complete"><span class="status-inner">206</span></span><strong>Verfügbar</strong><span class="value">83%</span>
+                <span class="status complete"><span class="status-inner">208</span></span><strong>Verfügbar</strong><span class="value">84%</span>
             </div>
             
             
             <div>
-                <span class="status inprogress"><span class="status-inner">6</span></span><strong>In Bearbeitung</strong><span class="value">2%</span>
+                <span class="status inprogress"><span class="status-inner">4</span></span><strong>In Bearbeitung</strong><span class="value">2%</span>
             </div>
             
             
@@ -379,13 +387,13 @@ data-event-label="Change reporting status view to un_designated_tier"
             
             
             
-            <span class="complete" style="width:83.06451612903226%" title="Verfügbar: 83%"></span>
+            <span class="complete" style="width:83.87096774193549%" title="Verfügbar: 84%"></span>
             
             
             
             
             
-            <span class="inprogress" style="width:2.4193548387096775%" title="In Bearbeitung: 2%"></span>
+            <span class="inprogress" style="width:1.6129032258064515%" title="In Bearbeitung: 2%"></span>
             
             
             
@@ -405,13 +413,13 @@ data-event-label="Change reporting status view to un_designated_tier"
 
   <h2>Status nach Ziel</h2><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/1">
+        <a href="/sdg-indicators/1/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/1.png" alt="Keine Armut - Ziel 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/1">Keine Armut</a>
+            <a href="/sdg-indicators/1/">Keine Armut</a>
         </h3>
         <span class="total">13 Indikatoren</span>
         <div class="summary">
@@ -468,13 +476,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/2">
+        <a href="/sdg-indicators/2/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/2.png" alt="Kein Hunger - Ziel 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/2">Kein Hunger</a>
+            <a href="/sdg-indicators/2/">Kein Hunger</a>
         </h3>
         <span class="total">14 Indikatoren</span>
         <div class="summary">
@@ -531,13 +539,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/3">
+        <a href="/sdg-indicators/3/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/3.png" alt="Gesundheit und Wohlergehen - Ziel 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/3">Gesundheit und Wohlergehen</a>
+            <a href="/sdg-indicators/3/">Gesundheit und Wohlergehen</a>
         </h3>
         <span class="total">28 Indikatoren</span>
         <div class="summary">
@@ -594,13 +602,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/4">
+        <a href="/sdg-indicators/4/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/4.png" alt="Hochwertige Bildung - Ziel 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/4">Hochwertige Bildung</a>
+            <a href="/sdg-indicators/4/">Hochwertige Bildung</a>
         </h3>
         <span class="total">12 Indikatoren</span>
         <div class="summary">
@@ -657,13 +665,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/5">
+        <a href="/sdg-indicators/5/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/5.png" alt="Geschlechtergleichstellung - Ziel 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/5">Geschlechtergleichstellung</a>
+            <a href="/sdg-indicators/5/">Geschlechtergleichstellung</a>
         </h3>
         <span class="total">14 Indikatoren</span>
         <div class="summary">
@@ -720,13 +728,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/6">
+        <a href="/sdg-indicators/6/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/6.png" alt="Sauberes Wasser und Sanitärversorgung - Ziel 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/6">Sauberes Wasser und Sanitärversorgung</a>
+            <a href="/sdg-indicators/6/">Sauberes Wasser und Sanitärversorgung</a>
         </h3>
         <span class="total">11 Indikatoren</span>
         <div class="summary">
@@ -783,13 +791,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/7">
+        <a href="/sdg-indicators/7/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/7.png" alt="Bezahlbare und saubere Energie - Ziel 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/7">Bezahlbare und saubere Energie</a>
+            <a href="/sdg-indicators/7/">Bezahlbare und saubere Energie</a>
         </h3>
         <span class="total">6 Indikatoren</span>
         <div class="summary">
@@ -846,13 +854,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/8">
+        <a href="/sdg-indicators/8/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/8.png" alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/8">Menschenwürdige Arbeit und Wirtschaftswachstum</a>
+            <a href="/sdg-indicators/8/">Menschenwürdige Arbeit und Wirtschaftswachstum</a>
         </h3>
         <span class="total">16 Indikatoren</span>
         <div class="summary">
@@ -909,13 +917,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/9">
+        <a href="/sdg-indicators/9/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/9.png" alt="Industrie, Innovationen und Infrastruktur - Ziel 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/9">Industrie, Innovationen und Infrastruktur</a>
+            <a href="/sdg-indicators/9/">Industrie, Innovationen und Infrastruktur</a>
         </h3>
         <span class="total">12 Indikatoren</span>
         <div class="summary">
@@ -972,13 +980,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/10">
+        <a href="/sdg-indicators/10/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/10.png" alt="Weniger Ungleichheiten - Ziel 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/10">Weniger Ungleichheiten</a>
+            <a href="/sdg-indicators/10/">Weniger Ungleichheiten</a>
         </h3>
         <span class="total">14 Indikatoren</span>
         <div class="summary">
@@ -1035,13 +1043,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/11">
+        <a href="/sdg-indicators/11/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/11.png" alt="Nachhaltige Städte und Gemeinden - Ziel 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/11">Nachhaltige Städte und Gemeinden</a>
+            <a href="/sdg-indicators/11/">Nachhaltige Städte und Gemeinden</a>
         </h3>
         <span class="total">15 Indikatoren</span>
         <div class="summary">
@@ -1098,13 +1106,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/12">
+        <a href="/sdg-indicators/12/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/12.png" alt="Verantwortungsvolle Konsum- und Produktionsmuster - Ziel 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/12">Verantwortungsvolle Konsum- und Produktionsmuster</a>
+            <a href="/sdg-indicators/12/">Verantwortungsvolle Konsum- und Produktionsmuster</a>
         </h3>
         <span class="total">13 Indikatoren</span>
         <div class="summary">
@@ -1161,13 +1169,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/13">
+        <a href="/sdg-indicators/13/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/13.png" alt="Maßnahmen zum Klimaschutz - Ziel 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/13">Maßnahmen zum Klimaschutz</a>
+            <a href="/sdg-indicators/13/">Maßnahmen zum Klimaschutz</a>
         </h3>
         <span class="total">8 Indikatoren</span>
         <div class="summary">
@@ -1224,25 +1232,25 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/14">
+        <a href="/sdg-indicators/14/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/14.png" alt="Leben unter Wasser - Ziel 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/14">Leben unter Wasser</a>
+            <a href="/sdg-indicators/14/">Leben unter Wasser</a>
         </h3>
         <span class="total">10 Indikatoren</span>
         <div class="summary">
             <div class="statuses">
                 
                 <div>
-                    <span class="status complete"><span class="status-inner">6</span></span><strong>Verfügbar</strong><span class="value">60%</span>
+                    <span class="status complete"><span class="status-inner">8</span></span><strong>Verfügbar</strong><span class="value">80%</span>
                 </div>
                 
                 
                 <div>
-                    <span class="status inprogress"><span class="status-inner">3</span></span><strong>In Bearbeitung</strong><span class="value">30%</span>
+                    <span class="status inprogress"><span class="status-inner">1</span></span><strong>In Bearbeitung</strong><span class="value">10%</span>
                 </div>
                 
                 
@@ -1262,13 +1270,13 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
-                <span class="complete" style="width:60.0%" title="Verfügbar: 60%"></span>
+                <span class="complete" style="width:80.0%" title="Verfügbar: 80%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:30.0%" title="In Bearbeitung: 30%"></span>
+                <span class="inprogress" style="width:10.0%" title="In Bearbeitung: 10%"></span>
                 
                 
                 
@@ -1287,13 +1295,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/15">
+        <a href="/sdg-indicators/15/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/15.png" alt="Leben an Land - Ziel 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/15">Leben an Land</a>
+            <a href="/sdg-indicators/15/">Leben an Land</a>
         </h3>
         <span class="total">14 Indikatoren</span>
         <div class="summary">
@@ -1350,13 +1358,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/16">
+        <a href="/sdg-indicators/16/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/16.png" alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/16">Frieden, Gerechtigkeit und starke Institutionen</a>
+            <a href="/sdg-indicators/16/">Frieden, Gerechtigkeit und starke Institutionen</a>
         </h3>
         <span class="total">24 Indikatoren</span>
         <div class="summary">
@@ -1413,13 +1421,13 @@ data-event-label="Change reporting status view to un_designated_tier"
     <br style="clear:both;">
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
-        <a href="/sdg-indicators/17">
+        <a href="/sdg-indicators/17/">
         <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/de/17.png" alt="Partnerschaften zur Erreichung der Ziele - Ziel 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
         <h3 class="status-goal">
-            <a href="/sdg-indicators/17">Partnerschaften zur Erreichung der Ziele</a>
+            <a href="/sdg-indicators/17/">Partnerschaften zur Erreichung der Ziele</a>
         </h3>
         <span class="total">24 Indikatoren</span>
         <div class="summary">
@@ -1491,12 +1499,12 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
             
             <div>
-                <span class="status complete"><span class="status-inner">206</span></span><strong>Verfügbar</strong><span class="value">83%</span>
+                <span class="status complete"><span class="status-inner">208</span></span><strong>Verfügbar</strong><span class="value">84%</span>
             </div>
             
             
             <div>
-                <span class="status inprogress"><span class="status-inner">6</span></span><strong>In Bearbeitung</strong><span class="value">2%</span>
+                <span class="status inprogress"><span class="status-inner">4</span></span><strong>In Bearbeitung</strong><span class="value">2%</span>
             </div>
             
             
@@ -1516,13 +1524,13 @@ data-event-label="Change reporting status view to un_designated_tier"
             
             
             
-            <span class="complete" style="width:83.06451612903226%" title="Verfügbar: 83%"></span>
+            <span class="complete" style="width:83.87096774193549%" title="Verfügbar: 84%"></span>
             
             
             
             
             
-            <span class="inprogress" style="width:2.4193548387096775%" title="In Bearbeitung: 2%"></span>
+            <span class="inprogress" style="width:1.6129032258064515%" title="In Bearbeitung: 2%"></span>
             
             
             
@@ -1545,21 +1553,21 @@ data-event-label="Change reporting status view to un_designated_tier"
         <h3 class="status-goal">
             <span class="status-field"><a href='https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/' title='Klicken Sie hier um weitere Informationen zur UN-Tier-Klassifikation zu erhalten.'  target='_blank'>Tier I</a></span>
         </h3>
-        <span class="total">2
+        <span class="total">1
             
-                indikatoren
+                indikator
             
         </span>
         <div class="summary">
             <div class="statuses">
                     
                     <div>
-                        <span class="status complete"><span class="status-inner">1</span></span><strong>Verfügbar</strong><span class="value">50%</span>
+                        <span class="status complete"><span class="status-inner">1</span></span><strong>Verfügbar</strong><span class="value">100%</span>
                     </div>
                     
                     
                     <div>
-                        <span class="status inprogress"><span class="status-inner">1</span></span><strong>In Bearbeitung</strong><span class="value">50%</span>
+                        <span class="status inprogress"><span class="status-inner">0</span></span><strong>In Bearbeitung</strong><span class="value">0%</span>
                     </div>
                     
                     
@@ -1579,13 +1587,13 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
-                <span class="complete" style="width:50.0%" title="Verfügbar: 50%"></span>
+                <span class="complete" style="width:100.0%" title="Verfügbar: 100%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:50.0%" title="In Bearbeitung: 50%"></span>
+                <span class="inprogress" style="width:0.0%" title="In Bearbeitung: 0%"></span>
                 
                 
                 
@@ -1605,21 +1613,21 @@ data-event-label="Change reporting status view to un_designated_tier"
         <h3 class="status-goal">
             <span class="status-field"><a href='https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/' title='Klicken Sie hier um weitere Informationen zur UN-Tier-Klassifikation zu erhalten.'  target='_blank'>Tier II</a></span>
         </h3>
-        <span class="total">3
+        <span class="total">1
             
-                indikatoren
+                indikator
             
         </span>
         <div class="summary">
             <div class="statuses">
                     
                     <div>
-                        <span class="status complete"><span class="status-inner">1</span></span><strong>Verfügbar</strong><span class="value">33%</span>
+                        <span class="status complete"><span class="status-inner">0</span></span><strong>Verfügbar</strong><span class="value">0%</span>
                     </div>
                     
                     
                     <div>
-                        <span class="status inprogress"><span class="status-inner">2</span></span><strong>In Bearbeitung</strong><span class="value">67%</span>
+                        <span class="status inprogress"><span class="status-inner">1</span></span><strong>In Bearbeitung</strong><span class="value">100%</span>
                     </div>
                     
                     
@@ -1639,13 +1647,13 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
-                <span class="complete" style="width:33.33333333333333%" title="Verfügbar: 33%"></span>
+                <span class="complete" style="width:0.0%" title="Verfügbar: 0%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:66.66666666666666%" title="In Bearbeitung: 67%"></span>
+                <span class="inprogress" style="width:100.0%" title="In Bearbeitung: 100%"></span>
                 
                 
                 
@@ -1665,7 +1673,7 @@ data-event-label="Change reporting status view to un_designated_tier"
         <h3 class="status-goal">
             <span class="status-field">status.not_specified</span>
         </h3>
-        <span class="total">243
+        <span class="total">246
             
                 indikatoren
             
@@ -1674,7 +1682,7 @@ data-event-label="Change reporting status view to un_designated_tier"
             <div class="statuses">
                     
                     <div>
-                        <span class="status complete"><span class="status-inner">204</span></span><strong>Verfügbar</strong><span class="value">84%</span>
+                        <span class="status complete"><span class="status-inner">207</span></span><strong>Verfügbar</strong><span class="value">84%</span>
                     </div>
                     
                     
@@ -1699,25 +1707,25 @@ data-event-label="Change reporting status view to un_designated_tier"
                 
                 
                 
-                <span class="complete" style="width:83.9506172839506%" title="Verfügbar: 84%"></span>
+                <span class="complete" style="width:84.14634146341463%" title="Verfügbar: 84%"></span>
                 
                 
                 
                 
                 
-                <span class="inprogress" style="width:1.2345679012345678%" title="In Bearbeitung: 1%"></span>
+                <span class="inprogress" style="width:1.2195121951219512%" title="In Bearbeitung: 1%"></span>
                 
                 
                 
                 
                 
-                <span class="notstarted" style="width:10.699588477366255%" title="Nicht verfügbar: 11%"></span>
+                <span class="notstarted" style="width:10.569105691056912%" title="Nicht verfügbar: 11%"></span>
                 
                 
                 
                 
                 
-                <span class="notapplicable" style="width:4.11522633744856%" title="Nicht zutreffend: 4%"></span>
+                <span class="notapplicable" style="width:4.065040650406504%" title="Nicht zutreffend: 4%"></span>
                 </div>
         <div class="divider"></div>
     </div>
@@ -1778,12 +1786,12 @@ data-event-label="Change reporting status view to un_designated_tier"
     </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" integrity="sha512-90vH1Z83AJY9DmlWa8WkjkV79yfS2n2Oxhsi2dZbIv0nC4E6m5AbH8Nh156kkM7JePmqD6tcZsfad1ueoaovww==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -1804,12 +1812,12 @@ data-event-label="Change reporting status view to un_designated_tier"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20230629125549'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20230629140410'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20230629125549"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20230629140410"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
