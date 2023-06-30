@@ -220,7 +220,7 @@ remote_theme: open-sdg/open-sdg@2.2.0
 
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
-goal_image_base: https://dns-indikatoren.de/assets/img/goals
+goal_image_base: https://sdg-indikatoren.de/assets/img/goals
 
 accessible_tabs: true
 accessible_charts: true
