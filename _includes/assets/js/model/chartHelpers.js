@@ -113,6 +113,7 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  * @return {Array} Datasets suitable for Chart.js
  */
 function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
+  console.log("Combinations: ", combinations);
   var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;

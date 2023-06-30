@@ -32,6 +32,7 @@ var indicatorModel = function (options) {
   this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
   this.showData = options.showData;
+  this.showInfo = options.showInfo;
   this.selectedFields = [];
   this.allowedFields = [];
   this.selectedUnit = undefined;
@@ -52,11 +53,15 @@ var indicatorModel = function (options) {
   this.graphTargetLines = options.graphTargetLines;
   this.graphSeriesBreaks = options.graphSeriesBreaks;
   this.graphErrorBars = options.graphErrorBars;
+  this.graphTargetPoints = options.graphTargetPoints;
+  this.graphTargetLabels = options.graphTargetLabels;
   this.indicatorDownloads = options.indicatorDownloads;
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
   this.dataSchema = options.dataSchema;
   this.graphStepsize = options.graphStepsize;
+  this.proxy = options.proxy;
+  this.proxySerieses = (this.proxy === 'both') ? options.proxySeries : [];
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
@@ -89,7 +94,7 @@ var indicatorModel = function (options) {
   }
 
   // Before continuing, we may need to filter by Series, so set up all the Series stuff.
-  this.allData = helpers.prepareData(this.data);
+  this.allData = helpers.prepareData(this.data, { indicatorId: this.indicatorId });
   this.allColumns = helpers.getColumnsFromData(this.allData);
   this.hasSerieses = helpers.dataHasSerieses(this.allColumns);
   this.serieses = this.hasSerieses ? helpers.getUniqueValuesByProperty(helpers.SERIES_COLUMN, this.allData) : [];
@@ -263,7 +268,8 @@ var indicatorModel = function (options) {
 
       this.onSeriesesComplete.notify({
         serieses: this.serieses,
-        selectedSeries: this.selectedSeries
+        selectedSeries: this.selectedSeries,
+        proxySerieses: this.proxySerieses,
       });
     }
 
@@ -284,6 +290,7 @@ var indicatorModel = function (options) {
         allowedFields: this.allowedFields,
         edges: this.edgesData,
         hasGeoData: this.hasGeoData,
+        startValues: this.startValues,
         indicatorId: this.indicatorId,
         showMap: this.showMap,
         precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
@@ -292,6 +299,8 @@ var indicatorModel = function (options) {
         chartTitles: this.chartTitles,
         chartSubtitles: this.chartSubtitles,
         graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
+        proxy: this.proxy,
+        proxySerieses: this.proxySerieses,
       });
     }
 
@@ -317,8 +326,8 @@ var indicatorModel = function (options) {
       headline = helpers.sortData(headline, this.selectedUnit);
     }
 
-    var combinations = helpers.getCombinationData(this.selectedFields);
-    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps);
+    var combinations = helpers.getCombinationData(this.selectedFields, this.dataSchema);
+    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps );
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
 
     var datasetCountExceedsMax = false;
@@ -349,7 +358,7 @@ var indicatorModel = function (options) {
       selectedSeries: this.selectedSeries,
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
-      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars),
+      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
       chartTitle: this.chartTitle,
       chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
@@ -357,6 +366,7 @@ var indicatorModel = function (options) {
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
       graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
       timeSeriesAttributes: timeSeriesAttributes,
+      isProxy: this.proxy === 'proxy' || this.proxySerieses.includes(this.selectedSeries),
     });
   };
 };

@@ -22,7 +22,7 @@
         {% endif %}
 
         {% if page.indicator.national_geographical_coverage and page.indicator.national_geographical_coverage != '' %}
-          <dt><u>{{ page.t.indicator.geographical_area}}</u>:</dt>
+          <dt><u>{{ page.t.indicator.geographical_area }}</u>:</dt>
           <dd>{{ page.indicator.national_geographical_coverage }}</dd>
         {% endif %}
 
@@ -41,27 +41,27 @@
 
         {% if page.indicator.footer_fields and page.indicator.footer_fields.size > 0 %}
           {% for footer_field in page.indicator.footer_fields %}
-          <dt
-            data-for-series={{ footer_field.series | default: "" | jsonify }}
-            data-for-unit={{ footer_field.unit | default: "" | jsonify }}
-          ><u>{{ footer_field.label | t  }}</u>:</dt>
-          <dd
-            data-for-series={{ footer_field.series | default: "" | jsonify }}
-            data-for-unit={{ footer_field.unit | default: "" | jsonify }}
-          >{{ footer_field.value | t  }}</dd>
+            <dt
+              data-for-series={{ footer_field.series | default: "" | jsonify }}
+              data-for-unit={{ footer_field.unit | default: "" | jsonify }}
+            ><u>{{ footer_field.label | t  }}</u>:</dt>
+            <dd
+              data-for-series={{ footer_field.series | default: "" | jsonify }}
+              data-for-unit={{ footer_field.unit | default: "" | jsonify }}
+            >{{ footer_field.value | t  }}</dd>
           {% endfor %}
         {% endif %}
 
         {% if site.time_series_attributes and site.time_series_attributes.size > 0 %}
           {% for ts_attribute in site.time_series_attributes %}
-          <dt
-            class="data-controlled-footer-field"
-            data-ts-attribute={{ ts_attribute.field | jsonify }}
-          ><u>{{ ts_attribute.label | t  }}</u>:</dt>
-          <dd
-            class="data-controlled-footer-field"
-            data-ts-attribute={{ ts_attribute.field | jsonify }}
-          ></dd>
+            <dt
+              class="data-controlled-footer-field"
+              data-ts-attribute={{ ts_attribute.field | jsonify }}
+            ><u>{{ ts_attribute.label | t  }}</u>:</dt>
+            <dd
+              class="data-controlled-footer-field"
+              data-ts-attribute={{ ts_attribute.field | jsonify }}
+            ></dd>
           {% endfor %}
         {% endif %}
 

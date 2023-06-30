@@ -1,0 +1,8 @@
+{% assign graph_title = page.indicator.graph_titles.first.title | default: page.indicator.graph_title %}
+{% assign graph_subtitle = page.indicator.graph_subtitles.first.title | default: page.indicator.graph_subtitle %}
+<h4 id="map-heading" class="chart-title">{{ graph_title }}</h4>
+<h6 id="map-subheading" class="chart-subtitle">{{ graph_subtitle }}</h6>
+<div id="map" aria-describedby="table-alternative">
+  <img class="map-loading-image" src="{{ site.baseurl }}/assets/img/loading.gif" alt="{{ page.t.indicator.loading_map }}" />
+</div>
+{% include components/indicator/data-footer.html footerId='mapFooter' %}

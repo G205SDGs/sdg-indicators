@@ -34,6 +34,7 @@ var indicatorInit = function () {
                         measurementUnit: domData.measurementunit,
                         xAxisLabel: domData.xaxislabel,
                         showData: domData.showdata,
+                        showInfo: domData.showinfo,
                         graphType: domData.graphtype,
                         graphTypes: domData.graphtypes,
                         startValues: domData.startvalues,
@@ -45,11 +46,15 @@ var indicatorInit = function () {
                         graphTargetLines: domData.graphtargetlines,
                         graphSeriesBreaks: domData.graphseriesbreaks,
                         graphErrorBars: domData.grapherrorbars,
+                        graphTargetPoints: domData.graphtargetpoints,
+                        graphTargetLabels: domData.graphtargetlabels,
                         indicatorDownloads: domData.indicatordownloads,
                         dataSchema: domData.dataschema,
                         compositeBreakdownLabel: domData.compositebreakdownlabel,
                         precision: domData.precision,
                         graphStepsize: domData.graphstepsize,
+                        proxy: domData.proxy,
+                        proxySeries: domData.proxyseries,
                     });
                     var view = new indicatorView(model, {
                         rootElement: '#indicatorData',
@@ -59,7 +64,7 @@ var indicatorInit = function () {
                         maxChartHeight: 420,
                         tableColumnDefs: [
                             { maxCharCount: 25 }, // nowrap
-                            { maxCharCount: 35, width: 200 },
+                            //{ maxCharCount: 35, width: 200 },
                             { maxCharCount: Infinity, width: 300 }
                         ]
                     });

@@ -191,13 +191,6 @@ search_index_extra_fields:
   - data_keywords
   - graph_title
 
-footer_fields:
-  - unit: '%'
-    label: metadata_fields.computation_units
-    value: data.%
-  - unit: number
-    label: metadata_fields.computation_units
-    value: data.number
 
 series_toggle: true
 graph_title_from_series: true
@@ -223,7 +216,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@map-series-unit-behaviors
-remote_theme: open-sdg/open-sdg@2.1.1
+remote_theme: open-sdg/open-sdg@2.2.0
 
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
@@ -314,3 +307,15 @@ map_layers:
     staticBorders: false
     subfolder: kreise
     label: indicator.map
+
+progressive_web_app:
+  enabled: true
+  name: SDG Indikatoren für Deutschland
+  short_name: SDGs Deutschland
+  precaching: true
+
+proxy_indicators:
+  label: Proxy
+  description: Diese Zeitreihe entspricht nicht den globalen Metadaten
+
+
