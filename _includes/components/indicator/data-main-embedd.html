@@ -1,0 +1,14 @@
+{% include components/indicator/headline.html %}
+
+<section>
+
+  <p class="async-loading" data-img="{{ site.baseurl }}/assets/img/loading-small.gif"></p>
+
+  <div class="async-loaded mt-4">
+    {% include components/indicator/data-embedd-tab.html %}
+    <div role="tabpanel" class="tab-pane {% if forloop.first %}active{% endif %}" id="embeddedmapview" class="embedded-map">
+      {% include components/indicator/embedded-feature.html %}
+    </div>
+  </div>
+
+</section>

@@ -1,0 +1,23 @@
+<div style="display: none;">
+    <span id="table-alternative">{{ page.t.indicator.data_tabular_alternative }}</span>
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  <li role="presentation"
+    class="
+      nav-item
+      embedded-map
+    ">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      id="tab-embeddedmapview"
+      data-bs-target="#embeddedmapview"
+      aria-controls="embeddedmapview"
+      data-no-disagg="true"
+      {% include autotrack.html preset="tab_data_embed" category="Tab change" action="Change data view" label="Change to embedded item tab" %}
+      ><i class="fa fa-plus-square" aria-hidden="true"></i>
+    <span class="hidden-xs" style="color:black">{{ page.t.general.additional_information }}</span></button>
+  </li>
+</ul>
