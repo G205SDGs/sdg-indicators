@@ -148,7 +148,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230929012816">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20230929111419">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -492,10 +492,10 @@ data-event-label="high"
   data-showdata="true"
   data-showinfo=""
   data-graphtype="line"
-  data-graphtypes="[{&quot;series&quot;:&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;type&quot;:&quot;line&quot;},{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;type&quot;:&quot;bar&quot;}]"
+  data-graphtypes="[{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;type&quot;:&quot;bar&quot;},{&quot;series&quot;:&quot;feeling of (in)security of the population in its neighbourhood (during the day)&quot;,&quot;type&quot;:&quot;bar&quot;}]"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Very safe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Safe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Unsafe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Very unsafe&quot;}]"
+  data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Z_16014_1&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Very safe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Safe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Unsafe&quot;},{&quot;field&quot;:&quot;Feelings of insecurity&quot;,&quot;value&quot;:&quot;Very unsafe&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation="Feelings of insecurity"
   data-showline="true"
@@ -507,10 +507,10 @@ data-event-label="high"
   data-graphseriesbreaks="[{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;value&quot;:1.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;feelings of insecurity&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Very safe&quot;,&quot;Safe&quot;,&quot;Unsafe&quot;,&quot;Very unsafe&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Feelings of insecurity&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 to under 25 years&quot;,&quot;25 to under 35 years&quot;,&quot;35 to under 45 years&quot;,&quot;45 to under 55 years&quot;,&quot;55 to under 65 years&quot;,&quot;65 to under 75 years&quot;,&quot;75 years and older&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;feelings of insecurity&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Very safe&quot;,&quot;Safe&quot;,&quot;Unsafe&quot;,&quot;Very unsafe&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Feelings of insecurity&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;feeling of (in)security of the population in its neighbourhood (during the day)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
-  data-graphstepsize="[{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;step&quot;:5.0},{&quot;series&quot;:&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;step&quot;:10.0}]"
+  data-graphstepsize="[{&quot;series&quot;:&quot;Feeling of (in)security of the population in its neighbourhood (after dark)&quot;,&quot;step&quot;:5.0},{&quot;series&quot;:&quot;Population not living in an area with crime, violence or vandalism&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;feeling of (in)security of the population in its neighbourhood (during the day)&quot;,&quot;step&quot;:5.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
@@ -902,11 +902,22 @@ data-event-label="Change to Table tab"
               <dt
                 data-for-series="Population not living in an area with crime, violence or vandalism"
                 data-for-unit=""
-              ><u>Note</u>:</dt>
+              ><u>Notes</u>:</dt>
               <dd
                 data-for-series="Population not living in an area with crime, violence or vandalism"
                 data-for-unit=""
-              >As of reference year 2020 there have been two types of results: First and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
+              ><br>• Due to methodological changes, the results from 2020 onwards are only comparable with previous years to a limited extend.<br>• The results currently shown for 2020 and 2021 are final results, for 2022 first results.</dd>
+            
+          
+            
+              <dt
+                data-for-series="feeling of (in)security of the population in its neighbourhood (during the day)"
+                data-for-unit=""
+              ><u>Note</u>:</dt>
+              <dd
+                data-for-series="feeling of (in)security of the population in its neighbourhood (during the day)"
+                data-for-unit=""
+              >Data is only available from 2020.</dd>
             
           
         
@@ -1008,11 +1019,22 @@ data-event-label="Change to Table tab"
               <dt
                 data-for-series="Population not living in an area with crime, violence or vandalism"
                 data-for-unit=""
-              ><u>Note</u>:</dt>
+              ><u>Notes</u>:</dt>
               <dd
                 data-for-series="Population not living in an area with crime, violence or vandalism"
                 data-for-unit=""
-              >As of reference year 2020 there have been two types of results: First and final results. The results currently shown are final results. The "Leben in Europa" survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.</dd>
+              ><br>• Due to methodological changes, the results from 2020 onwards are only comparable with previous years to a limited extend.<br>• The results currently shown for 2020 and 2021 are final results, for 2022 first results.</dd>
+            
+          
+            
+              <dt
+                data-for-series="feeling of (in)security of the population in its neighbourhood (during the day)"
+                data-for-unit=""
+              ><u>Note</u>:</dt>
+              <dd
+                data-for-series="feeling of (in)security of the population in its neighbourhood (during the day)"
+                data-for-unit=""
+              >Data is only available from 2020.</dd>
             
           
         
@@ -1138,7 +1160,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Time series available </th>
         <td>
           
-            <ul style="padding-left: 25px;"><li>Feeling of (in)security of the population in its neighbourhood (after dark)</li> <li> Population not living in an area with crime, violence or vandalism</li></ul>
+            <ul style="padding-left: 25px;"><li>Feeling of (in)security of the population in its neighbourhood (after dark)</li> <li> Population not living in an area with crime, violence or vandalism</li> <li> Feeling of (in)security of the population in its neighbourhood (during the day)</li></ul>
 
           
         </td>
@@ -1159,7 +1181,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Comparability with the global metadata </th>
         <td>
           
-            <p>The time series “Feeling of (in)security of the population in its neighbourhood (after dark)” is compliant with the global metadata. The time series “Population not living in an area with crime, violence or vandalism” provides additional information.</p>
+            <p>The time series “Feeling of (in)security of the population in its neighbourhood (after dark)” and “Feeling of (in)security of the population in its neighbourhood (during the day)” are compliant with the global metadata. The time series “Population not living in an area with crime, violence or vandalism” provides additional information.</p>
 
           
         </td>
@@ -3077,12 +3099,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20230929012816'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20230929111419'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20230929012816"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20230929111419"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
