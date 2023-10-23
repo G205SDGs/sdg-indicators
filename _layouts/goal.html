@@ -35,19 +35,19 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col d-grid gap-2">
-        <a href="{{ baseurl }}/{{ language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+        <a href="{{ baseurl }}/{{ page.language }}/{{ previous_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
           <b><i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.t.general.prev_goal }}</b>
         </a>
       </div>
 
       <div class="col-md-auto">
-        <a href="https://sustainabledevelopment-deutschland.github.io/{{ language }}/{{ page.goal.number }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
+        <a href="https://sustainabledevelopment-deutschland.github.io/{{ page.language }}/{{ page.goal.number }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn" title="{{ t.general.link_sdg_goal }}" role="button">
           <b class="btn-label d-none d-md-block">{{ page.t.general.target_link_dns }} {{ page.t.general.goal }} {{ page.goal.number }} </b><b class="btn-label d-block d-md-none">{{ page.t.general.goal }} {{ page.goal.number }} {{ page.t.general.national }}</b>
         </a>
       </div>
 
       <div class="col d-grid gap-2">
-        <a href="{{ baseurl }}/{{ language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
+        <a href="{{ baseurl }}/{{ page.language }}/{{ next_goal }}" class="btn btn-primary btn-block goal-{{ page.goal.number }} navigation-btn text-nowrap" role="button">
           <b>{{ page.t.general.next_goal }} <i class="fa fa-chevron-right" aria-hidden="true"></i></b>
         </a>
       </div>
