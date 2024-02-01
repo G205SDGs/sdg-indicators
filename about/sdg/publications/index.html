@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Über die Online Plattform - Deutschlands Indikatoren der VN Sustainable Development Goals</title>
+    <title>Publikationen - Deutschlands SDG Indikatoren</title>
 
 
 
@@ -143,14 +143,14 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240201103141">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240201145426">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">-->
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
 
@@ -201,38 +201,93 @@ layout-page
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/">17 Ziele</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Über uns
+                    <ul class="navbar-nav" id="menu"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Start
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" active">
-    <a class="dropdown-item" href="/sdg-indicators/platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/navigation/">Navigation</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/guidance/">Technische&nbspHinweise</a>
-</li></ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Wissenswertes
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-start"><li class=" ">
+    <a class="dropdown-item" href="https://dns-indikatoren.de" >Nationale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/DNS Wheel.png" title="Klicken Sie hier um zur Seite der DNS Indikatoren zu gelangen" alt="Link DNS" style="width:24px;height:24px;"/></a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/" >Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li>
+</ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Themen
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/facts_dns/">DNS</a>
-</li><li>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-about"><li>
                       <a class="dropdown-item dropdown-toggle" href="#">
-                          Open SDG Plattformen anderer Staaten
+                          Deutsche Nachhaltigkeitsstrategie (DNS)
                       </a>
-                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenien</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnien und Herzegowina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Färöer</a></li><li><a class="dropdown-item" href="https://odd-dashboard.cd/">Demokratische Republik Kongo</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Island</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kirgisistan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Laos</a></li><li><a class="dropdown-item" href="https://montestat.github.io/site/">Montenegro</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Ruanda</a></li><li><a class="dropdown-item" href="https://sdg.tuik.gov.tr/">Türkei</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">Südkorea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">Vereinigtes Königreich</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">USA</a></li></ul>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://dns-indikatoren.de/about/dns/monitoring">Monitoring</a></li><li><a class="dropdown-item" href="https://dns-indikatoren.de/about/dns/publications">Publikationen</a></li></ul>
+                    </li><li>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          Agenda 2030 (SDG)
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="/sdg-indicators//about/sdg/monitoring/">Monitoring</a></li><li><a class="dropdown-item" href="/sdg-indicators//about/sdg/publications/">Publikationen</a></li></ul>
                     </li></ul>
           </li><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/publications/">Publikationen</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="https://dns-indikatoren.de"><img class="link_btn" src="https://sdg-indikatoren.de/public/DNS%20Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/></a>
-</li></ul>
+    <a class="nav-link" href="/sdg-indicators/reporting-status/" >Berichtsstatus</a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-other-countries" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Weltweit
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-other-countries"><li class=" ">
+    <a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/"  target="_blank" onclick="return confirm_alert('von Armenien', 'De');" >Armenien</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.bhas.gov.ba/"  target="_blank" onclick="return confirm_alert('der Agentur für Statistik von Bosnien und Herzigovina', 'De');" >Bosnien und Herzegowina</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.hagstova.fo/sdg-site/en/"  target="_blank" onclick="return confirm_alert('von Färöer', 'De');" >Färöer</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://odd-dashboard.cd/en/"  target="_blank" onclick="return confirm_alert('der Demokratischen Republik Kongo', 'De');" >Demokratische Republik Kongo</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/"  target="_blank" onclick="return confirm_alert('des Stistischen Dienstes von Ghana', 'De');" >Ghana</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/en/"  target="_blank" onclick="return confirm_alert('Statistik Island', 'De');" >Island</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/en/"  target="_blank" onclick="return confirm_alert('Kirgisistan ', 'De');" >Kirgisistan</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://www.lsb.gov.la/sdg/en/"  target="_blank" onclick="return confirm_alert('des Amts für Statistik in Laos', 'De');" >Laos</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://montestat.github.io/site/en/"  target="_blank" onclick="return confirm_alert('Montenegro', 'De');" >Montenegro</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/"  target="_blank" onclick="return confirm_alert('Ruanda', 'De');" >Ruanda</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.tuik.gov.tr/en/"  target="_blank" onclick="return confirm_alert('des Instituts für Staistik Türkei', 'De');" >Türkei</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/"  target="_blank" onclick="return confirm_alert('von Statistik Ukraine', 'De');" >Ukraine</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdgdata.gov.uk/"  target="_blank" onclick="return confirm_alert('des Statistischen Amtes des Vereinigten Königreichs', 'De');" >Vereinigtes Königreich</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.data.gov/"  target="_blank" onclick="return confirm_alert('des Office of Management and Budget, der General Services Administration und des US Office of Science and Technology Policy', 'De');" >USA</a>
+</li>
+</ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Hilfe
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/help/navigation/" >Aufbau der Online Plattform</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/help/guidance/" >Technische Hinweise</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/help/faq/" >FAQ</a>
+</li>
+</ul>
+          </li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -256,23 +311,31 @@ layout-page
 
 
   <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/sdg-indicators/en/platform/">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/en/about/sdg/publications/">
                 English
             </a>
         </li></ul>
 </div>
 
 
+
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/sdg-indicators/en/platform/">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
+            <a class="language-toggle-link" href="/sdg-indicators/en/about/sdg/publications/">
                 English
             </a>
         </li></ul>
-</div></span><a title="" aria-label=""
+</div>
+</span><a title="" aria-label=""
     data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -292,95 +355,73 @@ data-event-label="high"
         <li class="breadcrumb-item" >
             <a href="/sdg-indicators/">Start</a>
         </li>
-        <li class="breadcrumb-item active">Über die Online Plattform</li>
+        <li class="breadcrumb-item active">Publikationen</li>
     </ol>
 </nav>
 </div>
 <div id="main-content" class="container" role="main">
     <div>
-        <h1>Über die Online Plattform</h1>
+        <h1>Publikationen</h1>
         
 
 
-    Die Online Plattform gliedert sich in das Indikatorenset für Deutschland zu den globalen Nachhaltigkeitszielen
-<a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">Sustainable Development Goals, SDGs</a>
-der Agenda 2030 der Vereinten Nationen sowie das Indikatorenset der
-<a href="https://www.bundesregierung.de/breg-de/themen/nachhaltigkeitspolitik/eine-strategie-begleitet-uns" target="blank" onclick="return confirm_alert('der Bundesregierung', 'De');"> Deutschen Nachhaltigkeitsstrategie</a> (DNS).
-Da die Deutsche Nachhaltigkeitsstrategie die nationale Umsetzung der Agenda 2030 ist, werden verwandte Indikatoren beider Strategien auf der Plattform miteinander verlinkt.
-<br><br>
-Die Zeitreihen zu den Indikatoren beider Online Plattformen stehen Ihnen zum Download zur Verfügung.
-<br><br>
-Einen Direktlink zur Startseite der DNS-Online Plattform finden Sie oben rechts auf dieser Seite neben dem Suchfeld: <a href="https://dns-indikatoren.de"><img src="https://sdg-indikatoren.de/assets/img/about/DNS Wheel.png" alt="Wheel"></a>
-<br><br>
-Beide Indikatorensets sind nach den 17 Zielen der Agenda 2030 der Vereinten Nationen gegliedert. Entsprechend stammen die Symbole und die Farbwahl der 17 Ziele (Abb. 1 und Abb. 2), die hier und auf der DNS-Online Plattform verwendet werden, von den Vereinten Nationen. Die Symbole sind urheberrechtlich geschützt.
-<br><br>
-<div class="container" style="padding-left: 0px;">
-<div class="row">
-<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
-<img src="https://dns-indikatoren.de//assets/img/about/sdgIcons.PNG" alt="Abbildung 1: SDG Icons" class="responsiveImg" style="width: 100%;">
-<small> Abb. 1: 17 SDG-Symbole der Vereinten Nationen, eingesetzt auf der <b>SDG-Online Plattform für Deutschland</b></small>
+    <h3 style="width: 80%;"><a href="https://sdg-indikatoren.de//public/wista_SDG.pdf" target="_blank">Sustainable Development Goals – Indikatoren für die Agenda 2030 für nachhaltige Entwicklung</a></h3>
+<div class="flex-container">
+  <div class="rightColumn">
+    <figure style="margin-left: 10px; max-width:280px; width:100%; border: 1px solid #ddd; border-radius: 4px;">
+      <img src="https://sdg-indikatoren.de/assets/img/wista_5_16.PNG"
+      alt="Abbildung 1: WISTA" style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px;">
+    </figure>
+  </div>
+  <div class="leftColumn">
+    Auszug aus der Publikation „WISTA - Wirtschaft und Statistik“
+    <br>
+    Erschienen im Mai 2016
+    <br><br>
+    <p style="padding-bottom: 30px;">Am Entwicklungsprozess des Indikatorenrahmenwerks der Nachhaltigkeitsziele der
+      Vereinten Nationen waren viele nationale und internationale Akteure beteiligt; ihre
+      gute und intensive Zusammenarbeit führte zu einer Einigung in sehr kurzer Zeit. Das
+      Rahmenwerk selbst soll möglichst viele Aspekte der Agenda 2030 der Vereinten
+      Nationen berücksichtigen; dadurch ist es mit seinen 231 Indikatoren sehr umfangreich.
+      Die amtliche Statistik sieht sich nun vor der Aufgabe, die vielseitigen Indikatoren
+      mit Leben zu füllen. Das Statistische Bundesamt hat im Juli 2016 bereits erste
+      nationale Zahlen veröffentlicht und wird auch künftig aktiv am Weiterentwicklungsprozess
+      des Rahmenwerkes teilnehmen. Damit eröffnet sich für das Statistische
+      Bundesamt die Chance, neue Datenquellen zu erschließen und das Blickfeld der
+      amtlichen Statistik inhaltlich zu erweitern.
+    </p>
+  </div>
 </div>
 
-<div class="col-xs-12 col-md-6 col-lg-6" style="padding-left: 100px; padding-right: 100px;">
-<img src="https://dns-indikatoren.de//assets/img/about/sdgIconsInvert.PNG" alt="Abbildung 2: SDG Icons inverted" class="responsiveImg" style="width: 100%;">
-<small> Abb. 2: 17 invertierte SDG-Symbole der Vereinten Nationen und das N im Kreis aus der Deutschen Nachhaltigkeitsstrategie, eingesetzt auf der <b>DNS-Online Plattform</b></small>
+<h1 style="width: 80%;">HLPF-Berichte</h1>
+<div class="flex-container">
+  <div class="rightColumn">
+    <figure style="margin-left: 10px; max-width:280px; width:100%; border: 1px solid #ddd; border-radius: 4px;">
+      <img src="https://sdg-indikatoren.de/assets/img/HLPF-Logo.jpg"
+      alt="Abbildung 2: HLPF"
+      style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px; max-width: 350px;">
+    </figure>
+  </div>
+  <div class="leftColumn">
+    Bei dem jährlich in New York stattfindenden High Level Political Forum für Nachhaltige Entwicklung (HLPF) der
+    Vereinten Nationen legen die Mitgliedsstaaten in unregelmäßigen Abständen einen Fortschrittsbericht vor, der Aufschluss über die Erreichung der
+    Sustainable Development Goals auf nationaler Ebene gibt.<br>Deutschland berichtete 2021 nach 2016 bereits zum zweiten mal.
+    <h3>2021</h3>
+    <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2021_de.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2021</a>
+    <br>
+    <h3>2016</h3>
+    <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2016_en.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2016</a> <small>(nur auf Englisch verfügbar)</small>
+  </div>
 </div>
+
+<h1 style="width: 80%;">Pressemitteilungen</h1>
+<div class="flex-container">
+  <div class="leftColumn">
+    <h3>Fünf Jahre Berichterstattung: Wie nachhaltig ist Deutschland?</h3>
+    <a href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2021/07/PD21_317_325.html" target="_blank">Pressemitteilung Nr. 317 vom 5. Juli 2021</a>
+    <br>
+  </div>
 </div>
-</div>
-
-<h3>Ziel und Hintergrund</h3>
-
-Ziel der SDG-Online Plattform ist die Darstellung der Indikatoren der UN-Nachhaltigkeitsziele für Deutschland.
-<br><br>
-Die SDGs sind in der Agenda 2030 für nachhaltige Entwicklung verankert, die im September 2015 von der Generalversammlung der Vereinten Nationen und somit im Einvernehmen aller Mitgliedsstaaten verabschiedet wurde.
-Die Agenda schafft die Grundlage, um weltweiten wirtschaftlichen Fortschritt im Einklang mit sozialer Gerechtigkeit und im Rahmen der ökologischen Grenzen der Erde zu gestalten.
-<br><br>
-Das Statistische Bundesamt ist für die Koordination und Veröffentlichung nationaler Daten für Deutschland zu den SDG-Indikatoren verantwortlich. Die SDG-Online Plattform ermöglicht es den zuständigen internationalen
-Organisationen (Custodian Agencies) die Daten für einzelne SDG-Indikatoren direkt herunterzuladen und z. B. für die ihnen durch die Vereinten Nationen übertragene globale Berichterstattung zu nutzen (Abb. 3).
-Zudem bietet sie stets aktualisierte Informationen über den Stand der SDG-Indikatoren für Deutschland und detaillierte Angaben zu deren Berechnungsmethodik.
-<br><br>
-<img src="https://dns-indikatoren.de//assets/img/about/agenda2.png" alt="Abbildung 3: Datenfluss zum Berechnen der SDG-Indikatoren für Deutschland" class="responsiveImg">
-
-<p style="text-align:center;">
-<small> Abb. 3: Datenfluss zum Berechnen der SDG-Indikatoren für Deutschland
-</small>
-</p>
-
-In einigen Fällen liegen für Deutschland Daten mit geringfügigen methodischen Abweichungen gegenüber den Vorgaben der zuständigen Custodian Agencies vor.
-In anderen Fällen sind dagegen nur Zeitreihen mit größeren Abweichungen zur global festgelegten Berechnungsmethodik verfügbar (Mehr dazu finden Sie in der Kategorie „Über uns“
-und <a href="https://sdg-indikatoren.de/navigation">Navigation</a> im Abschnitt globale Metadaten).
-Dies kann dazu führen, dass die jeweiligen Custodian Agencies zur Sicherstellung der internationalen Vergleichbarkeit die bereitgestellten Daten anpassen. Entsprechend können die Zeitreihen, die in
-der <a href="https://unstats.un.org/sdgs/indicators/database/" target="_blank" onclick="return confirm_alert('der Statistischen Division der Vereinten Nationen', 'De');">globalen SDG-Datenbank</a>
-zu finden sind, von den hier bereitgestellten Zeitreihen abweichen.
-
-<h3> Mögliche Änderungen bis 2030 </h3>
-
-Das bestehende Indikatorenset durchläuft zwei große Revisionsrunden in den Jahren 2020 (bereits abgeschlossen) und 2025. Die
-<a href="https://unstats.un.org/sdgs/iaeg-sdgs/" target="_blank" onclick="return confirm_alert('der Statistischen Division der Vereinten Nationen', 'De');">IAEG-SDG</a>
-(Inter-Agency and Expert Group on Sustainable Development Goal Indicators) ist mit der Koordination dieser Revisionen beauftragt.
-Durch die Revisionen besteht unter anderem die Möglichkeit, dass zum bestehenden Set neue Indikatoren hinzukommen, ersetzt oder aber auch herausgenommen werden können.
-Die Änderungen werden so zügig wie möglich auf der SDG-Online Plattform eingepflegt.
-
-<h3> Indikatorenvergleich SDG und DNS</h3>
-
-Die SDG-Indikatoren der Vereinten Nationen und ihre Nummerierung sind nicht identisch mit den DNS-Indikatoren. Wenn ein vergleichbarer DNS-Indikator zu einem SDG-Indikator vorhanden ist, ist dies über eine
-Schaltfläche mit Direktlink zum jeweiligen Indikator kenntlich gemacht (Abb.4).
-<br><br>
-<img src="https://sdg-indikatoren.de/assets/img/about/sdgIndicatorPage.PNG" alt="Abbildung 4: Schaltfläche zu verwandtem DNS-Indikator (hervorgehoben)" class="responsiveImg">
-
-<p style="text-align:center;">
-<small> Abb. 4: Schaltfläche zu verwandtem DNS-Indikator (hervorgehoben)
-</small>
-</p>
-
-Einen Direktlink zur Startseite der DNS-Online Plattform finden Sie oben rechts auf dieser Seite neben dem
-Suchfeld: <a href="https://dns-indikatoren.de"><img src="https://sdg-indikatoren.de/assets/img/about/DNS Wheel.png" alt="Wheel"></a>
-
-
-<h3> Technischer Hintergrund</h3>
-
-Um die Daten von jedem beteiligten Land aufbereitet darstellen zu können, bietet das Open-Source-Projekt Open SDG auf GitHub eine normierte
-Vorlage einer Online Plattform. Mehr dazu finden Sie unter <a href="https://sdg-indikatoren.de/guidance">Technische Hinweise</a>.
 
 
 
@@ -408,17 +449,6 @@ Vorlage einer Online Plattform. Mehr dazu finden Sie unter <a href="https://sdg-
                               
                           </li>
                         <li>
-                              
-                                
-                                  <a href="https://twitter.com/destatis?lang=de" target="_blank" onclick="return confirm_alert('', 'De');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                                
-                              
-                          </li>
-                        <li>
-                              <a href="/sdg-indicators/faq/ ">FAQ</a>
-                              
-                          </li>
-                        <li>
                               <a href="/sdg-indicators/imprint/ ">Im­pres­s­um</a>
                               
                           </li>
@@ -437,7 +467,8 @@ Vorlage einer Online Plattform. Mehr dazu finden Sie unter <a href="https://sdg-
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script type="text/javascript"  src="/sdg-indicators/assets/js/loadash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -458,12 +489,12 @@ Vorlage einer Online Plattform. Mehr dazu finden Sie unter <a href="https://sdg-
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20240201103141'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20240201145426'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20240201103141"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20240201145426"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

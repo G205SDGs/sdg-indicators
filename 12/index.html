@@ -118,7 +118,7 @@ var translations = {
 
         
     
-    <title>SDG 12 - Verantwortungsvolle Konsum- und Produktionsmuster - Deutschlands Indikatoren der VN Sustainable Development Goals</title>
+    <title>SDG 12 - Verantwortungsvolle Konsum- und Produktionsmuster - Deutschlands SDG Indikatoren</title>
     
 
 
@@ -145,14 +145,14 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240201103141">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240201145426">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">-->
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
 
@@ -203,38 +203,93 @@ layout-goal
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/">17 Ziele</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/reporting-status/">Datenverfügbarkeit</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Über uns
+                    <ul class="navbar-nav" id="menu"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Start
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/platform/">Die&nbspSDG&#8209;Online&nbspPlattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/navigation/">Navigation</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/guidance/">Technische&nbspHinweise</a>
-</li></ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Wissenswertes
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-start"><li class=" ">
+    <a class="dropdown-item" href="https://dns-indikatoren.de" >Nationale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/DNS Wheel.png" title="Klicken Sie hier um zur Seite der DNS Indikatoren zu gelangen" alt="Link DNS" style="width:24px;height:24px;"/></a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/" >Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li>
+</ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Themen
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/facts_agenda/">Agenda&nbsp2030</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/facts_dns/">DNS</a>
-</li><li>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-about"><li>
                       <a class="dropdown-item dropdown-toggle" href="#">
-                          Open SDG Plattformen anderer Staaten
+                          Deutsche Nachhaltigkeitsstrategie (DNS)
                       </a>
-                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenien</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnien und Herzegowina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Färöer</a></li><li><a class="dropdown-item" href="https://odd-dashboard.cd/">Demokratische Republik Kongo</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Island</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kirgisistan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Laos</a></li><li><a class="dropdown-item" href="https://montestat.github.io/site/">Montenegro</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Ruanda</a></li><li><a class="dropdown-item" href="https://sdg.tuik.gov.tr/">Türkei</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">Südkorea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">Vereinigtes Königreich</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">USA</a></li></ul>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://dns-indikatoren.de/about/dns/monitoring">Monitoring</a></li><li><a class="dropdown-item" href="https://dns-indikatoren.de/about/dns/publications">Publikationen</a></li></ul>
+                    </li><li>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          Agenda 2030 (SDG)
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="/sdg-indicators//about/sdg/monitoring/">Monitoring</a></li><li><a class="dropdown-item" href="/sdg-indicators//about/sdg/publications/">Publikationen</a></li></ul>
                     </li></ul>
           </li><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/publications/">Publikationen</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="https://dns-indikatoren.de"><img class="link_btn" src="https://sdg-indikatoren.de/public/DNS%20Wheel.png" title="Zur Seite der nationalen Indikatoren" alt="Link DNS" style="width:24px;height:24px;"/></a>
-</li></ul>
+    <a class="nav-link" href="/sdg-indicators/reporting-status/" >Berichtsstatus</a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-other-countries" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Weltweit
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-other-countries"><li class=" ">
+    <a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/"  target="_blank" onclick="return confirm_alert('von Armenien', 'De');" >Armenien</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.bhas.gov.ba/"  target="_blank" onclick="return confirm_alert('der Agentur für Statistik von Bosnien und Herzigovina', 'De');" >Bosnien und Herzegowina</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.hagstova.fo/sdg-site/en/"  target="_blank" onclick="return confirm_alert('von Färöer', 'De');" >Färöer</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://odd-dashboard.cd/en/"  target="_blank" onclick="return confirm_alert('der Demokratischen Republik Kongo', 'De');" >Demokratische Republik Kongo</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/"  target="_blank" onclick="return confirm_alert('des Stistischen Dienstes von Ghana', 'De');" >Ghana</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/en/"  target="_blank" onclick="return confirm_alert('Statistik Island', 'De');" >Island</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/en/"  target="_blank" onclick="return confirm_alert('Kirgisistan ', 'De');" >Kirgisistan</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://www.lsb.gov.la/sdg/en/"  target="_blank" onclick="return confirm_alert('des Amts für Statistik in Laos', 'De');" >Laos</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://montestat.github.io/site/en/"  target="_blank" onclick="return confirm_alert('Montenegro', 'De');" >Montenegro</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/"  target="_blank" onclick="return confirm_alert('Ruanda', 'De');" >Ruanda</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.tuik.gov.tr/en/"  target="_blank" onclick="return confirm_alert('des Instituts für Staistik Türkei', 'De');" >Türkei</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/"  target="_blank" onclick="return confirm_alert('von Statistik Ukraine', 'De');" >Ukraine</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdgdata.gov.uk/"  target="_blank" onclick="return confirm_alert('des Statistischen Amtes des Vereinigten Königreichs', 'De');" >Vereinigtes Königreich</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.data.gov/"  target="_blank" onclick="return confirm_alert('des Office of Management and Budget, der General Services Administration und des US Office of Science and Technology Policy', 'De');" >USA</a>
+</li>
+</ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Hilfe
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/help/navigation/" >Aufbau der Online Plattform</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/help/guidance/" >Technische Hinweise</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/help/faq/" >FAQ</a>
+</li>
+</ul>
+          </li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -258,8 +313,11 @@ layout-goal
 
 
   <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/sdg-indicators/en/12/">
                 English
             </a>
@@ -267,14 +325,19 @@ layout-goal
 </div>
 
 
+
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/sdg-indicators/en/12/">
                 English
             </a>
         </li></ul>
-</div></span><a title="" aria-label=""
+</div>
+</span><a title="" aria-label=""
     data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -401,7 +464,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -456,7 +519,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -492,7 +555,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -547,7 +610,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -602,7 +665,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -638,7 +701,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -693,7 +756,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -748,7 +811,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -803,7 +866,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -858,7 +921,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -913,7 +976,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -968,7 +1031,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1023,7 +1086,7 @@ data-event-label="high"
 
 
 
-    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label="Feld das den Berichtsstatus des Indikators angibt"><li class="list-inline-item">
+    <ul class="tags list-unstyled list-inline" style="margin-bottom: 0px; margin-top: 0px" aria-label=""><li class="list-inline-item">
         <span class="visually-hidden"></span>
         
 
@@ -1070,17 +1133,6 @@ data-event-label="high"
                               
                           </li>
                         <li>
-                              
-                                
-                                  <a href="https://twitter.com/destatis?lang=de" target="_blank" onclick="return confirm_alert('', 'De');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                                
-                              
-                          </li>
-                        <li>
-                              <a href="/sdg-indicators/faq/ ">FAQ</a>
-                              
-                          </li>
-                        <li>
                               <a href="/sdg-indicators/imprint/ ">Im­pres­s­um</a>
                               
                           </li>
@@ -1099,7 +1151,8 @@ data-event-label="high"
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script type="text/javascript"  src="/sdg-indicators/assets/js/loadash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -1120,12 +1173,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20240201103141'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20240201145426'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20240201103141"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20240201145426"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

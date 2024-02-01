@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Navigation - German Indicators For The UN Sustainable Development Goals</title>
+    <title>Structure of the online platform - German Indicators For The UN Sustainable Development Goals</title>
 
 
 
@@ -143,14 +143,14 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240201103141">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240201145426">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
         <link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"  crossorigin=""/>
         <link rel="stylesheet" href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'  crossorigin=""/>
         <link rel="stylesheet" href="https://bowercdn.net/c/leaflet.zoomhome-latest/dist/leaflet.zoomhome.css"  crossorigin=""/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.css" crossorigin="">-->
         <link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7/klaro.min.css" crossorigin=""/>
         
 
@@ -201,38 +201,93 @@ layout-page
             </button>
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/en/">17 Goals</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/en/reporting-status/">Data&nbspavailability</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    About us
+                    <ul class="navbar-nav" id="menu"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Start
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-about"><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/platform/">SDG&nbsponline&nbspplatform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/navigation/">Navigation</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/guidance/">Technical instructions</a>
-</li></ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-facts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Useful information
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-start"><li class=" ">
+    <a class="dropdown-item" href="https://dns-indicators.de" >National indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/DNS Wheel.png" title="Click here to get to the dns platform" alt="Link DNS" style="width:24px;height:24px;"/></a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/" >Global indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Click here to get to the sdg platform" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li>
+</ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Topics
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-facts"><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/facts_agenda/">2030 Agenda</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/en/facts_dns/">German Sustainable Development Strategy (DNS)</a>
-</li><li>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-about"><li>
                       <a class="dropdown-item dropdown-toggle" href="#">
-                          Open SDG platforms of other countries
+                          German Sustainable Developmnet Strategy (DNS)
                       </a>
-                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/">Armenia</a></li><li><a class="dropdown-item" href="https://sdg.bhas.gov.ba/">Bosnia and Herzegovina</a></li><li><a class="dropdown-item" href="https://sdg.hagstova.fo/">Faroe Islands</a></li><li><a class="dropdown-item" href="https://odd-dashboard.cd/">Democratic Republic of the Congo</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/">Ghana</a></li><li><a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/">Iceland</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/">Kyrgyzstan</a></li><li><a class="dropdown-item" href="https://www.lsb.gov.la/sdg/">Lao PDR</a></li><li><a class="dropdown-item" href="https://montestat.github.io/site/">Montenegro</a></li><li><a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/">Rwanda</a></li><li><a class="dropdown-item" href="https://sdg.tuik.gov.tr/">Turkey</a></li><li><a class="dropdown-item" href="http://kostat.go.kr/sdg">South korea</a></li><li><a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/">Ukraine</a></li><li><a class="dropdown-item" href="https://sdgdata.gov.uk/">United Kingdom</a></li><li><a class="dropdown-item" href="https://sdg.data.gov/">United States</a></li></ul>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://dns-indicators.de/about/dns/monitoring">Monitoring</a></li><li><a class="dropdown-item" href="https://dns-indicators.de/about/dns/publications/">Publications</a></li></ul>
+                    </li><li>
+                      <a class="dropdown-item dropdown-toggle" href="#">
+                          2030 Agenda (SDG)
+                      </a>
+                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="/sdg-indicators/en//about/sdg/monitoring/">Monitoring</a></li><li><a class="dropdown-item" href="/sdg-indicators/en//about/sdg/publications/">Publications</a></li></ul>
                     </li></ul>
           </li><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/en/publications/">Publications</a>
-</li><li class="nav-item ">
-    <a class="nav-link" href="https://dns-indikatoren.de"><img class="link_btn" src="https://sdg-indikatoren.de/public/DNS%20Wheel.png" title="To the page of the national indicators" alt="Link DNS" style="width:24px;height:24px;"/></a>
-</li></ul>
+    <a class="nav-link" href="/sdg-indicators/en/reporting-status/" >Reporting status</a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-other-countries" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Worldwide
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-other-countries"><li class=" ">
+    <a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/"  target="_blank" onclick="return confirm_alert('Armenia', 'En');" >Armenia</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.bhas.gov.ba/"  target="_blank" onclick="return confirm_alert('the Agency for Statistics of Bosnia and Herzegovina', 'En');" >Bosnia and Herzegovina</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.hagstova.fo/sdg-site/en/"  target="_blank" onclick="return confirm_alert('the Faroe Islands', 'En');" >Faroe Islands</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://odd-dashboard.cd/en/"  target="_blank" onclick="return confirm_alert('the Democratic Republic of the Congo', 'En');" >Democratic Republic of the Congo</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/"  target="_blank" onclick="return confirm_alert('the Statistical Service of Ghana', 'En');" >Ghana</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/en/"  target="_blank" onclick="return confirm_alert('Statistics Iceland', 'En');" >Iceland</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/en/"  target="_blank" onclick="return confirm_alert('Kyrgyzstan', 'En');" >Kyrgyzstan</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://www.lsb.gov.la/sdg/en/"  target="_blank" onclick="return confirm_alert('the Lao Statistics Bureau', 'En');" >Lao PDR</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://montestat.github.io/site/en/"  target="_blank" onclick="return confirm_alert('Montenegro', 'En');" >Montenegro</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/"  target="_blank" onclick="return confirm_alert('Rwanda', 'En');" >Rwanda</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.tuik.gov.tr/en/"  target="_blank" onclick="return confirm_alert('the Turkish Statistical Institute', 'En');" >Turkey</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/"  target="_blank" onclick="return confirm_alert('Statistics Ucrain', 'En');" >Ukraine</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdgdata.gov.uk/"  target="_blank" onclick="return confirm_alert('the Office for National Statistics UK', 'En');" >United Kingdom</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="https://sdg.data.gov/"  target="_blank" onclick="return confirm_alert('the Office of Management and Budget, the General Services Administration, and the US Office of Science and Technology Policy', 'En');" >United States</a>
+</li>
+</ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Help
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/help/navigation/" >Structure of the online platform</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/help/guidance/" >Technical guidance</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/en/help/faq/" >FAQ</a>
+</li>
+</ul>
+          </li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -256,23 +311,31 @@ layout-page
 
 
   <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
-            <a class="language-toggle-link" href="/sdg-indicators/navigation/">
+            <a class="language-toggle-link" href="/sdg-indicators/help/navigation/">
                 Deutsch
             </a>
+        </li><li class="language-option-en list-inline-item" style="opacity:0.3">
+            <span>
+                English
+            </span>
         </li></ul>
 </div>
 
 
+
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
-            <a class="language-toggle-link" href="/sdg-indicators/navigation/">
+            <a class="language-toggle-link" href="/sdg-indicators/help/navigation/">
                 Deutsch
             </a>
+        </li><li class="language-option-en list-inline-item" style="opacity:0.3">
+            <span>
+                English
+            </span>
         </li></ul>
-</div></span><a title="" aria-label=""
+</div>
+</span><a title="" aria-label=""
     data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
@@ -292,91 +355,50 @@ data-event-label="high"
         <li class="breadcrumb-item" >
             <a href="/sdg-indicators/en/">Home</a>
         </li>
-        <li class="breadcrumb-item active">Navigation</li>
+        <li class="breadcrumb-item active">Structure of the online platform</li>
     </ol>
 </nav>
 </div>
 <div id="main-content" class="container" role="main">
     <div>
-        <h1>Navigation</h1>
+        <h1>Structure of the online platform</h1>
         
 
 
-    <h3>Layout of the SDG online platform</h3>
-
-The online platform comprises two components, namely the German set of indicators for the global sustainable development goals
-(<a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank" onclick="return confirm_alert('the United Nations', 'En');">Sustainable Development Goals</a>, SDGs)
-of the United Nations 2030 Agenda and the indicator set of the
-<a href="https://www.bundesregierung.de/breg-en/issues/sustainability/" target="_blank" onclick="return confirm_alert('the Federal Government', 'En');">German Sustainable Development Strategy</a> (Deutsche Nachhaltigkeitsstrategie, DNS).
-Since the German Sustainable Development Strategy is aimed at implementing the 2030 Agenda at the national level, indicators shared by both strategies are
-linked to each other on the platform.
+    The online platform is structured into the indicator set of the
+<a href="https://www.bundesregierung.de/resource/blob/975274/1941044/2e8480a6b93910b347e647814ff59a7f/2021-07-09-kurzpapier-n-englisch-data.pdf?download=1" target="_blank" onclick="return confirm_alert('the Federal Government', 'En');"">German Sustainable Development Strategy (DNS)</a>
+and the indicator set for Germany on the global
+<a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank" onclick="return confirm_alert('the UN', 'En');">Sustainable Development Goals (SDGs)</a>
+of the United Nations 2030 Agenda. The German Sustainable Development Strategy is the national implementation of the 2030 Agenda,
+which is why related indicators from both strategies are linked to each other on the platform. You can find a direct link to the
+homepage of the SDG online platform under "Start".
 <br><br>
-A direct link to the homepage of the DNS online platform can be found at the top right of this page next to the search field:
-<a href="https://dns-indicators.de"><img src="https://sdg-indikatoren.de/assets/img/about/DNS Wheel.png" alt="Wheel"></a>
+The SDG online platform is divided into 17 goals, 169 targets and the corresponding indicators (248 - however, thirteen indicators
+repeat under two or three different targets).
 
+<h3>Presentation of the indicators</h3>
+The relevant data for each indicator is presented in a chart and a table. This presentation is supplemented for some indicators by
+an interactive map showing the data for the German federal states. However, some indicators cannot be meaningfully depicted simply
+by presenting data. Where possible, explanatory texts with links to thematically relevant information on the indicators are shown
+here.<br>The green buttons underneath the chart can be used to download the data in
+CSV format or the chart as a PNG file.
 
-<h3> Structure of the SDG online platform</h3>
+<h3>National and Global Metadata and data sources</h3>
+The "National Metadata", "Global Metadata" and "Data sources" tabs can be found at the bottom of the indicator pages.<br><br>The
+"National Metadata" tab contains an assessment of whether or not the time series shown fulfil the requirements for the indicator
+from the "Global Metadata" of the Custodian Agency. Under "National Metadata" you will also find a PDF document for each
+indicator containing detailed information on the data shown.<br><br>The most important information on the respective indicators
+is summarised under the "Global Metadata" tab and a link to the metadata is provided. The requirements for the indicator are
+described there by the responsible international organisations.<br><br>Under "Data sources" you will
+find links to the organisation or organisations that provided the data for the time series and - where possible - links directly to
+the specific data sources.
 
-The SDG online platform comprises goals, targets and related indicators (Fig. 1).
-<br><br>
-<img src="https://sdg-indikatoren.de/assets/img/about/en/target_page.PNG" alt="Abbildung 1: Aufbau der Unterziel-Seiten" class="responsiveImg">
-
-<p style="text-align:center">
-<small> Fig. 1: Example of the structure of SDGs based on goal 11 “Sustainable Cities and Communities“ (as of July 2020)</small>
-</p>
-<br>
-
-<h3>Presentation of SDG indicators</h3>
-
-Each SDG indicator is displayed on a separate page. Depending on the indicator, different selection menus are shown on the left.
-The first selection menu contains all time series available for the indicator.
-In the sub-menus you can select various variable values depending on the data series - e.g. different age groups.
-<br><br>
-The development of the time series is visualised in a chart.
-Click on the second tab next to “Chart“ to view, in a table, the data underlying the chart and all other data available from the
-selection menus (Fig. 2).
-<br><br>
-<img src="https://sdg-indikatoren.de/assets/img/about/en/indicator_page.PNG" alt="Abbildung 2: Aufbau der Indikator-Seiten" class="responsiveImg">
-
-<p style="text-align:center">
-<small> Fig. 2: Example of the presentation of SDG indicators using indicator 11.7.1 (as of April 2020)</small>
-</p>
-<br>
-
-Below, there are green buttons that allow the data to be downloaded in CSV format and, in the case of the chart, also as a PNG file.
-
-<h3>Metadata and data sources</h3>
-
-At the bottom of the indicator pages you can see the following three tabs: “National Metadata“, “Global Metadata“ and “Data Sources“.
-<br><br>
-The “National Metadata“ tab provides a list of the national time series which correspond most closely to the global metadata.
-The national metadata sheet includes a comparison with the global requirements and related methodological and country-specific information.
-<br><br>
-Each SDG indicator is managed by one or more custodian agencies. The custodian agencies, in consultation with the IAEG-SDGs, a statistical working group of
-the United Nations, determine the exact definition of and methodology for the respective indicator and publish these as global metadata.
-These can be found in the “Global metadata“ tab (Fig. 3). In addition to the indicator‘s detailed target, the
-<a href="https://unstats.un.org/sdgs/iaeg-sdgs/tier-classification/" target="_blank" onclick="return confirm_alert('the United Nations Statistics Division', 'En');">Tier classification</a> of the indicator is listed here as well.
-<br><br>
-The “Data sources“ tab provides links to the organisation(s) that submitted the data for the time series and, where possible, also direct links to the relevant data sources.
-
-<h3>Comparison of SDG and DNS indicators</h3>
-
-There are numerous overlaps between the indicators of the UN Sustainable Development Goals and the indicators of the German Sustainable Development Strategy (DNS).
-<br><br>
-About half of the DNS- indicators are similar to or congruent with the SDG- indicators. Both sets of indicators are also structured according to the 17 goals of
-the United Nations 2030 Agenda, as the DNS represents the national implementation ofGerman Sustainable Development Strategy is aimed at implementing the global
-agenda. at the national level. More information on the DNSGerman strategy can be found in the “Useful information“ section „Interesting Facts“ andunder
-<a href="https://sdg-indicators.de/facts_dns/">DNS</a>.
-<br><br>
-However, there are also differences. The names of the DNS indicators and especially their numbering are not identical to those of the SDG indicators.
-If an SDG indicator is comparable to a DNS indicator, this is indicated by a button with a direct link to the respective indicator (Fig. 3).
-<br><br>
-<img src="https://sdg-indikatoren.de/assets/img/about/en/navigation_dns.PNG" alt="Abbildung 3: Position des Direktlinks zu ähnlichen oder deckungsgleichen Indikatoren zwischen den Sustainable Development Goals und der Deutschen Nachhaltigkeitsstrategie" class="responsiveImg">
-
-<p style="text-align:center">
-<small> Fig. 3: Position of the direct link to similar or congruent indicators of the UN Sustainable Development Goals and the German Sustainable Development Strategy (as of July 2020)</small>
-</p>
-<br>
+<h3>Comparison of DNS and SDG indicators</h3>
+There are numerous thematic overlaps between the indicators of the German Sustainable Development Strategy and the indicators of the
+UN Sustainable Development Goals.<br><br>Some of the SDG indicators are similar or congruent with the indicators of the German
+Sustainable Development Strategy. Both sets of indicators are structured according to the 17 goals of the UN 2030 Agenda. However,
+there are differences in the numbering and labelling of the indicators. If a DNS indicator is comparable with an SDG indicator, this
+is indicated by a button with a direct link to the respective indicator.
 
 
 
@@ -404,17 +426,6 @@ If an SDG indicator is comparable to a DNS indicator, this is indicated by a but
                               
                           </li>
                         <li>
-                              
-                                
-                                  <a href="https://twitter.com/destatis?lang=en" target="_blank" onclick="return confirm_alert('', 'En');"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                                
-                              
-                          </li>
-                        <li>
-                              <a href="/sdg-indicators/en/faq/ ">FAQs</a>
-                              
-                          </li>
-                        <li>
                               <a href="/sdg-indicators/en/imprint/ ">Legal Notice</a>
                               
                           </li>
@@ -433,7 +444,8 @@ If an SDG indicator is comparable to a DNS indicator, this is indicated by a but
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
 <script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+<script type="text/javascript"  src="/sdg-indicators/assets/js/loadash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
@@ -454,12 +466,12 @@ If an SDG indicator is comparable to a DNS indicator, this is indicated by a but
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20240201103141'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20240201145426'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20240201103141"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20240201145426"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
