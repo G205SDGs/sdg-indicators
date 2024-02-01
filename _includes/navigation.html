@@ -9,7 +9,6 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-{{ dropdown_id }}">
                 {%- for dropdown_item in item.dropdown -%}
-
                   {%- if include.dropdowns and dropdown_item.dropdown and dropdown_item.dropdown.size > 0 -%}
                     <li>
                       <a class="dropdown-item dropdown-toggle" href="#">
@@ -17,8 +16,29 @@
                       </a>
                       <ul class="submenu dropdown-menu">
                         {%- for double_dropdown_item in dropdown_item.dropdown -%}
-                          {%- assign double_dropdown_item_path = double_dropdown_item.path -%}
-                          <li><a class="dropdown-item" href="{% unless double_dropdown_item_path contains 'http' %}{{ page.baseurl }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
+
+
+
+                          {%- if include.dropdowns and double_dropdown_item.dropdown and double_dropdown_item.dropdown.size > 0 -%}
+                            <li>
+                              <a class="dropdown-item dropdown-toggle" href="#">
+                                  {{ double_dropdown_item.translation_key | t }}
+                              </a>
+                              <ul class="submenu dropdown-menu">
+                                {%- for triple_dropdown_item in double_dropdown_item.dropdown -%}
+                                  {%- assign triple_dropdown_item_path = triple_dropdown_item.path | t -%}
+                                  <li><a class="dropdown-item" href="{% unless triple_dropdown_item_path contains 'http' %}{{ page.baseurl }}{% endunless %}{{ triple_dropdown_item_path }}">{{ triple_dropdown_item.translation_key | t }}</a></li>
+                                {%- endfor -%}
+                              </ul>
+                            </li>
+                          {%- else -%}
+
+
+
+
+                            {%- assign double_dropdown_item_path = double_dropdown_item.path | t -%}
+                            <li><a class="dropdown-item" href="{% unless double_dropdown_item_path contains 'http' %}{{ page.baseurl }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
+                          {%- endif -%}
                         {%- endfor -%}
                       </ul>
                     </li>

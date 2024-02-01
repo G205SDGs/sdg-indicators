@@ -1,0 +1,20 @@
+<div class="language-toggle-container d-flex">
+    <ul class="language-toggle-links list-unstyled list-inline">
+        {%- for language in site.languages -%}
+        {%- assign language_abbreviation = site.languages_public[language] | default: language -%}
+        {%- if language != page.language -%}
+        <li class="language-option-{{ language }} list-inline-item">
+            <a class="language-toggle-link" href="{{ page.url_by_language[language] }}">
+                {{ page.t.languages[language] }}
+            </a>
+        </li>
+        {%- else -%}
+        <li class="language-option-{{ language }} list-inline-item" style="opacity:0.3">
+            <span>
+                {{ page.t.languages[language] }}
+            </span>
+        </li>
+        {%- endif -%}
+        {%- endfor -%}
+    </ul>
+</div>

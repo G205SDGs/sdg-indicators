@@ -147,7 +147,10 @@
         newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
       if (newTitle) {
-        $('#map-heading').text(newTitle);
+        if (this.proxy === 'proxy' || this.proxySerieses.includes(currentSeries)) {
+            newTitle += ' ' + this.viewHelpers.PROXY_PILL;
+        }
+        $('#map-heading').html(newTitle);
       }
       if (newSubtitle) {
         $('#map-subheading').text(newSubtitle);
