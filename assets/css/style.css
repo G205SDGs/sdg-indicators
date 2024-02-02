@@ -3215,3 +3215,19 @@ body {
   font-weight: bold;
   font-size: 290%;
   color: #b90e0a; }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; }
+
+.leftColumn {
+  float: left;
+  padding: 10px;
+  flex: 80%; }
+
+.rightColumn {
+  float: right;
+  padding: 10px;
+  flex: 20%;
+  flex-direction: row-reverse; }
