@@ -1,3 +1,9 @@
+{% if site.environment == 'staging' %}
+  {% assign baseurl = 'https://g205sdgs.github.io/sdg-indicators' %}
+{% else %}
+  {% assign baseurl = 'https://sdg-indikatoren.de' %}
+{% endif %}
+
 <ul class="navbar-nav" id="{{ include.id | default: 'menu' }}">
     {%- if site.menu -%}
         {%- for item in site.menu -%}
@@ -27,7 +33,7 @@
                               <ul class="submenu dropdown-menu">
                                 {%- for triple_dropdown_item in double_dropdown_item.dropdown -%}
                                   {%- assign triple_dropdown_item_path = triple_dropdown_item.path | t -%}
-                                  <li><a class="dropdown-item" href="{% unless triple_dropdown_item.path contains 'http' %}{{ page.baseurl }}{% endunless %}{{ triple_dropdown_item_path }}">{{ triple_dropdown_item.translation_key | t }}</a></li>
+                                  <li><a class="dropdown-item" href="{% unless triple_dropdown_item.path contains 'http' %}{{ baseurl }}{% endunless %}{{ triple_dropdown_item_path }}">{{ triple_dropdown_item.translation_key | t }}</a></li>
                                 {%- endfor -%}
                               </ul>
                             </li>
@@ -37,7 +43,7 @@
 
 
                             {%- assign double_dropdown_item_path = double_dropdown_item.path | t -%}
-                            <li><a class="dropdown-item" href="{% unless double_dropdown_item.path contains 'http' %}{{ page.baseurl }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
+                            <li><a class="dropdown-item" href="{% unless double_dropdown_item.path contains 'http' %}{{ baseurl }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
                           {%- endif -%}
                         {%- endfor -%}
                       </ul>
