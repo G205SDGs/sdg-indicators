@@ -50,9 +50,15 @@ frontpage_goals_grid:
     description: frontpage.instructions
 
 frontpage_cards:
-    - rule_color: orange
+    - rule_color: grey
       title: ''
       include: components/download-all-data.html
+    - rule_color: grey
+      title: ''
+      include: components/joint_action_column.html
+    - rule_color: grey
+      title: ''
+      include: components/agenda_column.html
 
 analytics:
   ga_prod: ''
@@ -63,7 +69,6 @@ email_contacts:
   suggestions: sdg-indicators@destatis.de
   functional: sdg-indicators@destatis.de
 ###################################################################################################
-
 
 # Build settings
 markdown: kramdown
@@ -105,60 +110,152 @@ languages:
 
 # Menu
 menu:
-  - path: /
-    translation_key: general.seventeen_goals
+  - translation_key: menu.1_start
+    dropdown:
+    - path: menu.1_start_2_dns_platform_path
+      translation_key: menu.1_start_2_dns_platform
+    - path: /
+      translation_key: menu.1_start_2_sdg_platform
+  - translation_key: menu.1_about
+    dropdown:
+    - translation_key: menu.1_about_2_dns
+      dropdown:
+      - path: menu.1_about_2_dns_3_indicators_path
+        translation_key: menu.1_about_2_dns_3_indicators
+      - path: menu.1_about_2_dns_3_publications_path
+        translation_key: menu.1_about_2_dns_3_publications
+    - translation_key: menu.1_about_2_sdg
+      dropdown:
+      - path: /about/sdg/monitoring/
+        translation_key: menu.1_about_2_sdg_3_indicators
+      - path: /about/sdg/publications/
+        translation_key: menu.1_about_2_sdg_3_publications
   - path: /reporting-status/
-    translation_key: menu.reporting_status
-  - translation_key: menu.about
+    translation_key: menu.1_reporting_status
+  - translation_key: menu.1_other_countries
     dropdown:
-      - path: /platform/
-        translation_key: menu.about_platform
-      - path: /navigation/
-        translation_key: menu.about_navigation
-      - path: /guidance/
-        translation_key: menu.about_guidance
-  - translation_key: menu.facts
+      - path: https://armstat.github.io/sdg-site-armenia/
+        translation_key: menu.armenia
+        sourcede: 'von Armenien'
+        sourceen: 'Armenia'
+      - path: https://sdg.bhas.gov.ba/
+        translation_key: menu.bosnia_and_herzegovina
+        sourcede: 'der Agentur für Statistik von Bosnien und Herzigovina'
+        sourceen: 'the Agency for Statistics of Bosnia and Herzegovina'
+      - path: https://sdg.hagstova.fo/sdg-site/en/
+        translation_key: menu.faroe
+        sourcede: 'von Färöer'
+        sourceen: 'the Faroe Islands'
+      - path: https://odd-dashboard.cd/en/
+        translation_key: menu.domrepcongo
+        sourcede: 'der Demokratischen Republik Kongo'
+        sourceen: 'the Democratic Republic of the Congo'
+      - path: https://sustainabledevelopment-ghana.github.io/
+        translation_key: menu.ghana
+        sourcede: 'des Stistischen Dienstes von Ghana'
+        sourceen: 'the Statistical Service of Ghana'
+      - path: https://visar.hagstofa.is/heimsmarkmidin/en/
+        translation_key: menu.iceland
+        sourcede: 'Statistik Island'
+        sourceen: 'Statistics Iceland'
+      - path: https://sustainabledevelopment-kyrgyzstan.github.io/en/
+        translation_key: menu.kyrgyzstan
+        sourcede: 'Kirgisistan '
+        sourceen: 'Kyrgyzstan'
+      - path: https://www.lsb.gov.la/sdg/en/
+        translation_key: menu.lao
+        sourcede: 'des Amts für Statistik in Laos'
+        sourceen: 'the Lao Statistics Bureau'
+      - path: https://montestat.github.io/site/en/
+        translation_key: menu.montenegro
+        sourcede: 'Montenegro'
+        sourceen: 'Montenegro'
+      - path: https://sustainabledevelopment-rwanda.github.io/
+        translation_key: menu.rwanda
+        sourcede: 'Ruanda'
+        sourceen: 'Rwanda'
+      - path: https://sdg.tuik.gov.tr/en/
+        translation_key: menu.turkey
+        sourcede: 'des Instituts für Staistik Türkei'
+        sourceen: 'the Turkish Statistical Institute'
+      - path: https://sdg.ukrstat.gov.ua/
+        translation_key: menu.ukrain
+        sourcede: 'von Statistik Ukraine'
+        sourceen: 'Statistics Ucrain'
+      - path: https://sdgdata.gov.uk/
+        translation_key: menu.united_kingdom
+        sourcede: 'des Statistischen Amtes des Vereinigten Königreichs'
+        sourceen: 'the Office for National Statistics UK'
+      - path: https://sdg.data.gov/
+        translation_key: menu.unites_states
+        sourcede: 'des Office of Management and Budget, der General Services Administration und des US Office of Science and Technology Policy'
+        sourceen: 'the Office of Management and Budget, the General Services Administration, and the US Office of Science and Technology Policy'
+  - translation_key: menu.1_help
     dropdown:
-      - path: /facts_agenda/
-        translation_key: menu.facts_agenda
-      - path: /facts_dns/
-        translation_key: menu.facts_dns
-      - translation_key: menu.other_countries
-        dropdown:
-          - path: https://armstat.github.io/sdg-site-armenia/
-            translation_key: menu.armenia
-          - path: https://sdg.bhas.gov.ba/
-            translation_key: menu.bosnia_and_herzegovina
-          - path: https://sdg.hagstova.fo/
-            translation_key: menu.faroe
-          - path: https://odd-dashboard.cd/
-            translation_key: menu.domrepcongo
-          - path: https://sustainabledevelopment-ghana.github.io/
-            translation_key: menu.ghana
-          - path: https://visar.hagstofa.is/heimsmarkmidin/
-            translation_key: menu.iceland
-          - path: https://sustainabledevelopment-kyrgyzstan.github.io/
-            translation_key: menu.kyrgyzstan
-          - path: https://www.lsb.gov.la/sdg/
-            translation_key: menu.lao
-          - path: https://montestat.github.io/site/
-            translation_key: menu.montenegro
-          - path: https://sustainabledevelopment-rwanda.github.io/
-            translation_key: menu.rwanda
-          - path: https://sdg.tuik.gov.tr/
-            translation_key: menu.turkey
-          - path: http://kostat.go.kr/sdg
-            translation_key: menu.south_korea
-          - path: https://sdg.ukrstat.gov.ua/
-            translation_key: menu.ukrain
-          - path: https://sdgdata.gov.uk/
-            translation_key: menu.united_kingdom
-          - path: https://sdg.data.gov/
-            translation_key: menu.unites_states
-  - path: /publications/
-    translation_key: menu.publications
-  - path: https://dns-indikatoren.de
-    translation_key: menu.linkToDnsPlatform
+    - path: /help/navigation/
+      translation_key: menu.1_help_2_navigation
+    - path: /help/guidance/
+      translation_key: menu.1_help_2_guidance
+    - path: /help/faq/
+      translation_key: menu.1_help_2_faq
+
+
+#
+# menu:
+#   - path: /
+#     translation_key: general.seventeen_goals
+#   - path: /reporting-status/
+#     translation_key: menu.reporting_status
+#   - translation_key: menu.about
+#     dropdown:
+#       - path: /platform/
+#         translation_key: menu.about_platform
+#       - path: /navigation/
+#         translation_key: menu.about_navigation
+#       - path: /guidance/
+#         translation_key: menu.about_guidance
+#   - translation_key: menu.facts
+#     dropdown:
+#       - path: /facts_agenda/
+#         translation_key: menu.facts_agenda
+#       - path: /facts_dns/
+#         translation_key: menu.facts_dns
+#       - translation_key: menu.other_countries
+#         dropdown:
+#           - path: https://armstat.github.io/sdg-site-armenia/
+#             translation_key: menu.armenia
+#           - path: https://sdg.bhas.gov.ba/
+#             translation_key: menu.bosnia_and_herzegovina
+#           - path: https://sdg.hagstova.fo/
+#             translation_key: menu.faroe
+#           - path: https://odd-dashboard.cd/
+#             translation_key: menu.domrepcongo
+#           - path: https://sustainabledevelopment-ghana.github.io/
+#             translation_key: menu.ghana
+#           - path: https://visar.hagstofa.is/heimsmarkmidin/
+#             translation_key: menu.iceland
+#           - path: https://sustainabledevelopment-kyrgyzstan.github.io/
+#             translation_key: menu.kyrgyzstan
+#           - path: https://www.lsb.gov.la/sdg/
+#             translation_key: menu.lao
+#           - path: https://montestat.github.io/site/
+#             translation_key: menu.montenegro
+#           - path: https://sustainabledevelopment-rwanda.github.io/
+#             translation_key: menu.rwanda
+#           - path: https://sdg.tuik.gov.tr/
+#             translation_key: menu.turkey
+#           - path: http://kostat.go.kr/sdg
+#             translation_key: menu.south_korea
+#           - path: https://sdg.ukrstat.gov.ua/
+#             translation_key: menu.ukrain
+#           - path: https://sdgdata.gov.uk/
+#             translation_key: menu.united_kingdom
+#           - path: https://sdg.data.gov/
+#             translation_key: menu.unites_states
+#   - path: /publications/
+#     translation_key: menu.publications
+#   - path: https://dns-indikatoren.de
+#     translation_key: menu.linkToDnsPlatform
 
 
 contrast_type: single
@@ -170,11 +267,6 @@ header:
 footer_menu:
   - path: 'mailto:sdg-indicators@destatis.de'
     translation_key: menu.contact_us
-  - path: menu.twitterPath
-    translation_key:  general.twitter
-    alert: twitter
-  - path: /faq/
-    translation_key: menu.faq
   - path: /imprint/
     translation_key: menu.imprint
 
@@ -191,7 +283,6 @@ search_index_extra_fields:
   - data_keywords
   - graph_title
 
-
 series_toggle: true
 graph_title_from_series: true
 decimal_separator: ','
@@ -205,6 +296,10 @@ reporting_status:
     title: status.reporting_status
     description: status.status_blurb
     disaggregation_tabs: false
+
+
+ingnored_disaggregations:
+    - COMMENT_OBS
 
 hide_empty_metadata: true
 hide_single_unit: true
