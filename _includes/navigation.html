@@ -1,14 +1,14 @@
 {% if site.environment == 'staging' %}
   {% assign baseurl = 'https://g205sdgs.github.io/sdg-indicators' %}
 {% else %}
-  {% assign baseurl = 'https://sdg-indikatoren.de' %}
+  {% if page.language == 'de' %}
+    {% assign baseurl = 'https://sdg-indikatoren.de' %}
+  {% else %}
+      {% assign baseurl = 'https://sdg-indicators.de' %}
+  {% endif %}
 {% endif %}
 
-{% if page.language == 'de' %}
-  {% assign language = '' %}
-{% else %}
-  {% assign language = '/en' %}
-{% endif %}
+
 
 <ul class="navbar-nav" id="{{ include.id | default: 'menu' }}">
     {%- if site.menu -%}
@@ -39,7 +39,7 @@
                               <ul class="submenu dropdown-menu">
                                 {%- for triple_dropdown_item in double_dropdown_item.dropdown -%}
                                   {%- assign triple_dropdown_item_path = triple_dropdown_item.path | t -%}
-                                  <li><a class="dropdown-item" href="{% unless triple_dropdown_item_path contains 'http' %}{{ baseurl }}{{ language }}{% endunless %}{{ triple_dropdown_item_path }}">{{ triple_dropdown_item.translation_key | t }}</a></li>
+                                  <li><a class="dropdown-item" href="{% unless triple_dropdown_item_path contains 'http' %}{{ baseurl }}{% endunless %}{{ triple_dropdown_item_path }}">{{ triple_dropdown_item.translation_key | t }}</a></li>
                                 {%- endfor -%}
                               </ul>
                             </li>
@@ -49,7 +49,7 @@
 
 
                             {%- assign double_dropdown_item_path = double_dropdown_item.path | t -%}
-                            <li><a class="dropdown-item" href="{% unless double_dropdown_item_path contains 'http' %}{{ baseurl }}{{ language }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
+                            <li><a class="dropdown-item" href="{% unless double_dropdown_item_path contains 'http' %}{{ baseurl }}{% endunless %}{{ double_dropdown_item_path }}">{{ double_dropdown_item.translation_key | t }}</a></li>
                           {%- endif -%}
                         {%- endfor -%}
                       </ul>
