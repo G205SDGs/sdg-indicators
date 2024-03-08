@@ -59,7 +59,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/1-5-1/",
-          "status": "notstarted"
+          "status": "inprogress"
         },
         {
           "id": "1-5-2",
@@ -831,11 +831,11 @@
         },
         {
           "id": "7-b-1",
-          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungsländern (in Watt pro Kopf)",
+          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungs- und Industrieländern (in Watt pro Kopf)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/7-b-1/",
-          "status": "notapplicable"
+          "status": "inprogress"
         }]
     }
   },
@@ -1251,7 +1251,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/11-5-1/",
-          "status": "notstarted"
+          "status": "inprogress"
         },
         {
           "id": "11-5-2",
@@ -1423,11 +1423,11 @@
         },
         {
           "id": "12-a-1",
-          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungsländern (in Watt pro Kopf)",
+          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungs- und Industrieländern (in Watt pro Kopf)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/12-a-1/",
-          "status": "notapplicable"
+          "status": "inprogress"
         },
         {
           "id": "12-b-1",
@@ -1459,7 +1459,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/13-1-1/",
-          "status": "notstarted"
+          "status": "inprogress"
         },
         {
           "id": "13-1-2",
@@ -2091,7 +2091,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/17-18-1/",
-          "status": "notstarted"
+          "status": "inprogress"
         },
         {
           "id": "17-18-2",
