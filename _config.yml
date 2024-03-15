@@ -109,88 +109,27 @@ languages:
   - de
   - en
 
+
 # Menu
 menu:
-  - translation_key: menu.1_start
-    dropdown:
-    - path: menu.1_start_2_dns_platform_path
-      translation_key: menu.1_start_2_dns_platform
-    - path: /
-      translation_key: menu.1_start_2_sdg_platform
-  - translation_key: menu.1_about
-    dropdown:
-    - translation_key: menu.1_about_2_dns
-      dropdown:
-      - path: menu.1_about_2_dns_3_indicators_path
-        translation_key: menu.1_about_2_dns_3_indicators
-      - path: menu.1_about_2_dns_3_publications_path
-        translation_key: menu.1_about_2_dns_3_publications
-    - translation_key: menu.1_about_2_sdg
-      dropdown:
-      - path: /about/sdg/monitoring/
-        translation_key: menu.1_about_2_sdg_3_indicators
-      - path: /about/sdg/publications/
-        translation_key: menu.1_about_2_sdg_3_publications
+  - path: /
+    translation_key: menu.1_start
   - path: /reporting-status/
     translation_key: menu.1_reporting_status
-  - translation_key: menu.1_other_countries
+  - translation_key: menu.1_agenda2030
     dropdown:
-      - path: https://armstat.github.io/sdg-site-armenia/
-        translation_key: menu.armenia
-        sourcede: 'von Armenien'
-        sourceen: 'Armenia'
-      - path: https://sdg.bhas.gov.ba/
-        translation_key: menu.bosnia_and_herzegovina
-        sourcede: 'der Agentur für Statistik von Bosnien und Herzigovina'
-        sourceen: 'the Agency for Statistics of Bosnia and Herzegovina'
-      - path: https://sdg.hagstova.fo/sdg-site/en/
-        translation_key: menu.faroe
-        sourcede: 'von Färöer'
-        sourceen: 'the Faroe Islands'
-      - path: https://odd-dashboard.cd/en/
-        translation_key: menu.domrepcongo
-        sourcede: 'der Demokratischen Republik Kongo'
-        sourceen: 'the Democratic Republic of the Congo'
-      - path: https://sustainabledevelopment-ghana.github.io/
-        translation_key: menu.ghana
-        sourcede: 'des Stistischen Dienstes von Ghana'
-        sourceen: 'the Statistical Service of Ghana'
-      - path: https://visar.hagstofa.is/heimsmarkmidin/en/
-        translation_key: menu.iceland
-        sourcede: 'Statistik Island'
-        sourceen: 'Statistics Iceland'
-      - path: https://sustainabledevelopment-kyrgyzstan.github.io/en/
-        translation_key: menu.kyrgyzstan
-        sourcede: 'Kirgisistan '
-        sourceen: 'Kyrgyzstan'
-      - path: https://www.lsb.gov.la/sdg/en/
-        translation_key: menu.lao
-        sourcede: 'des Amts für Statistik in Laos'
-        sourceen: 'the Lao Statistics Bureau'
-      - path: https://montestat.github.io/site/en/
-        translation_key: menu.montenegro
-        sourcede: 'Montenegro'
-        sourceen: 'Montenegro'
-      - path: https://sustainabledevelopment-rwanda.github.io/
-        translation_key: menu.rwanda
-        sourcede: 'Ruanda'
-        sourceen: 'Rwanda'
-      - path: https://sdg.tuik.gov.tr/en/
-        translation_key: menu.turkey
-        sourcede: 'des Instituts für Staistik Türkei'
-        sourceen: 'the Turkish Statistical Institute'
-      - path: https://sdg.ukrstat.gov.ua/
-        translation_key: menu.ukrain
-        sourcede: 'von Statistik Ukraine'
-        sourceen: 'Statistics Ucrain'
-      - path: https://sdgdata.gov.uk/
-        translation_key: menu.united_kingdom
-        sourcede: 'des Statistischen Amtes des Vereinigten Königreichs'
-        sourceen: 'the Office for National Statistics UK'
-      - path: https://sdg.data.gov/
-        translation_key: menu.unites_states
-        sourcede: 'des Office of Management and Budget, der General Services Administration und des US Office of Science and Technology Policy'
-        sourceen: 'the Office of Management and Budget, the General Services Administration, and the US Office of Science and Technology Policy'
+    - path: /strategy/2030_agenda/
+      translation_key: menu.1_agenda2030_2_agenda
+    - path: /strategy/monitoring/
+      translation_key: menu.1_agenda2030_2_monitoring
+    - path: /strategy/publications/
+      translation_key: menu.1_agenda2030_2_publications
+    - path: /strategy/links/
+      translation_key: menu.1_agenda2030_2_links
+  - path: /worldwide/
+    translation_key: menu.1_worldwide
+  - path: menu.1_national_indicators_path
+    translation_key: menu.1_national_indicators
   - translation_key: menu.1_help
     dropdown:
     - path: /help/navigation/
@@ -199,6 +138,65 @@ menu:
       translation_key: menu.1_help_2_guidance
     - path: /help/faq/
       translation_key: menu.1_help_2_faq
+  #- translation_key: menu.1_other_countries
+    # dropdown:
+    #   - path: https://armstat.github.io/sdg-site-armenia/
+    #     translation_key: menu.armenia
+    #     sourcede: 'von Armenien'
+    #     sourceen: 'Armenia'
+    #   - path: https://sdg.bhas.gov.ba/
+    #     translation_key: menu.bosnia_and_herzegovina
+    #     sourcede: 'der Agentur für Statistik von Bosnien und Herzigovina'
+    #     sourceen: 'the Agency for Statistics of Bosnia and Herzegovina'
+    #   - path: https://sdg.hagstova.fo/sdg-site/en/
+    #     translation_key: menu.faroe
+    #     sourcede: 'von Färöer'
+    #     sourceen: 'the Faroe Islands'
+    #   - path: https://odd-dashboard.cd/en/
+    #     translation_key: menu.domrepcongo
+    #     sourcede: 'der Demokratischen Republik Kongo'
+    #     sourceen: 'the Democratic Republic of the Congo'
+    #   - path: https://sustainabledevelopment-ghana.github.io/
+    #     translation_key: menu.ghana
+    #     sourcede: 'des Stistischen Dienstes von Ghana'
+    #     sourceen: 'the Statistical Service of Ghana'
+    #   - path: https://visar.hagstofa.is/heimsmarkmidin/en/
+    #     translation_key: menu.iceland
+    #     sourcede: 'Statistik Island'
+    #     sourceen: 'Statistics Iceland'
+    #   - path: https://sustainabledevelopment-kyrgyzstan.github.io/en/
+    #     translation_key: menu.kyrgyzstan
+    #     sourcede: 'Kirgisistan '
+    #     sourceen: 'Kyrgyzstan'
+    #   - path: https://www.lsb.gov.la/sdg/en/
+    #     translation_key: menu.lao
+    #     sourcede: 'des Amts für Statistik in Laos'
+    #     sourceen: 'the Lao Statistics Bureau'
+    #   - path: https://montestat.github.io/site/en/
+    #     translation_key: menu.montenegro
+    #     sourcede: 'Montenegro'
+    #     sourceen: 'Montenegro'
+    #   - path: https://sustainabledevelopment-rwanda.github.io/
+    #     translation_key: menu.rwanda
+    #     sourcede: 'Ruanda'
+    #     sourceen: 'Rwanda'
+    #   - path: https://sdg.tuik.gov.tr/en/
+    #     translation_key: menu.turkey
+    #     sourcede: 'des Instituts für Staistik Türkei'
+    #     sourceen: 'the Turkish Statistical Institute'
+    #   - path: https://sdg.ukrstat.gov.ua/
+    #     translation_key: menu.ukrain
+    #     sourcede: 'von Statistik Ukraine'
+    #     sourceen: 'Statistics Ucrain'
+    #   - path: https://sdgdata.gov.uk/
+    #     translation_key: menu.united_kingdom
+    #     sourcede: 'des Statistischen Amtes des Vereinigten Königreichs'
+    #     sourceen: 'the Office for National Statistics UK'
+    #   - path: https://sdg.data.gov/
+    #     translation_key: menu.unites_states
+    #     sourcede: 'des Office of Management and Budget, der General Services Administration und des US Office of Science and Technology Policy'
+    #     sourceen: 'the Office of Management and Budget, the General Services Administration, and the US Office of Science and Technology Policy'
+
 
 
 #
@@ -283,6 +281,8 @@ search_index_extra_fields:
   - target_id
   - data_keywords
   - graph_title
+
+
 
 series_toggle: true
 graph_title_from_series: true
@@ -413,3 +413,4 @@ progressive_web_app:
 proxy_indicators:
   label: Proxy
   description: Diese Zeitreihe entspricht nicht den globalen Metadaten
+  
