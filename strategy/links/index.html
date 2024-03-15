@@ -117,7 +117,7 @@ var translations = {
         ================================================== -->
 
         
-    <title>Publikationen - Deutschlands SDG Indikatoren</title>
+    <title>Links - Deutschlands SDG Indikatoren</title>
 
 
 
@@ -143,7 +143,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240315012537">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20240315094250">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -205,80 +205,35 @@ layout-page
 
 
 
-<ul class="navbar-nav" id="menu"><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-start" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Start
+<ul class="navbar-nav" id="menu"><li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/" >Start</a>
+</li>
+<li class="nav-item ">
+    <a class="nav-link" href="/sdg-indicators/reporting-status/" >Status</a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-agenda2030" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Strategie
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-start"><li class=" ">
-    <a class="dropdown-item" href="https://dns-indikatoren.de" >Nationale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/DNS Wheel.png" title="Klicken Sie hier um zur Seite der DNS Indikatoren zu gelangen" alt="Link DNS" style="width:24px;height:24px;"/></a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-agenda2030"><li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/strategy/2030_agenda/" >Agenda 2030</a>
 </li>
 <li class=" ">
-    <a class="dropdown-item" href="/sdg-indicators/" >Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+    <a class="dropdown-item" href="/sdg-indicators/strategy/monitoring/" >Monitoring</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/sdg-indicators/strategy/publications/" >Publikationen</a>
+</li>
+<li class=" active">
+    <a class="dropdown-item" href="/sdg-indicators/strategy/links/" >Links</a>
 </li>
 </ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-about" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Themen
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-about"><li>
-                      <a class="dropdown-item dropdown-toggle" href="#">
-                          Deutsche Nachhaltigkeitsstrategie (DNS)
-                      </a>
-                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://dns-indikatoren.de/about/dns/monitoring">Monitoring</a></li><li><a class="dropdown-item" href="https://dns-indikatoren.de/about/dns/publications">Publikationen</a></li></ul>
-                    </li><li>
-                      <a class="dropdown-item dropdown-toggle" href="#">
-                          Agenda 2030 (SDG)
-                      </a>
-                      <ul class="submenu dropdown-menu"><li><a class="dropdown-item" href="https://g205sdgs.github.io/sdg-indicators/about/sdg/monitoring/">Monitoring</a></li><li><a class="dropdown-item" href="https://g205sdgs.github.io/sdg-indicators/about/sdg/publications/">Publikationen</a></li></ul>
-                    </li></ul>
           </li><li class="nav-item ">
-    <a class="nav-link" href="/sdg-indicators/reporting-status/" >Berichtsstatus</a>
+    <a class="nav-link" href="/sdg-indicators/worldwide/" >Weltweit</a>
 </li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-other-countries" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Weltweit
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-other-countries"><li class=" ">
-    <a class="dropdown-item" href="https://armstat.github.io/sdg-site-armenia/"  target="_blank" onclick="return confirm_alert('von Armenien', 'De');" >Armenien</a>
+<li class="nav-item ">
+    <a class="nav-link" href="https://dns-indikatoren.de" >Nationale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/DNS Wheel.png" title="Klicken Sie hier um zur Seite der DNS Indikatoren zu gelangen" alt="Link DNS" style="width:24px;height:24px;"/></a>
 </li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sdg.bhas.gov.ba/"  target="_blank" onclick="return confirm_alert('der Agentur für Statistik von Bosnien und Herzigovina', 'De');" >Bosnien und Herzegowina</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sdg.hagstova.fo/sdg-site/en/"  target="_blank" onclick="return confirm_alert('von Färöer', 'De');" >Färöer</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://odd-dashboard.cd/en/"  target="_blank" onclick="return confirm_alert('der Demokratischen Republik Kongo', 'De');" >Demokratische Republik Kongo</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sustainabledevelopment-ghana.github.io/"  target="_blank" onclick="return confirm_alert('des Stistischen Dienstes von Ghana', 'De');" >Ghana</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://visar.hagstofa.is/heimsmarkmidin/en/"  target="_blank" onclick="return confirm_alert('Statistik Island', 'De');" >Island</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sustainabledevelopment-kyrgyzstan.github.io/en/"  target="_blank" onclick="return confirm_alert('Kirgisistan ', 'De');" >Kirgisistan</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://www.lsb.gov.la/sdg/en/"  target="_blank" onclick="return confirm_alert('des Amts für Statistik in Laos', 'De');" >Laos</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://montestat.github.io/site/en/"  target="_blank" onclick="return confirm_alert('Montenegro', 'De');" >Montenegro</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sustainabledevelopment-rwanda.github.io/"  target="_blank" onclick="return confirm_alert('Ruanda', 'De');" >Ruanda</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sdg.tuik.gov.tr/en/"  target="_blank" onclick="return confirm_alert('des Instituts für Staistik Türkei', 'De');" >Türkei</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sdg.ukrstat.gov.ua/"  target="_blank" onclick="return confirm_alert('von Statistik Ukraine', 'De');" >Ukraine</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sdgdata.gov.uk/"  target="_blank" onclick="return confirm_alert('des Statistischen Amtes des Vereinigten Königreichs', 'De');" >Vereinigtes Königreich</a>
-</li>
-<li class=" ">
-    <a class="dropdown-item" href="https://sdg.data.gov/"  target="_blank" onclick="return confirm_alert('des Office of Management and Budget, der General Services Administration und des US Office of Science and Technology Policy', 'De');" >USA</a>
-</li>
-</ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Hilfe
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
@@ -320,7 +275,7 @@ layout-page
                 Deutsch
             </span>
         </li><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/sdg-indicators/en/about/sdg/publications/">
+            <a class="language-toggle-link" href="/sdg-indicators/en/strategy/links/">
                 English
             </a>
         </li></ul>
@@ -334,7 +289,7 @@ layout-page
                 Deutsch
             </span>
         </li><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/sdg-indicators/en/about/sdg/publications/">
+            <a class="language-toggle-link" href="/sdg-indicators/en/strategy/links/">
                 English
             </a>
         </li></ul>
@@ -359,72 +314,63 @@ data-event-label="high"
         <li class="breadcrumb-item" >
             <a href="/sdg-indicators/">Start</a>
         </li>
-        <li class="breadcrumb-item active">Publikationen</li>
+        <li class="breadcrumb-item active">Links</li>
     </ol>
 </nav>
 </div>
 <div id="main-content" class="container" role="main">
     <div>
-        <h1>Publikationen</h1>
+        <h1>Links</h1>
         
 
 
-    <h3 style="width: 80%;"><a href="https://sdg-indikatoren.de//public/wista_SDG.pdf" target="_blank">Sustainable Development Goals – Indikatoren für die Agenda 2030 für nachhaltige Entwicklung</a></h3>
-<div class="flex-container">
-  <div class="rightColumn">
-    <figure style="margin-left: 10px; max-width:280px; width:100%; border: 1px solid #ddd; border-radius: 4px;">
-      <img src="https://sdg-indikatoren.de/assets/img/wista_5_16.PNG"
-      alt="Abbildung 1: WISTA" style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px;">
-    </figure>
-  </div>
-  <div class="leftColumn">
-    Auszug aus der Publikation „WISTA - Wirtschaft und Statistik“
-    <br>
-    Erschienen im Mai 2016
-    <br><br>
-    <p style="padding-bottom: 30px;">Am Entwicklungsprozess des Indikatorenrahmenwerks der Nachhaltigkeitsziele der
-      Vereinten Nationen waren viele nationale und internationale Akteure beteiligt; ihre
-      gute und intensive Zusammenarbeit führte zu einer Einigung in sehr kurzer Zeit. Das
-      Rahmenwerk selbst soll möglichst viele Aspekte der Agenda 2030 der Vereinten
-      Nationen berücksichtigen; dadurch ist es mit seinen 231 Indikatoren sehr umfangreich.
-      Die amtliche Statistik sieht sich nun vor der Aufgabe, die vielseitigen Indikatoren
-      mit Leben zu füllen. Das Statistische Bundesamt hat im Juli 2016 bereits erste
-      nationale Zahlen veröffentlicht und wird auch künftig aktiv am Weiterentwicklungsprozess
-      des Rahmenwerkes teilnehmen. Damit eröffnet sich für das Statistische
-      Bundesamt die Chance, neue Datenquellen zu erschließen und das Blickfeld der
-      amtlichen Statistik inhaltlich zu erweitern.
-    </p>
-  </div>
-</div>
-
-<h1 style="width: 80%;">HLPF-Berichte</h1>
-<div class="flex-container">
-  <div class="rightColumn">
-    <figure style="margin-left: 10px; max-width:280px; width:100%; border: 1px solid #ddd; border-radius: 4px;">
-      <img src="https://sdg-indikatoren.de/assets/img/HLPF-Logo.jpg"
-      alt="Abbildung 2: HLPF"
-      style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px; max-width: 350px;">
-    </figure>
-  </div>
-  <div class="leftColumn">
-    Bei dem jährlich in New York stattfindenden High Level Political Forum für Nachhaltige Entwicklung (HLPF) der
-    Vereinten Nationen legen die Mitgliedsstaaten in unregelmäßigen Abständen einen Fortschrittsbericht vor, der Aufschluss über die Erreichung der
-    Sustainable Development Goals auf nationaler Ebene gibt.<br>Deutschland berichtete 2021 nach 2016 bereits zum zweiten mal.
-    <h3>2021</h3>
-    <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2021_de.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2021</a>
-    <br>
-    <h3>2016</h3>
-    <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2016_en.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2016</a> <small>(nur auf Englisch verfügbar)</small>
-  </div>
-</div>
-
-<h1 style="width: 80%;">Pressemitteilungen</h1>
-<div class="flex-container">
-  <div class="leftColumn">
-    <h3>Fünf Jahre Berichterstattung: Wie nachhaltig ist Deutschland?</h3>
-    <a href="https://www.destatis.de/DE/Presse/Pressemitteilungen/2021/07/PD21_317_325.html" target="_blank">Pressemitteilung Nr. 317 vom 5. Juli 2021</a>
-    <br>
-  </div>
+    <div>
+  <h3 style="width: 80%;">Vereinte Nationen</h3>
+  <ul style="line-height: 200%">
+    <li><a href="https://unstats.un.org/sdgs/iaeg-sdgs/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">IAEG-SDGs</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://unstats.un.org/sdgs/dataportal" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">SDG Global Database</a> (nicht auf Deutsch verfügbar)<br>
+  </ul>
+  <h6 style="width: 80%;">Der Bericht über die Ziele für nachhaltige Entwicklung</h6>
+  <ul>
+    <li><a href="https://unstats.un.org/sdgs/report/2023/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2023: Special Edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://unstats.un.org/sdgs/report/2022/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2022</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://unstats.un.org/sdgs/report/2021/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2021</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://unstats.un.org/sdgs/report/2020/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2020</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://unstats.un.org/sdgs/report/2019/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2019</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://unstats.un.org/sdgs/report/2018/" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">The Sustainable Development Goals Report 2018</a> (nicht auf Deutsch verfügbar)<br>
+  </ul>
+  <h3 style="width: 80%;">Wirtschaftskommission für Europa</h3>
+  <h6 style="width: 80%;">Halfway to 2030: How many targets will be achieved in the UNECE region</h6>
+  <ul style="line-height: 200%">
+    <li><a href="https://unece.org/info/Statistics/pub/353864" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">Is the UNECE region on track for 2030?</a> (nicht auf Deutsch verfügbar)<br>
+  </ul>
+  <h6 style="width: 80%;">Road Map on Statistics for Sustainable Development Goals – Second Edition</h6>
+  <ul style="line-height: 200%">
+    <li><a href="https://unece.org/statistics/publications/road-map-statistics-sustainable-development-goals" target="_blank" onclick="return confirm_alert('der Vereinten Nationen', 'De');">Road Map on Statistics for Sustainable Development Goals</a> (nicht auf Deutsch verfügbar)<br>
+  </ul>
+  <h3 style="width: 80%;">Europäischen Union (EU)</h3>
+  <ul style="line-height: 200%">
+    <li><a href="https://ec.europa.eu/eurostat/web/sdi/overview" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Indikatoren der EU-Kommission</a><br>
+    <li><a href="https://ec.europa.eu/eurostat/web/sdi/database" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Eurostat: Datenbank</a><br>
+  </ul>
+  <h6 style="width: 80%;">Sustainable development in the European Union — Monitoring report on progress towards the SDGs in an EU context</h6>
+  <ul style="line-height: 200%">
+    <li><a href="https://ec.europa.eu/eurostat/documents/15234730/16817772/KS-04-23-184-EN-N.pdf/845a1782-998d-a767-b097-f22ebe93d422?version=2.0&t=1688373085450" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2023 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/3217494/14665254/KS-09-22-019-EN-N.pdf/2edccd6a-c90d-e2ed-ccda-7e3419c7c271?t=1654253664613" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2022 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/15234730/15241861/KS-03-21-096-EN-N.pdf/e8413539-6c6a-131f-45d7-6af7178a0b67?t=1667395592318" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2021 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/3217494/11011074/KS-02-20-202-EN-N.pdf/334a8cfe-636a-bb8a-294a-73a052882f7f" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2020 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/3217494/9940483/KS-02-19-165-EN-N.pdf/1965d8f5-4532-49f9-98ca-5334b0652820" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2019 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/15234730/15229310/KS-01-18-656-EN-N.pdf/af0d775e-7874-d79b-548a-2c0055d8d24b?t=1667250557724" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Monitoring report on progress towards the SDGs in an EU context - 2018 edition</a> (nicht auf Deutsch verfügbar)<br>
+  </ul>
+  <h6 style="width: 80%;">Sustainable development in the European Union Statistical annex to the EU voluntary review 2023 edition</h6>
+  <ul style="line-height: 200%">
+    <li><a href="https://ec.europa.eu/eurostat/documents/7870049/16817926/KS-05-23-188-EN-N.pdf/3b2ee0b2-5bc8-d139-ed93-af99827dc50a?version=2.0&t=1688373164670" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2023 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/4031688/14665125/KS-06-22-017-EN-N.pdf/8febd4ca-49e4-abd3-23ca-76c48eb4b4e6?t=1653033908879" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2022 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/4031688/12878925/KS-03-21-097-EN-N.pdf/c7d90bf7-c3ae-00b5-7804-80526931036b?t=1623827181153" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2021 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/4031688/11010788/KS-01-20-192-EN-N.pdf/ae63aff0-a6f3-1d47-da83-c6886b9daaab" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2020 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/documents/4031688/9925908/KS-02-19-166-EN-N.pdf/e985fa37-b510-4cae-b30e-c247989163d9" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2019 edition</a> (nicht auf Deutsch verfügbar)<br>
+    <li><a href="https://ec.europa.eu/eurostat/en/web/products-catalogues/-/KS-02-18-827" target="_blank" onclick="return confirm_alert('der Europäischen Union', 'De');">Sustainable development in the European Union – Overview of progress towards the SDGs in an EU context - 2018 edition</a> (nicht auf Deutsch verfügbar)<br>
+  </ul>
 </div>
 
 
@@ -493,12 +439,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20240315012537'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20240315094250'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20240315012537"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20240315094250"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
