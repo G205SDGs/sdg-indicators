@@ -5,57 +5,53 @@ language: en
 layout: page
 ---
 
-<h3 style="width: 80%;"><a href="https://sdg-indikatoren.de//public/wista_SDG.pdf" target="_blank">Sustainable Development Goals – Indicators for the 2030 Agenda for Sustainable Development</a> <small>(only available in German)</small></h3>
 <div class="flex-container">
-  <div class="rightColumn">
-    <figure style="margin-left: 10px; max-width:280px; width:100%; border: 1px solid #ddd; border-radius: 4px;">
-      <img src="https://sdg-indikatoren.de//assets/img/wista_5_16.PNG"
-      alt="Figure 1: WISTA" style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px;">
-    </figure>
-  </div>
-  <div class="leftColumn">
-    Extract from the publication „WISTA - Wirtschaft und Statistik“
-    <br>
-    Published May 2016
-    <br><br>
-    <p style="padding-bottom: 30px;">Many national and international actors were involved in the development process of the indicator framework of
-      the United Nations Sustainable Development Goals; their good and intensive cooperation led to an agreement in a very short time.
-      The framework itself is intended to take into account as many aspects of the United Nations 2030 Agenda as possible; as a result,
-      it is very comprehensive with its 231 indicators. Official statistics are now faced with the task of filling the multifaceted
-      indicators with life. The Federal Statistical Office already published the first national figures in July 2016 and will continue
-      to actively participate in the further development process of the framework. This opens up the opportunity for the Federal Statistical
-      Office to tap new data sources and expand the field of vision of official statistics in terms of content.
-    </p>
+  <div class="leftColumn" >
+    <div class=collapsibleElements>
+      <button class="collapsible">HLPF-Reports</button>
+      <div class="content">
+        <h3>2021</h3>
+        <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2021_en.pdf" target="_blank">Voluntary National Report - HLPF 2021</a>
+        <br><br>
+        <h3>2016</h3>
+        <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2016_en.pdf" target="_blank">Voluntary National Report - HLPF 2016</a>
+        <br><br>
+      </div>
+      <button class="collapsible">Press releases</button>
+      <div class="content">
+        <a href="https://www.destatis.de/EN/Press/2021/07/PE21_317_325.html" target="_blank">Reporting over a five-year period: what about sustainability in Germany?</a>
+        <br>Press release No. 317 of 5 July 2021
+        <br><br>
+        <a href="https://www.destatis.de/EN/Press/2019/07/PE19_261_325.html" target="_blank">The development of global sustainability goals: German online platform starting now</a>
+        <br>Press release No. 261 of 9 July 2019
+        <br><br>
+      </div>
+      <button class="collapsible">Further related publications</button>
+      <div class="content">
+        <a href="https://sdg-indikatoren.de//public/wista_SDG.pdf" target="_blank">Sustainable Development Goals – Indicators for the 2030 Agenda for Sustainable Development</a>
+        <br>
+        Extract from the publication „WISTA - Wirtschaft und Statistik“
+        <br>
+        Published May 2016
+        <br><br>
+      </div>
+    </div>
   </div>
 </div>
 
-<h1 style="width: 80%;">HLPF-Reports</h1>
-<div class="flex-container">
-  <div class="rightColumn">
-    <figure style="margin-left: 10px; max-width:280px; width:100%; border: 1px solid #ddd; border-radius: 4px;">
-      <img src="https://sdg-indikatoren.de/assets/img/HLPF-Logo.jpg"
-      alt="Figure 2: HLPF"
-      style="width: 100%; padding-left: 20px; padding-right:20px; padding-bottom:10px; padding-top:10px; max-width: 350px;">
-    </figure>
-  </div>
-  <div class="leftColumn">At the UN High Level Political Forum on Sustainable Development (HLPF), which takes place annually in New
-    York, the member states submit a progress report at irregular intervals that provides information on the achievement of the Sustainable
-    Development Goals at national level.<br>Germany reported in 2021 for the second time after 2016.
-    <h3>2021</h3>
-    <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2021_en.pdf" target="_blank">Voluntary National Report - HLPF 2021</a>
-    <br>
-    <h3>2016</h3>
-    <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2016_en.pdf" target="_blank">Voluntary National Report - HLPF 2016</a>
-  </div>
-</div>
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
-<h1 style="width: 80%;">Press releases</h1>
-<div class="flex-container">
-  <div class="leftColumn">
-    <h3>Reporting over a five-year period: what about sustainability in Germany?</h3>
-    <a href="https://www.destatis.de/EN/Press/2021/07/PE21_317_325.html" target="_blank">Press release No. 317 of 5 July 2021</a>
-    <br>
-    <h3>The development of global sustainability goals: German online platform starting now</h3>
-    <a href="https://www.destatis.de/EN/Press/2019/07/PE19_261_325.html" target="_blank">Press release No. 261 of 9 July 2019</a>
-  </div>
-</div>
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
