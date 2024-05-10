@@ -296,3 +296,50 @@ body{
   flex: 20%;
   flex-direction: row-reverse;
 }
+
+// collapsible Texts on publications strategy page
+.collapsibleElements {
+  .collapsible {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+    cursor: pointer;
+    padding: 18px;
+    margin: 3px;
+    width: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+  }
+  .active, .collapsible:hover {
+    background-color: #999;
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .active:after {
+    content: "\2212";
+    font-size: 24px;
+  }
+
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    padding-top: 10px;
+  }
+}
+
+h3.h3bold {
+  font-weight: bold;
+}
