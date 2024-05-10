@@ -2636,16 +2636,6 @@ body.contrast-high #search-bar-on-page button:hover {
 body.contrast-high.layout-search form input, body.contrast-high.layout-search form label {
   color: black; }
 
-.breadcrumb {
-  margin-bottom: 0px;
-  padding-top: 10px; }
-
-/**
- * custom.scss
- *
- * This file left blank intentionally. Implementations of Open SDG can use
- * a similarly named file for custom styles.
- */
 /*#2.1 Navigation Buttons */
 .goal-1.goal-banner {
   background-color: #E52B3D; }
@@ -3084,11 +3074,6 @@ body {
   border: 1px solid #ddd;
   border-radius: 4px; }
 
-.responsiveSubtitle {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
 .status {
   display: inline-block;
   padding-left: 5px;
@@ -3098,16 +3083,6 @@ body {
 .breadcrumb {
   padding-top: 20px;
   padding-bottom: 10px; }
-
-.mytablestyle {
-  border-collapse: collapse; }
-  .mytablestyle > table, .mytablestyle td, .mytablestyle th {
-    border: 1px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px; }
-  .mytablestyle td {
-    vertical-align: top;
-    text-align: left; }
 
 #legend {
   padding-left: 0;
@@ -3231,6 +3206,21 @@ body {
   padding: 10px;
   flex: 20%;
   flex-direction: row-reverse; }
+
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 1200px) {
+  .rightColumn, .leftColumn {
+    flex: 100%; } }
+.mytablestyle {
+  border-collapse: collapse; }
+  .mytablestyle > table, .mytablestyle td, .mytablestyle th {
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; }
+  .mytablestyle td {
+    vertical-align: top;
+    text-align: left; }
 
 .collapsibleElements .collapsible {
   font-size: 24px;
