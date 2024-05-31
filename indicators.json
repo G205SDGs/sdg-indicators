@@ -1327,7 +1327,7 @@
         },
         {
           "id": "11-c-1",
-          "title": "Anteil der finanziellen Unterstützung, die den am wenigsten entwickelten Ländern für den Umbau zu und Neubau von nachhaltigen, widerstandsfähigen und ressourceneffizienten Gebäuden unter Verwendung lokaler Materialien bereitgestellt wird",
+          "title": "global_indicators.11-c-1-title",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/11-c-1/",
@@ -1751,7 +1751,7 @@
         },
         {
           "id": "16-1-3",
-          "title": "Anteil der Bevölkerung, der in den vorangegangenen 12 Monaten a) physischer Gewalt, b) psychischer Gewalt und/oder c) sexueller Gewalt ausgesetzt war",
+          "title": "Anteil der Bevölkerung, der in den vorangegan¬genen 12 Monaten a) physischer Gewalt, b) psychischer Gewalt und/oder c) sexueller Gewalt ausgesetzt war",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/16-1-3/",
@@ -2027,7 +2027,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/17-10-1/",
-          "status": "inprogress"
+          "status": "notstarted"
         },
         {
           "id": "17-11-1",
