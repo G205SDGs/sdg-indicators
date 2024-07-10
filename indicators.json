@@ -831,11 +831,11 @@
         },
         {
           "id": "7-b-1",
-          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungs- und Industrieländern (in Watt pro Kopf)",
+          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungsländern und entwickelten Ländern (in Watt pro Kopf)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/7-b-1/",
-          "status": "inprogress"
+          "status": "complete"
         }]
     }
   },
@@ -1423,11 +1423,11 @@
         },
         {
           "id": "12-a-1",
-          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungs- und Industrieländern (in Watt pro Kopf)",
+          "title": "Installierte Kapazitäten zur Erzeugung erneuerbarer Energie in Entwicklungsländern und entwickelten Ländern (in Watt pro Kopf)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/12-a-1/",
-          "status": "inprogress"
+          "status": "complete"
         },
         {
           "id": "12-b-1",
@@ -2091,7 +2091,7 @@
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/17-18-1/",
-          "status": "inprogress"
+          "status": "complete"
         },
         {
           "id": "17-18-2",
