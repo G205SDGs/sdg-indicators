@@ -312,7 +312,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@map-series-unit-behaviors
-remote_theme: open-sdg/open-sdg@2.2.0
+remote_theme: open-sdg/open-sdg@2.2.1
 
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
@@ -413,4 +413,3 @@ progressive_web_app:
 proxy_indicators:
   label: Proxy
   description: Diese Zeitreihe entspricht nicht den globalen Metadaten
-  
