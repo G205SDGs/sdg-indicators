@@ -4577,13 +4577,8 @@ function alterDataDisplay(value, info, context) {
     // Before passing to user-defined dataDisplayAlterations, let's
     // do our best to ensure that it starts out as a number.
     var altered = value;
-    // In case the decimal separator has already been applied,
-    // change it back now.
-    if (typeof altered === 'string' && OPTIONS.decimalSeparator) {
-        altered = altered.replace(OPTIONS.decimalSeparator, '.');
-    }
     if (typeof altered !== 'number') {
-        altered = Number(altered);
+        altered = Number(value);
     }
     // If that gave us a non-number, return original.
     if (isNaN(altered)) {
@@ -4605,20 +4600,51 @@ function alterDataDisplay(value, info, context) {
     }
     else {
       var precision = VIEW._precision
-    }
-    if (precision || precision === 0) {
-        altered = Number.parseFloat(altered).toFixed(precision);
-    }
-    // Now apply our custom decimal separator if needed.
-    if (OPTIONS.decimalSeparator) {
-        altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
-    }
-    // Apply thousands seperator if needed
-    if (OPTIONS.thousandsSeparator && precision <=3){
-        altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.thousandsSeparator);
+    };
+    // If the returned value is not a number, use the legacy logic for
+    // precision and decimal separator.
+    if (typeof altered !== 'number') {
+        // Now apply our custom precision control if needed.
+
+        if (precision || precision === 0) {
+            altered = Number.parseFloat(altered).toFixed(precision);
+        }
+        // Now apply our custom decimal separator if needed.
+        if (OPTIONS.decimalSeparator) {
+            altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
+        }
+        // Apply thousands seperator if needed
+        if (OPTIONS.thousandsSeparator && precision <=3){
+            altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.thousandsSeparator);
+        }
     }
 
+    // Otherwise if we have a number, use toLocaleString instead.
+    else {
+        var localeOpts = {};
+        if (VIEW._precision || VIEW._precision === 0) {
+            localeOpts.minimumFractionDigits = precision;
+            localeOpts.maximumFractionDigits = precision;
+        }
+        altered = altered.toLocaleString(opensdg.language, localeOpts);
+        // Apply thousands seperator if needed
+        if (OPTIONS.thousandsSeparator && precision <=3 && opensdg.language == 'de'){
+            altered = altered.replace('.', OPTIONS.thousandsSeparator);
+        }
+    }
+    
     return altered;
+}
+
+/**
+ * Convert a number into a string for observation atttribute footnotes.
+ *
+ * @param {int} num
+ * @returns {string} Number converted into unicode character for footnotes.
+ */
+function getObservationAttributeFootnoteSymbol(obsAttribute) {
+    return '[' + obsAttribute.value + ']';
+    //return '[' + translations.indicator.note + ' ' + (num + 1) + ']';
 }
 
   /**
