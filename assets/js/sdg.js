@@ -4632,19 +4632,7 @@ function alterDataDisplay(value, info, context) {
             altered = altered.replace('.', OPTIONS.thousandsSeparator);
         }
     }
-    
     return altered;
-}
-
-/**
- * Convert a number into a string for observation atttribute footnotes.
- *
- * @param {int} num
- * @returns {string} Number converted into unicode character for footnotes.
- */
-function getObservationAttributeFootnoteSymbol(obsAttribute) {
-    return '[' + obsAttribute.value + ']';
-    //return '[' + translations.indicator.note + ' ' + (num + 1) + ']';
 }
 
   /**
