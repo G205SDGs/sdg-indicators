@@ -72,7 +72,7 @@ var indicatorView = function (model, options) {
         if (MODEL.showData) {
             $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
             if (!VIEW._chartInstance) {
-                helpers.createPlot(args);
+                helpers.createPlot(args, helpers);
                 helpers.setPlotEvents(args);
             } else {
                 helpers.updatePlot(args);
@@ -85,6 +85,7 @@ var indicatorView = function (model, options) {
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
         helpers.updateUnitElements(args.selectedUnit);
         helpers.updateTimeSeriesAttributes(args.timeSeriesAttributes);
+        helpers.updateObservationAttributes(args.allObservationAttributes);
 
         VIEW._dataCompleteArgs = args;
     });
@@ -109,6 +110,7 @@ var indicatorView = function (model, options) {
                 args.startValues,
                 args.proxy,
                 args.proxySerieses,
+                MODEL.allObservationAttributes,
             );
         }
     });
@@ -122,6 +124,17 @@ var indicatorView = function (model, options) {
 
         MODEL.onSeriesesComplete.attach(function (sender, args) {
             helpers.initialiseSerieses(args);
+        });
+    }
+
+    if (MODEL.onUnitsSelectedChanged) {
+        MODEL.onUnitsSelectedChanged.attach(function (sender, args) {
+            helpers.updateIndicatorDataUnitStatus(args);
+        });
+    }
+    if (MODEL.onSeriesesSelectedChanged) {
+        MODEL.onSeriesesSelectedChanged.attach(function (sender, args) {
+            helpers.updateIndicatorDataSeriesStatus(args);
         });
     }
 

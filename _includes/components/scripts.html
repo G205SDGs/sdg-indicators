@@ -1,0 +1,55 @@
+<script>
+  {% include cookies-config.js %}
+  {% include cookies-translations.js %}
+</script>
+<script src="https://cdn.kiprotect.com/klaro/v0.7/klaro-no-css.js"></script>
+{% include multilingual-js.html key="cookies.cookie_settings" %}
+{% endif %}
+
+{% if site.analytics.ua and site.analytics.ua != '' %}
+  {% include components/analytics/ga-universal.html %}
+{% endif %}
+{% if site.analytics.ga_prod and site.analytics.ga_prod != '' %}
+  {% include components/analytics/ga-universal.html %}
+{% endif %}
+{% if site.analytics.gtm and site.analytics.gtm != '' %}
+  {% include components/analytics/ga-gtm-noscript.html %}
+{% endif %}
+
+{% include multilingual-js.html key="general.hide" %}
+{% include multilingual-js.html key="search.search" %}
+<script src='{{ site.baseurl }}/assets/js/sdg.js?v={{ cache_bust }}'></script>
+{% include scripts-custom.html %}
+{%- if site.custom_js -%}
+  {%- for custom_js_file in site.custom_js -%}
+    {% assign script_src = custom_js_file %}
+    {% assign src_start = script_src | slice: 0, 4 %}
+    {% if src_start != 'http' %}
+      {%- assign script_src = site.baseurl | append: script_src | append: "?v=" | append: cache_bust %}
+    {% endif %}
+    <script src="{{ script_src }}"></script>
+  {%- endfor -%}
+{%- endif -%}
+<script>
+    new indicatorInit();
+    new accessibilitySwitcher();
+</script>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = (content.scrollHeight + 10) + "px";
+    }
+  });
+}
+</script>

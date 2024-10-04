@@ -13,18 +13,33 @@ function alterTableConfig(config, info) {
  * @param {Object} tableData
  * @return {String}
  */
-function toCsv(tableData) {
+function toCsv(tableData, selectedSeries, selectedUnit) {
     var lines = [],
-        headings = _.map(tableData.headings, function (heading) { return '"' + translations.t(heading) + '"'; });
+        dataHeadings = _.map(tableData.headings, function (heading) { return '"' + translations.t(heading) + '"'; }),
+        metaHeadings = [];
 
-    lines.push(headings.join(','));
+    if (selectedSeries) {
+        metaHeadings.push(translations.indicator.series);
+    }
+    if (selectedUnit) {
+        metaHeadings.push(translations.indicator.unit);
+    }
+    var allHeadings = dataHeadings.concat(metaHeadings);
+
+    lines.push(allHeadings.join(','));
 
     _.each(tableData.data, function (dataValues) {
         var line = [];
 
-        _.each(headings, function (heading, index) {
+        _.each(dataHeadings, function (heading, index) {
             line.push(dataValues[index]);
         });
+        if (selectedSeries) {
+            line.push(JSON.stringify(translations.t(selectedSeries)));
+        }
+        if (selectedUnit) {
+            line.push(JSON.stringify(translations.t(selectedUnit)));
+        }
 
         lines.push(line.join(','));
     });
@@ -42,6 +57,7 @@ function initialiseDataTable(el, info) {
     for (var i = 1; i < info.table.headings.length; i++) {
         nonYearColumns.push(i);
     }
+
     var datatables_options = OPTIONS.datatables_options || {
         paging: false,
         bInfo: false,
@@ -53,7 +69,10 @@ function initialiseDataTable(el, info) {
             {
                 targets: nonYearColumns,
                 createdCell: function (td, cellData, rowData, row, col) {
-                    $(td).text(alterDataDisplay(cellData, rowData, 'table cell'));
+                    var additionalInfo = Object.assign({}, info);
+                    additionalInfo.row = row;
+                    additionalInfo.col = col;
+                    $(td).text(alterDataDisplay(cellData, rowData, 'table cell', additionalInfo));
                 },
             },
         ],
@@ -73,10 +92,10 @@ function initialiseDataTable(el, info) {
  * @return null
  */
 function createSelectionsTable(chartInfo) {
-    createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', chartInfo.isProxy);
+    createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', chartInfo.isProxy, chartInfo.observationAttributesTable);
     $('#tableSelectionDownload').empty();
     createTableTargetLines(chartInfo.graphAnnotations);
-    createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
+    createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
     createSourceButton(chartInfo.shortIndicatorId, '#tableSelectionDownload');
     createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#tableSelectionDownload');
 };
@@ -121,9 +140,11 @@ function tableHasData(table) {
  * @param {Object} table
  * @param {String} indicatorId
  * @param {Element} el
+ * @param {bool} isProxy
+ * @param {Object} observationAttributesTable
  * @return null
  */
-function createTable(table, indicatorId, el, isProxy) {
+function createTable(table, indicatorId, el, isProxy, observationAttributesTable) {
 
     var table_class = OPTIONS.table_class || 'table table-hover';
 
@@ -159,17 +180,37 @@ function createTable(table, indicatorId, el, isProxy) {
         table_head += '</tr></thead>';
         currentTable.append(table_head);
         currentTable.append('<tbody></tbody>');
+        var row = -1;
 
         table.data.forEach(function (data) {
+            row += 1;
+            var col = -1;
             var row_html = '<tr>';
+            var obsValue = '';
+            console.log("observationAttributesTable: ", observationAttributesTable);
+            //(observationAttributesTable.data[row][1][0] !== undefined ? obsValue = observationAttributesTable.data[row][1][0].value : obsValue = '.');
             table.headings.forEach(function (heading, index) {
+                col += 1;
                 // For accessibility set the Year column to a "row" scope th.
+                if (col == 0) {
+                  obsValue = ''
+                }
+                else if (observationAttributesTable.data[row][col].length == 0) {
+                  (data[index] !== null && data[index] !== undefined ?  obsValue = '' : obsValue = '.')
+                }
+                else {
+                  obsValue = '';
+                  for (var i = 0; i <  observationAttributesTable.data[row][col].length; i++) {
+                    obsValue += (i == 0 ? observationAttributesTable.data[row][col][i].value : (', ' + observationAttributesTable.data[row][col][i].value));
+                  };
+                }
+                //(observationAttributesTable.data[row][1][0] !== undefined ? obsValue = observationAttributesTable.data[row][1][0].value : obsValue = '.');
                 var isYear = (index == 0);
                 var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
                 //var cell_content = (isYear) ? translations.t(data[index]) : data[index];
                 //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (cell_content !== null &&  cell_content !== undefined ?  cell_content : '.') + cell_suffix;
-                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null &&  data[index] !== undefined ?  data[index] : '.') + cell_suffix;
+                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ?  (data[index] + ' ' + obsValue) : obsValue) + cell_suffix;
             });
             row_html += '</tr>';
             currentTable.find('tbody').append(row_html);
@@ -181,6 +222,7 @@ function createTable(table, indicatorId, el, isProxy) {
         var alterationInfo = {
             table: table,
             indicatorId: indicatorId,
+            observationAttributesTable: observationAttributesTable,
         };
         initialiseDataTable(el, alterationInfo);
 
@@ -193,6 +235,24 @@ function createTable(table, indicatorId, el, isProxy) {
                 var sortDirection = $(this).attr('aria-sort');
                 $(this).find('span[role="button"]').attr('aria-sort', sortDirection);
             });
+
+        let tableWrapper = document.querySelector('.dataTables_wrapper');
+        if (tableWrapper) {
+            tableWrapper.addEventListener('scroll', function(e) {
+                if (tableWrapper.scrollLeft > 0) {
+                    tableWrapper.classList.add('scrolled-x');
+                }
+                else {
+                    tableWrapper.classList.remove('scrolled-x');
+                }
+                if (tableWrapper.scrollTop > 0) {
+                    tableWrapper.classList.add('scrolled-y');
+                }
+                else {
+                    tableWrapper.classList.remove('scrolled-y');
+                }
+            });
+        }
     } else {
         $(el).append($('<h3 />').text(translations.indicator.data_not_available));
         $(el).addClass('table-has-no-data');
@@ -205,7 +265,6 @@ function createTable(table, indicatorId, el, isProxy) {
  * @return null
  */
 function setDataTableWidth(table) {
-
     table.find('thead th').each(function () {
         var textLength = $(this).text().length;
         for (var loop = 0; loop < VIEW._tableColumnDefs.length; loop++) {
@@ -251,9 +310,9 @@ function setDataTableWidth(table) {
  * @param {Object} table
  * @return null
  */
-function updateChartDownloadButton(table) {
+function updateChartDownloadButton(table, selectedSeries, selectedUnit) {
     if (typeof VIEW._chartDownloadButton !== 'undefined') {
-        var tableCsv = toCsv(table);
+        var tableCsv = toCsv(table, selectedSeries, selectedUnit);
         var blob = new Blob([tableCsv], {
             type: 'text/csv'
         });

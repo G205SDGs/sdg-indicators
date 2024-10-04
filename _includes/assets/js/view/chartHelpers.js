@@ -75,6 +75,29 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
         $('#indicator-data-view-status').text(status);
     }
 }
+/**
+ * @param {Array} unit
+ * @return null
+ */
+function updateIndicatorDataUnitStatus(unit) {
+    var status = translations.indicator.announce_unit_switched + translations.t(unit);
+    var current = $('#indicator-data-unit-status').text();
+    if (current != status) {
+        $('#indicator-data-unit-status').text(status);
+    }
+}
+
+/**
+ * @param {Array} series
+ * @return null
+ */
+function updateIndicatorDataSeriesStatus(series) {
+    var status = translations.indicator.announce_series_switched + translations.t(series);
+    var current = $('#indicator-data-series-status').text();
+    if (current != status) {
+        $('#indicator-data-series-status').text(status);
+    }
+}
 
 /**
  * @param {String} contrast
@@ -108,7 +131,6 @@ function getHeadlineColor(contrast, goalNumber) {
   var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
   var headlineColor = headlineColors[goalNumber-1];
   var htmlString = '{{ "' + headlineColor + '" | default: "#00006a" }}';
-  console.log("goalNumber: ", htmlString);
     return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : htmlString;
 }
 
@@ -158,7 +180,7 @@ function setPlotEvents(chartInfo) {
         $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
     });
 
-    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload');
+    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
     createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
     createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
 
@@ -214,9 +236,10 @@ function setPlotEvents(chartInfo) {
  * @param {Object} chartInfo
  * @return null
  */
-function createPlot(chartInfo) {
+function createPlot(chartInfo, helpers) {
 
     var chartConfig = getChartConfig(chartInfo);
+    chartConfig.indicatorViewHelpers = helpers;
     alterChartConfig(chartConfig, chartInfo);
     if (isHighContrast()) {
         updateGraphAnnotationColors('high', chartConfig);
@@ -226,9 +249,9 @@ function createPlot(chartInfo) {
 
     }
     else {
-      //Override: No headline color
-      //updateHeadlineColor('default', chartConfig);
-      updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
+        //Override: No headline color
+        //updateHeadlineColor('default', chartConfig);
+        updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
     }
     refreshChartLineWrapping(chartConfig);
 
@@ -249,7 +272,6 @@ function createPlot(chartInfo) {
         createPlot(chartInfo);
         return;
     }
-
     updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
     // Override: No headline color
     //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
@@ -265,6 +287,7 @@ function createPlot(chartInfo) {
     VIEW._chartInstance.data.datasets = updatedConfig.data.datasets;
     VIEW._chartInstance.data.labels = updatedConfig.data.labels;
     VIEW._chartInstance.options = updatedConfig.options;
+    updateGraphAnnotationColors(isHighContrast() ? 'high' : 'default', updatedConfig);
 
     // The following is needed in our custom "rescaler" plugin.
     VIEW._chartInstance.data.allLabels = VIEW._chartInstance.data.labels.slice(0);
@@ -272,7 +295,7 @@ function createPlot(chartInfo) {
     VIEW._chartInstance.update();
 
     $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
-    updateChartDownloadButton(chartInfo.selectionsTable);
+    updateChartDownloadButton(chartInfo.selectionsTable, chartInfo.selectedSeries, chartInfo.selectedUnit);
 };
 
 /**
@@ -281,8 +304,8 @@ function createPlot(chartInfo) {
  * @return null
  */
 function updateGraphAnnotationColors(contrast, chartInfo) {
-    if (chartInfo.options.annotation) {
-        chartInfo.options.annotation.annotations.forEach(function (annotation) {
+    if (chartInfo.options.plugins.annotation) {
+        chartInfo.options.plugins.annotation.annotations.forEach(function (annotation) {
             if (contrast === 'default') {
                 $.extend(true, annotation, annotation.defaultContrast);
             }

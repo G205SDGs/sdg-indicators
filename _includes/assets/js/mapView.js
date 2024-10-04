@@ -2,7 +2,7 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, thousandsSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles, chartSubtitles, startValues, proxy, proxySerieses) {
+  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, thousandsSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles, chartSubtitles, startValues, proxy, proxySerieses, allObservationAttributes) {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
@@ -20,6 +20,7 @@ var mapView = function () {
       proxy: proxy,
       proxySerieses: proxySerieses,
       startValues: startValues,
+      allObservationAttributes: allObservationAttributes,
     });
   };
 };
