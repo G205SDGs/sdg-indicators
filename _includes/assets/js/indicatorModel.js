@@ -16,7 +16,9 @@ var indicatorModel = function (options) {
 
   // general members:
   var that = this;
+  console.log("options.data: ",options.data);
   this.data = helpers.inputData(options.data);
+  console.log("this.data: ", this.data);
   this.edgesData = helpers.inputEdges(options.edgesData);
   this.hasHeadline = true;
   this.country = options.country;
@@ -62,6 +64,7 @@ var indicatorModel = function (options) {
   this.graphStepsize = options.graphStepsize;
   this.proxy = options.proxy;
   this.proxySerieses = (this.proxy === 'both') ? options.proxySeries : [];
+  this.observationAttributes = [];
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
@@ -113,6 +116,7 @@ var indicatorModel = function (options) {
   }
 
   // calculate some initial values:
+  this.allObservationAttributes = helpers.getAllObservationAttributes(this.allData);
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
   this.initialiseUnits();
@@ -327,8 +331,9 @@ var indicatorModel = function (options) {
     }
 
     var combinations = helpers.getCombinationData(this.selectedFields, this.dataSchema);
-    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps );
+    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps, this.allObservationAttributes);
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
+    var observationAttributesTable = helpers.observationAttributesTableFromDatasets(datasets, this.years);
 
     var datasetCountExceedsMax = false;
     // restrict count if it exceeds the limit:
@@ -352,6 +357,7 @@ var indicatorModel = function (options) {
       labels: this.years,
       headlineTable: helpers.getHeadlineTable(headline, this.selectedUnit),
       selectionsTable: selectionsTable,
+      observationAttributesTable: observationAttributesTable,
       indicatorId: this.indicatorId,
       shortIndicatorId: this.shortIndicatorId,
       selectedUnit: this.selectedUnit,
@@ -366,6 +372,7 @@ var indicatorModel = function (options) {
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
       graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
       timeSeriesAttributes: timeSeriesAttributes,
+      allObservationAttributes: this.allObservationAttributes,
       isProxy: this.proxy === 'proxy' || this.proxySerieses.includes(this.selectedSeries),
     });
   };

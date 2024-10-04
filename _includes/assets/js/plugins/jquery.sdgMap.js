@@ -80,7 +80,6 @@
     if (Array.isArray(options.mapOptions.colorRange[0])) {
       this.goalNumber = parseInt(options.indicatorId.slice(options.indicatorId.indexOf('_')+1,options.indicatorId.indexOf('-')));
       options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber-1];
-      console.log("goal: ",this.goalNumber);
     }
 
 
@@ -100,6 +99,8 @@
     this.proxy = options.proxy;
     this.proxySerieses = options.proxySerieses;
     this.startValues = options.startValues;
+    this.configObsAttributes = {{ site.observation_attributes | jsonify }};
+    this.allObservationAttributes = options.allObservationAttributes;
 
     // Require at least one geoLayer.
     if (!options.mapLayers || !options.mapLayers.length) {
@@ -187,9 +188,27 @@
     getTooltipContent: function(feature) {
       var tooltipContent = feature.properties.name;
       var tooltipData = this.getData(feature.properties);
+      var plugin = this;
       if (typeof tooltipData === 'number') {
         tooltipContent += ': ' + this.alterData(tooltipData);
       }
+      if (feature.properties.observation_attributes) {
+        var obsAtts = feature.properties.observation_attributes[plugin.currentDisaggregation][plugin.currentYear],
+            footnoteNumbers = [];
+        if (obsAtts) {
+          Object.keys(obsAtts).forEach(function(field) {
+            if (obsAtts[field]) {
+              var hashKey = field + '|' + obsAtts[field];
+              var footnoteNumber = plugin.allObservationAttributes[hashKey].footnoteNumber;
+              footnoteNumbers.push(plugin.viewHelpers.getObservationAttributeFootnoteSymbol(footnoteNumber));
+            }
+          });
+          if (footnoteNumbers.length > 0) {
+            tooltipContent += ' ' + footnoteNumbers.join(' ');
+          }
+        }
+      }
+
       return tooltipContent;
     },
 
@@ -292,10 +311,20 @@
         value = Number.parseFloat(value).toFixed(this._precision);
       }
       if (this._decimalSeparator) {
-        value = value.toString().replace('.', this._decimalSeparator);
+        if(opensdg.language == 'de') {
+          value = value.toString().replace('.', this._decimalSeparator);
+        }
+        else {
+          value = value.toString();
+        }
       }
       if (this._thousandsSeparator) {
-        value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, this._thousandsSeparator);
+        if(opensdg.language == 'de') {
+          value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, this._thousandsSeparator);
+        }
+        else {
+          value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
       }
       return value;
     },
@@ -564,7 +593,6 @@
         }
         else {
           plugin.updateTitle();
-          plugin.updateFooterFields();
           plugin.updatePrecision();
         }
 

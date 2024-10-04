@@ -54,9 +54,9 @@ opensdg.chartTypes.base = function(info) {
                     suggestedMin: 0,
                     ticks: {
                         color: tickColor,
-                         callback: function (value) {
-                             return alterDataDisplay(value, undefined, 'chart y-axis tick');
-                         },
+                        callback: function (value) {
+                            return alterDataDisplay(value, undefined, 'chart y-axis tick');
+                        },
                     },
                     title: {
                         display: MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit,
@@ -82,48 +82,7 @@ opensdg.chartTypes.base = function(info) {
                     backgroundColor: 'rgba(0,0,0,0.7)',
                     callbacks: {
                         label: function (tooltipItem) {
-
-                          var label =  translations.t(tooltipItem.dataset.label);
-                          label = label.replace('<sub>','').replace('</sub>','');
-                          if (label.length > 45){
-
-                            label = label.split(' ');
-                            var line = '';
-
-                            for(var i=0; i<label.length; i++){
-                              if (line.concat(label[i]).length < 45){
-                                line = line.concat(label[i] + ' ');
-                              }
-                              else {
-                                break
-                              }
-                            }
-                            return line;
-                          } else {
-                            return label + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip');
-                          }
-                        },
-                        afterLabel: function(tooltipItem) {
-
-                          var label =  tooltipItem.dataset.label;
-                          label = label.replace('<sub>','').replace('</sub>','');
-                          if (label.length > 45){
-                            label = label.split(' ');
-                            var re = [];
-                            var line = '';
-                            for (var i=0; i<label.length; i++){
-                              if (line.concat(label[i]).length < 45){
-                                line = line.concat(label[i] + ' ');
-                              } else {
-                                re.push(line);
-                                line = '';
-                                line = line.concat(label[i] + ' ');
-                              }
-                            };
-                            re.push(line.slice(0, -1) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip'));
-                            re.shift();
-                          }
-                          return re;
+                            return translations.t(tooltipItem.dataset.label) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip', tooltipItem);
                         },
                         afterBody: function () {
                             var unit = MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit;
@@ -220,6 +179,32 @@ opensdg.chartTypes.base = function(info) {
             if (annotation.label && annotation.label.content) {
                 annotation.label.content = translations.t(annotation.label.content);
             }
+            // Fix some keys where there was once a discrepancy between
+            // Open SDG and Chart.js. Eg, we mistakenly used "fontColor"
+            // instead of "color".
+            if (annotation.label && annotation.label.fontColor) {
+                annotation.label.color = annotation.label.fontColor;
+            }
+            if (annotation.highContrast && annotation.highContrast.label) {
+                if (annotation.highContrast.label.fontColor) {
+                    annotation.highContrast.label.color = annotation.highContrast.label.fontColor;
+                }
+            }
+            // We also used the wrong values for label position.
+            if (annotation.label &&
+                annotation.label.position &&
+                (annotation.label.position == 'top' ||
+                 annotation.label.position == 'left')) {
+                // It should be 'start' instead of 'top' or 'left'.
+                annotation.label.position = 'start';
+            }
+            if (annotation.label &&
+                annotation.label.position &&
+                (annotation.label.position == 'bottom' ||
+                 annotation.label.position == 'right')) {
+                // It should be 'start' instead of 'top' or 'left'.
+                annotation.label.position = 'end';
+            }
             // Save some original values for later used when contrast mode is switched.
             if (typeof annotation.defaultContrast === 'undefined') {
                 annotation.defaultContrast = {};
@@ -231,11 +216,17 @@ opensdg.chartTypes.base = function(info) {
                 }
                 if (annotation.label) {
                     annotation.defaultContrast.label = {};
-                    if (annotation.label.fontColor) {
-                        annotation.defaultContrast.label.fontColor = annotation.label.fontColor;
+                    if (annotation.label.color) {
+                        annotation.defaultContrast.label.color = annotation.label.color;
                     }
                     if (annotation.label.backgroundColor) {
                         annotation.defaultContrast.label.backgroundColor = annotation.label.backgroundColor;
+                    }
+                    if (annotation.label.borderWidth) {
+                        annotation.defaultContrast.label.borderWidth = annotation.label.borderWidth;
+                    }
+                    if (annotation.label.borderColor) {
+                        annotation.defaultContrast.label.borderColor = annotation.label.borderColor;
                     }
                 }
             }

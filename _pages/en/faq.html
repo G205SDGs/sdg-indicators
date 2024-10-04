@@ -4,6 +4,45 @@ permalink: /en/help/faq/
 language: en
 layout: page
 ---
+<style>
+body, h1, h2, h3, h4, h5, h6, {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 500;}
+body h3,{
+  margin-top: 5px;
+  margin-bottom: 0px;
+  text-align: left;
+  font-size: 24px;}
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;}
+.addinfotable {
+  width: 100%;
+  border:1px solid black;
+  border-collapse: collapse;}
+.thyear {
+  border-right: 1px solid black;
+  text-align: left;}
+.addinfoth {
+  text-align: left;
+  border:1px solid black;
+  padding-left: 5px;}
+.addinfotd {
+  text-align: left;
+  border:1px solid black;
+  padding-left: 5px;}
+tr {line-height:30px;}
+.addinfonotel {
+  vertical-align: top;
+  font-size: 15px;
+  padding-left: 10px;
+  white-space: nowrap;}
+.addinfonoter {
+  vertical-align: top;
+  font-size: 15px;
+  padding-left: 10px;}
+
+</style>
 
 <h3 class="h3bold">1. How often is the data updated?</h3>
 The frequency with which new data is published and the time at which this happens varies for many indicators.
@@ -20,7 +59,7 @@ For feedback on the data sources we use or for suggestions for new data sources,
 here: <a href="mailto:{{site.email_contacts.questions}}">{{site.email_contacts.questions}}</a>
 
 <h3 class="h3bold">4. What does the report status mean?</h3>
-e have used four different types of reporting status for an indicator, which are also colour coded:
+We have used four different types of reporting status for an indicator, which are also colour coded:
 <br><br>
 * Green: Reported – The most important national data for this indicator or further information is available on this website.
 The data may not yet be available for all desired disaggregations.<br>
@@ -29,28 +68,101 @@ are currently being prepared for provision on this platform.<br>
 * Red: Not available - No data is available for this indicator.<br>
 * Grey: Not applicable - This internationally relevant indicator cannot be meaningfully calculated for Germany or can only be answered in a global context.
 
-<h3 class="h3bold">5. Why is there not a weather symbol for every indicator?</h3>
+<h3 class="h3bold">5. Why are some indicators labelled as "available" without actual data being stored?</h3>
 Some indicators cannot be meaningfully populated with data at national level, e.g. indicator 5.c.1 "Proportion of countries with systems to track and make
 public allocations for gender equality and women’s empowerment". Instead of only showing the value 1 or 0 in such cases, further information on the
 context of the indicator is presented.
 
-<h3 class="h3bold">6. Why does some of the data presented on the online platform not correspond to the SDG indicators?</h3>
+<h3 class="h3bold">6. What do the characters and letters on the data in the graphs and tables mean?</h3>
+If numerical values of individual data points cannot be published or cannot be published with their
+original value, a so-called <b>value-replacing character</b> (character instead of numbers) is used
+instead of the actual numerical value, which only appears in the table view.
+In certain constellations, numerical values require an explanation in order to illustrate the
+significance or the origin of the numerical value. In these cases, a so-called <b>value-explanatory
+character</b> (character at numbers) is used in addition to the numerical value. In the chart view,
+value-explanatory symbols appear when you move the mouse over the corresponding data point. In the table
+view, they are attached to the numerical values attached to the numerical values.
+The meaning of the symbols used is shown in the symbol explanation below the chart and table.<br>
+<table class="addinfotable">
+  <tr class="addinfotr">
+  	<th class="addinfoth">Character</th>
+    <th class="addinfoth">Explanation of character</th>
+    <th class="addinfoth">Type of character</th>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">0</td>
+    <td class="addinfotd">less than half of 1 in the last digit occupied, but more than zero</td>
+    <td class="addinfotd">value-replacing character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">-</td>
+    <td class="addinfotd">no figures or magnitude zero</td>
+    <td class="addinfotd">value-replacing character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">...</td>
+    <td class="addinfotd">data will be available later</td>
+    <td class="addinfotd">value-replacing character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">/</td>
+    <td class="addinfotd">no data because the numerical value is not sufficiently reliable</td>
+    <td class="addinfotd">value-replacing character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">.</td>
+    <td class="addinfotd">numerical value unknown or not be disclosed</td>
+    <td class="addinfotd">value-replacing character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">X</td>
+    <td class="addinfotd">cell blocked for logical reasons</td>
+    <td class="addinfotd">value-replacing character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">( )</td>
+    <td class="addinfotd">limited informational value because numerical value is of limited statistical reliability</td>
+    <td class="addinfotd">value-explanatory character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">|</td>
+    <td class="addinfotd">fundamental change within a series affecting comparisons over time</td>
+    <td class="addinfotd">value-explanatory character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">p</td>
+    <td class="addinfotd">provisional data</td>
+    <td class="addinfotd">value-explanatory character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">r</td>
+    <td class="addinfotd">revised data</td>
+    <td class="addinfotd">value-explanatory character</td>
+  </tr>
+  <tr class="addinfotr">
+    <td class="addinfotd">s</td>
+    <td class="addinfotd">estimated data</td>
+    <td class="addinfotd">value-explanatory character</td>
+  </tr>
+</table>
+
+<h3 class="h3bold">7. Why does some of the data presented on the online platform not correspond to the SDG indicators?</h3>
 For some of the SDG indicators, it is not possible to find data that corresponds exactly to the requirements of the indicator. In these cases, where
 possible, data is presented that reflects the subject area of the indicator and thus still provides relevant information,
 even if it differs in wording from the actual SDG indicator.
 
-<h3 class="h3bold">7. What is disaggregation?</h3>
+<h3 class="h3bold">8. What is disaggregation?</h3>
 Disaggregation is used to divide an existing indicator into further subcategories for more detailed analysis.
 The best known are age or gender. For many indicators, however, separate disaggregations apply, which are defined
 in the indicator name or by the international organisation responsible for the indicator.
 
-<h3 class="h3bold">8. Why can there be differences between the data for Germany on this platform and in the UN database?</h3>
+<h3 class="h3bold">9. Why can there be differences between the data for Germany on this platform and in the UN database?</h3>
 National official statistics are the data source for most of the indicators in the global UN database.
 For some indicators, however, the respective international organisations also compile estimated data or
 recalculate the data provided by the individual countries in order to ensure international comparability.
 They use their own methodology for this purpose. If the global database contains recalculated data from the international
 organisations, there may be differences between this data and the data on this platform.
 
-<h3 class="h3bold">9. Can other countries copy this website?</h3>
+<h3 class="h3bold">10. Can other countries copy this website?</h3>
 The website can be used freely to create your own online platform. The terms and conditions for the use of GitHub apply.
-Further information can be found at <a href="https://sdg-indicators.de/help/guidance/">Technical guidance</a>.
+Further information can be found at <a href="https://sdgtestenvironment.github.io/sdg-indicators/en/help/guidance/">Technical guidance</a>.

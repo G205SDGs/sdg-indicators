@@ -36,6 +36,9 @@ date_formats:
     language: en
     format: "%b %d, %Y"
 
+disclaimer:
+  hidden: true
+
 # Automatically create indicator pages, goal pages,
 # and some other required pages.
 create_indicators:
@@ -74,6 +77,7 @@ email_contacts:
 # Build settings
 markdown: kramdown
 
+# Exclude some files/folders.
 exclude:
   - vendor
   - scripts
@@ -257,6 +261,14 @@ menu:
 #     translation_key: menu.linkToDnsPlatform
 
 
+observation_attributes:
+  - field: COMMENT_OBS_0
+    label: ''
+  - field: COMMENT_OBS_1
+    label: ''
+  - field: COMMENT_OBS_2
+    label: ''
+
 contrast_type: single
 
 header_language_toggle: links
@@ -291,16 +303,13 @@ thousands_separator: ' '
 graph_color_headline: '#b8b8b8' #
 #graph_color_headline: ['#e5243b', '#dda63a', '#4c9f38', '#c5192d', '#ff3a21', '#26bde2', '#fcc30b', '#a21942', '#fd6925', '#dd1367', '#fd9d24', '#bf8b2e', '#3f7e44', '#0a97d9', '#56c02b', '#00689d', '#19486a']
 useHeadlineColor: false
-no_value_character: '.'
+no_value_character: '(.)'
 
 reporting_status:
     title: status.reporting_status
     description: status.status_blurb
     disaggregation_tabs: false
 
-
-ingnored_disaggregations:
-    - COMMENT_OBS
 
 hide_empty_metadata: true
 hide_single_unit: true
@@ -312,7 +321,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@map-series-unit-behaviors
-remote_theme: open-sdg/open-sdg@2.2.1
+remote_theme: open-sdg/open-sdg@2.3.3
 
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css

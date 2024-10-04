@@ -67,6 +67,10 @@
           {% endfor %}
         {% endif %}
 
+        {% if site.observation_attributes and site.observation_attributes.size > 0 %}
+          <dl class="observation-attribute-list" style= "margin-bottom: 10px;"></dl>
+        {% endif %}
+
         {% if page.indicator.copyright and page.indicator.copyright != '' %}
           <dt><u>{{ page.t.metadata_fields.copyright }}</u>:</dt>
           <dd>{{ page.indicator.copyright }}</dd>
