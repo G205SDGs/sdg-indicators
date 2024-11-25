@@ -18,11 +18,9 @@ function alterDataDisplay(value, info, context, additionalInfo) {
         if (typeof altered == 'string' && context === 'table cell' && altered.indexOf(' ') > 0) {
             obsText = altered.substring(altered.indexOf(' ') + 1);
             altered = Number(altered.substring(0, altered.indexOf(' ')));
-            console.log("X", altered, obsText);
         }
         else {
             altered = Number(value);
-            console.log("Y", altered, obsText);
         }
     }
     // If that gave us a non-number, return original.
@@ -94,8 +92,30 @@ function alterDataDisplay(value, info, context, additionalInfo) {
         var obsAttributeFootnoteNumbers = obsAttributes.map(function(obsAttribute) {
           return getObservationAttributeFootnoteSymbol(obsAttribute);
         });
-        altered += ' ' + obsAttributeFootnoteNumbers.join(' ');
+        // if (context == 'table cell'){
+        //   obsAttributeFootnoteNumbers.splice(obsAttributeFootnoteNumbers.indexOf('0'),1);
+        // }
+        var attributes = ' [' + obsAttributeFootnoteNumbers.join(', ') + ']';
     }
+    else {
+      var attributes = '';
+    }
+
+    // for table: we do not want "0 [-]" but "-"; and not "0,00 [0]" but "0,00"
+    if (context == 'table cell'){
+      if (parseFloat(altered) == 0){
+        // case: "0"
+        if (attributes.indexOf('0') > -1) {
+          attributes = attributes.replace('[0]','').replace('0, ','').replace(', 0','');
+        }
+        else if (attributes.indexOf('‒') > -1){
+          altered = '‒';
+          attributes = attributes.replace('[‒]','').replace('‒, ','').replace(', ‒','');
+        }
+      }
+    }
+    altered += attributes;
+
     return altered;
 }
 
@@ -106,6 +126,6 @@ function alterDataDisplay(value, info, context, additionalInfo) {
  * @returns {string} Number converted into unicode character for footnotes.
  */
 function getObservationAttributeFootnoteSymbol(obsAttribute) {
-    return ' ' + obsAttribute.value + '';
+    return '' + obsAttribute.value + '';
     //return '[' + translations.indicator.note + ' ' + (num + 1) + ']';
 }
