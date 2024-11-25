@@ -4697,17 +4697,20 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
             var col = -1;
             var row_html = '<tr>';
             var obsValue = '';
-            console.log("observationAttributesTable: ", observationAttributesTable);
+            //console.log("observationAttributesTable: ", observationAttributesTable);
             //(observationAttributesTable.data[row][1][0] !== undefined ? obsValue = observationAttributesTable.data[row][1][0].value : obsValue = '.');
             table.headings.forEach(function (heading, index) {
                 col += 1;
                 // For accessibility set the Year column to a "row" scope th.
+                // No observation values for years
                 if (col == 0) {
                   obsValue = ''
                 }
+                // case: no obs attributes defined --> '' if we have a value and '.' if not
                 else if (observationAttributesTable.data[row][col].length == 0) {
                   (data[index] !== null && data[index] !== undefined ?  obsValue = '' : obsValue = '.')
                 }
+                // case: Obs values are defined --> adding up all obs values separated by comma
                 else {
                   obsValue = '';
                   for (var i = 0; i <  observationAttributesTable.data[row][col].length; i++) {
@@ -4718,12 +4721,40 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                 var isYear = (index == 0);
                 var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
+
+                //var dateForTable = (data[index] == 0 && obsValue.indexOf('‒') > -1) ? ('‒' + obsValue.replace('‒, ','').replace(', ‒','').replace('[‒]','')) : (data[index] + ' ' + obsValue);
+                //var dateForTable = (data[index] == 0 && obsValue.indexOf('0') > -1) ? ('0' + obsValue.replace('0, ','').replace(', 0','').replace('[0]','')) : (data[index] + ' ' + obsValue);
+                // case: datapoint == 0 --> we do not want 0 plus obsValue in tabel but only 0 (or 0.00) or - feventually ollowed by other obs values
+                var dateForTable = ''
+                if (data[index] == 0){
+                  // case: only one obs-value (0 or -) --> show only the obs-value instead of the value
+                  if (obsValue.length == 1){
+                    dateForTable = obsValue;
+                  }
+                  // case: more than one obs-value --> setting the value to 0 or - and replace it in the obs-value by ''
+                  else{
+                    if (obsValue.indexOf('‒') > -1){
+                      dateForTable = '‒ [' + obsValue.replace('‒, ','').replace(', ‒','') + ']';
+                    }
+                    else{
+                      dateForTable = data[index] + ' [' + obsValue.replace('0, ','').replace(', 0','') + ']';
+                    }
+                  }
+                }
+                // case: datapoint is not zero --> datapoint plus obs-value
+                else {
+                  dateForTable = (data[index] + ' ' + obsValue);
+                }
+
                 //var cell_content = (isYear) ? translations.t(data[index]) : data[index];
                 //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (cell_content !== null &&  cell_content !== undefined ?  cell_content : '.') + cell_suffix;
-                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ?  (data[index] + ' ' + obsValue) : obsValue) + cell_suffix;
+                //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ?  (data[index] + ' ' + obsValue) : obsValue) + cell_suffix;
+                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ?  dateForTable : obsValue) + cell_suffix;
+                console.log("ROW FIN", row_html);
             });
             row_html += '</tr>';
             currentTable.find('tbody').append(row_html);
+            console.log("currentTable", currentTable);
         });
 
         $(el).append(currentTable);
@@ -4862,11 +4893,9 @@ function alterDataDisplay(value, info, context, additionalInfo) {
         if (typeof altered == 'string' && context === 'table cell' && altered.indexOf(' ') > 0) {
             obsText = altered.substring(altered.indexOf(' ') + 1);
             altered = Number(altered.substring(0, altered.indexOf(' ')));
-            console.log("X", altered, obsText);
         }
         else {
             altered = Number(value);
-            console.log("Y", altered, obsText);
         }
     }
     // If that gave us a non-number, return original.
@@ -4938,8 +4967,30 @@ function alterDataDisplay(value, info, context, additionalInfo) {
         var obsAttributeFootnoteNumbers = obsAttributes.map(function(obsAttribute) {
           return getObservationAttributeFootnoteSymbol(obsAttribute);
         });
-        altered += ' ' + obsAttributeFootnoteNumbers.join(' ');
+        // if (context == 'table cell'){
+        //   obsAttributeFootnoteNumbers.splice(obsAttributeFootnoteNumbers.indexOf('0'),1);
+        // }
+        var attributes = ' [' + obsAttributeFootnoteNumbers.join(', ') + ']';
     }
+    else {
+      var attributes = '';
+    }
+
+    // for table: we do not want "0 [-]" but "-"; and not "0,00 [0]" but "0,00"
+    if (context == 'table cell'){
+      if (parseFloat(altered) == 0){
+        // case: "0"
+        if (attributes.indexOf('0') > -1) {
+          attributes = attributes.replace('[0]','').replace('0, ','').replace(', 0','');
+        }
+        else if (attributes.indexOf('‒') > -1){
+          altered = '‒';
+          attributes = attributes.replace('[‒]','').replace('‒, ','').replace(', ‒','');
+        }
+      }
+    }
+    altered += attributes;
+
     return altered;
 }
 
@@ -4950,7 +5001,7 @@ function alterDataDisplay(value, info, context, additionalInfo) {
  * @returns {string} Number converted into unicode character for footnotes.
  */
 function getObservationAttributeFootnoteSymbol(obsAttribute) {
-    return ' ' + obsAttribute.value + '';
+    return '' + obsAttribute.value + '';
     //return '[' + translations.indicator.note + ' ' + (num + 1) + ']';
 }
 
