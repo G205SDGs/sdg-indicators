@@ -227,7 +227,11 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                       dateForTable = '‒ [' + obsValue.replace('‒, ','').replace(', ‒','') + ']';
                     }
                     else{
-                      dateForTable = data[index] + ' [' + obsValue.replace('0, ','').replace(', 0','') + ']';
+                      var deci = ['0', '0.0', '0.00', '0.000']
+                      for (var i = 0; i < deci.length; i++) {
+                        dateForTable = data[index] + ' [' + obsValue.replace('' + deci[i] + ', ','').replace(', ' + deci[i] + '','') + ']';
+                      }
+                      //dateForTable = data[index] + ' [' + obsValue.replace('0, ','').replace(', 0','') + ']';
                     }
                   }
                 }
