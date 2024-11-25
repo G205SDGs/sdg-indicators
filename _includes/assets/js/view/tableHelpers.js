@@ -187,7 +187,7 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
             var col = -1;
             var row_html = '<tr>';
             var obsValue = '';
-            //console.log("observationAttributesTable: ", observationAttributesTable);
+            console.log("observationAttributesTable: ", observationAttributesTable);
             //(observationAttributesTable.data[row][1][0] !== undefined ? obsValue = observationAttributesTable.data[row][1][0].value : obsValue = '.');
             table.headings.forEach(function (heading, index) {
                 col += 1;
@@ -240,11 +240,9 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                 //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (cell_content !== null &&  cell_content !== undefined ?  cell_content : '.') + cell_suffix;
                 //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ?  (data[index] + ' ' + obsValue) : obsValue) + cell_suffix;
                 row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ?  dateForTable : obsValue) + cell_suffix;
-                console.log("ROW FIN", row_html);
             });
             row_html += '</tr>';
             currentTable.find('tbody').append(row_html);
-            console.log("currentTable", currentTable);
         });
 
         $(el).append(currentTable);
