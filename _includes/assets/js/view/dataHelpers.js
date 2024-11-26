@@ -106,7 +106,10 @@ function alterDataDisplay(value, info, context, additionalInfo) {
       if (parseFloat(altered) == 0){
         // case: "0"
         if (attributes.indexOf('0') > -1) {
-          attributes = attributes.replace('[0]','').replace('0, ','').replace(', 0','');
+          var deci = ['0', '0.0', '0.00', '0.000']
+          for (var i = 0; i < deci.length; i++) {
+            attributes = attributes.replace('[' + deci[i] + ']','').replace('' + deci[i] + ', ','').replace(', ' + deci[i] + '','');
+          }
         }
         else if (attributes.indexOf('‒') > -1){
           altered = '‒';
@@ -126,6 +129,13 @@ function alterDataDisplay(value, info, context, additionalInfo) {
  * @returns {string} Number converted into unicode character for footnotes.
  */
 function getObservationAttributeFootnoteSymbol(obsAttribute) {
-    return '' + obsAttribute.value + '';
+    // make sure we do not get 0.000 for obsValue
+    if (isNaN(parseInt(obsAttribute.value))) {
+        return '' + obsAttribute.value + '';
+    }
+    else{
+        return '' + String(parseInt(obsAttribute.value)) + '';
+    }
+
     //return '[' + translations.indicator.note + ' ' + (num + 1) + ']';
 }
