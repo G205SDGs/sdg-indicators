@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20250214015947">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20250214104351">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -316,7 +316,7 @@ layout-indicator-iframe
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit="Million EUR"
+  data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
   data-showinfo=""
@@ -336,7 +336,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;r&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Million EUR&quot;,&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;r&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
   data-graphstepsize="[{&quot;step&quot;:50.0}]"
@@ -389,7 +389,11 @@ layout-indicator-iframe
         
         
         
-        <th scope="col" class="table-value">Value</th>
+        <th scope="col">Value</th>
+        
+        
+        
+        <th scope="col" class="table-value">Units</th>
         
         
       </thead>
@@ -402,7 +406,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">306.3</td>
+          <td>306.3</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -414,7 +422,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">312.1</td>
+          <td>312.1</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -426,7 +438,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">336.9</td>
+          <td>336.9</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -438,7 +454,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">391.4</td>
+          <td>391.4</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -450,7 +470,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">406.8</td>
+          <td>406.8</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -462,7 +486,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">404.4</td>
+          <td>404.4</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -474,7 +502,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">447.8</td>
+          <td>447.8</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -486,7 +518,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">474.7</td>
+          <td>474.7</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -498,7 +534,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">490.5</td>
+          <td>490.5</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -510,7 +550,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">474.5</td>
+          <td>474.5</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -522,7 +566,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">489.4</td>
+          <td>489.4</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
           
           
         </tr>
@@ -534,7 +582,235 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">611.7</td>
+          <td>611.7</td>
+          
+          
+          
+          <td class="table-value">Million EUR</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td>2.4</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td>2.35</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td>2.51</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td>2.74</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td>2.87</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td>2.69</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td>2.87</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td>2.85</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td>2.84</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td>2.53</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td>2.37</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td>2.58</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td>2.3</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td>2.54</td>
+          
+          
+          
+          <td class="table-value">Percentage</td>
           
           
         </tr>
@@ -552,8 +828,6 @@ layout-indicator-iframe
     
     <p>Geographic coverage: Germany</p>
     
-    
-    <p>Unit of measurement: Million EUR</p>
     
     
     <p>Note: </p>
@@ -1997,12 +2271,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20250214015947'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20250214104351'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20250214015947"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20250214104351"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
