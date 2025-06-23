@@ -4,16 +4,20 @@ permalink: /strategy/publications/
 layout: page
 ---
 
+
 <div class="flex-container">
   <div class="leftColumn" >
     <div class=collapsibleElements>
       <button class="collapsible">HLPF-Berichte</button>
       <div class="content">
+        <h4>2025</h4>
+        <a href="https://sdg-indcators.de/public/HLPF_Bericht_2025_de.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2025</a>
+        <br><br>
         <h4>2021</h4>
-        <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2021_de.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2021</a>
+        <a href="https://sdg-indcators.de/public/HLPF_Bericht_2021_de.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2021</a>
         <br><br>
         <h4>2016</h4>
-        <a href="https://sdg-indikatoren.de/public/HLPF_Bericht_2016_en.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2016</a> <small>(nur auf Englisch verfügbar)</small>
+        <a href="https://sdg-indcators.de/public/HLPF_Bericht_2016_en.pdf" target="_blank">Freiwilliger Deutscher Staatenbericht zum HLPF 2016</a> <small>(nur auf Englisch verfügbar)</small>
         <br><br>
       </div>
       <button class="collapsible">Pressemitteilungen</button>
@@ -40,18 +44,18 @@ layout: page
 </div>
 
 <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = (content.scrollHeight + 10) + "px";
-    }
-  });
-}
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = (content.scrollHeight + 10) + "px";
+      }
+    });
+  }
 </script>
