@@ -158,6 +158,14 @@
           "status": "complete"
         },
         {
+          "id": "2-2-4",
+          "title": "Prävalenz minimaler Ernährungsvielfalt, nach Bevölkerungsgruppen (Kinder im Alter von 6 bis 23,9 Monaten und nicht schwangere Frauen im Alter von 15 bis 49 Jahren)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators/2-2-4/",
+          "status": "inprogress"
+        },
+        {
           "id": "2-3-1",
           "title": "Produktionsvolumen je Arbeitseinheit, nach Größenklassen der Land-/ Weide-/ Forstwirtschaftsbetriebe",
           "description": "",
@@ -191,7 +199,7 @@
         },
         {
           "id": "2-5-2",
-          "title": "Anteil heimischer Rassen, die als vom Aussterben bedroht eingestuft sind",
+          "title": "Anteil heimischer und grenzüberschreitend vorkommender Nutztierrassen, die als vom Aussterben bedroht eingestuft sind",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/2-5-2/",
@@ -942,6 +950,14 @@
           "status": "complete"
         },
         {
+          "id": "8-9-2",
+          "title": "Erwerbstätige in der Tourismuswirtschaft",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators/8-9-2/",
+          "status": "inprogress"
+        },
+        {
           "id": "8-10-1",
           "title": "a) Anzahl der Bankfilialen je 100&nbsp;000 Erwachsene und b) Anzahl der Geldautomaten je 100&nbsp;000 Erwachsene",
           "description": "",
@@ -1015,7 +1031,7 @@
         },
         {
           "id": "9-3-1",
-          "title": "Anteil kleiner Industrieunternehmen an der gesamten industriellen Wertschöpfung",
+          "title": "Anteil kleiner Industrieunternehmen an der gesamten industriellen Wertschöpfung, basierend auf a) der internationalen Klassifikation und b) nationalen Klassifikationen",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/9-3-1/",
@@ -1119,7 +1135,7 @@
         },
         {
           "id": "10-4-2",
-          "title": "Umverteilende Wirkung der Fiskalpolitik",
+          "title": "Umverteilende Wirkung der Fiskalpolitik auf den Gini-Index",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/10-4-2/",
@@ -1695,7 +1711,7 @@
         },
         {
           "id": "15-9-1",
-          "title": "a) Anzahl der Staaten, die nationale Zielvorgaben gemäß oder ähnlich dem Aichi-Biodiversitätsziel 2 des Strategieplans für die biologische Vielfalt 2011-2020 in ihre nationalen Strategien und Aktionspläne zugunsten der biologischen Vielfalt aufgenommen haben, und die bei der Umsetzung dieser Zielvorgaben gemeldeten Fortschritte und b) Aufnahme der biologischen Vielfalt in die nationalen Rechnungslegungs- und Berichterstattungssysteme, definiert als die Anwendung des Systems der Umweltökonomischen Gesamtrechnungen",
+          "title": "a) Anzahl der Staaten, die nationale Zielvorgaben im Einklang mit oder vergleichbar zu Handlungsziel 14 des Globalen Biodiversitätsrahmens von Kunming-Montreal in ihre nationalen Strategien und Aktionspläne zugunsten der Biodiversität aufgenommen haben, und die bei der Umsetzung dieser Zielvorgaben gemeldeten Fortschritte; und b) Integration der Biodiversität in die nationalen Systeme der volkswirtschaftlichen Gesamtrechnung und Berichterstattung, gemessen an der Umsetzung des Systems der Umweltökonomischen Gesamtrechnungen (SEEA)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/15-9-1/",
@@ -1975,7 +1991,7 @@
         },
         {
           "id": "17-4-1",
-          "title": "Schuldendienst im Verhältnis zu den Waren- und Dienstleistungsexporten",
+          "title": "Schuldendienst im Verhältnis zu den Exporten von Waren, Dienstleistungen und dem Primäreinkommen",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/17-4-1/",
@@ -1999,7 +2015,7 @@
         },
         {
           "id": "17-7-1",
-          "title": "Gesamtbetrag der Finanzmittel für Entwicklungsländer zur Förderung der Entwicklung, des Transfers, der Bereitstellung und der Verbreitung von umweltverträglichen Technologien",
+          "title": "Gesamtbetrag der Finanzmittel für Entwicklungsländer und entwickelte Länder zur Förderung der Entwicklung, des Transfers, der Bereitstellung und der Verbreitung von umweltverträglichen Technologien",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/17-7-1/",

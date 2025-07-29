@@ -158,6 +158,14 @@
           "status": "complete"
         },
         {
+          "id": "2-2-4",
+          "title": "Prevalence of minimum dietary diversity, by population group (children aged 6 to 23.9 months and non-pregnant women aged 15 to 49 years)",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators/en/2-2-4/",
+          "status": "inprogress"
+        },
+        {
           "id": "2-3-1",
           "title": "Volume of production per labour unit, by classes of farming/ pastoral/ forestry enterprise size",
           "description": "",
@@ -191,7 +199,7 @@
         },
         {
           "id": "2-5-2",
-          "title": "Proportion of local breeds classified as being at risk of extinction",
+          "title": "Proportion of local and transboundary breeds classified as being at risk of extinction",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/2-5-2/",
@@ -942,6 +950,14 @@
           "status": "complete"
         },
         {
+          "id": "8-9-2",
+          "title": "Employed persons in the tourism industries",
+          "description": "",
+          "keywords": "",
+          "href": "/sdg-indicators/en/8-9-2/",
+          "status": "inprogress"
+        },
+        {
           "id": "8-10-1",
           "title": "(a) Number of commercial bank branches per 100,000 adults and (b) number of automated teller machines (ATMs) per 100,000 adults",
           "description": "",
@@ -1015,7 +1031,7 @@
         },
         {
           "id": "9-3-1",
-          "title": "Proportion of small-scale industries in total industry value added",
+          "title": "Proportion of small-scale industries in total industry value added, based on (a) international classification and (b) national classifications",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/9-3-1/",
@@ -1119,7 +1135,7 @@
         },
         {
           "id": "10-4-2",
-          "title": "Redistributive impact of fiscal policy",
+          "title": "Redistributive impact of fiscal policy on the Gini index",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/10-4-2/",
@@ -1695,7 +1711,7 @@
         },
         {
           "id": "15-9-1",
-          "title": "(a) Number of countries that have established national targets in accordance with or similar to Aichi Biodiversity Target 2 of the Strategic Plan for Biodiversity 2011–2020 in their national biodiversity strategy and action plans and the progress reported towards these targets; and (b) integration of biodiversity into national accounting and reporting systems, defined as implementation of the System of Environmental-Economic Accounting",
+          "title": "(a) Number of countries that have established national targets in accordance with or similar to Kunming-Montreal Global Biodiversity Framework Target 14 in their national biodiversity strategy and action plans and the progress reported towards these targets; and (b) integration of biodiversity into national accounting and reporting systems, defined as implementation of the System of Environmental-Economic Accounting",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/15-9-1/",
@@ -1975,7 +1991,7 @@
         },
         {
           "id": "17-4-1",
-          "title": "Debt service as a proportion of exports of goods and services",
+          "title": "Debt service as a proportion of exports of goods, services and primary income",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/17-4-1/",
@@ -1999,7 +2015,7 @@
         },
         {
           "id": "17-7-1",
-          "title": "Total amount of funding for developing countries to promote the development, transfer, dissemination and diffusion of environmentally sound technologies",
+          "title": "Total amount of funding for developing and developed countries to promote the development, transfer, dissemination and diffusion of environmentally sound technologies",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/17-7-1/",
