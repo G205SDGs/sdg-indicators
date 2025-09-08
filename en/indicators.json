@@ -87,7 +87,7 @@
         },
         {
           "id": "1-a-1",
-          "title": "Total official development assistance grants from all donors that focus on poverty reduction as a share of the recipient country’s gross national income",
+          "title": "Total official development assistance grants that focus on poverty reduction as a share of the recipient country’s gross national income",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/1-a-1/",
@@ -439,7 +439,7 @@
         },
         {
           "id": "3-b-3",
-          "title": "Proportion of health facilities that have a core set of relevant essential medicines available and affordable on a sustainable basis",
+          "title": "Health product access index",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/3-b-3/",
@@ -535,7 +535,7 @@
         },
         {
           "id": "4-6-1",
-          "title": "Proportion of population in a given age group achieving at least a fixed level of proficiency in functional (a) literacy and (b) numeracy skills, by sex",
+          "title": "Youth/adult literacy rate",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/4-6-1/",
@@ -559,7 +559,7 @@
         },
         {
           "id": "4-b-1",
-          "title": "Volume of official development assistance flows for scholarships, by sector and type of study",
+          "title": "Volume of official development assistance flows for scholarships",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/4-b-1/",
@@ -1199,7 +1199,7 @@
         },
         {
           "id": "10-b-1",
-          "title": "Total resource flows for development, by recipient and donor countries and type of flow (e.g. official development assistance, foreign direct investment and other flows)",
+          "title": "Total resource flows for development (e.g. official development assistance, foreign direct investment and other flows)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/10-b-1/",
@@ -2031,7 +2031,7 @@
         },
         {
           "id": "17-9-1",
-          "title": "Dollar value of financial and technical assistance (including through North-South, South-South and triangular cooperation) committed to developing countries",
+          "title": "Dollar value of official development assistance committed to developing countries",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/en/17-9-1/",

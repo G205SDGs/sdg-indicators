@@ -87,7 +87,7 @@
         },
         {
           "id": "1-a-1",
-          "title": "Gesamtumfang der Zuschüsse im Rahmen der öffentlichen Entwicklungszusammenarbeit (ODA) aller Geber mit Schwerpunkt auf der Minderung der Armut, gemessen am Bruttonationaleinkommen (BNE) des Empfängerlands",
+          "title": "Gesamtumfang der Zuschüsse im Rahmen der öffentlichen Entwicklungszusammenarbeit (ODA) mit Schwerpunkt auf der Minderung der Armut, gemessen am Bruttonationaleinkommen (BNE) des Empfängerlands",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/1-a-1/",
@@ -439,7 +439,7 @@
         },
         {
           "id": "3-b-3",
-          "title": "Anteil der Gesundheitseinrichtungen mit einem Kernbestand an relevanten unentbehrlichen Arzneimitteln, die nachhaltig verfügbar und bezahlbar sind",
+          "title": "Index für den Zugang zu Gesundheitsprodukten",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/3-b-3/",
@@ -535,7 +535,7 @@
         },
         {
           "id": "4-6-1",
-          "title": "Anteil der Bevölkerung einer bestimmten Altersgruppe, der ein festgelegtes Mindestniveau an funktionalen a) Lese-, Schreib- und b) Rechenkompetenzen besitzt, nach Geschlecht",
+          "title": "Alphabetenquote bei Jugendlichen und Erwachsenen",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/4-6-1/",
@@ -559,7 +559,7 @@
         },
         {
           "id": "4-b-1",
-          "title": "Umfang der Ausgaben der öffentlichen Entwicklungszusammenarbeit (ODA) für Stipendien, nach Sektor und Art des Studiums",
+          "title": "Umfang der Ausgaben der öffentlichen Entwicklungszusammenarbeit (ODA) für Stipendien",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/4-b-1/",
@@ -1199,7 +1199,7 @@
         },
         {
           "id": "10-b-1",
-          "title": "Gesamte Finanzströme für Entwicklung, nach Nehmer- und Geberländern und Art des Zahlungsstroms (z. B. öffentliche Entwicklungszusammenarbeit (ODA), ausländische Direktinvestitionen und sonstige Finanzströme)",
+          "title": "Gesamte Finanzströme für Entwicklung (z. B. öffentliche Entwicklungszusammenarbeit (ODA), ausländische Direktinvestitionen und sonstige Finanzströme)",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/10-b-1/",
@@ -2031,7 +2031,7 @@
         },
         {
           "id": "17-9-1",
-          "title": "Wert der finanziellen und technischen Hilfe für Entwicklungsländer (einschließlich durch Nord-Süd-, Süd-Süd- und Dreieckskooperationen), in US-Dollar",
+          "title": "Wert der öffentlichen Entwicklungszusammenarbeit (ODA) für Entwicklungsländer, in US-Dollar",
           "description": "",
           "keywords": "",
           "href": "/sdg-indicators/17-9-1/",
