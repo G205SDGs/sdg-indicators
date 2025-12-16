@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251215195240">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251216022959">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -504,20 +504,20 @@ data-event-label="high"
   data-indicatorid='indicator_17-18-3'
   data-id="17-18-3"
   data-country="Germany"
-  data-charttitle=""
+  data-charttitle="National statistical plan that is fully funded and under implementation"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
-  data-measurementunit=""
+  data-measurementunit="yes=1, no=0"
   data-xaxislabel=""
-  data-showdata="false"
+  data-showdata="true"
   data-showinfo=""
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="&quot;&quot;"
-  data-graphlimits="null"
+  data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:1.0}]"
   data-stackeddisaggregation=""
   data-showline="true"
   data-spangaps="true"
@@ -530,14 +530,519 @@ data-event-label="high"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
-  data-precision="null"
-  data-graphstepsize="null"
+  data-precision="[{&quot;decimals&quot;:0}]"
+  data-graphstepsize="[{&quot;step&quot;:1.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
-  <div id="indicator-main" class="indicator-main col-md-12">
+  <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
+  <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
+    <div id="serieses"></div>
+<div id="units"></div>
+<div id="toolbar">
+  <span id="series-help">
+    <h4>Selection</h4>
+    <p>Please select here what should be displayed in the chart and/or the table.</p>
+  </span>
+  <div id="fields">
+    <p class="async-loading" data-img="/sdg-indicators/assets/img/loading-small.gif"></p>
+  </div>
+</div>
+
+  </div>
+  <div id="indicator-main" class="indicator-main col-md-9">
     
+
+
+
+
+<div id="headlineTable">
+
+  <div id="datatables">
+
+    
+    <a role="button" href="https://g205SDGs.github.io/sdg-data/en/headline/17-18-3.csv" class="btn btn-primary btn-download" download="indicator_17-18-3.csv" tabindex="0" role="button">Download Headline CSV</a>
+    
+    <a role="button" href="https://g205SDGs.github.io/sdg-data/en/data/17-18-3.csv" class="btn btn-primary btn-download" download='indicator_17-18-3.csv' tabindex='0' role='button'>Download Source CSV</a>
+
+    <p class="no-js-disaggregation-hint"></p>
+
+    
+    <h3></h3>
+    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
+      <caption>National statistical plan that is fully funded and under implementation</caption>
+      <thead>
+        
+        
+        <th scope="col">Year</th>
+        
+        
+        
+        <th scope="col" class="table-value">Value</th>
+        
+        
+      </thead>
+      <tbody>
+        
+        <tr>
+          
+          
+          <td>2010</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2011</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2012</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2013</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2014</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2015</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2016</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2017</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2018</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2019</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2020</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2021</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2022</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2023</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+        <tr>
+          
+          
+          <td>2024</td>
+          
+          
+          
+          <td class="table-value">1</td>
+          
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    
+  </div>
+
+  
+  <div id="datatableFooter">
+    
+    <p>Data source: <a href="https://www.bmj.de/EN" target="_blank" onclick="return confirm_alert('the Federal Ministry of Justice and the Federal Office of Justice and Consumer Protection','En');" title="Click here to go to the website of the organisation Federal Ministry of Justice and Consumer Protection and the Federal Office of Justice."> Federal Ministry of Justice and Consumer Protection and the Federal Office of Justice </a></p>
+    
+    
+    <p>Geographic coverage: Germany</p>
+    
+    
+    <p>Unit of measurement: yes=1, no=0</p>
+    
+    
+    <p>Note: </p>
+    
+  </div>
+  
+
+</div>
+
+
+<section>
+
+  <p class="async-loading" data-img="/sdg-indicators/assets/img/loading-small.gif"></p>
+
+  <div class="async-loaded mt-4" style="display:none;">
+
+    <div style="display: none;">
+    <span id="table-alternative"></span>
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-chartview"
+        data-bs-target="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Chart tab"
+
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Chart</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-tableview"
+        data-bs-target="#tableview"
+        aria-controls="tableview"
+        data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Table tab"
+
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Table</span></button>
+  </li>
+  
+</ul>
+
+    <div class="tab-content data-view">
+    
+      
+        <div role="tabpanel" class="tab-pane active" id="chartview">
+          
+
+    <div id="dataset-size-warning" style="display:none" role="alert">
+      <i class="fa fa-bolt"><span class="sr-only"></span></i>
+      There are too many datasets to show on the chart. Not all will be shown until you remove some selections.
+    </div>
+
+    
+    
+    <div id="selectionsChart">
+      <figure role="group">
+        <div id="chart-canvas">
+          <h4 id="chart-heading" class="chart-title">National statistical plan that is fully funded and under implementation</h4>
+          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <div id="chart" class="plot-container">
+            <canvas
+    role="img"
+    aria-labelledby="chart-heading"
+    aria-describedby="table-alternative chart-annotations"
+    tabindex="0"
+ ></canvas>
+
+          </div>
+          <div id="plotLegend"></div>
+          
+
+
+
+<div id="selectionChartFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+          
+            <dt><u>Data sources</u>:</dt>
+          
+          <dd><a href="https://www.bmj.de/EN" target="_blank" onclick="return confirm_alert('the Federal Ministry of Justice and the Federal Office of Justice and Consumer Protection','En');" title="Click here to go to the website of the organisation Federal Ministry of Justice and Consumer Protection and the Federal Office of Justice."> Federal Ministry of Justice and Consumer Protection and the Federal Office of Justice </a>, <a href="https://www.destatis.de/EN" target="_blank" title="Click here to go to the website of the organisation Federal Statistical Office (Destatis)."> Federal Statistical Office (Destatis) </a></dd>
+        
+
+        
+          <dt><u>Geographic coverage</u>:</dt>
+          <dd>Germany</dd>
+        
+
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+          
+            <dt
+              class="data-controlled-footer-field"
+              data-ts-attribute="COMMENT_TS"
+            ><u>Note</u>:</dt>
+            <dd
+              class="data-controlled-footer-field"
+              data-ts-attribute="COMMENT_TS"
+            ></dd>
+          
+            <dt
+              class="data-controlled-footer-field"
+              data-ts-attribute="DATA_LAST_UPDATE"
+            ><u><u>Last data update:</u><br></u>:</dt>
+            <dd
+              class="data-controlled-footer-field"
+              data-ts-attribute="DATA_LAST_UPDATE"
+            ></dd>
+          
+        
+
+        
+          <dl class="observation-attribute-list" style= "margin-bottom: 10px;"></dl>
+        
+
+        
+          <dt><u>Copyright</u>:</dt>
+          <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+    </dl>
+</div>
+
+        </div>
+      </figure>
+      <div id="chartSelectionDownload" class="clearfix">
+        <button
+          id="btnSave"
+          title=""
+          aria-label=""
+          class='btn btn-primary btn-download'>
+          Download Chart Image
+        </button><!--
+   --></div>
+    </div>
+
+
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="tableview">
+          <div style="display: none;">
+            <span id="column-sort-info"></span>
+          </div>
+          <div id="selectionsTable"></div>
+<dl id="tableTargetLines" class="clearfix"></dl>
+
+
+
+
+<div id="selectionTableFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+          
+            <dt><u>Data sources</u>:</dt>
+          
+          <dd><a href="https://www.bmj.de/EN" target="_blank" onclick="return confirm_alert('the Federal Ministry of Justice and the Federal Office of Justice and Consumer Protection','En');" title="Click here to go to the website of the organisation Federal Ministry of Justice and Consumer Protection and the Federal Office of Justice."> Federal Ministry of Justice and Consumer Protection and the Federal Office of Justice </a>, <a href="https://www.destatis.de/EN" target="_blank" title="Click here to go to the website of the organisation Federal Statistical Office (Destatis)."> Federal Statistical Office (Destatis) </a></dd>
+        
+
+        
+          <dt><u>Geographic coverage</u>:</dt>
+          <dd>Germany</dd>
+        
+
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+
+        
+
+        
+
+        
+          
+            <dt
+              class="data-controlled-footer-field"
+              data-ts-attribute="COMMENT_TS"
+            ><u>Note</u>:</dt>
+            <dd
+              class="data-controlled-footer-field"
+              data-ts-attribute="COMMENT_TS"
+            ></dd>
+          
+            <dt
+              class="data-controlled-footer-field"
+              data-ts-attribute="DATA_LAST_UPDATE"
+            ><u><u>Last data update:</u><br></u>:</dt>
+            <dd
+              class="data-controlled-footer-field"
+              data-ts-attribute="DATA_LAST_UPDATE"
+            ></dd>
+          
+        
+
+        
+          <dl class="observation-attribute-list" style= "margin-bottom: 10px;"></dl>
+        
+
+        
+          <dt><u>Copyright</u>:</dt>
+          <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+    </dl>
+</div>
+
+<div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+  </div>
+  
+
+  </div>
+
+</section>
+
   
   <div class="mt-4">
 <ul class="nav nav-tabs" role="tablist">
@@ -609,6 +1114,48 @@ data-event-label="Change to Sources tab"
       
       
       
+      
+      <tr>
+        <th scope="row">Time series available </th>
+        <td style="width: 100%">
+          
+            <p>National statistical plan that is fully funded and under implementation</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Compliance with the UN metadata </th>
+        <td style="width: 100%">
+          
+            <p>The time series is compliant with the UN metadata.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
         
           
       
@@ -664,28 +1211,19 @@ data-event-label="Change to Sources tab"
       
       
       
-        
+      
+      <tr>
+        <th scope="row">Data state </th>
+        <td style="width: 100%">
           
-      
-      
-      
-        
+            <p>2025/11/17</p>
+
           
-      
-      
-      
+        </td>
+        </tr>
         
-          
       
-      
-      
-        
-          
-      
-      
-      
-        
-          
+  
   
   
   
@@ -1220,8 +1758,8 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
-        <h4 class="sr-only">Data source 1</h4>
       
+        <h4>Data source 1</h4>
       
       
 <table class="table metadata-content">
@@ -1623,6 +2161,510 @@ data-event-label="Change to Sources tab"
 
     </div>
     
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Data source 2</h4>
+      
+      
+<table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.destatis.de/EN" target="_blank"><img src="https://sdg-indikatoren.de/public/OrgImgEn/destatis.png" alt="Logo destatis" style="height:60px; width:148px" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.destatis.de/EN" target="_blank" title="Click here to go to the website of the organisation Federal Statistical Office (Destatis)."> Federal Statistical Office (Destatis) </a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Data source </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2018.pdf" target="_blank">
+                  PARIS21 Questionnaire, assessment 2018 <span class="visuallyhidden">opens in a new window</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2023.pdf" target="_blank">
+                  PARIS21 Questionnaire, assessment 2023 <span class="visuallyhidden">opens in a new window</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2024.pdf" target="_blank">
+                  PARIS21 Questionnaire, assessment 2024 <span class="visuallyhidden">opens in a new window</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2025.pdf" target="_blank">
+                  PARIS21 Questionnaire, assessment 2025 <span class="visuallyhidden">opens in a new window</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
   </div>
 
 
@@ -1719,12 +2761,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20251215195240'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20251216022959'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20251215195240"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20251216022959"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

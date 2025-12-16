@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251215195240">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251216022959">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -312,7 +312,7 @@ layout-indicator-iframe
   data-indicatorid='indicator_2-5-2'
   data-id="2-5-2"
   data-country="Deutschland"
-  data-charttitle="Anteil heimischer Rassen, die als vom Aussterben bedroht eingestuft sind"
+  data-charttitle="Heimische Nutztierrassen, die als vom Aussterben bedroht eingestuft sind"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
@@ -324,7 +324,7 @@ layout-indicator-iframe
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Gefährdungskategorie (nach nationaler Klassifikation)&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Nicht gefährdet&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Beobachtungspopulationen&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Erhaltungspopulationen&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Phänotypische Erhaltungspopulationen&quot;},{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Einheimische Nutztierrassen (Pferde, Rinder, Schweine, Schafe und Ziegen)&quot;},{&quot;field&quot;:&quot;Units&quot;,&quot;value&quot;:&quot;Prozent&quot;}]"
+  data-startvalues="[{&quot;field&quot;:&quot;Art der Klassifikation&quot;,&quot;value&quot;:&quot;FAO-Klassifikation&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Gefährdet&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Nicht gefährdet&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Beobachtungspopulation&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Erhaltungspopulation&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Phänotypische Erhaltungspopulation&quot;},{&quot;field&quot;:&quot;Gefährdungskategorie&quot;,&quot;value&quot;:&quot;Nicht gefährdet&quot;}]"
   data-graphlimits="[{&quot;unit&quot;:&quot;Prozent&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0},{&quot;unit&quot;:&quot;Anzahl&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation="Gefährdungskategorie"
   data-showline="true"
@@ -466,7 +466,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anteil heimischer Rassen, die als vom Aussterben bedroht eingestuft sind</h4>
+          <h4 id="chart-heading" class="chart-title">Heimische Nutztierrassen, die als vom Aussterben bedroht eingestuft sind</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -502,6 +502,11 @@ data-event-label="Change to Table tab"
 
         
 
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          
+          
+          <dd ><br>• Heimische Nutztierrassen: Kühe, Ziegen, Pferde, Schweine und Schafe.<br>• Phänotypische Erhaltungspopulationen: Diese Rassen können aus tierzuchtwissenschaftlicher Sicht nur noch als Rudimente verstanden werden, der kulturelle Wert solcher Rassen ist jedoch unbestritten.<br>• Erhaltungspopulationen: stark existenzgefährdete Populationen.<br>• Beobachtungspopulationen: gefährdete Populationen.</dd>
         
 
         
@@ -588,6 +593,11 @@ data-event-label="Change to Table tab"
 
         
 
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          
+          
+          <dd ><br>• Heimische Nutztierrassen: Kühe, Ziegen, Pferde, Schweine und Schafe.<br>• Phänotypische Erhaltungspopulationen: Diese Rassen können aus tierzuchtwissenschaftlicher Sicht nur noch als Rudimente verstanden werden, der kulturelle Wert solcher Rassen ist jedoch unbestritten.<br>• Erhaltungspopulationen: stark existenzgefährdete Populationen.<br>• Beobachtungspopulationen: gefährdete Populationen.</dd>
         
 
         
@@ -704,17 +714,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
       
       <tr>
-        <th scope="row">Verfügbare Zeitreihen </th>
+        <th scope="row">Verfügbare Zeitreihe </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Gefährdungskategorie (nach FAO-Klassifikation)</li> <li> Gefährdungskategorie (nach nationaler Klassifikation)</li> <li> Einheimische Nutztierrassen (Pferde, Rinder, Schweine, Schafe und Ziegen)</li></ul>
+            <p>Heimische Nutztierrassen, die als vom Aussterben bedroht eingestuft sind</p>
 
           
         </td>
@@ -722,6 +727,11 @@ data-event-label="Change to Sources tab"
         
       
   
+      
+      
+      
+        
+          
       
       
       
@@ -735,7 +745,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Vergleichbarkeit mit den UN-Metadaten </th>
         <td style="width: 100%">
           
-            <p>Die Zeitreihe “Gefährdungskategorie (nach FAO-Klassifikation)” entspricht den UN-Metadaten. Die Zeitreihen “Gefährdungskategorie (nach nationaler Klassifikation)” und “Einheimische Nutztierrassen (Pferde, Rinder, Schweine, Schafe und Ziegen)” bieten zusätzliche Informationen.</p>
+            <p>Die Zeitreihe entspricht den UN-Metadaten.</p>
 
           
         </td>
@@ -746,9 +756,19 @@ data-event-label="Change to Sources tab"
       
       
       
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
       
       <tr>
-        <th scope="row">Nationale Metadaten<small> (nur auf Englisch verfügbar)</small> </th>
+        <th scope="row">Nationale Metadaten </th>
         <td style="width: 100%">
           
             
@@ -762,7 +782,7 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://sdg-indikatoren.de/public/Meta/2.5.2.pdf" target="_blank">
+                <a href="https://sdg-indikatoren.de/public/MetaDe/2.5.2.pdf" target="_blank">
                   Metadaten zu den dargestellten Zeitreihen <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
@@ -818,22 +838,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
       
       <tr>
         <th scope="row">Datenstand </th>
         <td style="width: 100%">
           
-            <p>24.01.2025</p>
+            <p>26.11.2025</p>
 
           
         </td>
@@ -1843,12 +1853,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20251215195240'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20251216022959'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20251215195240"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20251216022959"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

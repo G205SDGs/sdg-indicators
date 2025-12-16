@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251215195240">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251216022959">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -325,7 +325,7 @@ layout-indicator-iframe
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="&quot;&quot;"
-  data-graphlimits="null"
+  data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:1.0}]"
   data-stackeddisaggregation=""
   data-showline="true"
   data-spangaps="true"
@@ -338,8 +338,8 @@ layout-indicator-iframe
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
   data-compositebreakdownlabel=""
-  data-precision="[{&quot;decimals&quot;:1}]"
-  data-graphstepsize="null"
+  data-precision="[{&quot;decimals&quot;:0}]"
+  data-graphstepsize="[{&quot;step&quot;:1.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
@@ -496,7 +496,7 @@ layout-indicator-iframe
     <p>Einheit: ja=1, nein=0</p>
     
     
-    <p>Anmerkung: Daten sind erst ab 2018 verfügbar.</p>
+    <p>Anmerkung: </p>
     
   </div>
   
@@ -605,9 +605,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Datenquelle</u>:</dt>
+            <dt><u>Datenquellen</u>:</dt>
           
-          <dd><a href="https://paris21.org/" target="_blank" onclick="return confirm_alert('der Partnership in Statistics for Development in the 21st Century','De');" title="Klicken Sie hier um zur Website der Organisation Partnership in Statistics for Development in the 21st Century (PARIS21) zu gelangen."> Partnership in Statistics for Development in the 21st Century (PARIS21) </a></dd>
+          <dd><a href="https://paris21.org/" target="_blank" onclick="return confirm_alert('der Partnership in Statistics for Development in the 21st Century','De');" title="Klicken Sie hier um zur Website der Organisation Partnership in Statistics for Development in the 21st Century (PARIS21) zu gelangen."> Partnership in Statistics for Development in the 21st Century (PARIS21) </a>, <a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></dd>
         
 
         
@@ -618,11 +618,6 @@ data-event-label="Change to Table tab"
         <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
-        
-          <dt><u>Anmerkung</u>:</dt>
-          
-          
-          <dd >Daten sind erst ab 2018 verfügbar.</dd>
         
 
         
@@ -696,9 +691,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Datenquelle</u>:</dt>
+            <dt><u>Datenquellen</u>:</dt>
           
-          <dd><a href="https://paris21.org/" target="_blank" onclick="return confirm_alert('der Partnership in Statistics for Development in the 21st Century','De');" title="Klicken Sie hier um zur Website der Organisation Partnership in Statistics for Development in the 21st Century (PARIS21) zu gelangen."> Partnership in Statistics for Development in the 21st Century (PARIS21) </a></dd>
+          <dd><a href="https://paris21.org/" target="_blank" onclick="return confirm_alert('der Partnership in Statistics for Development in the 21st Century','De');" title="Klicken Sie hier um zur Website der Organisation Partnership in Statistics for Development in the 21st Century (PARIS21) zu gelangen."> Partnership in Statistics for Development in the 21st Century (PARIS21) </a>, <a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></dd>
         
 
         
@@ -709,11 +704,6 @@ data-event-label="Change to Table tab"
         <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
-        
-          <dt><u>Anmerkung</u>:</dt>
-          
-          
-          <dd >Daten sind erst ab 2018 verfügbar.</dd>
         
 
         
@@ -874,40 +864,13 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Nationale Metadaten<small> (nur auf Englisch verfügbar)</small> </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://sdg-indikatoren.de/public/Meta/17.18.2.pdf" target="_blank">
-                  Metadaten zu den dargestellten Zeitreihen <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
+          
       
       
       
-      
-  
+        
+          
       
       
       
@@ -961,7 +924,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Datenstand </th>
         <td style="width: 100%">
           
-            <p>30.04.2025</p>
+            <p>17.11.2025</p>
 
           
         </td>
@@ -1503,8 +1466,8 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
-        <h4 class="sr-only">Datenquelle 1</h4>
       
+        <h4>Datenquelle 1</h4>
       
       
 <table class="table metadata-content">
@@ -1906,6 +1869,510 @@ data-event-label="Change to Sources tab"
 
     </div>
     
+    
+    
+    <div class="col-md-6">
+      
+      
+        <h4>Datenquelle 2</h4>
+      
+      
+<table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.destatis.de" target="_blank"><img src="https://sdg-indikatoren.de/public/OrgImgDe/destatis.png" alt="Logo destatis" style="height:60px; width:148px" /></a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td style="width: 100%">
+          
+            <p><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Datenquelle </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2018.pdf" target="_blank">
+                  PARIS21-Fragebogen, Bewertung 2018 (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2023.pdf" target="_blank">
+                  PARIS21-Fragebogen, Bewertung 2013 (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2024.pdf" target="_blank">
+                  PARIS21-Fragebogen, Bewertung 2024 (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td style="width: 100%">
+          
+            
+            
+            
+            
+
+            
+            
+            
+
+            
+              
+                <a href="https://sdg-indikatoren.de/public/PARIS21-Survey_2025.pdf" target="_blank">
+                  PARIS21-Fragebogen, Bewertung 2025 (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                </a>
+              
+            
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+      
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+</table>
+
+    </div>
+    
   </div>
 
 
@@ -1944,12 +2411,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20251215195240'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20251216022959'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20251215195240"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20251216022959"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

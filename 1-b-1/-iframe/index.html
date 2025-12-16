@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251215195240">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20251216022959">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -312,8 +312,8 @@ layout-indicator-iframe
   data-indicatorid='indicator_1-b-1'
   data-id="1-b-1"
   data-country="Deutschland"
-  data-charttitle="Armutsorientierte öffentliche Sozialausgaben"
-  data-charttitles="[{&quot;series&quot;:&quot;Armutsgefährdungsquote&quot;,&quot;title&quot;:&quot;Armutsgefährdungsquote&quot;},{&quot;series&quot;:&quot;Staatsausgaben für soziale Sicherung&quot;,&quot;title&quot;:&quot;Staatsausgaben für soziale Sicherung&quot;}]"
+  data-charttitle="Staatsausgaben für soziale Sicherung"
+  data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
   data-measurementunit="Prozent"
@@ -324,7 +324,7 @@ layout-indicator-iframe
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Staatsausgaben für soziale Sicherung&quot;}]"
+  data-startvalues="&quot;&quot;"
   data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation=""
   data-showline="true"
@@ -333,7 +333,7 @@ layout-indicator-iframe
   data-graphtargetlines="null"
   data-graphtargetpoints="null"
   data-graphtargetlabels="null"
-  data-graphseriesbreaks="[{&quot;series&quot;:&quot;Armutsgefährdungsquote&quot;,&quot;value&quot;:9.5}]"
+  data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;r&quot;,&quot;p&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
@@ -381,7 +381,7 @@ layout-indicator-iframe
     
     <h3></h3>
     <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Armutsorientierte öffentliche Sozialausgaben</caption>
+      <caption>Staatsausgaben für soziale Sicherung</caption>
       <thead>
         
         
@@ -459,6 +459,8 @@ layout-indicator-iframe
     
     <p>Einheit: Prozent</p>
     
+    
+    <p>Anmerkung: </p>
     
   </div>
   
@@ -546,7 +548,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Armutsgefährdungsquote</h4>
+          <h4 id="chart-heading" class="chart-title">Staatsausgaben für soziale Sicherung</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -567,9 +569,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Datenquellen</u>:</dt>
+            <dt><u>Datenquelle</u>:</dt>
           
-          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');" title="Klicken Sie hier um zur Website der Organisation Statistisches Amt der Europäischen Union (Eurostat) zu gelangen."> Statistisches Amt der Europäischen Union (Eurostat) </a></dd>
+          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></dd>
         
 
         
@@ -584,23 +586,6 @@ data-event-label="Change to Table tab"
 
         
 
-        
-          
-            
-              <dt
-                data-for-series="Armutsgefährdungsquote"
-                data-for-unit=""
-              ><u>Anmerkung</u>:</dt>
-              
-              
-
-              <dd
-                data-for-series="Armutsgefährdungsquote"
-                data-for-unit=""
-                
-              >Aufgrund methodischer Änderungen sind die Ergebnisse ab 2020 nur eingeschränkt mit den Vorjahren vergleichbar.</dd>
-            
-          
         
 
         
@@ -631,7 +616,7 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Statistisches Bundesamt (Destatis), 2024</dd>
+          <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
     </dl>
 </div>
@@ -670,9 +655,9 @@ data-event-label="Change to Table tab"
     <dl>
         
           
-            <dt><u>Datenquellen</u>:</dt>
+            <dt><u>Datenquelle</u>:</dt>
           
-          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a>, <a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');" title="Klicken Sie hier um zur Website der Organisation Statistisches Amt der Europäischen Union (Eurostat) zu gelangen."> Statistisches Amt der Europäischen Union (Eurostat) </a></dd>
+          <dd><a href="https://www.destatis.de" target="_blank" title="Klicken Sie hier um zur Website der Organisation Statistisches Bundesamt (Destatis) zu gelangen."> Statistisches Bundesamt (Destatis) </a></dd>
         
 
         
@@ -687,23 +672,6 @@ data-event-label="Change to Table tab"
 
         
 
-        
-          
-            
-              <dt
-                data-for-series="Armutsgefährdungsquote"
-                data-for-unit=""
-              ><u>Anmerkung</u>:</dt>
-              
-              
-
-              <dd
-                data-for-series="Armutsgefährdungsquote"
-                data-for-unit=""
-                
-              >Aufgrund methodischer Änderungen sind die Ergebnisse ab 2020 nur eingeschränkt mit den Vorjahren vergleichbar.</dd>
-            
-          
         
 
         
@@ -734,7 +702,7 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Statistisches Bundesamt (Destatis), 2024</dd>
+          <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
     </dl>
 </div>
@@ -818,17 +786,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
       
       <tr>
-        <th scope="row">Verfügbare Zeitreihen </th>
+        <th scope="row">Verfügbare Zeitreihe </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Armutsgefährdungsquote</li> <li> Staatsausgaben für soziale Sicherung</li></ul>
+            <p>Staatsausgaben für soziale Sicherung</p>
 
           
         </td>
@@ -844,12 +807,17 @@ data-event-label="Change to Sources tab"
       
       
       
+        
+          
+      
+      
+      
       
       <tr>
         <th scope="row">Vergleichbarkeit mit den UN-Metadaten </th>
         <td style="width: 100%">
           
-            <p>Die Zeitreihen entsprechen nicht den UN-Metadaten, bieten aber zusätzliche Informationen.</p>
+            <p>Die Zeitreihe entspricht teilweise den UN-Metadaten.</p>
 
           
         </td>
@@ -947,7 +915,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Datenstand </th>
         <td style="width: 100%">
           
-            <p>18.06.2025</p>
+            <p>26.09.2025</p>
 
           
         </td>
@@ -1489,8 +1457,8 @@ data-event-label="Change to Sources tab"
     
     <div class="col-md-6">
       
+        <h4 class="sr-only">Datenquelle 1</h4>
       
-        <h4>Datenquelle 1</h4>
       
       
 <table class="table metadata-content">
@@ -1892,429 +1860,6 @@ data-event-label="Change to Sources tab"
 
     </div>
     
-    
-    
-    <div class="col-md-6">
-      
-      
-        <h4>Datenquelle 2</h4>
-      
-      
-<table class="table metadata-content">
-  <tbody>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td style="width: 100%">
-          
-            <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');"><img src="https://sdg-indikatoren.de/public/OrgImgDe/eurostat.png" alt="Logo eurostat" style="height:60px; width:148px" /></a></p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td style="width: 100%">
-          
-            <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');" title="Klicken Sie hier um zur Website der Organisation Statistisches Amt der Europäischen Union (Eurostat) zu gelangen."> Statistisches Amt der Europäischen Union (Eurostat) </a></p>
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Datenquelle </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table?lang=de" target="_blank" onclick="return confirm_alert('des Statischen Amts der Europäischen Union','De');">
-                  EU-SILC Erhebung: Quote der von Armut bedrohten Personen – Eurostat Tabelle [ilc_li02] <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </tbody>
-</table>
-
-    </div>
-    
   </div>
 
 
@@ -2337,8 +1882,6 @@ data-event-label="Change to Sources tab"
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
-
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
@@ -2355,12 +1898,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20251215195240'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20251216022959'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20251215195240"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20251216022959"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
