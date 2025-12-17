@@ -15,6 +15,29 @@ function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
 }
 
 /**
+ * Model helper functions related to charts and datasets.
+ */
+
+/**
+ * @param {string} currentSubTitle
+ * @param {Array} allSubTitles Objects containing 'unit' and 'subtitle'
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {String} Updated title
+ */
+function getChartSubTitle(currentSubTitle, allSubTitles, selectedUnit, selectedSeries) {
+  var match = getMatchByUnitSeries(allSubTitles, selectedUnit, selectedSeries);
+  if (allSubTitles == null) {
+    currentSubTitle;
+  }
+  else {
+    return (match) ? match.title : '';
+  }
+
+}
+
+
+/**
  * @param {string} currentType
  * @param {Array} allTypes Objects containing 'unit', 'series', and 'type'
  * @param {String} selectedUnit
