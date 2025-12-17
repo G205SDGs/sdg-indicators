@@ -80,7 +80,7 @@ var indicatorModel = function (options) {
     if (this.hasSerieses) {
       if (helpers.GRAPH_TITLE_FROM_SERIES) {
         this.chartTitle = this.selectedSeries;
-        this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
+        this.chartSubtitle = helpers.getChartSubTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
       }
       this.data = helpers.getDataBySeries(this.allData, this.selectedSeries);
       this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
@@ -151,7 +151,7 @@ var indicatorModel = function (options) {
   }
 
   this.updateChartSubtitle = function() {
-    this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
+    this.chartSubtitle = helpers.getChartSubTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartType = function() {
