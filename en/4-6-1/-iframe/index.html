@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260130025706">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260130095804">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -312,7 +312,7 @@ layout-indicator-iframe
   data-indicatorid='indicator_4-6-1'
   data-id="4-6-1"
   data-country="Germany"
-  data-charttitle="Adults with a fixed level of proficiency in functional (a) literacy and (b) numeracy skills"
+  data-charttitle="Adults with a fixed level of proficiency in functional literacy skills"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
@@ -324,7 +324,7 @@ layout-indicator-iframe
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Skill&quot;,&quot;value&quot;:&quot;a) Literacy skills&quot;},{&quot;field&quot;:&quot;Skill&quot;,&quot;value&quot;:&quot;b) Numeracy skills&quot;},{&quot;field&quot;:&quot;Level of proficiency&quot;,&quot;value&quot;:&quot;Minimum requirement level II&quot;}]"
+  data-startvalues="[{&quot;field&quot;:&quot;Age group&quot;,&quot;value&quot;:&quot;16 to under 66 years&quot;}]"
   data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation=""
   data-showline="true"
@@ -336,7 +336,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;skill&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a) Literacy skills&quot;,&quot;b) Numeracy skills&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Skill&quot;},{&quot;name&quot;:&quot;level of proficiency&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Minimum requirement level I&quot;,&quot;Minimum requirement level II&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Level of proficiency&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 to under 66 years&quot;,&quot;16 to under 25 years&quot;,&quot;25 to under 65 years&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
   data-graphstepsize="[{&quot;step&quot;:10.0}]"
@@ -466,7 +466,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Adults with a fixed level of proficiency in functional (a) literacy and (b) numeracy skills</h4>
+          <h4 id="chart-heading" class="chart-title">Adults with a fixed level of proficiency in functional literacy skills</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -534,7 +534,7 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+          <dd>&copy; Federal Statistical Office (Destatis), 2026</dd>
         
     </dl>
 </div>
@@ -620,7 +620,7 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+          <dd>&copy; Federal Statistical Office (Destatis), 2026</dd>
         
     </dl>
 </div>
@@ -709,7 +709,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Time series available </th>
         <td style="width: 100%">
           
-            <p>Adults with a fixed level of proficiency in functional (a) literacy and (b) numeracy skills</p>
+            <p>Adults with a fixed level of proficiency in functional literacy skills</p>
 
           
         </td>
@@ -735,7 +735,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Compliance with the UN metadata </th>
         <td style="width: 100%">
           
-            <p>The time series is compliant with the UN metadata.</p>
+            <p>The time series is partly compliant with the UN metadata.</p>
 
           
         </td>
@@ -833,7 +833,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Data state </th>
         <td style="width: 100%">
           
-            <p>2024/12/10</p>
+            <p>2026/01/21</p>
 
           
         </td>
@@ -1843,12 +1843,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20260130025706'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20260130095804'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20260130025706"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20260130095804"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
