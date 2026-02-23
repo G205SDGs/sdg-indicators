@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260223032438">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260223105805">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -312,9 +312,9 @@ layout-indicator-iframe
   data-indicatorid='indicator_16-3-1'
   data-id="16-3-1"
   data-country="Deutschland"
-  data-charttitle="Anzeigequote bei Gewalttaten"
+  data-charttitle="Opfer von Gewalt"
   data-charttitles="null"
-  data-chartsubtitle=""
+  data-chartsubtitle="Anzeigequote"
   data-chartsubtitles="null"
   data-measurementunit="Prozent"
   data-xaxislabel=""
@@ -324,7 +324,7 @@ layout-indicator-iframe
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="&quot;&quot;"
+  data-startvalues="[{&quot;field&quot;:&quot;Art der Gewalt&quot;,&quot;value&quot;:&quot;a) Physische Gewalt&quot;},{&quot;field&quot;:&quot;Art der physischen Gewalt&quot;,&quot;value&quot;:&quot;Körperverletzung&quot;},{&quot;field&quot;:&quot;Art der physischen Gewalt&quot;,&quot;value&quot;:&quot;Raub&quot;},{&quot;field&quot;:&quot;Art der Gewalt&quot;,&quot;value&quot;:&quot;b) Psychische Gewalt&quot;},{&quot;field&quot;:&quot;Art der Gewalt&quot;,&quot;value&quot;:&quot;c) Sexuelle Gewalt&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
   data-showline="true"
@@ -336,7 +336,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="[{&quot;value&quot;:1.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Anzeigequote bei Körperverletzung&quot;,&quot;Anzeigequote bei Raub&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 bis unter 25 Jahre&quot;,&quot;25 bis unter 35 Jahre&quot;,&quot;35 bis unter 45 Jahre&quot;,&quot;45 bis unter 55 Jahre&quot;,&quot;55 bis unter 65 Jahre&quot;,&quot;65 bis unter 75 Jahre&quot;,&quot;75 Jahre und älter&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Altersklasse&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;type of violence&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a) Physische Gewalt&quot;,&quot;b) Psychische Gewalt&quot;,&quot;c) Sexuelle Gewalt&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Art der Gewalt&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;16 bis unter 25 Jahre&quot;,&quot;25 bis unter 35 Jahre&quot;,&quot;35 bis unter 45 Jahre&quot;,&quot;45 bis unter 55 Jahre&quot;,&quot;55 bis unter 65 Jahre&quot;,&quot;65 bis unter 75 Jahre&quot;,&quot;75 Jahre und älter&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Altersklasse&quot;},{&quot;name&quot;:&quot;type of physical violence&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Körperverletzung&quot;,&quot;Raub&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Art der physischen Gewalt&quot;},{&quot;name&quot;:&quot;type of sexual violence&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Körperliche sexuelle Belästigung&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Art der sexuellen Gewalt&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
   data-graphstepsize="[{&quot;step&quot;:5.0}]"
@@ -465,8 +465,8 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Anzeigequote bei Gewalttaten</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">Opfer von Gewalt</h4>
+          <h6 id="chart-heading" class="chart-subtitle">Anzeigequote</h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -500,12 +500,12 @@ data-event-label="Change to Table tab"
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          
-          
-          <dd >Aufgrund methodischer Änderungen sind die Ergebnisse ab 2020 nur eingeschränkt mit den Vorjahren vergleichbar.</dd>
-        
 
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          
+          
+          <dd ><br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Physische Gewalt: Aufgrund methodischer Änderungen sind die Ergebnisse ab 2020 nur eingeschränkt mit den Vorjahren vergleichbar. Weiterführende Informationen siehe "1. Allgemeine Angaben zur Zeitreihe" in den nationalen Metadaten.<br>• Psychische Gewalt und sexuelle Gewalt: Daten erst ab 2020 verfügbar.</dd>
         
 
         
@@ -538,7 +538,7 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Statistisches Bundesamt (Destatis), 2024</dd>
+          <dd>&copy; Statistisches Bundesamt (Destatis), 2026</dd>
         
     </dl>
 </div>
@@ -591,12 +591,12 @@ data-event-label="Change to Table tab"
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          
-          
-          <dd >Aufgrund methodischer Änderungen sind die Ergebnisse ab 2020 nur eingeschränkt mit den Vorjahren vergleichbar.</dd>
-        
 
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          
+          
+          <dd ><br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Physische Gewalt: Aufgrund methodischer Änderungen sind die Ergebnisse ab 2020 nur eingeschränkt mit den Vorjahren vergleichbar. Weiterführende Informationen siehe "1. Allgemeine Angaben zur Zeitreihe" in den nationalen Metadaten.<br>• Psychische Gewalt und sexuelle Gewalt: Daten erst ab 2020 verfügbar.</dd>
         
 
         
@@ -629,7 +629,7 @@ data-event-label="Change to Table tab"
 
         
           <dt><u>Copyright</u>:</dt>
-          <dd>&copy; Statistisches Bundesamt (Destatis), 2024</dd>
+          <dd>&copy; Statistisches Bundesamt (Destatis), 2026</dd>
         
     </dl>
 </div>
@@ -713,17 +713,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
       
       <tr>
-        <th scope="row">Verfügbare Zeitreihen </th>
+        <th scope="row">Verfügbare Zeitreihe </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Anzeigequote bei Körperverletzung</li> <li> Anzeigequote bei Raub</li></ul>
+            <p>Anzeigequote von physischer, psychischer und sexueller Gewalt</p>
 
           
         </td>
@@ -731,6 +726,11 @@ data-event-label="Change to Sources tab"
         
       
   
+      
+      
+      
+        
+          
       
       
       
@@ -842,7 +842,7 @@ data-event-label="Change to Sources tab"
         <th scope="row">Datenstand </th>
         <td style="width: 100%">
           
-            <p>18.09.2023</p>
+            <p>30.05.2025</p>
 
           
         </td>
@@ -1486,40 +1486,28 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row">Datenquelle </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://www.bka.de/DE/AktuelleInformationen/StatistikenLagebilder/ViktimisierungssurveyDunkelfeldforschung/viktimisierungssurveyDunkelfeldforschung_node.html" target="_blank" onclick="return confirm_alert('des Bundeskriminalamts','De');">
-                  Dunkelfeldforschung / Viktimisierungssurveys <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
+          
       
       
       
+        
+          
       
-  
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
       
       
       
@@ -1548,77 +1536,8 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row"> </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/Publikationsreihen/Forschungsergebnisse/2018ersteErgebnisseDVS2017.pdf" target="_blank" onclick="return confirm_alert('des Bundeskriminalamts','De');">
-                  Deutscher Viktimisierungssurvey 2017 – Abschlussbericht <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td style="width: 100%">
           
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://www.bka.de/SharedDocs/Downloads/DE/Publikationen/Publikationsreihen/Forschungsergebnisse/SKiD2020_Ergebnisse_V1.4.pdf" target="_blank" onclick="return confirm_alert('des Bundeskriminalamts','De');">
-                  Sicherheit und Kriminalität in Deutschland – SKiD 2020 <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      
-  
       
       
       
@@ -1881,12 +1800,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20260223032438'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20260223105805'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20260223032438"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20260223105805"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
