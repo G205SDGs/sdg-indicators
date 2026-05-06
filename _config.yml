@@ -333,7 +333,7 @@ accessible_charts: true
 custom_js:
   - /assets/js/custom.js
 
-graph_color_set: 'goal'
+graph_color_set: 'classic'
 graph_color_number: 9
 
 disclaimer:
