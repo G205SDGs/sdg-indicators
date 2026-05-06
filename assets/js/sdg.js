@@ -1252,7 +1252,7 @@ $(document).ready(function() {
     });
 });
 opensdg.chartColors = function(indicatorId) {
-  var colorSet = "goal";
+  var colorSet = "classic";
   var numberOfColors = 9;
   var customColorList = null;
 
