@@ -2313,8 +2313,8 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  * @param {Array} colorAssignments Color/striping assignments for disaggregation combinations
  * @return {Array} Datasets suitable for Chart.js
  */
-function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps, allObservationAttributes) {
-  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
+function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes) {
+  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, fill, fillAbove, fillBelow, showLine, spanGaps;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;
 
@@ -2354,14 +2354,14 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
-      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps, allObservationAttributes);
+      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes);
       datasets.push(dataset);
       index++;
     }
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, allObservationAttributes);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes);
     datasets.unshift(dataset);
   }
   return datasets;
@@ -2545,7 +2545,7 @@ function getBorderDash(striped) {
  * @param {Array} excess
  * @return {Object} Dataset object for Chart.js
  */
-function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, showLine, spanGaps, allObservationAttributes) {
+function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes) {
   var dataset = getBaseDataset(),
       prepared = prepareDataForDataset(years, rows, allObservationAttributes),
       data = prepared.data,
@@ -2563,6 +2563,11 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     pointStyle: 'circle',
     data: data,
     excess: excess,
+    fill: {
+      target: fill,
+      above: fillAbove,
+      below: fillBelow
+    },
     spanGaps: spanGaps,
     showLine: showLine,
     observationAttributes: obsAttributes,
@@ -2574,10 +2579,10 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
  */
 function getBaseDataset() {
   return Object.assign({}, {
-    fill: false,
     pointHoverRadius: 5,
     pointHoverBorderWidth: 1,
     tension: 0,
+    fill: false,
     spanGaps: true,
     showLine: true,
     maxBarThickness: 150,
@@ -2653,7 +2658,7 @@ function getHeadlineColor() {
  * @param {string} label
  * @return {Object} Dataset object for Chart.js
  */
-function makeHeadlineDataset(years, rows, label, showLine, spanGaps, allObservationAttributes) {
+function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes) {
   var dataset = getBaseDataset(),
       prepared = prepareDataForDataset(years, rows, allObservationAttributes),
       data = prepared.data,
@@ -2668,6 +2673,11 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, allObservat
     headline: true,
     pointStyle: 'circle',
     data: data,
+    fill: {
+      target: fill,
+      above: fillAbove,
+      below: fillBelow
+    },
     showLine: showLine,
     spanGaps: spanGaps,
     observationAttributes: obsAttributes,
@@ -3649,519 +3659,377 @@ function initialiseSerieses(args) {
 }
 
   /**
- * Model helper functions related to charts and datasets.
+ * @param {Object} config
+ * @param {Object} info
+ * @return null
  */
-
-/**
- * @param {string} currentTitle
- * @param {Array} allTitles Objects containing 'unit' and 'title'
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {String} Updated title
- */
-function getChartTitle(currentTitle, allTitles, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(allTitles, selectedUnit, selectedSeries);
-  return (match) ? match.title : currentTitle;
+function alterChartConfig(config, info) {
+    opensdg.chartConfigAlterations.forEach(function (callback) {
+        callback(config, info);
+    });
 }
 
 /**
- * Model helper functions related to charts and datasets.
+ * @param {String} chartTitle
+ * @return null
  */
-
-/**
- * @param {string} currentSubTitle
- * @param {Array} allSubTitles Objects containing 'unit' and 'subtitle'
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {String} Updated title
- */
-function getChartSubTitle(currentSubTitle, allSubTitles, selectedUnit, selectedSeries) {
-  var match = getMatchByUnitSeries(allSubTitles, selectedUnit, selectedSeries);
-  if (allSubTitles == null) {
-    currentSubTitle;
-  }
-  else {
-    return (match) ? match.title : '';
-  }
-
-}
-
-
-/**
- * @param {string} currentType
- * @param {Array} allTypes Objects containing 'unit', 'series', and 'type'
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {String} Updated type
- */
-function getChartType(currentType, allTypes, selectedUnit, selectedSeries) {
-  if (!currentType) {
-    currentType = 'line';
-  }
-  var match = getMatchByUnitSeries(allTypes, selectedUnit, selectedSeries);
-  return (match) ? match.type : currentType;
-}
-
-/**
- * @param {Array} graphLimits Objects containing 'unit' and 'title'
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {Object|false} Graph limit object, if any
- */
-function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
-  return getMatchByUnitSeries(graphLimits, selectedUnit, selectedSeries);
-}
-
-/**
- * @param {Array} graphAnnotations Objects containing 'unit' or 'series' or more
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {Array} Graph annotations objects, if any
- */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars) {
-  var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
-  if (graphTargetLines) {
-    annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
-  }
-  if (graphSeriesBreaks) {
-    annotations = annotations.concat(getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries));
-  }
-  if (graphErrorBars) {
-    annotations = annotations.concat(getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries));
-  }
-  return annotations;
-}
-
-/**
- * @param {Array} graphTargetLines Objects containing 'unit' or 'series' or more
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {Array} Graph annotations objects, if any
- */
-function getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries) {
-  return getMatchesByUnitSeries(graphTargetLines, selectedUnit, selectedSeries).map(function(targetLine) {
-    targetLine.preset = 'target_line';
-    targetLine.label = { content: targetLine.label_content };
-    return targetLine;
-  });
-}
-
-/**
- * @param {Array} graphErrorBars Objects containing 'unit' or 'series' or more
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {Array} Graph annotations objects, if any
- */
-function getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries) {
-  return getMatchesByUnitSeries(graphErrorBars, selectedUnit, selectedSeries).map(function(errorBar) {
-    errorBar.preset = 'error_bar';
-    errorBar.label = { content: errorBar.label_content };
-    return errorBar;
-  });
-}
-
-/**
- * @param {Array} graphSeriesBreaks Objects containing 'unit' or 'series' or more
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- * @return {Array} Graph annotations objects, if any
- */
-function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
-  return getMatchesByUnitSeries(graphSeriesBreaks, selectedUnit, selectedSeries).map(function(seriesBreak) {
-    seriesBreak.preset = 'series_break';
-    seriesBreak.label = { content: seriesBreak.label_content };
-    return seriesBreak;
-  });
-}
-
-/**
- * @param {Array} headline Rows
- * @param {Array} rows
- * @param {Array} combinations Objects representing disaggregation combinations
- * @param {Array} years
- * @param {string} defaultLabel
- * @param {Array} colors
- * @param {Array} selectableFields Field names
- * @param {Array} colorAssignments Color/striping assignments for disaggregation combinations
- * @return {Array} Datasets suitable for Chart.js
- */
-function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes) {
-  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, fill, fillAbove, fillBelow, showLine, spanGaps;
-  var numColors = colors.length,
-      maxColorAssignments = numColors * 2;
-
-  prepareColorAssignments(colorAssignments, maxColorAssignments);
-  setAllColorAssignmentsReadyForEviction(colorAssignments);
-
-  combinations.forEach(function(combination) {
-    var filteredData = getDataMatchingCombination(data, combination, selectableFields);
-    if (filteredData.length > 0) {
-      excess = (index >= maxColorAssignments);
-      if (excess) {
-        // This doesn't really matter: excess datasets won't be displayed.
-        color = getHeadlineColor();
-        striped = false;
+function updateChartTitle(chartTitle, isProxy) {
+    if (typeof chartTitle !== 'undefined') {
+      if (isProxy) {
+          chartTitle += ' ' + PROXY_PILL;
       }
-      else {
-        combinationKey = JSON.stringify(combination);
-        colorAssignment = getColorAssignmentByCombination(colorAssignments, combinationKey);
-        if (colorAssignment !== undefined) {
-          colorIndex = colorAssignment.colorIndex;
-          striped = colorAssignment.striped;
-          colorAssignment.readyForEviction = false;
+      $('.chart-title').html(chartTitle);
+    }
+}
+
+/**
+ * @param {String} chartSubtitle
+ * @return null
+ */
+function updateChartSubtitle(chartSubtitle) {
+    if (typeof chartSubtitle !== 'undefined') {
+        $('.chart-subtitle').text(chartSubtitle);
+    }
+}
+
+/**
+ * @param {Array} oldDatasets
+ * @param {Array} newDatasets
+ * @return null
+ */
+function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
+    var status = '',
+        hasData = newDatasets.length > 0,
+        dataAdded = newDatasets.length > oldDatasets.length,
+        dataRemoved = newDatasets.length < oldDatasets.length,
+        getDatasetLabel = function (dataset) { return dataset.label; },
+        oldLabels = oldDatasets.map(getDatasetLabel),
+        newLabels = newDatasets.map(getDatasetLabel);
+
+    if (!hasData) {
+        status = translations.indicator.announce_data_not_available;
+    }
+    else if (dataAdded) {
+        status = translations.indicator.announce_data_added;
+        var addedLabels = [];
+        newLabels.forEach(function (label) {
+            if (!oldLabels.includes(label)) {
+                addedLabels.push(label);
+            }
+        });
+        status += ' ' + addedLabels.join(', ');
+    }
+    else if (dataRemoved) {
+        status = translations.indicator.announce_data_removed;
+        var removedLabels = [];
+        oldLabels.forEach(function (label) {
+            if (!newLabels.includes(label)) {
+                removedLabels.push(label);
+            }
+        });
+        status += ' ' + removedLabels.join(', ');
+    }
+
+    var current = $('#indicator-data-view-status').text();
+    if (current != status) {
+        $('#indicator-data-view-status').text(status);
+    }
+}
+/**
+ * @param {Array} unit
+ * @return null
+ */
+function updateIndicatorDataUnitStatus(unit) {
+    var status = translations.indicator.announce_unit_switched + translations.t(unit);
+    var current = $('#indicator-data-unit-status').text();
+    if (current != status) {
+        $('#indicator-data-unit-status').text(status);
+    }
+}
+
+/**
+ * @param {Array} series
+ * @return null
+ */
+function updateIndicatorDataSeriesStatus(series) {
+    var status = translations.indicator.announce_series_switched + translations.t(series);
+    var current = $('#indicator-data-series-status').text();
+    if (current != status) {
+        $('#indicator-data-series-status').text(status);
+    }
+}
+
+/**
+ * @param {String} contrast
+ * @param {Object} chartInfo
+ * @return null
+ */
+function updateHeadlineColor(contrast, chartInfo, indicatorId) {
+    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
+    if (chartInfo.data.datasets.length > 0) {
+        var firstDataset = chartInfo.data.datasets[0];
+        var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
+        if (isHeadline) {
+            var newColor = getHeadlineColor(contrast, goalNumber);
+            firstDataset.backgroundColor = newColor;
+            firstDataset.borderColor = newColor;
+            firstDataset.pointBackgroundColor = newColor;
+            firstDataset.pointBorderColor = newColor;
         }
-        else {
-          if (colorAssignmentsAreFull(colorAssignments)) {
-            evictColorAssignment(colorAssignments);
-          }
-          var openColorInfo = getOpenColorInfo(colorAssignments, colors);
-          colorIndex = openColorInfo.colorIndex;
-          striped = openColorInfo.striped;
-          colorAssignment = getAvailableColorAssignment(colorAssignments);
-          assignColor(colorAssignment, combinationKey, colorIndex, striped);
+    }
+}
+
+/**
+ * @param {String} contrast
+ * @return {String} The headline color in hex form.
+ */
+//Override: No Headline Color
+//function getHeadlineColor(contrast) {
+    //return isHighContrast(contrast) ? '#FFDD00' : '#b8b8b8';
+function getHeadlineColor(contrast, goalNumber) {
+
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
+  var headlineColor = headlineColors[goalNumber-1];
+  var htmlString = '' + headlineColor + '';
+    return isHighContrast(contrast) ? '#FFDD00' : htmlString;
+}
+
+/**
+ * @param {String} contrast
+ * @return {String} The grid color in hex form.
+ */
+function getGridColor(contrast) {
+    return isHighContrast(contrast) ? '#222' : '#ddd';
+};
+
+/**
+ * @param {String} contrast
+ * @return {String} The tick color in hex form.
+ */
+function getTickColor(contrast) {
+    return isHighContrast(contrast) ? '#fff' : '#000';
+}
+
+function getChartConfig(chartInfo) {
+    var chartType = chartInfo.chartType;
+    if (typeof opensdg.chartTypes[chartType] === 'undefined') {
+        console.log('Unknown chart type: ' + chartType + '. Falling back to "line".');
+        chartType = 'line';
+    }
+    return opensdg.chartTypes[chartType](chartInfo);
+}
+
+function setPlotEvents(chartInfo) {
+    window.addEventListener('contrastChange', function (e) {
+        var gridColor = getGridColor(e.detail);
+        var tickColor = getTickColor(e.detail);
+        updateHeadlineColor(e.detail, VIEW._chartInstance, chartInfo.indicatorId);
+        updateGraphAnnotationColors(e.detail, VIEW._chartInstance);
+        VIEW._chartInstance.options.scales.y.title.color = tickColor;
+        VIEW._chartInstance.options.scales.x.title.color = tickColor;
+        VIEW._chartInstance.options.scales.y.ticks.color = tickColor;
+        VIEW._chartInstance.options.scales.x.ticks.color = tickColor;
+        VIEW._chartInstance.options.scales.y.grid.color = function(line) {
+            return (line.index === 0) ? tickColor : gridColor;
+        };
+        VIEW._chartInstance.options.scales.x.grid.color = function(line) {
+            return (line.index === 0) ? tickColor : 'transparent';
+        };
+
+        VIEW._chartInstance.update();
+        $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
+    });
+
+    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
+    createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
+    createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
+
+    $("#btnSave").click(function () {
+        var filename = chartInfo.indicatorId + '.png',
+            element = document.getElementById('chart-canvas'),
+            height = element.clientHeight + 50,
+            width = element.clientWidth + 50;
+        var options = {
+            // These options fix the height, width, and position.
+            height: height,
+            width: width,
+            windowHeight: height,
+            windowWidth: width,
+            x: 0,
+            y: 0,
+            scrollX: 0,
+            scrollY: 0,
+            scale: 2,
+            backgroundColor: isHighContrast() ? '#000000' : '#FFFFFF',
+            // Allow a chance to alter the screenshot's HTML.
+            onclone: function (clone) {
+                // Add a body class so that the screenshot style can be custom.
+                clone.body.classList.add('image-download-in-progress');
+            },
+            // Decide which elements to skip.
+            ignoreElements: function (el) {
+                // Keep all style, head, and link elements.
+                var keepTags = ['STYLE', 'HEAD', 'LINK'];
+                if (keepTags.indexOf(el.tagName) !== -1) {
+                    return false;
+                }
+                // Keep all elements contained by (or containing) the screenshot
+                // target element.
+                if (element.contains(el) || el.contains(element)) {
+                    return false;
+                }
+                // Leave out everything else.
+                return true;
+            }
+        };
+        // First convert the target to a canvas.
+        html2canvas(element, options).then(function (canvas) {
+            // Then download that canvas as a PNG file.
+            canvas.toBlob(function (blob) {
+                saveAs(blob, filename);
+            });
+        });
+    });
+}
+
+/**
+ * @param {Object} chartInfo
+ * @return null
+ */
+function createPlot(chartInfo, helpers) {
+
+    var chartConfig = getChartConfig(chartInfo);
+    chartConfig.indicatorViewHelpers = helpers;
+    alterChartConfig(chartConfig, chartInfo);
+    if (isHighContrast()) {
+        updateGraphAnnotationColors('high', chartConfig);
+        //Override: No headline color
+        //updateHeadlineColor('high', chartConfig);
+        updateHeadlineColor('high', chartConfig, chartInfo.indicatorId);
+
+    }
+    else {
+        //Override: No headline color
+        //updateHeadlineColor('default', chartConfig);
+        updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
+    }
+    refreshChartLineWrapping(chartConfig);
+
+    VIEW._chartInstance = new Chart($(OPTIONS.rootElement).find('canvas'), chartConfig);
+    $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
+};
+
+/**
+ * @param {Object} chartInfo
+ * @return null
+ */
+ function updatePlot(chartInfo) {
+    // If we have changed type, we will need to destroy and recreate the chart.
+    // So we can abort here.
+    var updatedConfig = getChartConfig(chartInfo);
+    if (updatedConfig.type !== VIEW._chartInstance.config.type) {
+        VIEW._chartInstance.destroy();
+        createPlot(chartInfo);
+        return;
+    }
+    updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
+    // Override: No headline color
+    //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig, chartInfo.indicatorId);
+
+    if (chartInfo.selectedUnit) {
+        updatedConfig.options.scales.y.title.text = translations.t(chartInfo.selectedUnit);
+    }
+
+    alterChartConfig(updatedConfig, chartInfo);
+    refreshChartLineWrapping(updatedConfig);
+    VIEW._chartInstance.config.type = updatedConfig.type;
+    VIEW._chartInstance.data.datasets = updatedConfig.data.datasets;
+    VIEW._chartInstance.data.labels = updatedConfig.data.labels;
+    VIEW._chartInstance.options = updatedConfig.options;
+    updateGraphAnnotationColors(isHighContrast() ? 'high' : 'default', updatedConfig);
+
+    // The following is needed in our custom "rescaler" plugin.
+    VIEW._chartInstance.data.allLabels = VIEW._chartInstance.data.labels.slice(0);
+
+    VIEW._chartInstance.update();
+
+    $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
+    updateChartDownloadButton(chartInfo.selectionsTable, chartInfo.selectedSeries, chartInfo.selectedUnit);
+};
+
+/**
+ * @param {String} contrast
+ * @param {Object} chartInfo
+ * @return null
+ */
+function updateGraphAnnotationColors(contrast, chartInfo) {
+    if (chartInfo.options.plugins.annotation) {
+        chartInfo.options.plugins.annotation.annotations.forEach(function (annotation) {
+            if (contrast === 'default') {
+                $.extend(true, annotation, annotation.defaultContrast);
+            }
+            else if (contrast === 'high') {
+                $.extend(true, annotation, annotation.highContrast);
+            }
+        });
+    }
+}
+
+/**
+ * @param {Object} chart
+ * @return {String} The HTML of the chart legend
+ */
+function generateChartLegend(chart) {
+    var text = [];
+    text.push('<h5 class="sr-only">' + translations.indicator.plot_legend_description + '</h5>');
+    text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
+    _.each(chart.data.datasets, function (dataset) {
+        text.push('<li>');
+        //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+        text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+        text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
+        text.push('</span>');
+        text.push(translations.t(dataset.label));
+        text.push('</li>');
+    });
+    text.push('</ul>');
+    return text.join('');
+}
+
+/**
+ * @param {Object} chartConfig
+ */
+function refreshChartLineWrapping(chartConfig) {
+    var yAxisLimit = 40,
+        wrappedYAxis = strToArray(chartConfig.options.scales.y.title.text, yAxisLimit);
+    chartConfig.options.scales.y.title.text = wrappedYAxis;
+}
+
+/**
+ * @param {String} str
+ * @param {Number} limit
+ * @returns {Array} The string divided into an array for line wrapping.
+ */
+function strToArray (str, limit) {
+    var words = str.split(' '),
+        aux = [],
+        concat = [];
+
+    for (var i = 0; i < words.length; i++) {
+        concat.push(words[i]);
+        var join = concat.join(' ');
+        if (join.length > limit) {
+            aux.push(join);
+            concat = [];
         }
-      }
-
-      color = getColor(colorIndex, colors);
-      background = getBackground(color, striped);
-      border = getBorderDash(striped);
-
-      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes);
-      datasets.push(dataset);
-      index++;
     }
-  }, this);
 
-  if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes);
-    datasets.unshift(dataset);
-  }
-  return datasets;
-}
-
-/**
- * @param {Array} colorAssignments
- * @param {int} maxColorAssignments
- */
-function prepareColorAssignments(colorAssignments, maxColorAssignments) {
-  while (colorAssignments.length < maxColorAssignments) {
-    colorAssignments.push({
-      combination: null,
-      colorIndex: null,
-      striped: false,
-      readyForEviction: false,
-    });
-  }
-}
-
-/**
- * @param {Array} colorAssignments
- */
-function setAllColorAssignmentsReadyForEviction(colorAssignments) {
-  for (var i = 0; i < colorAssignments.length; i++) {
-    colorAssignments[i].readyForEviction = true;
-  }
-}
-
-/**
- * @param {Array} rows
- * @param {Object} combination Key/value representation of a field combo
- * @param {Array} selectableFields Field names
- * @return {Array} Matching rows
- */
-function getDataMatchingCombination(data, combination, selectableFields) {
-  return data.filter(function(row) {
-    return selectableFields.every(function(field) {
-      return row[field] === combination[field];
-    });
-  });
-}
-
-/**
- * @param {Array} colorAssignments
- * @param {string} combination
- * @return {Object|undefined} Color assignment object if found.
- */
-function getColorAssignmentByCombination(colorAssignments, combination) {
-  return colorAssignments.find(function(assignment) {
-    return assignment.combination === combination;
-  });
-}
-
-/**
- * @param {Array} colorAssignments
- * @return {boolean}
- */
-function colorAssignmentsAreFull(colorAssignments) {
-  for (var i = 0; i < colorAssignments.length; i++) {
-    if (colorAssignments[i].combination === null) {
-      return false;
+    if (concat.length) {
+        aux.push(concat.join(' ').trim());
     }
-  }
-  return true;
-}
 
-/**
- * @param {Array} colorAssignments
- */
-function evictColorAssignment(colorAssignments) {
-  for (var i = 0; i < colorAssignments.length; i++) {
-    if (colorAssignments[i].readyForEviction) {
-      colorAssignments[i].combination = null;
-      colorAssignments[i].colorIndex = null;
-      colorAssignments[i].striped = false;
-      colorAssignments[i].readyForEviction = false;
-      return;
-    }
-  }
-  throw 'Could not evict color assignment';
-}
-
-/**
- * @param {Array} colorAssignments
- * @param {Array} colors
- * @return {Object} Object with 'colorIndex' and 'striped' properties.
- */
-function getOpenColorInfo(colorAssignments, colors) {
-  // First look for normal colors, then striped.
-  var stripedStates = [false, true];
-  for (var i = 0; i < stripedStates.length; i++) {
-    var stripedState = stripedStates[i];
-    var assignedColors = colorAssignments.filter(function(colorAssignment) {
-      return colorAssignment.striped === stripedState && colorAssignment.colorIndex !== null;
-    }).map(function(colorAssignment) {
-      return colorAssignment.colorIndex;
-    });
-    if (assignedColors.length < colors.length) {
-      for (var colorIndex = 0; colorIndex < colors.length; colorIndex++) {
-        if (!(assignedColors.includes(colorIndex))) {
-          return {
-            colorIndex: colorIndex,
-            striped: stripedState,
-          }
-        }
-      }
-    }
-  }
-  throw 'Could not find open color';
-}
-
-/**
- * @param {Array} colorAssignments
- * @return {Object|undefined} Color assignment object if found.
- */
-function getAvailableColorAssignment(colorAssignments) {
-  return colorAssignments.find(function(assignment) {
-    return assignment.combination === null;
-  });
-}
-
-/**
- * @param {Object} colorAssignment
- * @param {string} combination
- * @param {int} colorIndex
- * @param {boolean} striped
- */
-function assignColor(colorAssignment, combination, colorIndex, striped) {
-  colorAssignment.combination = combination;
-  colorAssignment.colorIndex = colorIndex;
-  colorAssignment.striped = striped;
-  colorAssignment.readyForEviction = false;
-}
-
-/**
- * @param {int} colorIndex
- * @param {Array} colors
- * @return Color from a list
- */
-function getColor(colorIndex, colors) {
-  return '#' + colors[colorIndex];
-}
-
-/**
- * @param {string} color
- * @param {boolean} striped
- * @return Background color or pattern
- */
-function getBackground(color, striped) {
-  return striped ? getStripes(color) : color;
-}
-
-/**
- * @param {string} color
- * @return Canvas pattern from color
- */
-function getStripes(color) {
-  if (window.pattern && typeof window.pattern.draw === 'function') {
-    return window.pattern.draw('diagonal', color);
-  }
-  return color;
-}
-
-/**
- * @param {boolean} striped
- * @return {Array|undefined} An array produces dashed lines on the chart
- */
-function getBorderDash(striped) {
-  return striped ? [5, 5] : undefined;
-}
-
-/**
- * @param {Array} years
- * @param {Array} rows
- * @param {Object} combination
- * @param {string} labelFallback
- * @param {string} color
- * @param {string} background
- * @param {Array} border
- * @param {Array} excess
- * @return {Object} Dataset object for Chart.js
- */
-function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes) {
-  var dataset = getBaseDataset(),
-      prepared = prepareDataForDataset(years, rows, allObservationAttributes),
-      data = prepared.data,
-      obsAttributes = prepared.observationAttributes;
-  return Object.assign(dataset, {
-    label: getCombinationDescription(combination, labelFallback),
-    disaggregation: combination,
-    borderColor: color,
-    backgroundColor: background,
-    pointBorderColor: color,
-    pointBackgroundColor: background,
-    borderDash: border,
-    borderWidth: 2,
-    headline: false,
-    pointStyle: 'circle',
-    data: data,
-    excess: excess,
-    fill: {
-      target: fill,
-      above: fillAbove,
-      below: fillBelow
-    },
-    spanGaps: spanGaps,
-    showLine: showLine,
-    observationAttributes: obsAttributes,
-  });
-}
-
-/**
- * @return {Object} Starting point for a Chart.js dataset
- */
-function getBaseDataset() {
-  return Object.assign({}, {
-    pointHoverRadius: 5,
-    pointHoverBorderWidth: 1,
-    tension: 0,
-    fill: false,
-    spanGaps: true,
-    showLine: true,
-    maxBarThickness: 150,
-  });
-}
-
-/**
- * @param {Object} combination Key/value representation of a field combo
- * @param {string} fallback
- * @return {string} Human-readable description of combo
- */
-function getCombinationDescription(combination, fallback) {
-  var keys = Object.keys(combination);
-  if (keys.length === 0) {
-    return fallback;
-  }
-  return keys.map(function(key) {
-    return translations.t(combination[key]);
-  }).join(', ');
-}
-
-/**
- * @param {Array} years
- * @param {Array} rows
- * @return {Array} Prepared rows
- */
-function prepareDataForDataset(years, rows, allObservationAttributes) {
-  var ret = {
-    data: [],
-    observationAttributes: [],
-  };
-  var configObsAttributes = [{"field":"COMMENT_OBS_0","label":""},{"field":"COMMENT_OBS_1","label":""},{"field":"COMMENT_OBS_2","label":""}];
-  if (configObsAttributes && configObsAttributes.length > 0) {
-    configObsAttributes = configObsAttributes.map(function(obsAtt) {
-      return obsAtt.field;
-    });
-  }
-  else {
-    configObsAttributes = [];
-  }
-  years.forEach(function(year) {
-    var found = rows.find(function (row) {
-      return row[YEAR_COLUMN] === year;
-    });
-    ret.data.push(found ? found[VALUE_COLUMN] : null);
-
-    var obsAttributesForRow = [];
-    if (found) {
-      configObsAttributes.forEach(function(field) {
-        if (found[field]) {
-          var hashKey = field + '|' + found[field];
-          obsAttributesForRow.push(allObservationAttributes[hashKey]);
-        }
-      });
-    }
-    ret.observationAttributes.push(obsAttributesForRow);
-  });
-  return ret;
-}
-
-/**
- * @return {string} Hex number of headline color
- *
- * TODO: Make this dynamic to support high-contrast.
- */
-function getHeadlineColor() {
-  return HEADLINE_COLOR;
-}
-
-/**
- * @param {Array} years
- * @param {Array} rows
- * @param {string} label
- * @return {Object} Dataset object for Chart.js
- */
-function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes) {
-  var dataset = getBaseDataset(),
-      prepared = prepareDataForDataset(years, rows, allObservationAttributes),
-      data = prepared.data,
-      obsAttributes = prepared.observationAttributes;
-  return Object.assign(dataset, {
-    label: label,
-    borderColor: getHeadlineColor(),
-    backgroundColor: getHeadlineColor(),
-    pointBorderColor: getHeadlineColor(),
-    pointBackgroundColor: getHeadlineColor(),
-    borderWidth: 4,
-    headline: true,
-    pointStyle: 'circle',
-    data: data,
-    fill: {
-      target: fill,
-      above: fillAbove,
-      below: fillBelow
-    },
-    showLine: showLine,
-    spanGaps: spanGaps,
-    observationAttributes: obsAttributes,
-  });
-}
-/**
- * @param {Array} graphStepsize Objects containing 'unit' and 'title'
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- */
-function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
-  return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
+    return aux;
 }
 
   opensdg.annotationPresets = {
@@ -4897,7 +4765,7 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                 }
                 //(observationAttributesTable.data[row][1][0] !== undefined ? obsValue = observationAttributesTable.data[row][1][0].value : obsValue = '.');
                 var isYear = (index == 0);
-                var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
+                var cell_prefix = (isYear) ? '<th scope="row" tabindex="0"' : '<td tabindex="0"';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
 
                 //var dateForTable = (data[index] == 0 && obsValue.indexOf('‒') > -1) ? ('‒' + obsValue.replace('‒, ','').replace(', ‒','').replace('[‒]','')) : (data[index] + ' ' + obsValue);
@@ -5713,6 +5581,7 @@ var indicatorInit = function () {
                         fillAbove: domData.fillabove,
                         fillBelow: domData.fillbelow,
                         showLine: domData.showline,
+                        mixedTypes: domData.mixedtypes,
                         spanGaps: domData.spangaps,
                         graphAnnotations: domData.graphannotations,
                         graphTargetLines: domData.graphtargetlines,
@@ -5747,7 +5616,6 @@ var indicatorInit = function () {
         }
     }
 };
-s
 $(document).ready(function() {
     $('.nav-tabs').each(function() {
         var tabsList = $(this);
