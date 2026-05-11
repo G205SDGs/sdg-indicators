@@ -21,6 +21,7 @@ opensdg.chartTypes.base = function(info) {
             responsive: true,
             maintainAspectRatio: false,
             spanGaps: true,
+            fill: false,
             scrollX: true,
             scrollCollapse: true,
             sScrollXInner: '150%',
@@ -54,9 +55,9 @@ opensdg.chartTypes.base = function(info) {
                     suggestedMin: 0,
                     ticks: {
                         color: tickColor,
-                        callback: function (value) {
-                            return alterDataDisplay(value, undefined, 'chart y-axis tick');
-                        },
+                         callback: function (value) {
+                             return alterDataDisplay(value, undefined, 'chart y-axis tick');
+                         },
                     },
                     title: {
                         display: MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit,

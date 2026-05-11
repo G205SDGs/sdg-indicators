@@ -40,6 +40,9 @@ var indicatorInit = function () {
                         startValues: domData.startvalues,
                         graphLimits: domData.graphlimits,
                         stackedDisaggregation: domData.stackeddisaggregation,
+                        fill: domData.fill,
+                        fillAbove: domData.fillabove,
+                        fillBelow: domData.fillbelow,
                         showLine: domData.showline,
                         spanGaps: domData.spangaps,
                         graphAnnotations: domData.graphannotations,
@@ -75,3 +78,4 @@ var indicatorInit = function () {
         }
     }
 };
+s
