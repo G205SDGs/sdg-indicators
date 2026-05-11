@@ -44,6 +44,7 @@ var indicatorInit = function () {
                         fillAbove: domData.fillabove,
                         fillBelow: domData.fillbelow,
                         showLine: domData.showline,
+                        mixedTypes: domData.mixedtypes,
                         spanGaps: domData.spangaps,
                         graphAnnotations: domData.graphannotations,
                         graphTargetLines: domData.graphtargetlines,
@@ -78,4 +79,3 @@ var indicatorInit = function () {
         }
     }
 };
-s

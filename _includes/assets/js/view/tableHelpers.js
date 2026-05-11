@@ -209,7 +209,7 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                 }
                 //(observationAttributesTable.data[row][1][0] !== undefined ? obsValue = observationAttributesTable.data[row][1][0].value : obsValue = '.');
                 var isYear = (index == 0);
-                var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
+                var cell_prefix = (isYear) ? '<th scope="row" tabindex="0"' : '<td tabindex="0"';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
 
                 //var dateForTable = (data[index] == 0 && obsValue.indexOf('‒') > -1) ? ('‒' + obsValue.replace('‒, ','').replace(', ‒','').replace('[‒]','')) : (data[index] + ' ' + obsValue);
