@@ -53,6 +53,7 @@ var indicatorModel = function (options) {
   this.fillAbove = options.fillAbove;
   this.fillBelow = options.fillBelow;
   this.showLine = options.showLine;
+  this.mixedTypes = options.mixedTypes; // ? options.showLine : true;
   this.spanGaps = options.spanGaps;
   this.graphAnnotations = options.graphAnnotations;
   this.graphTargetLines = options.graphTargetLines;
@@ -101,6 +102,7 @@ var indicatorModel = function (options) {
 
   // Before continuing, we may need to filter by Series, so set up all the Series stuff.
   this.allData = helpers.prepareData(this.data, { indicatorId: this.indicatorId });
+  console.log("this.allData_2: ",this.allData);
   this.allColumns = helpers.getColumnsFromData(this.allData);
   this.hasSerieses = helpers.dataHasSerieses(this.allColumns);
   this.serieses = this.hasSerieses ? helpers.getUniqueValuesByProperty(helpers.SERIES_COLUMN, this.allData) : [];
@@ -119,6 +121,7 @@ var indicatorModel = function (options) {
   }
 
   // calculate some initial values:
+  console.log("this.allData: ",this.allData);
   this.allObservationAttributes = helpers.getAllObservationAttributes(this.allData);
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
@@ -253,12 +256,19 @@ var indicatorModel = function (options) {
         this.selectedSeries = startingSeries;
       }
 
-      // Decide on starting field values if not changing series.
+      // Decide on starting field values.
       var startingFields = this.selectedFields;
-      if (this.hasStartValues && !options.changingSeries) {
+      var useMinimumStartingFields = false;
+      if (this.hasStartValues) {
         startingFields = helpers.selectFieldsFromStartValues(this.startValues, this.selectableFields);
+        // Quick test to see if this would result in zero matches, in cases where
+        // the series is being changed and the new series would not show data.
+        if (options.changingSeries && !helpers.hasDataBySelectedFields(this.data, startingFields)) {
+          useMinimumStartingFields = true;
+          startingFields = this.selectedFields;
+        }
       }
-      else {
+      if (!this.hasStartValues || useMinimumStartingFields) {
         if (headline.length === 0) {
           startingFields = helpers.selectMinimumStartingFields(this.data, this.selectableFields, this.selectedUnit);
         }

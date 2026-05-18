@@ -83,7 +83,48 @@ opensdg.chartTypes.base = function(info) {
                     backgroundColor: 'rgba(0,0,0,0.7)',
                     callbacks: {
                         label: function (tooltipItem) {
-                            return translations.t(tooltipItem.dataset.label) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip', tooltipItem);
+
+                          var label =  translations.t(tooltipItem.dataset.label);
+                          label = label.replace('<sub>','').replace('</sub>','').replace("<u>","").replace("</u>","");
+                          if (label.length > 45){
+
+                            label = label.split(' ');
+                            var line = '';
+
+                            for(var i=0; i<label.length; i++){
+                              if (line.concat(label[i]).length < 45){
+                                line = line.concat(label[i] + ' ');
+                              }
+                              else {
+                                break
+                              }
+                            }
+                            return line;
+                          } else {
+                            return label + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip', tooltipItem);
+                          }
+                        },
+                        afterLabel: function(tooltipItem) {
+
+                          var label =  tooltipItem.dataset.label;
+                          label = label.replace('<sub>','').replace('</sub>','').replace('<u>','').replace('</u>','');
+                          if (label.length > 45){
+                            label = label.split(' ');
+                            var re = [];
+                            var line = '';
+                            for (var i=0; i<label.length; i++){
+                              if (line.concat(label[i]).length < 45){
+                                line = line.concat(label[i] + ' ');
+                              } else {
+                                re.push(line);
+                                line = '';
+                                line = line.concat(label[i] + ' ');
+                              }
+                            };
+                            re.push(line.slice(0, -1) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip', tooltipItem));
+                            re.shift();
+                          }
+                          return re;
                         },
                         afterBody: function () {
                             var unit = MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit;

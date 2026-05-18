@@ -32,6 +32,7 @@
   data-fillbelow="{{ page.indicator.fill_below }}"
   data-showline="{{ page.indicator.show_line }}"
   data-spangaps="{{ page.indicator.span_gaps }}"
+  data-mixedtypes="{{ page.indicator.mixed_types | jsonify | xml_escape }}"
   data-graphannotations="{{ page.indicator.graph_annotations | jsonify | xml_escape }}"
   data-graphtargetlines="{{ page.indicator.graph_target_lines | jsonify | xml_escape }}"
   data-graphtargetpoints="{{ page.indicator.graph_target_points | jsonify | xml_escape }}"
@@ -57,8 +58,8 @@
     {% include components/indicator/data-main.html %}
   {% else %}
   <div id="indicator-main" class="indicator-main col-md-12">
-    {% if show_embedded_only %}
-      {% include components/indicator/data-main-embedd.html %}
+    {% if show_info %}
+      {% include components/indicator/data-main-info.html %}
     {% endif %}
   {% endif %}
   {% include components/indicator/metadata-section.html %}

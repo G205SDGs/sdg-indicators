@@ -139,3 +139,14 @@ function getObservationAttributeFootnoteSymbol(obsAttribute) {
 
     //return '[' + translations.indicator.note + ' ' + (num + 1) + ']';
 }
+
+/**
+ * Figure out what the browser will be using for the decimal separator.
+ *
+ * @returns {string} The decimal separator the browser will use.
+ */
+function getBrowserDecimalSeparator() {
+    var browserDecimal = 1.1;
+    browserDecimal = browserDecimal.toLocaleString(opensdg.language).substring(1, 2);
+    return browserDecimal;
+}

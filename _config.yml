@@ -321,7 +321,7 @@ plugins:
 
 # Use a remote Jekyll theme.
 #remote_theme: brockfanning/open-sdg@map-series-unit-behaviors
-remote_theme: open-sdg/open-sdg@2.3.3
+remote_theme: open-sdg/open-sdg@2.4.0
 
 
 #remote_theme: brockfanning/open-sdg@goal-page-status-css
