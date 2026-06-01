@@ -2728,6 +2728,9 @@ body.contrast-high #search-bar-on-page button:hover {
 body.contrast-high.layout-search form input, body.contrast-high.layout-search form label {
   color: black; }
 
+#sources {
+  hyphens: auto; }
+
 /*#2.1 Navigation Buttons */
 .goal-1.goal-banner {
   background-color: #E52B3D; }
