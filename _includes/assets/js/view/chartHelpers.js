@@ -75,6 +75,27 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
         $('#indicator-data-view-status').text(status);
     }
 }
+
+/**
+ * @param {String} contrast
+ * @param {Object} chartInfo
+ * @return null
+ */
+function updateHeadlineColor(contrast, chartInfo, indicatorId) {
+    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
+    if (chartInfo.data.datasets.length > 0) {
+        var firstDataset = chartInfo.data.datasets[0];
+        var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
+        if (isHeadline) {
+            var newColor = getHeadlineColor(contrast, goalNumber);
+            firstDataset.backgroundColor = newColor;
+            firstDataset.borderColor = newColor;
+            firstDataset.pointBackgroundColor = newColor;
+            firstDataset.pointBorderColor = newColor;
+        }
+    }
+}
+
 /**
  * @param {Array} unit
  * @return null
@@ -101,26 +122,6 @@ function updateIndicatorDataSeriesStatus(series) {
 
 /**
  * @param {String} contrast
- * @param {Object} chartInfo
- * @return null
- */
-function updateHeadlineColor(contrast, chartInfo, indicatorId) {
-    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
-    if (chartInfo.data.datasets.length > 0) {
-        var firstDataset = chartInfo.data.datasets[0];
-        var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
-        if (isHeadline) {
-            var newColor = getHeadlineColor(contrast, goalNumber);
-            firstDataset.backgroundColor = newColor;
-            firstDataset.borderColor = newColor;
-            firstDataset.pointBackgroundColor = newColor;
-            firstDataset.pointBorderColor = newColor;
-        }
-    }
-}
-
-/**
- * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
 //Override: No Headline Color
@@ -131,6 +132,7 @@ function getHeadlineColor(contrast, goalNumber) {
   var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
   var headlineColor = headlineColors[goalNumber-1];
   var htmlString = '{{ "' + headlineColor + '" | default: "#00006a" }}';
+  console.log("goalNumber: ", htmlString);
     return isHighContrast(contrast) ? '{{ site.graph_color_headline_high_contrast | default: "#FFDD00" }}' : htmlString;
 }
 
@@ -180,9 +182,9 @@ function setPlotEvents(chartInfo) {
         $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
     });
 
-    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
-    createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
-    createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
+    //createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
+    //createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
+    //createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
 
     $("#btnSave").click(function () {
         var filename = chartInfo.indicatorId + '.png',

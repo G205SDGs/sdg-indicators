@@ -135,11 +135,10 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  * @param {Array} colorAssignments Color/striping assignments for disaggregation combinations
  * @return {Array} Datasets suitable for Chart.js
  */
-function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps, allObservationAttributes) {
-  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
+function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes, mixedTypes) {
+  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, fill, fillAbove, fillBelow, showLine, spanGaps, mixedTypes;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;
-
   prepareColorAssignments(colorAssignments, maxColorAssignments);
   setAllColorAssignmentsReadyForEviction(colorAssignments);
 
@@ -175,15 +174,14 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       color = getColor(colorIndex, colors);
       background = getBackground(color, striped);
       border = getBorderDash(striped);
-
-      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps, allObservationAttributes);
+      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes, mixedTypes);
       datasets.push(dataset);
       index++;
     }
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, allObservationAttributes);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, fill, fillAbove, fillBelow, showLine, spanGaps, colors, allObservationAttributes, mixedTypes);
     datasets.unshift(dataset);
   }
   return datasets;
@@ -367,13 +365,18 @@ function getBorderDash(striped) {
  * @param {Array} excess
  * @return {Object} Dataset object for Chart.js
  */
-function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, showLine, spanGaps, allObservationAttributes) {
-  var dataset = getBaseDataset(),
-      prepared = prepareDataForDataset(years, rows, allObservationAttributes),
-      data = prepared.data,
-      obsAttributes = prepared.observationAttributes;
+function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, fill, fillAbove, fillBelow, showLine, spanGaps, allObservationAttributes, mixedTypes) {
+   var dataset = getBaseDataset(),
+       prepared = prepareDataForDataset(years, rows, allObservationAttributes),
+       data = prepared.data,
+       obsAttributes = prepared.observationAttributes;
+  console.log("fill, fillAbove, fillBelow:", fill, fillAbove, fillBelow, typeof fill);
   return Object.assign(dataset, {
+
     label: getCombinationDescription(combination, labelFallback),
+    combination: combination,
+    type: getCombinationType(combination, labelFallback, mixedTypes),
+    order: getCombinationType(combination, labelFallback, mixedTypes) == undefined ? 0 : 1,
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -385,6 +388,11 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     pointStyle: 'circle',
     data: data,
     excess: excess,
+    fill: {
+      target: fill,
+      above: fillAbove,
+      below: fillBelow
+    },
     spanGaps: spanGaps,
     showLine: showLine,
     observationAttributes: obsAttributes,
@@ -396,14 +404,38 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
  */
 function getBaseDataset() {
   return Object.assign({}, {
-    fill: false,
     pointHoverRadius: 5,
     pointHoverBorderWidth: 1,
     tension: 0,
+    fill: false,
     spanGaps: true,
     showLine: true,
     maxBarThickness: 150,
+    //type: 'x',
   });
+}
+
+/**
+ * @param {Object} combination Key/value representation of a field combo
+ * @param {string} fallback
+ * @param {Array} mixedTypes objects containing field, value, type
+ * @return {string} type of chart for the given combination
+ */
+function getCombinationType(combination, fallback, mixedTypes) {
+
+  var combi = getCombinationDescription(combination, fallback);
+  if (mixedTypes !== undefined && mixedTypes !== null){
+    var values = mixedTypes.map(a => a.value);
+    if (values.indexOf(combi) != -1) {
+      return mixedTypes.find(function(item) {
+        return getCombinationDescription([item.value],'') === combi;
+      }).type;
+    }
+  }
+  else {
+    return '';
+  }
+
 }
 
 /**
@@ -426,21 +458,21 @@ function getCombinationDescription(combination, fallback) {
  * @param {Array} rows
  * @return {Array} Prepared rows
  */
-function prepareDataForDataset(years, rows, allObservationAttributes) {
-  var ret = {
-    data: [],
-    observationAttributes: [],
-  };
-  var configObsAttributes = {{ site.observation_attributes | jsonify }};
-  if (configObsAttributes && configObsAttributes.length > 0) {
-    configObsAttributes = configObsAttributes.map(function(obsAtt) {
-      return obsAtt.field;
-    });
-  }
-  else {
-    configObsAttributes = [];
-  }
-  years.forEach(function(year) {
+ function prepareDataForDataset(years, rows, allObservationAttributes) {
+   var ret = {
+     data: [],
+     observationAttributes: [],
+   };
+   var configObsAttributes = {{ site.observation_attributes | jsonify }};
+   if (configObsAttributes && configObsAttributes.length > 0) {
+     configObsAttributes = configObsAttributes.map(function(obsAtt) {
+       return obsAtt.field;
+     });
+   }
+   else {
+     configObsAttributes = [];
+   }
+   years.forEach(function(year) {
     var found = rows.find(function (row) {
       return row[YEAR_COLUMN] === year;
     });
@@ -460,6 +492,8 @@ function prepareDataForDataset(years, rows, allObservationAttributes) {
   return ret;
 }
 
+
+
 /**
  * @return {string} Hex number of headline color
  *
@@ -475,31 +509,40 @@ function getHeadlineColor() {
  * @param {string} label
  * @return {Object} Dataset object for Chart.js
  */
-function makeHeadlineDataset(years, rows, label, showLine, spanGaps, allObservationAttributes) {
-  var dataset = getBaseDataset(),
-      prepared = prepareDataForDataset(years, rows, allObservationAttributes),
-      data = prepared.data,
-      obsAttributes = prepared.observationAttributes;
+function makeHeadlineDataset(years, rows, label, fill, fillAbove, fillBelow, showLine, spanGaps, colors, allObservationAttributes, mixedTypes) {
+   var dataset = getBaseDataset(),
+       prepared = prepareDataForDataset(years, rows, allObservationAttributes),
+       data = prepared.data,
+       obsAttributes = prepared.observationAttributes;
   return Object.assign(dataset, {
     label: label,
-    borderColor: getHeadlineColor(),
-    backgroundColor: getHeadlineColor(),
-    pointBorderColor: getHeadlineColor(),
-    pointBackgroundColor: getHeadlineColor(),
+    // Override: no headline color
+    borderColor: '#a9e13e',//getHeadlineColor(colors),
+    backgroundColor: '#a9e13e',//getHeadlineColor(colors),
+    pointBorderColor: '#a9e13e',//getHeadlineColor(colors),
+    pointBackgroundColor: '#a9e13e',//getHeadlineColor(colors),
     borderWidth: 4,
     headline: true,
     pointStyle: 'circle',
     data: data,
+    observationAttributes: obsAttributes,
+    fill: {
+      target: fill,
+      above: fillAbove,
+      below: fillBelow
+    },
     showLine: showLine,
     spanGaps: spanGaps,
-    observationAttributes: obsAttributes,
+    type: getCombinationType([], '', mixedTypes),
+    order: getCombinationType([], '', mixedTypes) == '' ? 0 : 1,
   });
 }
-/**
- * @param {Array} graphStepsize Objects containing 'unit' and 'title'
- * @param {String} selectedUnit
- * @param {String} selectedSeries
- */
-function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
-  return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
+
+  /**
+   * @param {Array} graphStepsize Objects containing 'unit' and 'title'
+   * @param {String} selectedUnit
+   * @param {String} selectedSeries
+   */
+  function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
+    return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
 }
