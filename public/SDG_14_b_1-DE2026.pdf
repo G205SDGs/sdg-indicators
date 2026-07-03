@@ -3,7 +3,7 @@
 1 0 obj
 <<
 /CreationDate (D:20260226165600Z)
-/ModDate (D:20260703135204+02'00')
+/ModDate (D:20260703140531+02'00')
 /Producer (iText® 5.5.13.3 ©2000-2022 iText Group NV \(AGPL-version\))
 >>
 endobj
@@ -41,7 +41,7 @@ stream
 				xmlns:dc="http://purl.org/dc/elements/1.1/"
 				xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/">
 			<xmp:CreateDate>2026-02-26T17:56+02:00</xmp:CreateDate>
-			<xmp:ModifyDate>2026-07-03T13:52:04+02:00</xmp:ModifyDate>
+			<xmp:ModifyDate>2026-07-03T14:05:31+02:00</xmp:ModifyDate>
 			<pdf:Producer>iTextÂ® 5.5.13.3 Â©2000-2022 iText Group NV (AGPL-version)</pdf:Producer>
 			<dc:format>application/pdf</dc:format>
 			<xmpMM:DocumentID>uuid:5602580e-480a-4345-bf4c-134580b2b351</xmpMM:DocumentID>
@@ -2566,7 +2566,7 @@ trailer
 /Root 2 0 R
 /Size 153
 >>
-%PXC-Ver:10.8.4.409-Date:20260703115204-SHA:00037B49:CBAE60798A277E58758D4876BE0E0EA86C8610052DA0B69D60A69571A8C01569
+%PXC-Ver:10.8.4.409-Date:20260703120531-SHA:00037B49:83645D1D5F8D16111909F3D7E7125066502522111F3C2C4003DD4B815755A066
 startxref
 224833
 %%EOF
