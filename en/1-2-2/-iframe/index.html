@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724034709">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724063404">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -342,7 +342,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="[{&quot;value&quot;:9.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Persons at risk of poverty or social exclusion&quot;,&quot;At-risk-of-poverty rate&quot;,&quot;Persons living in households with very low work intensity&quot;,&quot;Severely materially and socially deprived persons&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;|&quot;,&quot;p&quot;,&quot;.&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Persons at risk of poverty or social exclusion&quot;,&quot;population living below the national poverty line&quot;,&quot;Persons living in households with very low work intensity&quot;,&quot;Severely materially and socially deprived persons&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;5 years and younger&quot;,&quot;6 to under 12 years&quot;,&quot;12 to under 18 years&quot;,&quot;18 to under 65 years&quot;,&quot;65 years and older&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1}]"
   data-graphstepsize="[{&quot;step&quot;:5.0}]"
@@ -729,7 +729,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Time series available </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Persons at risk of poverty or social exclusion</li> <li> At-risk-of-poverty rate</li> <li> Persons living in households with very low work intensity</li> <li> Severely materially and socially deprived persons</li></ul>
+            <ul style="padding-left: 25px;"><li>Persons at risk of poverty or social exclusion</li> <li> Population living below the national poverty line</li> <li> Persons living in households with very low work intensity</li> <li> Severely materially and socially deprived persons</li></ul>
 
           
         </td>
@@ -848,7 +848,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Data state </th>
         <td style="width: 100%">
           
-            <p>Last updated on 2026/03/19. Data for further reporting periods will be added as soon as it becomes available.</p>
+            <p>Last updated on 2026/05/21. Data for further reporting periods will be added as soon as it becomes available.</p>
 
           
         </td>
@@ -1450,7 +1450,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;"> </th>
         <td style="width: 100%">
           
-            <p><a href="https://www.destatis.de/EN" target="_blank"><img src="https://sdg-indikatoren.de/public/OrgImgEn/destatis.png" alt="Logo destatis" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://www.destatis.de/EN" target="_blank"><img src="https://sdg-indikatoren.de/public/OrgImgEn/destatis.png" alt="Logo destatis" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
 
           
         </td>
@@ -1867,7 +1867,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;"> </th>
         <td style="width: 100%">
           
-            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"><img src="https://sdg-indikatoren.de/public/OrgImgEn/eurostat.png" alt="Logo eurostat" style="height:60px; width:148px" /></a></p>
+            <p><a href="https://ec.europa.eu/eurostat/en/home" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');"><img src="https://sdg-indikatoren.de/public/OrgImgEn/eurostat.png" alt="Logo eurostat" style="height:80px; width:auto; max-width:100%; object-fit:contain; border:transparent" /></a></p>
 
           
         </td>
@@ -1926,7 +1926,7 @@ data-event-label="Change to Sources tab"
             
               
                 <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_PEPS01N/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
-                  EU-SILC survey: People at risk of poverty or social exclusion – Eurostat table [ilc_peps01n] <span class="visuallyhidden">opens in a new window</span>
+                  EU-SILC survey: People at risk of poverty or social exclusion: Eurostat table [ilc_peps01n] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -1988,7 +1988,7 @@ data-event-label="Change to Sources tab"
             
               
                 <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_li02/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
-                  EU-SILC survey: At-risk-of-poverty rate – Eurostat table [ilc_li02] <span class="visuallyhidden">opens in a new window</span>
+                  EU-SILC survey: At-risk-of-poverty rate: Eurostat table [ilc_li02] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -2025,7 +2025,7 @@ data-event-label="Change to Sources tab"
             
               
                 <a href="https://ec.europa.eu/eurostat/databrowser/view/ilc_lvhl11n/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
-                  Persons living in households with very low work intensity – Eurostat table [ilc_lvhl11n] <span class="visuallyhidden">opens in a new window</span>
+                  Persons living in households with very low work intensity: Eurostat table [ilc_lvhl11n] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -2062,7 +2062,7 @@ data-event-label="Change to Sources tab"
             
               
                 <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_MDSD11__custom_11713961/default/table?lang=en" target="_blank" onclick="return confirm_alert('the Statistical Office of the European Union','En');">
-                  EU-SILC survey: SSevere material and social deprivation rate – Eurostat table [ilc_mdsd11] <span class="visuallyhidden">opens in a new window</span>
+                  EU-SILC survey: Severe material and social deprivation rate: Eurostat table [ilc_mdsd11] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -2313,12 +2313,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20260724034709'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20260724063404'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20260724034709"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20260724063404"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

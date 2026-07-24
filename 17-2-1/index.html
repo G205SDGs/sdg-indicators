@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724034709">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724063404">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -515,7 +515,7 @@ data-event-label="high"
   data-indicatorid='indicator_17-2-1'
   data-id="17-2-1"
   data-country="Deutschland"
-  data-charttitle="Verhältnis der öffentlichen Entwicklungsausgaben (ODA) zum Bruttonationaleinkommen (BNE)"
+  data-charttitle="Verhältnis der öffentlichen Entwicklungsleistungen zum Bruttonationaleinkommen"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
@@ -527,7 +527,7 @@ data-event-label="high"
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Verhältnis der öffentlichen Nettoentwicklungsausgaben (ODA) zum BNE&quot;}]"
+  data-startvalues="[{&quot;field&quot;:&quot;type of official development assistance&quot;,&quot;value&quot;:&quot;net disbursements total&quot;},{&quot;field&quot;:&quot;type of official development assistance&quot;,&quot;value&quot;:&quot;net disbursements to least developed countries&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
   data-fill="false"
@@ -543,7 +543,7 @@ data-event-label="high"
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Verhältnis der öffentlichen Nettoentwicklungsausgaben (ODA) zum BNE&quot;,&quot;Verhältnis der bilateralen sowie kalkulatorischen multilateralen öffentlichen Nettoentwicklungsausgaben (ODA) für die am wenigsten entwickelten Länder (LDCs) zum Bruttonationaleinkommen (BNE)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;p&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;type of official development assistance&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;net disbursements total&quot;,&quot;net disbursements to least developed countries&quot;,&quot;&quot;]},&quot;title&quot;:&quot;type of official development assistance&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;p&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:2}]"
   data-graphstepsize="[{&quot;step&quot;:0.1}]"
@@ -672,7 +672,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Verhältnis der öffentlichen Entwicklungsausgaben (ODA) zum Bruttonationaleinkommen (BNE)</h4>
+          <h4 id="chart-heading" class="chart-title">Verhältnis der öffentlichen Entwicklungsleistungen zum Bruttonationaleinkommen</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -707,12 +707,12 @@ data-event-label="Change to Table tab"
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          
-          
-          <dd >ODA: Official Development Assistance (Entwicklungsausgaben).</dd>
-        
 
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          
+          
+          <dd ><br>• Öffentliche Entwicklungsleistungen (Official Development Assistance): ODA.<br>• Netto-Leistungen: Der in einem bestimmten Abrechnungszeitraum ausgezahlte Gesamtbetrag abzüglich der im selben Zeitraum erfolgten Tilgungszahlungen, wobei Zinsen unberücksichtigt bleiben.<br>• Bilaterale Leistungen: Leistungen werden direkt von einem Geberland an ein Empfängerland geleistet.<br>• Multilaterale Leistungen: Leistungen werden über eine im Entwicklungsbereich tätige internationale Organisation (z. B. Weltbank, UNDP) bereitgestellt.<br>• LDC: Least developed countries (am wenigsten entwickelte Länder).</dd>
         
 
         
@@ -798,12 +798,12 @@ data-event-label="Change to Table tab"
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          
-          
-          <dd >ODA: Official Development Assistance (Entwicklungsausgaben).</dd>
-        
 
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          
+          
+          <dd ><br>• Öffentliche Entwicklungsleistungen (Official Development Assistance): ODA.<br>• Netto-Leistungen: Der in einem bestimmten Abrechnungszeitraum ausgezahlte Gesamtbetrag abzüglich der im selben Zeitraum erfolgten Tilgungszahlungen, wobei Zinsen unberücksichtigt bleiben.<br>• Bilaterale Leistungen: Leistungen werden direkt von einem Geberland an ein Empfängerland geleistet.<br>• Multilaterale Leistungen: Leistungen werden über eine im Entwicklungsbereich tätige internationale Organisation (z. B. Weltbank, UNDP) bereitgestellt.<br>• LDC: Least developed countries (am wenigsten entwickelte Länder).</dd>
         
 
         
@@ -924,17 +924,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
       
       <tr>
-        <th scope="row" style="min-width:130px;">Verfügbare Zeitreihen </th>
+        <th scope="row" style="min-width:130px;">Verfügbare Zeitreihe </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Verhältnis der öffentlichen Nettoentwicklungsausgaben (ODA) zum BNE</li> <li> Verhältnis der bilateralen sowie kalkulatorischen multilateralen öffentlichen Nettoentwicklungsausgaben (ODA) für die am wenigsten entwickelten Länder (LDCs) zum Bruttonationaleinkommen (BNE)</li></ul>
+            <p>Verhältnis der öffentlichen Entwicklungsleistungen zum Bruttonationaleinkommen</p>
 
           
         </td>
@@ -942,6 +937,11 @@ data-event-label="Change to Sources tab"
         
       
   
+      
+      
+      
+        
+          
       
       
       
@@ -955,7 +955,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Vergleichbarkeit mit den UN-Metadaten </th>
         <td style="width: 100%">
           
-            <p>Die Zeitreihen entsprechen den UN-Metadaten.</p>
+            <p>Die Zeitreihe entspricht den UN-Metadaten.</p>
 
           
         </td>
@@ -966,9 +966,19 @@ data-event-label="Change to Sources tab"
       
       
       
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
       
       <tr>
-        <th scope="row" style="min-width:130px;">Nationale Metadaten<small> (nur auf Englisch verfügbar)</small> </th>
+        <th scope="row" style="min-width:130px;">Nationale Metadaten </th>
         <td style="width: 100%">
           
             
@@ -982,7 +992,7 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://sdg-indikatoren.de/public/Meta/17.2.1.pdf" target="_blank">
+                <a href="https://sdg-indikatoren.de/public/MetaDe/17.2.1.pdf" target="_blank">
                   Metadaten zu den dargestellten Zeitreihen <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
@@ -1000,16 +1010,6 @@ data-event-label="Change to Sources tab"
       
       
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
       
       
       
@@ -1713,8 +1713,8 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://www.oecd.org/dac/financing-sustainable-development/development-finance-data/" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');">
-                  OECD – Daten zur Entwicklungsfinanzierung (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                <a href="https://data-explorer.oecd.org/?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&fc=Topic&bp=true&snb=20" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');">
+                  OECD: ODA Gesamtströme (nicht auf Deutsch verfügbar) [Einstellungen: DAC1: Flows by provider (ODA+OOF+Private); Measure: ODA; Flow type: Disbursements] <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
             
@@ -1775,8 +1775,8 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://data-explorer.oecd.org/vis?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&fc=Topic&bp=true&snb=27&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_DAC1%40DF_DAC1&df[ag]=OECD.DCD.FSD&df[vs]=1.5&dq=DEU.1010..1140.XDC.V%2BQ._Z&pd=2010%2C&to[TIME_PERIOD]=false&ly[rw]=PRICE_BASE%2CTIME_PERIOD" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');">
-                  OECD – Gesamtströme nach Geber (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                <a href="https://data-explorer.oecd.org/?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&fc=Topic&bp=true&snb=20" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');">
+                  OECD: ODA (nicht auf Deutsch verfügbar) [Einstellungen: DAC2A: Aid (ODA) disbursements to countries and regions; Recipient: LDCs; Measure: ODA, disbursements] <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
             
@@ -1796,40 +1796,13 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row" style="min-width:130px;"> </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_DAC2%40DF_DAC2A&df[ag]=OECD.DCD.FSD&dq=DEU.LDC.106%2B206.USD.V&to[TIME_PERIOD]=false&vw=tb&pd=2010%2C" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');">
-                  OECD – Hilfszahlungen (ODA) an Länder und Regionen (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
+          
       
       
       
-      
-  
+        
+          
       
       
       
@@ -2212,7 +2185,7 @@ data-event-label="Change to Sources tab"
             
               
                 <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0003&bypass=true&language=de" target="_blank">
-                  VGR des Bundes – Bruttonationaleinkommen, Volkseinkommen – GENESIS online 81000-0003 <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  VGR des Bundes – Bruttonationaleinkommen, Volkseinkommen: GENESIS online 81000-0003 <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
             
@@ -2574,12 +2547,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20260724034709'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20260724063404'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20260724034709"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20260724063404"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

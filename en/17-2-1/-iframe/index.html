@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724034709">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724063404">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -314,7 +314,7 @@ layout-indicator-iframe
   data-indicatorid='indicator_17-2-1'
   data-id="17-2-1"
   data-country="Germany"
-  data-charttitle="Proportion of official development assistance (ODA) to gross national income (GNI)"
+  data-charttitle="Proportion of Official Development Assistance to gross national income"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
@@ -326,7 +326,7 @@ layout-indicator-iframe
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Proportion of ODA (net disbursements) to GNI&quot;}]"
+  data-startvalues="[{&quot;field&quot;:&quot;type of official development assistance&quot;,&quot;value&quot;:&quot;net disbursements total&quot;},{&quot;field&quot;:&quot;type of official development assistance&quot;,&quot;value&quot;:&quot;net disbursements to least developed countries&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
   data-fill="false"
@@ -342,7 +342,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Proportion of ODA (net disbursements) to GNI&quot;,&quot;Proportion of bilateral and imputed multilateral ODA (net disbursements) for LDCs to the gross national income (GNI)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;p&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;type of official development assistance&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;net disbursements total&quot;,&quot;net disbursements to least developed countries&quot;,&quot;&quot;]},&quot;title&quot;:&quot;type of official development assistance&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;p&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:2}]"
   data-graphstepsize="[{&quot;step&quot;:0.1}]"
@@ -471,7 +471,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Proportion of official development assistance (ODA) to gross national income (GNI)</h4>
+          <h4 id="chart-heading" class="chart-title">Proportion of Official Development Assistance to gross national income</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -506,12 +506,12 @@ data-event-label="Change to Table tab"
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Note</u>:</dt>
-          
-          
-          <dd >ODA: Official Development Assistance.</dd>
-        
 
+        
+          <dt><u>Notes</u>:</dt>
+          
+          
+          <dd ><br>• Official Development Assistance: ODA.<br>• Net flow: The total amount disbursed over a given accounting period, less repayments of loan principal during the same period, no account being taken of interest.<br>• Bilateral flow: Flows are provided directly by a donor country to an aid recipient country.<br>• Multilateral flow: Flows are channeled via an international organisation active in development (e.g. World Bank, UNDP).<br>• LDC: Least developed countries.</dd>
         
 
         
@@ -597,12 +597,12 @@ data-event-label="Change to Table tab"
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Note</u>:</dt>
-          
-          
-          <dd >ODA: Official Development Assistance.</dd>
-        
 
+        
+          <dt><u>Notes</u>:</dt>
+          
+          
+          <dd ><br>• Official Development Assistance: ODA.<br>• Net flow: The total amount disbursed over a given accounting period, less repayments of loan principal during the same period, no account being taken of interest.<br>• Bilateral flow: Flows are provided directly by a donor country to an aid recipient country.<br>• Multilateral flow: Flows are channeled via an international organisation active in development (e.g. World Bank, UNDP).<br>• LDC: Least developed countries.</dd>
         
 
         
@@ -719,17 +719,12 @@ data-event-label="Change to Sources tab"
       
       
       
-        
-          
-      
-      
-      
       
       <tr>
         <th scope="row" style="min-width:130px;">Time series available </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Proportion of ODA (net disbursements) to GNI</li> <li> Proportion of bilateral and imputed multilateral ODA (net disbursements) for LDCs to the gross national income (GNI)</li></ul>
+            <p>Proportion of Official Development Assistance to gross national income</p>
 
           
         </td>
@@ -745,12 +740,17 @@ data-event-label="Change to Sources tab"
       
       
       
+        
+          
+      
+      
+      
       
       <tr>
         <th scope="row" style="min-width:130px;">Compliance with the UN metadata </th>
         <td style="width: 100%">
           
-            <p>The time series are compliant with the UN metadata.</p>
+            <p>The time series is compliant with the UN metadata.</p>
 
           
         </td>
@@ -1508,8 +1508,8 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://www.oecd.org/dac/financing-sustainable-development/development-finance-data/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development','En');">
-                  OECD – Development Finance Data <span class="visuallyhidden">opens in a new window</span>
+                <a href="https://data-explorer.oecd.org/?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&fc=Topic&bp=true&snb=20" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development','En');">
+                  OECD: ODA Total flows [Selections: DAC1: Flows by provider (ODA+OOF+Private); Measure: ODA; Flow type: Disbursements] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -1570,8 +1570,8 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://data-explorer.oecd.org/vis?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&fc=Topic&bp=true&snb=27&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_DAC1%40DF_DAC1&df[ag]=OECD.DCD.FSD&df[vs]=1.5&dq=DEU.1010..1140.XDC.V%2BQ._Z&pd=2010%2C&to[TIME_PERIOD]=false&ly[rw]=PRICE_BASE%2CTIME_PERIOD" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development','En');">
-                  OECD – Total flows by donor <span class="visuallyhidden">opens in a new window</span>
+                <a href="https://data-explorer.oecd.org/?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&fc=Topic&bp=true&snb=20" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development','En');">
+                  OECD: ODA [Selections: DAC2A: Aid (ODA) disbursements to countries and regions; Recipient: LDCs; Measure: ODA, disbursements] <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -1591,40 +1591,13 @@ data-event-label="Change to Sources tab"
       
       
       
-      
-      <tr>
-        <th scope="row" style="min-width:130px;"> </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
-                <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_DAC2%40DF_DAC2A&df[ag]=OECD.DCD.FSD&dq=DEU.LDC.106%2B206.USD.V&to[TIME_PERIOD]=false&vw=tb&pd=2010%2C" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development','En');">
-                  OECD – Aid (ODA) disbursements to countries and regions <span class="visuallyhidden">opens in a new window</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
         
-      
-  
-      
+          
       
       
       
-      
-  
+        
+          
       
       
       
@@ -2007,7 +1980,7 @@ data-event-label="Change to Sources tab"
             
               
                 <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=81000-0003&bypass=true&language=en" target="_blank">
-                  National accounts – Gross national income, national income – GENESIS online 81000-0003 <span class="visuallyhidden">opens in a new window</span>
+                  National accounts – Gross national income, national income: GENESIS online 81000-0003 <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -2311,12 +2284,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20260724034709'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20260724063404'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20260724034709"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20260724063404"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

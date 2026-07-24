@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724034709">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724063404">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -534,7 +534,7 @@ data-event-label="high"
   data-graphseriesbreaks="[{&quot;value&quot;:8.5},{&quot;value&quot;:11.5}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Ratio of regulatory capital to all weighted risk positions&quot;,&quot;Ratio of regulatory (tier 1) capital to all weighted risk positions&quot;,&quot;Ratio of non-performing loans (net of risk provisions) to balance sheet capital&quot;,&quot;Non-performing loans to total gross loans&quot;,&quot;Total return on assets&quot;,&quot;Ratio of liquid assets to short-term liabilities&quot;,&quot;Ratio of open foreign exchange position to regulatory capital&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;|&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;timeseries&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;(1) tier-1 capital to assets&quot;,&quot;(2) regulatory tier 1 capital to risk-weighted assets&quot;,&quot;(3) non-performing loans net of provisions to capital&quot;,&quot;(4) non-performing loans to total gross loans&quot;,&quot;(5) return on assets&quot;,&quot;(6) liquid assets to short-term liabilities&quot;,&quot;(7) net open position in foreign exchange to capital&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;|&quot;,&quot;r&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;r&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:2}]"
   data-graphstepsize="[{&quot;step&quot;:0.5}]"
@@ -925,7 +925,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Time series available </th>
         <td style="width: 100%">
           
-            <ul style="padding-left: 25px;"><li>Ratio of regulatory capital to all weighted risk positions</li> <li> Ratio of regulatory (tier 1) capital to all weighted risk positions</li> <li> Ratio of non-performing loans (net of risk provisions) to balance sheet capital</li> <li> Non-performing loans to total gross loans</li> <li> Total return on assets</li> <li> Ratio of liquid assets to short-term liabilities</li> <li> Ratio of open foreign exchange position to regulatory capital</li></ul>
+            <ul style="padding-left: 25px;"><li>(1) Tier-1 capital to assets</li> <li> (2) Regulatory Tier 1 capital to risk-weighted assets</li> <li> (3) Non-performing loans net of provisions to capital</li> <li> (4) Non-performing loans to total gross loans</li> <li> (5) Return on assets</li> <li> (6) Liquid assets to short-term liabilities</li> <li> (7) Net open position in foreign exchange to capital</li></ul>
 
           
         </td>
@@ -1044,7 +1044,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Data state </th>
         <td style="width: 100%">
           
-            <p>Last updated on 2025/09/23. Data for further reporting periods will be added as soon as it becomes available.</p>
+            <p>Last updated on 2026/06/17. Data for further reporting periods will be added as soon as it becomes available.</p>
 
           
         </td>
@@ -1767,7 +1767,7 @@ data-event-label="Change to Sources tab"
             
               
                 <a href="https://www.bundesbank.de/dynamic/action/en/statistics/time-series-databases/time-series-databases/759784/759784?listId=www_sfsi_sddsplusfsi" target="_blank" onclick="return confirm_alert('the Deutsche Bundesbank','En');">
-                  FSI – Special series regarding SDDS+ <span class="visuallyhidden">opens in a new window</span>
+                  FSI: Special series regarding SDDS+ <span class="visuallyhidden">opens in a new window</span>
                 </a>
               
             
@@ -2540,12 +2540,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20260724034709'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20260724063404'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20260724034709"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20260724063404"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

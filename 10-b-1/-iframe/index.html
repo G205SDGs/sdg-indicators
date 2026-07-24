@@ -149,7 +149,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724034709">
+        <link rel="stylesheet" href="/sdg-indicators/assets/css/style.css?v=20260724063404">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -314,7 +314,7 @@ layout-indicator-iframe
   data-indicatorid='indicator_10-b-1'
   data-id="10-b-1"
   data-country="Deutschland"
-  data-charttitle="Öffentliche und private Nettoentwicklungsausgaben"
+  data-charttitle="Netto-Finanzströme öffentlicher Entwicklungsleistungen"
   data-charttitles="null"
   data-chartsubtitle=""
   data-chartsubtitles="null"
@@ -326,9 +326,9 @@ layout-indicator-iframe
   data-graphtypes="null"
   data-geocoderegex=""
   data-showmap="false"
-  data-startvalues="&quot;&quot;"
+  data-startvalues="[{&quot;field&quot;:&quot;type of official development assistance&quot;,&quot;value&quot;:&quot;net disbursements&quot;},{&quot;field&quot;:&quot;type of financial flow&quot;,&quot;value&quot;:&quot;official development assistance&quot;},{&quot;field&quot;:&quot;type of financial flow&quot;,&quot;value&quot;:&quot;other official flows&quot;},{&quot;field&quot;:&quot;type of financial flow&quot;,&quot;value&quot;:&quot;officially supported export credits&quot;},{&quot;field&quot;:&quot;type of financial flow&quot;,&quot;value&quot;:&quot;private sector flows at market terms&quot;},{&quot;field&quot;:&quot;type of financial flow&quot;,&quot;value&quot;:&quot;private grants&quot;}]"
   data-graphlimits="null"
-  data-stackeddisaggregation="Art des Finanzstroms"
+  data-stackeddisaggregation="type of financial flow"
   data-fill="false"
   data-fillabove=""
   data-fillbelow=""
@@ -342,7 +342,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Millionen EUR&quot;,&quot;Millionen USD, konstante Preise (2023)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;type of flow&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Öffentliche Nettoentwicklungsausgaben (ODA)&quot;,&quot;Sonstige öffentliche Nettoausgaben (OOF)&quot;,&quot;Öffentlich unterstützte Exportkredite (Nettoausgaben)&quot;,&quot;Private Leistungen zu marktüblichen Bedingungen (Nettoausgaben)&quot;,&quot;Leistungen von Nichtregierungsorganisationen aus Eigenmitteln (Nettoausgaben)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Art des Finanzstroms&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Millionen EUR&quot;,&quot;Millionen USD, konstante Preise (2024)&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;type of financial flow&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;official development assistance&quot;,&quot;other official flows&quot;,&quot;officially supported export credits&quot;,&quot;private sector flows at market terms&quot;,&quot;private grants&quot;,&quot;&quot;]},&quot;title&quot;:&quot;type of financial flow&quot;},{&quot;name&quot;:&quot;type of official development assistance&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;commitments&quot;,&quot;net disbursements&quot;,&quot;&quot;]},&quot;title&quot;:&quot;type of official development assistance&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;…&quot;,&quot;.&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_1&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_1&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_2&quot;,&quot;type&quot;:&quot;number&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_2&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Wert&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0}]"
   data-graphstepsize="null"
@@ -377,529 +377,15 @@ layout-indicator-iframe
   <div id="datatables">
 
     
-    <a role="button" href="https://g205SDGs.github.io/sdg-data/de/headline/10-b-1.csv" class="btn btn-primary btn-download" download="indicator_10-b-1.csv" tabindex="0" role="button">Speichern der Headline im CSV-Format</a>
-    
     <a role="button" href="https://g205SDGs.github.io/sdg-data/de/data/10-b-1.csv" class="btn btn-primary btn-download" download='indicator_10-b-1.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
 
     <p class="no-js-disaggregation-hint"></p>
 
     
     <h3></h3>
-    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Öffentliche und private Nettoentwicklungsausgaben</caption>
-      <thead>
-        
-        
-        <th scope="col">Year</th>
-        
-        
-        
-        <th scope="col">Value</th>
-        
-        
-        
-        <th scope="col" class="table-value">Units</th>
-        
-        
-      </thead>
-      <tbody>
-        
-        <tr>
-          
-          
-          <td>2010</td>
-          
-          
-          
-          <td>31435.8</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011</td>
-          
-          
-          
-          <td>40420.4</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012</td>
-          
-          
-          
-          <td>27009.7</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2013</td>
-          
-          
-          
-          <td>39992.1</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014</td>
-          
-          
-          
-          <td>39948.4</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td>42935.5</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td>44490.2</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2017</td>
-          
-          
-          
-          <td>47671.1</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018</td>
-          
-          
-          
-          <td>44045.5</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019</td>
-          
-          
-          
-          <td>37690.8</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020</td>
-          
-          
-          
-          <td>39224.8</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2021</td>
-          
-          
-          
-          <td>58513.0</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2022</td>
-          
-          
-          
-          <td>49095.0</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2023</td>
-          
-          
-          
-          <td>68763.5</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2024</td>
-          
-          
-          
-          <td>62375.1</td>
-          
-          
-          
-          <td class="table-value">Millionen EUR</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2010</td>
-          
-          
-          
-          <td>46398.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011</td>
-          
-          
-          
-          <td>58935.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012</td>
-          
-          
-          
-          <td>38823.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2013</td>
-          
-          
-          
-          <td>56360.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014</td>
-          
-          
-          
-          <td>55250.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td>58399.3</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td>59759.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2017</td>
-          
-          
-          
-          <td>63102.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018</td>
-          
-          
-          
-          <td>57236.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019</td>
-          
-          
-          
-          <td>48013.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020</td>
-          
-          
-          
-          <td>49103.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2021</td>
-          
-          
-          
-          <td>71254.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2022</td>
-          
-          
-          
-          <td>56348.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2023</td>
-          
-          
-          
-          <td>74355.0</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2024</td>
-          
-          
-          
-          <td>65300.3</td>
-          
-          
-          
-          <td class="table-value">Millionen USD, konstante Preise (2023)</td>
-          
-          
-        </tr>
-        
-      </tbody>
-    </table>
     
   </div>
 
-  
-  <div id="datatableFooter">
-    
-    <p>Datenquelle: <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');" title="Klicken Sie hier um zur Website der Organisation Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) zu gelangen."> Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) </a></p>
-    
-    
-    <p>Geographische Abdeckung: Deutschland</p>
-    
-    
-    
-  </div>
   
 
 </div>
@@ -985,7 +471,7 @@ data-event-label="Change to Table tab"
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Öffentliche und private Nettoentwicklungsausgaben</h4>
+          <h4 id="chart-heading" class="chart-title">Netto-Finanzströme öffentlicher Entwicklungsleistungen</h4>
           <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
@@ -1025,7 +511,7 @@ data-event-label="Change to Table tab"
           <dt><u>Anmerkungen</u>:</dt>
           
           
-          <dd ><br>• ODA: Official Development Assistance (Entwicklungsausgaben).<br>• OOF: Other Official Flows (Andere öffentliche Leistungen).</dd>
+          <dd ><br>• Öffentliche Entwicklungsleistungen (Official Development Assistance): ODA.<br>• Sonstige öffentliche Leistungen (Other Official Flows): OOF.</dd>
         
 
         
@@ -1116,7 +602,7 @@ data-event-label="Change to Table tab"
           <dt><u>Anmerkungen</u>:</dt>
           
           
-          <dd ><br>• ODA: Official Development Assistance (Entwicklungsausgaben).<br>• OOF: Other Official Flows (Andere öffentliche Leistungen).</dd>
+          <dd ><br>• Öffentliche Entwicklungsleistungen (Official Development Assistance): ODA.<br>• Sonstige öffentliche Leistungen (Other Official Flows): OOF.</dd>
         
 
         
@@ -1238,7 +724,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Verfügbare Zeitreihe </th>
         <td style="width: 100%">
           
-            <p>Gesamte öffentliche und private Leistungen für Entwicklung (Nettoausgaben)</p>
+            <p>Netto-Finanzströme für Entwicklungszusammenarbeit</p>
 
           
         </td>
@@ -1362,7 +848,7 @@ data-event-label="Change to Sources tab"
         <th scope="row" style="min-width:130px;">Datenstand </th>
         <td style="width: 100%">
           
-            <p>Zuletzt aktualisiert am 18.03.2026. Sobald Daten für weitere Berichtszeiträume vorliegen, werden diese zeitnah hinzugefügt.</p>
+            <p>Zuletzt aktualisiert am 05.06.2026. Sobald Daten für weitere Berichtszeiträume vorliegen, werden diese zeitnah hinzugefügt.</p>
 
           
         </td>
@@ -2022,70 +1508,8 @@ data-event-label="Change to Sources tab"
 
             
               
-                <a href="https://www.oecd.org/dac/financing-sustainable-development/development-finance-data/" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');">
-                  OECD – Daten zur Entwicklungsfinanzierung (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                </a>
-              
-            
-
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row" style="min-width:130px;"> </th>
-        <td style="width: 100%">
-          
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-              
                 <a href="https://data-explorer.oecd.org/?fs[0]=Topic%2C1%7CDevelopment%23DEV%23%7COfficial%20Development%20Assistance%20%28ODA%29%23DEV_ODA%23&pg=0&fc=Topic&bp=true&snb=20" target="_blank" onclick="return confirm_alert('der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung','De');">
-                  OECD – Daten zur Entwicklungsfinanzierung (nicht auf Deutsch verfügbar) [Einstellungen: DAC1: Flows by provider (ODA+OOF+Private); Measure: Official and private flows, Official Development Assistance (ODA), Other Official Flows (OOF), Officially supported export credits, Private flows at market terms, rivate grants, net; Flow type: Disbursements, net] <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  OECD: Daten zur Entwicklungsfinanzierung (nicht auf Deutsch verfügbar) [Einstellungen: DAC1: Flows by provider (ODA+OOF+Private); Measure: Official and private flows, Official Development Assistance (ODA), Other Official Flows (OOF), Officially supported export credits, Private flows at market terms, Private grants, net; Flow type: Disbursements, net, Commitments] <span class="visuallyhidden">in neuem Fenster öffnen</span>
                 </a>
               
             
@@ -2102,6 +1526,41 @@ data-event-label="Change to Sources tab"
       
       
   
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
       
       
       
@@ -2375,12 +1834,12 @@ data-event-label="Change to Sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/sdg-indicators/assets/js/sdg.js?v=20260724034709'></script>
+<script src='/sdg-indicators/assets/js/sdg.js?v=20260724063404'></script>
 
 
     
     
-    <script src="/sdg-indicators/assets/js/custom.js?v=20260724034709"></script><script>
+    <script src="/sdg-indicators/assets/js/custom.js?v=20260724063404"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
