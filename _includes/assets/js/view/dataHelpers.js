@@ -35,6 +35,7 @@ function alterDataDisplay(value, info, context, additionalInfo) {
 
     // Special treatment for numbers on y axis: If stepSize is defined, they should display decimal places as follows:
     // StepSize >= 1 --> 0 decimal places, Stepsize >= 0.1 --> 1 decimal place, StepSize >= 0.01 --> 2 decimal places ...
+    console.log("preIf", context, VIEW._graphStepsize, VIEW.graphStepsize != 0 && VIEW.graphStepsize != '');
     if (context == 'chart y-axis tick' && VIEW._graphStepsize && VIEW.graphStepsize != 0 && VIEW.graphStepsize != '') {
       precision = Math.ceil(Math.log(1 / VIEW._graphStepsize.step) / Math.LN10);
       if (precision < 0) {
