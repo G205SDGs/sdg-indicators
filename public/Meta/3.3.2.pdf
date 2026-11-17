@@ -3,10 +3,10 @@
 1 0 obj
 <<
 /Author (Boﬂe, Moritz \(G25\))
-/CreationDate (D:20260826144350+02'00')
+/CreationDate (D:20261020110500+02'00')
 /Creator (PDF-XChange Office Addin)
 /CreatorTool (PDF-XChange Standard \(10.8.4 build 409\) [GDI] [Windows 11 x64 \(Build 26100\)])
-/ModDate (D:20260826144359+02'00')
+/ModDate (D:20261020110715+02'00')
 /Producer (PDF-XChange Standard \(10.8.4 build 409\) [GDI] [Windows 11 x64 \(Build 26100\)])
 >>
 endobj
@@ -20,7 +20,7 @@ endobj
 endobj
 3 0 obj
 <<
-/Length 3238
+/Length 3235
 /Subtype /XML
 /Type /Metadata
 >>
@@ -39,11 +39,11 @@ stream
 					<rdf:li>Bo√üe, Moritz (G25)</rdf:li>
 				</rdf:Seq>
 			</dc:creator>
-			<xmpMM:DocumentID>uuid:6d2f9a9c-7b83-42b5-b2c0-db1ad007cd96</xmpMM:DocumentID>
-			<xmpMM:InstanceID>uuid:291bb027-b99a-4776-a36c-2494438009e0</xmpMM:InstanceID>
+			<xmpMM:DocumentID>uuid:cc48a3a0-3d0c-485d-94ec-531e7fe6d08f</xmpMM:DocumentID>
+			<xmpMM:InstanceID>uuid:fa0ac166-d91a-40f9-97a4-1e1fe89eb928</xmpMM:InstanceID>
 			<xmp:CreatorTool>PDF-XChange Office Addin</xmp:CreatorTool>
-			<xmp:CreateDate>2026-08-26T14:43:50+02:00</xmp:CreateDate>
-			<xmp:ModifyDate>2026-08-26T14:43:59+02:00</xmp:ModifyDate>
+			<xmp:CreateDate>2026-10-20T11:05+02:00</xmp:CreateDate>
+			<xmp:ModifyDate>2026-10-20T11:07:15+02:00</xmp:ModifyDate>
 			<pdf:Producer>PDF-XChange Standard (10.8.4 build 409) [GDI] [Windows 11 x64 (Build 26100)]</pdf:Producer>
 			<pdf:CreatorTool>PDF-XChange Standard (10.8.4 build 409) [GDI] [Windows 11 x64 (Build 26100)]</pdf:CreatorTool>
 		</rdf:Description>
@@ -135,8 +135,8 @@ endobj
 endobj
 9 0 obj
 <<
-/Annots [24 0 R 25 0 R 26 0 R 27 0 R]
-/Contents 28 0 R
+/Annots [24 0 R 25 0 R 26 0 R 27 0 R 28 0 R 29 0 R]
+/Contents 30 0 R
 /MediaBox [0 0 595.275591 841.889764]
 /Parent 5 0 R
 /Resources <<
@@ -160,8 +160,8 @@ endobj
 >>
 /C [0 0 0]
 /Count 8
-/First 29 0 R
-/Last 30 0 R
+/First 31 0 R
+/Last 32 0 R
 /Parent 7 0 R
 /Title (SDG Target 3.3)
 >>
@@ -175,8 +175,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (8519299a-9660-44b9-90886e34db70a414)
+/M (D:20261020110500+02'00')
+/NM (235e73a3-7e85-47ac-a3c5c9fd1b0360b2)
 /P 8 0 R
 /Rect [165.75 543.75 325.5 558.75]
 /Subtype /Link
@@ -192,8 +192,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (141f1d49-f588-4b2c-a15771f1de595204)
+/M (D:20261020110500+02'00')
+/NM (6f58da3e-67e2-49aa-8dc28abe09e613e7)
 /P 8 0 R
 /Rect [163.149994 445.900024 505.149994 460.900024]
 /Subtype /Link
@@ -209,8 +209,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (dda98058-a999-4f50-be7ce4965bf5376d)
+/M (D:20261020110500+02'00')
+/NM (2bf9c078-cfb5-4674-921fc748f27b6938)
 /P 8 0 R
 /Rect [92.25 172.400024 208.5 186.400024]
 /Subtype /Link
@@ -226,8 +226,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (aa9f598c-ffb5-47bd-92a51bbd323baa5c)
+/M (D:20261020110500+02'00')
+/NM (7c848dc3-f047-4793-b1e4acb5a69c8256)
 /P 8 0 R
 /Rect [92.25 143.150024 518.650024 157.150024]
 /Subtype /Link
@@ -243,8 +243,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (3154a000-5f2a-4170-8ff1326f72d971e9)
+/M (D:20261020110500+02'00')
+/NM (d1c8f193-7eb8-4bb3-8913926aa9d629de)
 /P 8 0 R
 /Rect [92.25 128.900024 331.5 142.900024]
 /Subtype /Link
@@ -260,8 +260,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (264bdf6c-886a-44e2-b682e1880aa8e42f)
+/M (D:20261020110500+02'00')
+/NM (08030cf9-e96e-4b0c-956cbdf5a0aad1ab)
 /P 8 0 R
 /Rect [92.25 99.650024 504 113.650024]
 /Subtype /Link
@@ -277,8 +277,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (31b230d3-f0cf-4315-ae1d2c3ffb388ec9)
+/M (D:20261020110500+02'00')
+/NM (e868b16d-dfd5-4a40-af327fd2fe2eff36)
 /P 8 0 R
 /Rect [92.25 85.400024 457.899994 99.400024]
 /Subtype /Link
@@ -294,8 +294,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (4a41973d-3b5a-4e08-b1460959b709d761)
+/M (D:20261020110500+02'00')
+/NM (73a1ff2c-3ce2-4b7a-823519a5510ecaa2)
 /P 8 0 R
 /Rect [395.649994 780.900024 533.650024 793.900024]
 /Subtype /Link
@@ -321,14 +321,14 @@ endobj
 /BaseFont /StatisSans-Regular
 /Encoding /WinAnsiEncoding
 /FirstChar 32
-/FontDescriptor 31 0 R
+/FontDescriptor 33 0 R
 /LastChar 150
 /Subtype /TrueType
 /Type /Font
 /Widths [265 0 0 560 0 0 729 0 324 324 0 560 240 403 240 520
 560 560 560 560 560 560 560 560 0 560 240 240 0 560 0 459
 1020 573 608 560 644 535 491 631 0 295 305 589 0 778 683 692
-589 0 605 545 517 662 0 0 0 0 0 0 0 0 0 520
+589 691 605 545 517 662 0 0 0 0 0 0 0 0 0 520
 0 544 586 477 590 544 335 520 579 276 0 509 294 850 579 584
 586 590 383 467 361 575 492 717 485 492 432 0 0 0 0 0
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
@@ -340,7 +340,7 @@ endobj
 /BaseFont /BundesSans-Bold
 /Encoding /WinAnsiEncoding
 /FirstChar 32
-/FontDescriptor 32 0 R
+/FontDescriptor 34 0 R
 /LastChar 121
 /Subtype /Type1
 /Type /Font
@@ -354,22 +354,22 @@ endobj
 endobj
 22 0 obj
 <<
-/BaseFont /AOXKVF+SymbolMT
+/BaseFont /CTABSU+SymbolMT
 /DescendantFonts [<<
-/BaseFont /AOXKVF+SymbolMT
+/BaseFont /CTABSU+SymbolMT
 /CIDSystemInfo <<
 /Ordering (Identity)
 /Registry (PXCViewer)
 /Supplement 0
 >>
 /DW 460
-/FontDescriptor 33 0 R
+/FontDescriptor 35 0 R
 /Subtype /CIDFontType2
 /Type /Font
 >>]
 /Encoding /Identity-H
 /Subtype /Type0
-/ToUnicode 34 0 R
+/ToUnicode 36 0 R
 /Type /Font
 >>
 endobj
@@ -450,8 +450,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (e43ac62c-58b0-4e66-948ac0c0fbc04796)
+/M (D:20261020110500+02'00')
+/NM (1d95263d-9282-40d7-a4974fdc87681c2d)
 /P 9 0 R
 /Rect [92.25 710.900024 513 724.900024]
 /Subtype /Link
@@ -467,8 +467,8 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (5a215ca7-16d4-4864-b548fa6cf6be91a0)
+/M (D:20261020110500+02'00')
+/NM (45e9a69e-6e28-46e0-a4ad0c0140ee1f32)
 /P 9 0 R
 /Rect [92.25 687.650024 278.649994 710.650024]
 /Subtype /Link
@@ -484,10 +484,10 @@ endobj
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (94e733a6-a53f-4289-8ab2d9512e458296)
+/M (D:20261020110500+02'00')
+/NM (b4376533-caa6-4437-a52251ea5bf26499)
 /P 9 0 R
-/Rect [92.25 634.75 378.399994 657.75]
+/Rect [92.25 643.75 378.399994 657.75]
 /Subtype /Link
 /Type /Annot
 >>
@@ -496,42 +496,78 @@ endobj
 <<
 /A <<
 /S /URI
-/URI (mailto:sdg-indicators@destatis.de)
+/URI (https://www.destatis.de/DE/Methoden/Qualitaet/Qualitaetsberichte/Bevoelkerung/einfuehrung.html)
 >>
 /Border [0 0 0]
 /C [0 0 0]
 /F 4
-/M (D:20260826144350+02'00')
-/NM (a0c911a9-e1d6-4753-8baf40f08f1deda7)
+/M (D:20261020110500+02'00')
+/NM (ad77376a-60cd-4acf-9ab2c148ced3fc9e)
 /P 9 0 R
-/Rect [395.649994 780.900024 533.650024 793.900024]
+/Rect [92.25 614.5 497.25 628.5]
 /Subtype /Link
 /Type /Annot
 >>
 endobj
 28 0 obj
 <<
-/Filter /FlateDecode
-/Length 833
+/A <<
+/S /URI
+/URI (https://www.destatis.de/DE/Methoden/Qualitaet/Qualitaetsberichte/Bevoelkerung/einfuehrung.html)
 >>
-stream
-x⁄•Uﬂo€6~◊_q@_d¥¢HÍ∑1mí&HãÆ›¢>•≈¿H¥≠F¢ëé◊˝ıªìl'A≥-m¯Å4ÔÓªÔ˚Ó|Tzñp∆Ee -ég·≈ﬂt1ÑßÑ`<Ürqî≥8á¨HôÑ≤ˆ¸ãì3hL›T ıD,brV~Ò∆úÂbºîàhaÎepà∞/kmùrçeµﬁ håDŒäÇ,,œ)ˆ“?’µTcå√$-º_Ãë˙ã¶“≥œÂ—èïcû≥îZ†¿j©ABøÄôææ.ΩO~2| !¶N©}Y xŒ9ÿoö∞Ñﬁ§Pu^xﬁq8ÈΩﬂëæ3åyÉﬂ/@X∑ê√;∏¸Ã°ˆr ¿Y,†É$ ËÁ›·{Gƒ=Çº«vx*ÓàŒ2Í9ì9√öÿ¡/ÿT˛+<†ˆAÏ=ëDÃd~hº_oZ$´7P+ß‡JY]ûéµ±íK	ü¸ﬁ¥_A›™ô(¸¶UW≠FY·Lù2üfÛ±XÑ∞Xñd0ÏúìNŒ	¶™cÕïsk;√ÌvÀÓÈûºÀïÓ¥	œ¥’mk´©°.¯ÿmuÎ¬#}€ÎˆZ≥<ÇΩZÖdX.C+a£±D·P
-ÉÜz«ÃÓ!Ú3yé“YƒaÍœ∆¨TÎÿ uÌ3ªñ2äíòì˜“b§]‰)ã“˚h\æïM‚ Õ8À!E€å4¯	€öèÜ;M¸w⁄©QT¡ˆõ°“£4Ùöí?A 8+h|jˆ#»'˙¿o⁄∆Lu»p±nià^˛Òˆ$C˝‡∏7N7'Oî˙†¥≈t§3ÆRzó+<7÷õäÏ∑øc ÆˇzHwú–tH¢[~/›2Å§#ŸäÀ¶”‘∞µÄ¢√b–7m™ØÙËª¯çû<hw%Á‡‡9Ó§ƒá∂Z_#àÖ”√4ÄÉÆts´Î—‘ˇπv<ˇ+6ÒTÒO˜Ìœ·ï1’Ó≠ˆ8±Å‰˚ l"7;8y≤¿ÅÊc’V˚Ì“i∑ÍÎˇ1ÒO8¯£iÌÔN+tm7á»*ø¿54ÿWπ≥è˜˜8µìÅ~‘Âƒ¿®ıD√~Î®ı∫≈ˇ¶^„&e˚˝ıíF„d
-endstream
+/Border [0 0 0]
+/C [0 0 0]
+/F 4
+/M (D:20261020110500+02'00')
+/NM (da6aa216-b5e2-460c-8585e481be48d535)
+/P 9 0 R
+/Rect [92.25 591.25 202.149994 614.25]
+/Subtype /Link
+/Type /Annot
+>>
 endobj
 29 0 obj
+<<
+/A <<
+/S /URI
+/URI (mailto:sdg-indicators@destatis.de)
+>>
+/Border [0 0 0]
+/C [0 0 0]
+/F 4
+/M (D:20261020110500+02'00')
+/NM (a249818e-30e2-4611-895c9f06464fe9d2)
+/P 9 0 R
+/Rect [395.649994 780.900024 533.650024 793.900024]
+/Subtype /Link
+/Type /Annot
+>>
+endobj
+30 0 obj
+<<
+/Filter /FlateDecode
+/Length 955
+>>
+stream
+x⁄µVYo€F~ÁØ†/Z.wóßÑ¢Hm«ÜS∏9Ã<ŸA±&Wcr©ê+´ÓØœ©À∂í*(*@KÌ\ﬂ1‘IÊpòÅ«c»r‡ê≠@p<Û ¸CZˇúÉåáêM!R¶êåc&!+˜˙ÏJSîπ≤Mòeüù>gB9ΩJD∞éËäô∑çË^∫≥ ñ+Ù&P}` R6é¡K¡“îbo‹s]ËVUp›«XLR¡€È»±;-s=˙îΩq∞˚ær»S”¯NÕ4Hh¶0í¬ï˝≈◊ôÛ≈„Äâ1~º !§Ii|IÃx 98o±àÓƒê◊éYs8kú˜ﬂ∆º¡Ôg†^Wê¬‹|‚P8)e‡,PC$ÙÛ˙åÌ;'Ñ=6πá∂.v@'	Õú»îaMú‡W*˝û@˚$vè$2ônoÀ
+¡j *∏Sù. Oß⁄tÀ$ón›∆Tè†‘Hå›≤RwïFZ·B∑µ2∑£…X	,¿∂X%–Æï ÒÜ™}Õπµãn‚˚´’äÌÒÎüΩˆ≥πÆµÒ/tß´™ÀÁƒÜöZÔcΩ“ïıOÙC£´{›.Õl{6lç%√r	J	%á≈–jò†;d÷üAsîÆ√>L·ˇUöπ™,õ€∫˙©[¥3Q»I{€
+Ò∏á]§1‚˝
+dóó¥I¿>à3ŒRàQ6=nƒ6ÇÊΩ†≈ö˜J[’sÅ,tÕ≤ÕuO›¶‰Ot‡	Œ∆düàÜ}!y§‹∑¶*ÕPá ◊ÀˆÅLÙÍ√ó Úßç±⁄ÿ	ıq$’[¶;LG<≥ˆæ$¶◊π¸K”Ÿvôì¸6œòÍ?Ö;å»í‡ñˇ˜óƒÅd·ì§«ÇÛ~©™“>¬ΩhZ∑R∆pUÊmìŸŸ„ê5æ	WÚCŒ@UÃõΩ1t£ÙHDÆ›ûlwß€2ü[Ω3…3cƒ"fqä{/z&€^É{∆ày¿“pËàå¶K3]Í9π}AuÎÍYjN#¢˜cÜàR\z}17Ó±ıAV÷öTŸuÄŒÑi´ø,µ…È“7Lp¿¡—´pWo~∆∑F‰B +≠Ô±É©’Ì∞"[ùÎÚA=ﬂ’ﬂöZrß<†@)éU‡˘fˆ	¸nRæYáÅı§ ä=\Åk#&€e3∏tÚ©™ÚÕ†Ó%ˆøÓôè¶¥Ùñ≠µ¬ù@ªﬁN‡"ã¡ø‡Àh˝ﬁ°†çÌœxﬁˇ“‘Õ Bœ˜Äƒ˛l,®≈¢¬§w45€(˛+*VT»
+endstream
+endobj
+31 0 obj
 <<
 /A <<
 /D [8 0 R /XYZ 76.150002 649.150024 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Next 30 0 R
+/Next 32 0 R
 /Parent 10 0 R
 /Title (SDG Indicator 3.3.2)
 >>
 endobj
-30 0 obj
+32 0 obj
 <<
 /A <<
 /D [8 0 R /XYZ 76.150002 626.650024 0]
@@ -539,14 +575,14 @@ endobj
 >>
 /C [0 0 0]
 /Count 7
-/First 35 0 R
-/Last 36 0 R
+/First 37 0 R
+/Last 38 0 R
 /Parent 10 0 R
-/Prev 29 0 R
+/Prev 31 0 R
 /Title (Time series)
 >>
 endobj
-31 0 obj
+33 0 obj
 <<
 /Ascent 935
 /CapHeight 689
@@ -559,7 +595,7 @@ endobj
 /Type /FontDescriptor
 >>
 endobj
-32 0 obj
+34 0 obj
 <<
 /Ascent 953
 /CapHeight 690
@@ -572,56 +608,55 @@ endobj
 /Type /FontDescriptor
 >>
 endobj
-33 0 obj
+35 0 obj
 <<
 /Ascent 1005
 /CapHeight 700
 /Descent -220
 /Flags 4
 /FontBBox [0 -220 1113 1005]
-/FontFile2 37 0 R
-/FontName /AOXKVF+SymbolMT
+/FontFile2 39 0 R
+/FontName /CTABSU+SymbolMT
 /ItalicAngle 0
 /StemV 0
 /Type /FontDescriptor
 >>
 endobj
-34 0 obj
+36 0 obj
 <<
 /Filter /FlateDecode
-/Length 234
+/Length 233
 >>
 stream
-x⁄]P;k√0ﬁı+nLË '“¡⁄É	iBJVY:ªÇË¡Y¸Ô+©∆CÓ‡æá¯t¸ÿú´9ŸbÄ^[E8∫â$BáÉ∂l∑•eX∂<•ûÒhnÁ1†ilÔXY2˛…1–õ€©~_ã-„WRH⁄∞i⁄†√ú–vÚ˛â&P∞™b
-˚¯‡E¯Oa¯˚ıq˛Æ_⁄ŸtÓyπ√Jﬂgè∞œ˚Ó/ët
-G/$í∞≤≤àUAY«™Zıè_\]/%ı·-©ãèCV/xÚ•?Æâ‰D√ÊC‰ )Ç∂∏ﬁ ;ü\π/øpc
+x⁄]P;k√0ﬁı+nLÈ '“¡áÄá§°r°´,ù]AÙ@ñ˝˚J™Ò–É;∏Ô!>mªKgT ˙V00*#=ŒvÒa¿I≤?ÄT"¨[ôBsGh2≥8‘ù-©kB?9a˜∏\ø€cıBËáóËïô`◊I4AÖòQ∂8˜Dù ®H”âcz∆›ùk⁄ˆÔgˆı ¢ÏÛ÷√F˜—! æˇK$¨ƒŸqÅûõ	I]•j†æ¶j˘è_]√(~∏œÍ”[VWÁSQØxˆÂ?nâƒ‚}
+[QÇ‰ ‡v+g]vï˛&pV
 endstream
 endobj
-35 0 obj
+37 0 obj
 <<
 /A <<
 /D [8 0 R /XYZ 88.900002 589.150024 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Next 38 0 R
-/Parent 30 0 R
+/Next 40 0 R
+/Parent 32 0 R
 /Title (1. General information on the time series)
 >>
 endobj
-36 0 obj
+38 0 obj
 <<
 /A <<
-/D [9 0 R /XYZ 88.900002 582 0]
+/D [9 0 R /XYZ 88.900002 538.5 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Parent 30 0 R
-/Prev 39 0 R
+/Parent 32 0 R
+/Prev 41 0 R
 /Title (7. Calculation method)
 >>
 endobj
-37 0 obj
+39 0 obj
 <<
 /Filter /FlateDecode
 /Length 3116
@@ -644,124 +679,126 @@ L&Ë2ô»XƒW.Às S˙
 WEÚkÚ†*·˛BKÚÎ‰•Aï≈—jXÔ±˛¨≠‰KÏ0ì.Ωõ∂uƒ§é∑∫≠5ì;
 endstream
 endobj
-38 0 obj
+40 0 obj
 <<
 /A <<
 /D [8 0 R /XYZ 88.900002 491.250031 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Next 40 0 R
-/Parent 30 0 R
-/Prev 35 0 R
+/Next 42 0 R
+/Parent 32 0 R
+/Prev 37 0 R
 /Title (2. Comparability with the UN metadata)
 >>
 endobj
-39 0 obj
+41 0 obj
 <<
 /A <<
-/D [9 0 R /XYZ 88.900002 635.25 0]
+/D [9 0 R /XYZ 88.900002 591.75 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Next 36 0 R
-/Parent 30 0 R
-/Prev 41 0 R
+/Next 38 0 R
+/Parent 32 0 R
+/Prev 43 0 R
 /Title (6. Timeliness and frequency)
 >>
 endobj
-40 0 obj
+42 0 obj
 <<
 /A <<
 /D [8 0 R /XYZ 88.900002 422.650024 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Next 42 0 R
-/Parent 30 0 R
-/Prev 38 0 R
+/Next 44 0 R
+/Parent 32 0 R
+/Prev 40 0 R
 /Title (3. Data description)
 >>
 endobj
-41 0 obj
+43 0 obj
 <<
 /A <<
 /D [9 0 R /XYZ 88.900002 688.150024 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Next 39 0 R
-/Parent 30 0 R
-/Prev 42 0 R
+/Next 41 0 R
+/Parent 32 0 R
+/Prev 44 0 R
 /Title (5. Metadata on source data)
 >>
 endobj
-42 0 obj
+44 0 obj
 <<
 /A <<
 /D [8 0 R /XYZ 88.900002 217.150024 0]
 /S /GoTo
 >>
 /C [0 0 0]
-/Next 41 0 R
-/Parent 30 0 R
-/Prev 40 0 R
+/Next 43 0 R
+/Parent 32 0 R
+/Prev 42 0 R
 /Title (4. Access to data source)
 >>
 endobj
 xref
-0 43
+0 45
 0000000000 65535 f
 0000000015 00000 n
 0000000367 00000 n
 0000000448 00000 n
-0000003768 00000 n
-0000003823 00000 n
-0000003886 00000 n
-0000004021 00000 n
-0000004209 00000 n
-0000004466 00000 n
-0000004695 00000 n
-0000004859 00000 n
-0000005112 00000 n
-0000005415 00000 n
-0000005668 00000 n
-0000006024 00000 n
-0000006375 00000 n
-0000006738 00000 n
-0000007107 00000 n
-0000007379 00000 n
-0000009564 00000 n
-0000010112 00000 n
-0000010545 00000 n
-0000010858 00000 n
-0000024337 00000 n
-0000024673 00000 n
-0000025016 00000 n
-0000025298 00000 n
-0000025570 00000 n
-0000026476 00000 n
-0000026623 00000 n
-0000026798 00000 n
-0000026979 00000 n
-0000027156 00000 n
-0000027349 00000 n
-0000027656 00000 n
-0000027825 00000 n
-0000027967 00000 n
-0000031171 00000 n
-0000031349 00000 n
-0000031513 00000 n
-0000031673 00000 n
-0000031840 00000 n
+0000003765 00000 n
+0000003820 00000 n
+0000003883 00000 n
+0000004018 00000 n
+0000004206 00000 n
+0000004463 00000 n
+0000004706 00000 n
+0000004870 00000 n
+0000005123 00000 n
+0000005426 00000 n
+0000005679 00000 n
+0000006035 00000 n
+0000006386 00000 n
+0000006749 00000 n
+0000007118 00000 n
+0000007390 00000 n
+0000009575 00000 n
+0000010125 00000 n
+0000010558 00000 n
+0000010871 00000 n
+0000024350 00000 n
+0000024686 00000 n
+0000025029 00000 n
+0000025311 00000 n
+0000025625 00000 n
+0000025945 00000 n
+0000026217 00000 n
+0000027245 00000 n
+0000027392 00000 n
+0000027567 00000 n
+0000027748 00000 n
+0000027925 00000 n
+0000028118 00000 n
+0000028424 00000 n
+0000028593 00000 n
+0000028737 00000 n
+0000031941 00000 n
+0000032119 00000 n
+0000032283 00000 n
+0000032443 00000 n
+0000032610 00000 n
 trailer
 <<
-/ID [<3AF072436F3AAE1B211DB96D9BA4C8CB> <3AF072436F3AAE1B211DB96D9BA4C8CB>]
+/ID [<2964C50CBF723DC6800818E42541D6DB> <2964C50CBF723DC6800818E42541D6DB>]
 /Info 1 0 R
 /Root 2 0 R
-/Size 43
+/Size 45
 >>
-%PXC-Ver:10.8.4.409-Date:20260826124359-SHA:00008172:CE80198D2E114148B513755D5178D818A50B874CD28631A3BDE17B85C9B446BA
+%PXC-Ver:10.8.4.409-Date:20261020090715-SHA:0000849C:08CF661DCFF72CFE9C1DF37032659BAC310F89CB09EF4FF3FC8EC6862EE86BFC
 startxref
-32005
+32775
 %%EOF
